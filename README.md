@@ -32,7 +32,7 @@
   * [其他衡量指標](https://blog.csdn.net/aws3217150/article/details/50479457)
     * ROC(Receiver Operating Curve)：客群樣貌、素材好壞
     * MAP@N：如 MAP@5、MAP@12
-* 作業D001 
+* [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
 <br>
 
 
