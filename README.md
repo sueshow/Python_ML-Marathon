@@ -32,10 +32,68 @@
   * [其他衡量指標](https://blog.csdn.net/aws3217150/article/details/50479457)
     * ROC(Receiver Operating Curve)：客群樣貌、素材好壞
     * MAP@N：如 MAP@5、MAP@12
-* 作業D001 
+* [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
 <br>
 
 
 ## D002 機器學習概論
-* 
-<>
+* 機器學習範疇
+  * 人工智慧 > 機器學習 > 深度學習
+  * 白話文：讓機器從資料中找尋規律與趨勢而不需要給定特殊規則
+  * 數學：給定目標函數與訓練資料，學習出能讓目標函數最佳的模型參數
+* 機器學習的組成及應用
+  * 監督式學習：如圖像分類、詐騙偵測
+    * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
+    * 如圖像分類，每張圖都有對應到的標記(y)
+  * 非監督式學習：如維度縮減、分群、壓縮
+    * 僅有 x 資料而沒有標註的 y
+    * 如有圖像資料，但沒有標記
+    * 應用：降維(Dimension Reduction)、分群(Clustering)
+  * 強化學習：如下圍棋、打電玩
+    * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
+    * 應用：Alpha GO
+<br>
+
+
+## D003 機器學習-流程與步驟
+* 機器學習專案開發流程
+  * 資料蒐集、前處理
+    * 資料來源
+      * 結構化資料：Excel檔、CSV檔
+      * 非結構化資料：圖片、影音、文字
+    * 瞭解資料，使用資料的 Python 套件
+      * 開啟圖片：PIL、skimage、open-cv等
+      * 開啟文件：pandas
+    * 資料前處理，進行特徵工程
+      * 缺失值填補
+      * 離群值處理
+      * 標準化
+  * 定義目標與評估準則
+    * 回歸問題(數值)？分類問題(類別)？
+    * 要使用甚麼資料來進行預測？
+    * 資料分為：訓練集training set、驗證集validation set、測試集test set
+    * 評估指標
+      * 回歸問題
+        * RMSE (Root Mean Square Error)
+        * Mean Absolute Error
+        * R-Square
+      * 分類問題
+        * Accuracy
+        * F1-score
+        * AUC (Area Under Curve)
+  * 建立模型與調整參數：模型調整、優化、訓練
+    * 回歸模型 Regression
+    * 樹模型 Tree-based model
+    * 神經網絡 Neural network
+  * 導入
+    * 建立資料蒐集、前處理等流程
+    * 送進模型進行預測
+    * 輸出預測結果
+    * 視專案需求整合前後端，資料格式使用 json、csv
+<br>
+
+
+## D004 EDA/讀取資料與分析流程
+* 範例
+  * 
+<br>
