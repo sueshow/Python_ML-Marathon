@@ -53,3 +53,44 @@
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
 <br>
+
+
+## D003 機器學習-流程與步驟
+* 機器學習專案開發流程
+  * 資料蒐集、前處理
+    * 資料來源
+      * 結構化資料：Excel檔、CSV檔
+      * 非結構化資料：圖片、影音、文字
+    * 瞭解資料，使用資料的 Python 套件
+      * 開啟圖片：PIL、skimage、open-cv等
+      * 開啟文件：pandas
+    * 資料前處理，進行特徵工程
+      * 缺失值填補
+      * 離群值處理
+      * 標準化
+  * 定義目標與評估準則
+    * 回歸問題(數值)？分類問題(類別)？
+    * 要使用甚麼資料來進行預測？
+    * 資料分為：訓練集training set、驗證集validation set、測試集test set
+    * 評估指標
+      * 回歸問題
+        * RMSE (Root Mean Square Error)
+        * Mean Absolute Error
+        * R-Square
+      * 分類問題
+        * Accuracy
+        * F1-score
+        * AUC (Area Under Curve)
+  * 建立模型與調整參數：模型調整、優化、訓練
+    * 回歸模型 Regression
+    * 樹模型 Tree-based model
+    * 神經網絡 Neural network
+  * 導入
+    * 建立資料蒐集、前處理等流程
+    * 送進模型進行預測
+    * 輸出預測結果
+    * 視專案需求整合前後端，資料格式使用 json、csv
+<br>
+
+
+## D004
