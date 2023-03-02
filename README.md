@@ -52,6 +52,7 @@
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
+* [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
 <br>
 
 
@@ -90,6 +91,7 @@
     * 送進模型進行預測
     * 輸出預測結果
     * 視專案需求整合前後端，資料格式使用 json、csv
+* [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
 <br>
 
 
