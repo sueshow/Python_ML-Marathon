@@ -1,6 +1,8 @@
 # Python_ML-Marathon
 
-## D001 資料介紹與評估資料
+
+## 機器學習概論
+### D001 資料介紹與評估資料
 * 進入資料科學領域的流程
   * 找到問題：挑一個有趣的問題，並解決一個簡單的問題開始
   * 初探：在這個題目上做一個原型解決方案(prototype solution)
@@ -35,8 +37,7 @@
 * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
 <br>
 
-
-## D002 機器學習概論
+### D002 機器學習概論
 * 機器學習範疇
   * 人工智慧 > 機器學習 > 深度學習
   * 白話文：讓機器從資料中找尋規律與趨勢而不需要給定特殊規則
@@ -55,8 +56,7 @@
 * [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
 <br>
 
-
-## D003 機器學習-流程與步驟
+### D003 機器學習-流程與步驟
 * 機器學習專案開發流程
   * 資料蒐集、前處理
     * 資料來源
@@ -94,8 +94,47 @@
 * [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
 <br>
 
+### D004 EDA/讀取資料與分析流程
+* 範例：Home Credit Default Risk (房貸風險預測 from Kaggle)
+  * 目的：預測借款者是否會還款，以還款機率作為最終輸出
+  * 此問題為分類問題
+  * 步驟：
+    * 為何這個問題重要：有人沒有信用資料
+    * 資料從何而來：信用局(Credit Bureau)調閱紀錄、Home Credit內部紀錄(過去借貸、信用卡狀況)
+    * 資料的型態：結構化資料(數值、類別資料)
+    * 可以回答什麼問題：指標(如(ROC)[https://zh.wikipedia.org/wiki/ROC%E6%9B%B2%E7%BA%BF]、AUC等)
+      * AUC：0.5代表隨機猜測，~1則代表模型預測力越好
+* EDA
+  * 初步透過視覺化/統計工具進行分析，達到三個主題目的
+    * 了解資料：獲取資料所包含的資訊、結構和特點
+    * 發現 outliers 或異常數值：檢查資料是否有誤
+    * 分析各變數間的關聯性：找到重要的變數
+  * 觀察資料，並檢查是否符合分析前的假設
+  * 數據分析流程
+    * 收集資料
+    * 數據清理 → 特徵萃取 → 資料視覺化 → 建立模型 → 驗證模型
+    * 決策應用
+* (作業D004)[]
+<br>
 
-## D004 EDA/讀取資料與分析流程
-* 範例
-  * 
+
+## 資料清理數據前處理
+### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
+* 
+<br>
+
+### D006 EDA-欄位的資料類型介紹及處理
+* 
+<br>
+
+### D007 EDA-特徵類型
+* 
+<br>
+
+### D008 EDA-資料分佈
+* 
+<br>
+
+### D009 EDA-Outlier及處理
+* 
 <br>
