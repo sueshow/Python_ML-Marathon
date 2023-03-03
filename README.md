@@ -35,6 +35,7 @@
     * ROC(Receiver Operating Curve)：客群樣貌、素材好壞
     * MAP@N：如 MAP@5、MAP@12
 * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
+  * 目標：寫一個 MSE 函數
 <br>
 
 ### D002 機器學習概論
@@ -55,6 +56,7 @@
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
 * [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
+  * 目標：瞭解機器學習適合應用的領域與範疇
 <br>
 
 ### D003 機器學習-流程與步驟
@@ -93,6 +95,7 @@
     * 輸出預測結果
     * 視專案需求整合前後端，資料格式使用 json、csv
 * [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
+  * 閱讀文章：機器學習巨頭作的專案
 <br>
 
 ### D004 EDA/讀取資料與分析流程
@@ -116,7 +119,16 @@
     * 收集資料
     * 數據清理 → 特徵萃取 → 資料視覺化 → 建立模型 → 驗證模型
     * 決策應用
-* [作業D004]()
+* 作業
+  * [範例D004]()
+    * 重點
+      * 使用 pandas.read_csv 讀取資料
+      * 簡單瀏覽 pandas 所讀進的資料
+  * [作業D004]()
+    * 重點
+      * 列出資料的大小：shape
+      * 列出所有欄位：columns
+      * 擷取部分資料：loc、iloc
 <br>
 
 
@@ -190,6 +202,14 @@
       * [寫給自己的技術筆記 - 作為程式開發者我們絕對不能忽略的JSON - Python 如何處理JSON文件](https://matters.news/@CHWang/103773-%E5%AF%AB%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98-%E4%BD%9C%E7%82%BA%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC%E8%80%85%E6%88%91%E5%80%91%E7%B5%95%E5%B0%8D%E4%B8%8D%E8%83%BD%E5%BF%BD%E7%95%A5%E7%9A%84json-python-%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86json%E6%96%87%E4%BB%B6-bafyreibegh77qc2xaejwbbbv5xdoodgqyaznesq5uhety5von3rpqzdaoa)
   * [範例D005-3]()
     * 讀取圖片：skimage、PIL、OpenCV
+  * [作業D005]()
+    * 重點
+      * 用 skimage.io 讀取圖檔
+      * 用 PIL.Image 讀取圖檔
+      * 用 OpenCV 讀取圖檔：pip install opencv-python
+        * cv2.IMREAD_COLOR：讀取 RGB 的三個 CHANNELS 的彩色圖片，忽略透明度的 CHANNELS
+        * cv2.IMREAD_GRAYSCALE：灰階
+        * cv2.IMREAD_UNCHANGED：讀取圖片的所有 CHANNELS，包含透明度的 CHANNELS
 <br>
 
 ### D006 EDA-欄位的資料類型介紹及處理
