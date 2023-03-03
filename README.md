@@ -139,3 +139,53 @@
 ### D009 EDA-Outlier及處理
 * 
 <br>
+
+### D010 EDA-去除離群值(數值型)
+* 
+<br>
+
+### D011 EDA-常用的數值取代
+* 中位數
+* 分位數
+* 連續數值標準化
+<br>
+
+### D012 EDA-補缺失值與標準化(數值型)
+* 
+<br>
+
+### D013 常見的 DataFrame 操作
+* 
+<br>
+
+### D014 程式實作 EDA-相關係數簡介
+* 
+<br>
+
+### D015 EDA-Correlation
+* 
+<br>
+
+### D016 EDA-不同數值範圍間的特徵如何檢視
+* 
+<br>
+
+### D017 EDA-把連續型變數離散化
+* 
+<br>
+
+### D018 程式實作EDA-把連續型變數離散化
+* 
+<br>
+
+### D019 程式實作-Subplots
+* 
+<br>
+
+### D020 程式實作-Heatmap & Grid-plot
+* 
+<br>
+
+### D021 模型-Logistic Regression
+* 
+<br>
