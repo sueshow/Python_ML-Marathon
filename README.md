@@ -180,14 +180,16 @@
   * [Pandas Foundations](https://www.datacamp.com/courses/data-manipulation-with-pandas)
   * [github repo](https://github.com/guipsamora/pandas_exercises)
 * 作業
-  * [作業D005-1]()
+  * [範例D005-1]()
     * Dict → DataFrame
     * List → DataFrame
-    * Group by 
-  * [作業D005-2]()
+    * Group by
+  * [範例D005-2]()
     * 檔案轉換：txt、json、npy、Pickle
     * 參考資料
       * [寫給自己的技術筆記 - 作為程式開發者我們絕對不能忽略的JSON - Python 如何處理JSON文件](https://matters.news/@CHWang/103773-%E5%AF%AB%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98-%E4%BD%9C%E7%82%BA%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC%E8%80%85%E6%88%91%E5%80%91%E7%B5%95%E5%B0%8D%E4%B8%8D%E8%83%BD%E5%BF%BD%E7%95%A5%E7%9A%84json-python-%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86json%E6%96%87%E4%BB%B6-bafyreibegh77qc2xaejwbbbv5xdoodgqyaznesq5uhety5von3rpqzdaoa)
+  * [範例D005-3]()
+    * 讀取圖片：skimage、PIL、OpenCV
 <br>
 
 ### D006 EDA-欄位的資料類型介紹及處理
