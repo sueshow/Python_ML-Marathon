@@ -46,10 +46,11 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
-    * 應用：降維(Dimension Reduction)、分群(Clustering)
+    * 應用：降維 Dimension Reduction、分群 Clustering
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
@@ -121,6 +122,9 @@
 
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
+* 前處理 Processing
+  * 資料讀取 → 格式調整 → 填補缺值 → 去離群值 → 特徵縮放
+  * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
 * 
 <br>
 
