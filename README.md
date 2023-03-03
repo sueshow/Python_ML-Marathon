@@ -124,8 +124,70 @@
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
 * 前處理 Processing
   * 資料讀取 → 格式調整 → 填補缺值 → 去離群值 → 特徵縮放
-  * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
-* 
+  * 用途
+    * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
+    * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
+    * 先建立 dataframe 來瞭解所需的資料結構、分佈
+* 讀取其他資料格式：txt / jpg / png / json / mat / npy / pkl
+  * 圖像檔 (jpg / png)
+    * 範例：可使用 PIL、Skimage、CV2，其中 CV2 速度較快，但須注意讀入的格式為BGR
+      ```
+      Import cv2
+      image = cv2.imread(...) # 注意 cv2 會以 BGR 讀入
+      image = cv2.cvtcolor(image, cv2.COLOR_BGR2RGB)
+
+      from PIL import Image
+      image = Image.read(...)
+      import skimage.io as skio
+      image = skio.imread(...)
+      ```
+  * Python npy：可儲存處理後的資料
+    * 範例
+      ```
+      import numpy as np
+      arr = np.load(example.npy)
+      ```
+  * Pickle (pkl)：可儲存處理後的資料
+    * 範例
+      ```
+      import pickle
+      with open('example.pkl', 'rb') as f:
+          arr = pickle.load(f)
+      ```
+* 程式用法
+  <table border="1" width="40%">
+    <tr>
+        <th width="10%">函式</a>
+        <th width="10%">用途</a>
+        <th width="10%">函式</a>
+        <th width="10%">用途</a>
+    </tr>
+    <tr>
+        <td> pd.DataFrame </td>
+        <td> 建立一個 dataframe </td>
+        <td> np.random.randint </td>
+        <td> 產生隨機數值 </td>
+    </tr>
+    <tr>
+        <td> with open() </td>
+        <td> 文字格式 </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+  </table>
+  
+* 延伸閱讀
+  * [Pandas Foundations](https://www.datacamp.com/courses/data-manipulation-with-pandas)
+  * [github repo](https://github.com/guipsamora/pandas_exercises)
+* 作業
+  * [作業D005-1]()
+    * Dict → DataFrame
+    * List → DataFrame
+    * Group by 
+  * [作業D005-2]()
+    * 檔案轉換：txt、json、npy、Pickle
+    * 參考資料
+      * [寫給自己的技術筆記 - 作為程式開發者我們絕對不能忽略的JSON - Python 如何處理JSON文件](https://matters.news/@CHWang/103773-%E5%AF%AB%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98-%E4%BD%9C%E7%82%BA%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC%E8%80%85%E6%88%91%E5%80%91%E7%B5%95%E5%B0%8D%E4%B8%8D%E8%83%BD%E5%BF%BD%E7%95%A5%E7%9A%84json-python-%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86json%E6%96%87%E4%BB%B6-bafyreibegh77qc2xaejwbbbv5xdoodgqyaznesq5uhety5von3rpqzdaoa)
 <br>
 
 ### D006 EDA-欄位的資料類型介紹及處理
