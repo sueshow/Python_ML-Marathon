@@ -1,6 +1,8 @@
 # Python_ML-Marathon
 
-## D001 資料介紹與評估資料
+
+## 機器學習概論
+### D001 資料介紹與評估資料
 * 進入資料科學領域的流程
   * 找到問題：挑一個有趣的問題，並解決一個簡單的問題開始
   * 初探：在這個題目上做一個原型解決方案(prototype solution)
@@ -33,10 +35,10 @@
     * ROC(Receiver Operating Curve)：客群樣貌、素材好壞
     * MAP@N：如 MAP@5、MAP@12
 * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
+  * 目標：寫一個 MSE 函數
 <br>
 
-
-## D002 機器學習概論
+### D002 機器學習概論
 * 機器學習範疇
   * 人工智慧 > 機器學習 > 深度學習
   * 白話文：讓機器從資料中找尋規律與趨勢而不需要給定特殊規則
@@ -45,17 +47,19 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
-    * 應用：降維(Dimension Reduction)、分群(Clustering)
+    * 應用：降維 Dimension Reduction、分群 Clustering
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
+* [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
+  * 目標：瞭解機器學習適合應用的領域與範疇
 <br>
 
-
-## D003 機器學習-流程與步驟
+### D003 機器學習-流程與步驟
 * 機器學習專案開發流程
   * 資料蒐集、前處理
     * 資料來源
@@ -90,10 +94,186 @@
     * 送進模型進行預測
     * 輸出預測結果
     * 視專案需求整合前後端，資料格式使用 json、csv
+* [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
+  * 閱讀文章：機器學習巨頭作的專案
+<br>
+
+### D004 EDA/讀取資料與分析流程
+* 範例：Home Credit Default Risk (房貸風險預測 from Kaggle)
+  * 目的：預測借款者是否會還款，以還款機率作為最終輸出
+  * 此問題為分類問題
+  * 步驟：
+    * 為何這個問題重要：有人沒有信用資料
+    * 資料從何而來：信用局(Credit Bureau)調閱紀錄、Home Credit內部紀錄(過去借貸、信用卡狀況)
+    * 資料的型態：結構化資料(數值、類別資料)
+    * 可以回答什麼問題：指標
+      * [ROC](https://zh.wikipedia.org/wiki/ROC%E6%9B%B2%E7%BA%BF)
+      * AUC：0.5代表隨機猜測，~1則代表模型預測力越好
+* EDA
+  * 初步透過視覺化/統計工具進行分析，達到三個主題目的
+    * 了解資料：獲取資料所包含的資訊、結構和特點
+    * 發現 outliers 或異常數值：檢查資料是否有誤
+    * 分析各變數間的關聯性：找到重要的變數
+  * 觀察資料，並檢查是否符合分析前的假設
+  * 數據分析流程
+    * 收集資料
+    * 數據清理 → 特徵萃取 → 資料視覺化 → 建立模型 → 驗證模型
+    * 決策應用
+* 作業
+  * [範例D004]()
+    * 重點
+      * 使用 pandas.read_csv 讀取資料
+      * 簡單瀏覽 pandas 所讀進的資料
+  * [作業D004]()
+    * 重點
+      * 列出資料的大小：shape
+      * 列出所有欄位：columns
+      * 擷取部分資料：loc、iloc
 <br>
 
 
-## D004 EDA/讀取資料與分析流程
-* 範例
-  * 
+## 資料清理數據前處理
+### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
+* 前處理 Processing
+  * 資料讀取 → 格式調整 → 填補缺值 → 去離群值 → 特徵縮放
+  * 用途
+    * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
+    * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
+    * 先建立 dataframe 來瞭解所需的資料結構、分佈
+* 讀取其他資料格式：txt / jpg / png / json / mat / npy / pkl
+  * 圖像檔 (jpg / png)
+    * 範例：可使用 PIL、Skimage、CV2，其中 CV2 速度較快，但須注意讀入的格式為BGR
+      ```
+      Import cv2
+      image = cv2.imread(...) # 注意 cv2 會以 BGR 讀入
+      image = cv2.cvtcolor(image, cv2.COLOR_BGR2RGB)
+
+      from PIL import Image
+      image = Image.read(...)
+      import skimage.io as skio
+      image = skio.imread(...)
+      ```
+  * Python npy：可儲存處理後的資料
+    * 範例
+      ```
+      import numpy as np
+      arr = np.load(example.npy)
+      ```
+  * Pickle (pkl)：可儲存處理後的資料
+    * 範例
+      ```
+      import pickle
+      with open('example.pkl', 'rb') as f:
+          arr = pickle.load(f)
+      ```
+* 程式用法
+  <table border="1" width="40%">
+    <tr>
+        <th width="10%">函式</a>
+        <th width="10%">用途</a>
+        <th width="10%">函式</a>
+        <th width="10%">用途</a>
+    </tr>
+    <tr>
+        <td> pd.DataFrame </td>
+        <td> 建立一個 dataframe </td>
+        <td> np.random.randint </td>
+        <td> 產生隨機數值 </td>
+    </tr>
+    <tr>
+        <td> with open() </td>
+        <td> 文字格式 </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+  </table>
+  
+* 延伸閱讀
+  * [Pandas Foundations](https://www.datacamp.com/courses/data-manipulation-with-pandas)
+  * [github repo](https://github.com/guipsamora/pandas_exercises)
+* 作業
+  * [範例D005-1]()
+    * Dict → DataFrame
+    * List → DataFrame
+    * Group by
+  * [範例D005-2]()
+    * 檔案轉換：txt、json、npy、Pickle
+    * 參考資料
+      * [寫給自己的技術筆記 - 作為程式開發者我們絕對不能忽略的JSON - Python 如何處理JSON文件](https://matters.news/@CHWang/103773-%E5%AF%AB%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98-%E4%BD%9C%E7%82%BA%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC%E8%80%85%E6%88%91%E5%80%91%E7%B5%95%E5%B0%8D%E4%B8%8D%E8%83%BD%E5%BF%BD%E7%95%A5%E7%9A%84json-python-%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86json%E6%96%87%E4%BB%B6-bafyreibegh77qc2xaejwbbbv5xdoodgqyaznesq5uhety5von3rpqzdaoa)
+  * [範例D005-3]()
+    * 讀取圖片：skimage、PIL、OpenCV
+  * [作業D005]()
+    * 重點
+      * 用 skimage.io 讀取圖檔
+      * 用 PIL.Image 讀取圖檔
+      * 用 OpenCV 讀取圖檔：pip install opencv-python
+        * cv2.IMREAD_COLOR：讀取 RGB 的三個 CHANNELS 的彩色圖片，忽略透明度的 CHANNELS
+        * cv2.IMREAD_GRAYSCALE：灰階
+        * cv2.IMREAD_UNCHANGED：讀取圖片的所有 CHANNELS，包含透明度的 CHANNELS
+<br>
+
+### D006 EDA-欄位的資料類型介紹及處理
+* 
+<br>
+
+### D007 EDA-特徵類型
+* 
+<br>
+
+### D008 EDA-資料分佈
+* 
+<br>
+
+### D009 EDA-Outlier及處理
+* 
+<br>
+
+### D010 EDA-去除離群值(數值型)
+* 
+<br>
+
+### D011 EDA-常用的數值取代
+* 中位數
+* 分位數
+* 連續數值標準化
+<br>
+
+### D012 EDA-補缺失值與標準化(數值型)
+* 
+<br>
+
+### D013 常見的 DataFrame 操作
+* 
+<br>
+
+### D014 程式實作 EDA-相關係數簡介
+* 
+<br>
+
+### D015 EDA-Correlation
+* 
+<br>
+
+### D016 EDA-不同數值範圍間的特徵如何檢視
+* 
+<br>
+
+### D017 EDA-把連續型變數離散化
+* 
+<br>
+
+### D018 程式實作EDA-把連續型變數離散化
+* 
+<br>
+
+### D019 程式實作-Subplots
+* 
+<br>
+
+### D020 程式實作-Heatmap & Grid-plot
+* 
+<br>
+
+### D021 模型-Logistic Regression
+* 
 <br>
