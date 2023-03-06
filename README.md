@@ -278,18 +278,27 @@
     * Label encoding：使用時機為資料類別間有順序的概念，如年齡分組
     * One Hot encoding：使用時機為資料類別間無順序的概念，如國家
 * 範例與作業
-  * [範例D006]()
+  * [範例D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_006_HW_EDA%E6%AC%84%E4%BD%8D%E7%9A%84%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E4%BB%8B%E7%B4%B9%E5%8F%8A%E8%99%95%E7%90%86/Day_006_column_data_type.ipynb)
     * 重點
       * 檢視 DataFrame 的資料型態
       * 瞭解 Label Encoding 如何寫
       * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
-  * [作業D006]()
+  * [作業D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_006_column_data_type_Ans.ipynb)
 <br>
 
 ### D007 EDA-特徵類型
 * 特徵類別：[參考資料](https://openhome.cc/Gossip/CodeData/PythonTutorial/NumericStringPy3.html)
   * 數值型特徵：有不同轉換方式，函數/條件式都可以，如坪數、年齡
+    * 填補缺失值或直接去除離群值的方法：[去偏態](https://ithelp.ithome.com.tw/articles/10219949?sc=iThelpR)，符合常態假設
+      * 對數去偏(log1p)
+      * 方根去偏(sqrt)
+      * 分布去偏(boxcox)
   * 類別型特徵：通常一種類別對應一種分數，如行政區、性別
+    * 標籤編碼(Label Encoding)
+    * 獨熱編碼(One Hot Encoding)
+    * 均值編碼(Mean Encoding)
+    * 計數編碼(Counting)
+    * 特徵雜湊(Feature Hash)
   * 其他類別
     <table border="1" width="13%">
       <tr>
@@ -309,13 +318,36 @@
       <tr>
         <td> 時間型特徵 </td>
         <td> ● 不適合當作數值型或類別型特徵，可能會失去週期性、排序資訊 <br>
-             ● 特殊之處在於有週期性</td>
+             ● 特殊之處在於有週期性 <br>
+             ● 處理方式：時間特徵分解、週期循環特徵 </td>
+      </tr>
+      <tr>
+        <td> 文本型 </td>
+        <td> ● TF-IDF、詞袋、word2vec </td>
+      </tr>
+      <tr>
+        <td> 統計型 </td>
+        <td> ● 比率、次序、加減乘除平均、分位數 </td>
+      </tr>
+      <tr>
+        <td> 其他類型 </td>
+        <td> ● 組合特徵 </td>
       </tr>
     </table> 
 
-* 模型優劣的評估
-  * 以 [cross_val_score](https://zhuanlan.zhihu.com/p/24825503) 顯示改善效果
-*   
+* [交叉驗證](https://zhuanlan.zhihu.com/p/24825503)
+  * 以 cross_val_score 顯示改善效果
+  * 方法
+    * 留出法(holdout cross validation)
+    * K 拆交叉驗證法(K fold Cross Vaildation)：將所有數據集切成 K 等分，不重複選其中一份當測試集，其他當訓練集，並計算模型在測試集上的 MSE
+    * 留一法(Leave one out cross validation; LOOCV)：只用一個數據當測試集，其他全為訓練集
+    * Bootstrap Sampling
+* 範例與作業
+  * [範例D007]()
+    * 以房價預測為範例，看特徵類型
+  * [作業D007]()
+    * 以鐵達尼生存預測為範例
+    * 目標：完成三種不同特徵類型的三種資料操作，觀察其結果(何類難處理)
 <br>
 
 ### D008 EDA-資料分佈
