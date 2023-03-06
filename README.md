@@ -287,7 +287,35 @@
 <br>
 
 ### D007 EDA-特徵類型
-* 
+* 特徵類別：[參考資料](https://openhome.cc/Gossip/CodeData/PythonTutorial/NumericStringPy3.html)
+  * 數值型特徵：有不同轉換方式，函數/條件式都可以，如坪數、年齡
+  * 類別型特徵：通常一種類別對應一種分數，如行政區、性別
+  * 其他類別
+    <table border="1" width="13%">
+      <tr>
+        <th width="3%">特徵</a>
+        <th width="10%">說明</a>
+      </tr>
+      <tr>
+        <td> 二元特徵 </td>
+        <td> ● 只有 True/False 兩種數值的特徵 <br>
+             ● 可當作類別型，也可當作數值型特徵(True:1/False:0) </td>
+      </tr>
+      <tr>
+        <td> 排序型特徵 </td>
+        <td> ● 如名次/百分等級，有大小關係，但非連續數字 <br>
+             ● 通常視為數值型特徵，避免失去排序資訊 </td>
+      </tr>
+      <tr>
+        <td> 時間型特徵 </td>
+        <td> ● 不適合當作數值型或類別型特徵，可能會失去週期性、排序資訊 <br>
+             ● 特殊之處在於有週期性</td>
+      </tr>
+    </table> 
+
+* 模型優劣的評估
+  * 以 [cross_val_score](https://zhuanlan.zhihu.com/p/24825503) 顯示改善效果
+*   
 <br>
 
 ### D008 EDA-資料分佈
