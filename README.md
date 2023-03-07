@@ -135,7 +135,7 @@
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
 * 前處理 Processing
-  * 資料讀取 D005 → 格式調整 D006、D007 → 填補缺值 → 去離群值 → 特徵縮放
+  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009 → 去離群值 → 特徵縮放
   * 用途
     * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
     * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
@@ -351,7 +351,32 @@
 <br>
 
 ### D008 EDA-資料分佈
-* 
+* 統計量化
+  * 基本統計分析方法
+    * 描述性分析：總量分析、相對數分析、平均數、變異指數等
+    * 趨勢概率分析：計算集中趨勢 
+      * 算數平均值 Mean
+      * 中位數 Median
+      * 眾數 Mode
+    * 離散程度分析：計算資料分散程度
+      * 最小值 Min、最大值 Max、範圍 Range
+      * 四分位差 Quartiles
+      * 變異數 Variance
+      * 標準差 Standard deviation
+      * 極差、方差
+  * 列表分析
+  * 假設檢驗分析 
+    * 分布程式：[常見統計分布](https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1b-statistical-methods/statistical-distributions)
+    * 參數估計(含點、區間)
+    * 統程
+    * 多項分析與*2檢驗
+  * 多元統計分析
+    * 一元線性回歸分析
+    * 聚類分析，如KNN
+* 視覺化
+  * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
+* 範例與作業
+  * [作業D008]() 
 <br>
 
 ### D009 EDA-Outlier及處理
