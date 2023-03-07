@@ -343,9 +343,9 @@
     * 留一法(Leave one out cross validation; LOOCV)：只用一個數據當測試集，其他全為訓練集
     * Bootstrap Sampling
 * 範例與作業
-  * [範例D007]()
+  * [範例D007](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_007_HW_%E7%89%B9%E5%BE%B5%E9%A1%9E%E5%9E%8B/Day_007_Feature_Types.ipynb)
     * 以房價預測為範例，看特徵類型
-  * [作業D007]()
+  * [作業D007](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_007_Ans.ipynb)
     * 以鐵達尼生存預測為範例
     * 目標：完成三種不同特徵類型的三種資料操作，觀察其結果(何類難處理)
 <br>
@@ -376,7 +376,7 @@
 * 視覺化
   * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
 * 範例與作業
-  * [作業D008]() 
+  * [作業D008](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_008_Ans.ipynb) 
     * DataFrame下可用的函數
       * .mean()、median()、.sum()
       * .cumsum()：以上累積
