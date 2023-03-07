@@ -419,7 +419,7 @@
     * 捨棄離群值：離群值數量夠少時使用
     * 調整離群值：取代
 * 範例與作業
-  * [範例D010]()
+  * [範例D010](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_010_%E6%95%B8%E5%80%BC%E5%9E%8B%E7%89%B9%E5%BE%B5/Day_010_Outliers.ipynb)
     * 觀察原始數值的散佈圖及線性迴歸分數(用 cross-validation score 來評估)
     * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
     * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
