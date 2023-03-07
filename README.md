@@ -410,7 +410,7 @@
 ### D010 EDA-去除離群值(數值型)
 * [離群值](https://zhuanlan.zhihu.com/p/33468998)
   * 只有少數幾筆資料跟其他數值差異很大，標準化無法處理
-    * 常態標準化：Z-score = (Xi-mean(Xi))/variance(Xi)
+    * 常態標準化：Z-score = (Xi-mean(Xi))/std(Xi)
     * 最大最小化：(Xi-min(Xi))/(max(Xi)-min(Xi))，code：MinMaxScaler
     * 參考資料
       * [資料預處理- 特徵工程- 標準化](https://matters.news/@CHWang/77028-machine-learning-%E8%B3%87%E6%96%99%E9%A0%90%E8%99%95%E7%90%86-%E7%89%B9%E5%BE%B5%E5%B7%A5%E7%A8%8B-%E6%A8%99%E6%BA%96%E5%8C%96-standard-scaler-%E5%85%AC%E5%BC%8F%E6%95%99%E5%AD%B8%E8%88%87python%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%AF%A6%E4%BD%9C%E6%95%99%E5%AD%B8-bafyreihd2uc5clmc7kzzswuhvfd56axliecfzxlk5236o54cvvcphgumzu)
@@ -429,9 +429,49 @@
 <br>
 
 ### D011 EDA-常用的數值取代
-* 中位數
-* 分位數
-* 連續數值標準化
+* 處理例外值：常用以填補的統計值
+  <table border="1" width="26%">
+      <tr>
+        <th width="3%">統計值</a>
+        <th width="10%">語法</a>
+        <th width="3%">統計值</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 中位數(median) </td>
+        <td> np.median(value_array) </td>
+        <td> 分位數(quantiles) </td>
+        <td> np.quantile(value_array, q=...) </td>
+      </tr>
+      <tr>
+        <td> 眾數(mode) </td>
+        <td> scipy.stats.mode(value_array)：較慢的方法 <br>
+             dictionary method：較快的方法</td>
+        <td> 平均數(mean) </td>
+        <td> np.mean(value_array) </td>
+      </tr>
+  </table>
+* 連續數據標準化
+  * 單位不同對 y 的影響完全不同
+  * 模型
+    * 有影響的模型：Regression model
+    * 影響不大的模型：Tree-based model
+  * 常用方式
+    * Z 轉換：(Xi-mean(Xi))/std(Xi)  
+    * 空間壓縮：有時候不會使用 min/max 方法進行標準化，而會採用 Qlow/Qhigh normalization 
+      * Y = 0~1，(Xi-min(Xi))/(max(Xi)-min(Xi))
+      * Y = -1~1，((Xi-min(Xi))/(max(Xi)-min(Xi))-0.5)*2
+      * Y = 0~1，針對特別影像，Xi/255
+  * 標準化的優缺點
+    * 優
+      * 某些演算法(如SVM、DL)等，對權眾敏感或對損失函數平滑程度有幫助者
+      * 特徵間的量級差異甚大
+    * 劣
+      * 有些指標，如相關不適合在有標準化的空間進行
+      * 量的單位在某些特徵上是有意義的
+* 範例與作業
+  * []()
+  * []()
 <br>
 
 ### D012 EDA-補缺失值與標準化(數值型)
