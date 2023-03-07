@@ -121,14 +121,12 @@
     * 決策應用
 * 範例與作業
   * [範例D004](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_004_HW_EDA_%E8%AE%80%E5%8F%96%E8%B3%87%E6%96%99%E8%88%87%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/Day_004_first_EDA.ipynb)
-    * 重點
-      * 使用 pandas.read_csv 讀取資料
-      * 簡單瀏覽 pandas 所讀進的資料
-  * [作業D004]()
-    * 重點
-      * 列出資料的大小：shape
-      * 列出所有欄位：columns
-      * 擷取部分資料：loc、iloc
+    * 使用 pandas.read_csv 讀取資料
+    * 簡單瀏覽 pandas 所讀進的資料
+  * [作業D004](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_004_first_EDA_Ans.ipynb)
+    * 列出資料的大小：shape
+    * 列出所有欄位：columns
+    * 擷取部分資料：loc、iloc
 <br>
 
 
@@ -201,19 +199,17 @@
     * 參考資料
       * [寫給自己的技術筆記 - 作為程式開發者我們絕對不能忽略的JSON - Python 如何處理JSON文件](https://matters.news/@CHWang/103773-%E5%AF%AB%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98-%E4%BD%9C%E7%82%BA%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC%E8%80%85%E6%88%91%E5%80%91%E7%B5%95%E5%B0%8D%E4%B8%8D%E8%83%BD%E5%BF%BD%E7%95%A5%E7%9A%84json-python-%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86json%E6%96%87%E4%BB%B6-bafyreibegh77qc2xaejwbbbv5xdoodgqyaznesq5uhety5von3rpqzdaoa)
   * [範例D005-3](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_005_HW_%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BA%E4%B8%80%E5%80%8Bdataframe/Day_005-3_read_and_write_files.ipynb)
-    * 重點
-      * 用 skimage.io 讀取圖檔
-      * 用 PIL.Image 讀取圖檔
-      * 用 OpenCV 讀取圖檔：pip install opencv-python
-        * cv2.IMREAD_COLOR：讀取 RGB 的三個 CHANNELS 的彩色圖片，忽略透明度的 CHANNELS
+    * 用 skimage.io 讀取圖檔
+    * 用 PIL.Image 讀取圖檔
+    * 用 OpenCV 讀取圖檔：pip install opencv-python
+      * cv2.IMREAD_COLOR：讀取 RGB 的三個 CHANNELS 的彩色圖片，忽略透明度的 CHANNELS
         * cv2.IMREAD_GRAYSCALE：灰階
         * cv2.IMREAD_UNCHANGED：讀取圖片的所有 CHANNELS，包含透明度的 CHANNELS
   * [作業D005-1](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-1_HW.ipynb)
     * 重點：DataFrame、Group by
-  * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_HW.ipynb)
-    * 重點
-      * 從網頁上讀取連結清單
-      * 從清單網址讀取圖片
+  * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_HW.ipynb)  
+    * 從網頁上讀取連結清單
+    * 從清單網址讀取圖片
 <br>
 
 ### D006 EDA-欄位的資料類型介紹及處理
@@ -279,10 +275,9 @@
     * One Hot encoding：使用時機為資料類別間無順序的概念，如國家
 * 範例與作業
   * [範例D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_006_HW_EDA%E6%AC%84%E4%BD%8D%E7%9A%84%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E4%BB%8B%E7%B4%B9%E5%8F%8A%E8%99%95%E7%90%86/Day_006_column_data_type.ipynb)
-    * 重點
-      * 檢視 DataFrame 的資料型態
-      * 瞭解 Label Encoding 如何寫
-      * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
+    * 檢視 DataFrame 的資料型態
+    * 瞭解 Label Encoding 如何寫
+    * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
   * [作業D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_006_column_data_type_Ans.ipynb)
 <br>
 
@@ -407,9 +402,8 @@
     * [離群值處理參考資料](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
 * 範例與作業
   * [範例D009]()
-    * 重點
-      * 計算統計值、畫圖(直方圖)來觀察離群值
-      * 疑似離群值的資料移除後，看剩餘的資料是否正常
+    * 計算統計值、畫圖(直方圖)來觀察離群值
+    * 疑似離群值的資料移除後，看剩餘的資料是否正常
   * [作業D009]()
 <br>
 
@@ -426,6 +420,9 @@
     * 調整離群值：取代
 * 範例與作業
   * [範例D010]()
+    * 觀察原始數值的散佈圖，及線性迴歸分數
+    * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
+    * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
   * [作業D010]()
 <br>
 
