@@ -377,10 +377,22 @@
   * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
 * 範例與作業
   * [作業D008]() 
+    * DataFrame下可用的函數
+      * .mean()、median()、.sum()
+      * .cumsum()：以上累積
+      * .describe()：描述性統計
+      * .var()、.std()
+      * .skew()、.kurt()
+      * .corr()、.cov()
+    * [視覺化](https://pandas.pydata.org/pandas-docs/version/0.23.4/visualization.html)
 <br>
 
 ### D009 EDA-Outlier及處理
-* 
+* 離群值、異常值(Outlier)
+  * 可能出現的原因
+    * 未知值
+    * 錯誤紀錄/手誤/系統性錯誤
+* [](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
 <br>
 
 ### D010 EDA-去除離群值(數值型)
