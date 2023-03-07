@@ -135,14 +135,14 @@
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
 * 前處理 Processing
-  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009 → 去離群值 → 特徵縮放
+  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009 → 去離群值 D010 → 特徵縮放
   * 用途
     * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
     * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
     * 先建立 dataframe 來瞭解所需的資料結構、分佈
 * 讀取其他資料格式：txt / jpg / png / json / mat / npy / pkl
   * 圖像檔 (jpg / png)
-    * 範例：可使用 PIL、Skimage、CV2，其中 CV2 速度較快，但須注意讀入的格式為BGR
+    * 範例：可使用 PIL、Skimage、CV2，其中 CV2 速度較快，但須注意讀入的格式為 BGR
       ```
       Import cv2
       image = cv2.imread(...) # 注意 cv2 會以 BGR 讀入
@@ -414,7 +414,19 @@
 <br>
 
 ### D010 EDA-去除離群值(數值型)
-* 
+* [離群值](https://zhuanlan.zhihu.com/p/33468998)
+  * 只有少數幾筆資料跟其他數值差異很大，標準化無法處理
+    * 常態標準化：Z-score = (Xi-mean(Xi))/variance(Xi)
+    * 最大最小化：(Xi-min(Xi))/(max(Xi)-min(Xi))
+    * 參考資料
+      * [資料預處理- 特徵工程- 標準化](https://matters.news/@CHWang/77028-machine-learning-%E8%B3%87%E6%96%99%E9%A0%90%E8%99%95%E7%90%86-%E7%89%B9%E5%BE%B5%E5%B7%A5%E7%A8%8B-%E6%A8%99%E6%BA%96%E5%8C%96-standard-scaler-%E5%85%AC%E5%BC%8F%E6%95%99%E5%AD%B8%E8%88%87python%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%AF%A6%E4%BD%9C%E6%95%99%E5%AD%B8-bafyreihd2uc5clmc7kzzswuhvfd56axliecfzxlk5236o54cvvcphgumzu)
+      * [Sklearn 套件教學](https://matters.news/@CHWang/78462-machine-learning-%E6%A8%99%E6%BA%96%E5%8C%96-standard-scaler-%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90%E6%95%B8%E6%93%9A%E6%A8%99%E6%BA%96%E5%8C%96-sklearn-%E5%A5%97%E4%BB%B6%E6%95%99%E5%AD%B8-bafyreibpusofl5b3tt43ovknw2mnjzrmekfldelelyl33luzkfzc4k6loy)
+  * 方法：用 cross-validation 來選擇
+    * 捨棄離群值：離群值數量夠少時使用
+    * 調整離群值：取代
+* 範例與作業
+  * [範例D010]()
+  * [作業D010]()
 <br>
 
 ### D011 EDA-常用的數值取代
