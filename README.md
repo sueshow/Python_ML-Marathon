@@ -121,28 +121,26 @@
     * 決策應用
 * 範例與作業
   * [範例D004](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_004_HW_EDA_%E8%AE%80%E5%8F%96%E8%B3%87%E6%96%99%E8%88%87%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/Day_004_first_EDA.ipynb)
-    * 重點
-      * 使用 pandas.read_csv 讀取資料
-      * 簡單瀏覽 pandas 所讀進的資料
-  * [作業D004]()
-    * 重點
-      * 列出資料的大小：shape
-      * 列出所有欄位：columns
-      * 擷取部分資料：loc、iloc
+    * 使用 pandas.read_csv 讀取資料
+    * 簡單瀏覽 pandas 所讀進的資料
+  * [作業D004](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_004_first_EDA_Ans.ipynb)
+    * 列出資料的大小：shape
+    * 列出所有欄位：columns
+    * 擷取部分資料：loc、iloc
 <br>
 
 
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
 * 前處理 Processing
-  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009 → 去離群值 → 特徵縮放
+  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009 → 去離群值 D010 → 特徵縮放
   * 用途
     * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
     * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
     * 先建立 dataframe 來瞭解所需的資料結構、分佈
 * 讀取其他資料格式：txt / jpg / png / json / mat / npy / pkl
   * 圖像檔 (jpg / png)
-    * 範例：可使用 PIL、Skimage、CV2，其中 CV2 速度較快，但須注意讀入的格式為BGR
+    * 範例：可使用 PIL、Skimage、CV2，其中 CV2 速度較快，但須注意讀入的格式為 BGR
       ```
       Import cv2
       image = cv2.imread(...) # 注意 cv2 會以 BGR 讀入
@@ -201,19 +199,17 @@
     * 參考資料
       * [寫給自己的技術筆記 - 作為程式開發者我們絕對不能忽略的JSON - Python 如何處理JSON文件](https://matters.news/@CHWang/103773-%E5%AF%AB%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98-%E4%BD%9C%E7%82%BA%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC%E8%80%85%E6%88%91%E5%80%91%E7%B5%95%E5%B0%8D%E4%B8%8D%E8%83%BD%E5%BF%BD%E7%95%A5%E7%9A%84json-python-%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86json%E6%96%87%E4%BB%B6-bafyreibegh77qc2xaejwbbbv5xdoodgqyaznesq5uhety5von3rpqzdaoa)
   * [範例D005-3](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_005_HW_%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BA%E4%B8%80%E5%80%8Bdataframe/Day_005-3_read_and_write_files.ipynb)
-    * 重點
-      * 用 skimage.io 讀取圖檔
-      * 用 PIL.Image 讀取圖檔
-      * 用 OpenCV 讀取圖檔：pip install opencv-python
-        * cv2.IMREAD_COLOR：讀取 RGB 的三個 CHANNELS 的彩色圖片，忽略透明度的 CHANNELS
+    * 用 skimage.io 讀取圖檔
+    * 用 PIL.Image 讀取圖檔
+    * 用 OpenCV 讀取圖檔：pip install opencv-python
+      * cv2.IMREAD_COLOR：讀取 RGB 的三個 CHANNELS 的彩色圖片，忽略透明度的 CHANNELS
         * cv2.IMREAD_GRAYSCALE：灰階
         * cv2.IMREAD_UNCHANGED：讀取圖片的所有 CHANNELS，包含透明度的 CHANNELS
-  * [作業D005-1](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-1_HW.ipynb)
+  * [作業D005-1](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-1_Ans.ipynb)
     * 重點：DataFrame、Group by
-  * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_HW.ipynb)
-    * 重點
-      * 從網頁上讀取連結清單
-      * 從清單網址讀取圖片
+  * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_Ans.ipynb)  
+    * 從網頁上讀取連結清單
+    * 從清單網址讀取圖片
 <br>
 
 ### D006 EDA-欄位的資料類型介紹及處理
@@ -279,10 +275,9 @@
     * One Hot encoding：使用時機為資料類別間無順序的概念，如國家
 * 範例與作業
   * [範例D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_006_HW_EDA%E6%AC%84%E4%BD%8D%E7%9A%84%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E4%BB%8B%E7%B4%B9%E5%8F%8A%E8%99%95%E7%90%86/Day_006_column_data_type.ipynb)
-    * 重點
-      * 檢視 DataFrame 的資料型態
-      * 瞭解 Label Encoding 如何寫
-      * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
+    * 檢視 DataFrame 的資料型態
+    * 瞭解 Label Encoding 如何寫
+    * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
   * [作業D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_006_column_data_type_Ans.ipynb)
 <br>
 
@@ -343,9 +338,9 @@
     * 留一法(Leave one out cross validation; LOOCV)：只用一個數據當測試集，其他全為訓練集
     * Bootstrap Sampling
 * 範例與作業
-  * [範例D007]()
+  * [範例D007](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_007_HW_%E7%89%B9%E5%BE%B5%E9%A1%9E%E5%9E%8B/Day_007_Feature_Types.ipynb)
     * 以房價預測為範例，看特徵類型
-  * [作業D007]()
+  * [作業D007](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_007_Ans.ipynb)
     * 以鐵達尼生存預測為範例
     * 目標：完成三種不同特徵類型的三種資料操作，觀察其結果(何類難處理)
 <br>
@@ -376,7 +371,7 @@
 * 視覺化
   * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
 * 範例與作業
-  * [作業D008]() 
+  * [作業D008](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_008_Ans.ipynb) 
     * DataFrame下可用的函數
       * .mean()、median()、.sum()
       * .cumsum()：以上累積
@@ -407,14 +402,30 @@
     * [離群值處理參考資料](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
 * 範例與作業
   * [範例D009]()
-    * 重點
-      * 計算統計值、畫圖(直方圖)來觀察離群值
-      * 疑似離群值的資料移除後，看剩餘的資料是否正常
+    * 計算統計值、畫圖(直方圖)來觀察離群值
+    * 疑似離群值的資料移除後，看剩餘的資料是否正常
   * [作業D009]()
 <br>
 
 ### D010 EDA-去除離群值(數值型)
-* 
+* [離群值](https://zhuanlan.zhihu.com/p/33468998)
+  * 只有少數幾筆資料跟其他數值差異很大，標準化無法處理
+    * 常態標準化：Z-score = (Xi-mean(Xi))/variance(Xi)
+    * 最大最小化：(Xi-min(Xi))/(max(Xi)-min(Xi))，code：MinMaxScaler
+    * 參考資料
+      * [資料預處理- 特徵工程- 標準化](https://matters.news/@CHWang/77028-machine-learning-%E8%B3%87%E6%96%99%E9%A0%90%E8%99%95%E7%90%86-%E7%89%B9%E5%BE%B5%E5%B7%A5%E7%A8%8B-%E6%A8%99%E6%BA%96%E5%8C%96-standard-scaler-%E5%85%AC%E5%BC%8F%E6%95%99%E5%AD%B8%E8%88%87python%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%AF%A6%E4%BD%9C%E6%95%99%E5%AD%B8-bafyreihd2uc5clmc7kzzswuhvfd56axliecfzxlk5236o54cvvcphgumzu)
+      * [Sklearn 套件教學](https://matters.news/@CHWang/78462-machine-learning-%E6%A8%99%E6%BA%96%E5%8C%96-standard-scaler-%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90%E6%95%B8%E6%93%9A%E6%A8%99%E6%BA%96%E5%8C%96-sklearn-%E5%A5%97%E4%BB%B6%E6%95%99%E5%AD%B8-bafyreibpusofl5b3tt43ovknw2mnjzrmekfldelelyl33luzkfzc4k6loy)
+  * 方法：用 cross-validation 來選擇
+    * 捨棄離群值：離群值數量夠少時使用
+    * 調整離群值：取代
+* 範例與作業
+  * [範例D010]()
+    * 觀察原始數值的散佈圖及線性迴歸分數(用 cross-validation score 來評估)
+    * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
+    * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
+  * [作業D010]()
+    * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
+    * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
 <br>
 
 ### D011 EDA-常用的數值取代
