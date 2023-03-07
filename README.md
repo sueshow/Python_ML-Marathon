@@ -205,9 +205,9 @@
       * cv2.IMREAD_COLOR：讀取 RGB 的三個 CHANNELS 的彩色圖片，忽略透明度的 CHANNELS
         * cv2.IMREAD_GRAYSCALE：灰階
         * cv2.IMREAD_UNCHANGED：讀取圖片的所有 CHANNELS，包含透明度的 CHANNELS
-  * [作業D005-1](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-1_HW.ipynb)
+  * [作業D005-1](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-1_Ans.ipynb)
     * 重點：DataFrame、Group by
-  * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_HW.ipynb)  
+  * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_Ans.ipynb)  
     * 從網頁上讀取連結清單
     * 從清單網址讀取圖片
 <br>
@@ -411,7 +411,7 @@
 * [離群值](https://zhuanlan.zhihu.com/p/33468998)
   * 只有少數幾筆資料跟其他數值差異很大，標準化無法處理
     * 常態標準化：Z-score = (Xi-mean(Xi))/variance(Xi)
-    * 最大最小化：(Xi-min(Xi))/(max(Xi)-min(Xi))
+    * 最大最小化：(Xi-min(Xi))/(max(Xi)-min(Xi))，code：MinMaxScaler
     * 參考資料
       * [資料預處理- 特徵工程- 標準化](https://matters.news/@CHWang/77028-machine-learning-%E8%B3%87%E6%96%99%E9%A0%90%E8%99%95%E7%90%86-%E7%89%B9%E5%BE%B5%E5%B7%A5%E7%A8%8B-%E6%A8%99%E6%BA%96%E5%8C%96-standard-scaler-%E5%85%AC%E5%BC%8F%E6%95%99%E5%AD%B8%E8%88%87python%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%AF%A6%E4%BD%9C%E6%95%99%E5%AD%B8-bafyreihd2uc5clmc7kzzswuhvfd56axliecfzxlk5236o54cvvcphgumzu)
       * [Sklearn 套件教學](https://matters.news/@CHWang/78462-machine-learning-%E6%A8%99%E6%BA%96%E5%8C%96-standard-scaler-%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90%E6%95%B8%E6%93%9A%E6%A8%99%E6%BA%96%E5%8C%96-sklearn-%E5%A5%97%E4%BB%B6%E6%95%99%E5%AD%B8-bafyreibpusofl5b3tt43ovknw2mnjzrmekfldelelyl33luzkfzc4k6loy)
@@ -420,10 +420,12 @@
     * 調整離群值：取代
 * 範例與作業
   * [範例D010]()
-    * 觀察原始數值的散佈圖，及線性迴歸分數
+    * 觀察原始數值的散佈圖及線性迴歸分數(用 cross-validation score 來評估)
     * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
     * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
   * [作業D010]()
+    * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
+    * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
 <br>
 
 ### D011 EDA-常用的數值取代
