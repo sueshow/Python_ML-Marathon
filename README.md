@@ -389,6 +389,10 @@
 
 ### D009 EDA-Outlier及處理
 * 離群值、異常值([Outlier](https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba))
+  * 定義
+    * 數據集中有一個或一些數值與其他數值相比差異較大
+    * 一個數值偏離觀測平均值的機率小於等於 1/(2n)，則該數值應當拿掉
+    * 
   * 可能出現的原因
     * 未知值
     * 錯誤紀錄/手誤/系統性錯誤
@@ -398,7 +402,7 @@
   * 處理方法
     * 新增欄位用以紀錄異常與否
     * 填補 (取代)：視情況以中位數、Min、Max 或平均數填補(有時會用 NA)
-* [](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
+    * [離群值處理參考資料](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
 * 範例與作業
   * [範例D009]()
   * [作業D009]()
