@@ -388,11 +388,20 @@
 <br>
 
 ### D009 EDA-Outlier及處理
-* 離群值、異常值(Outlier)
+* 離群值、異常值([Outlier](https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba))
   * 可能出現的原因
     * 未知值
     * 錯誤紀錄/手誤/系統性錯誤
+  * 檢查流程與方法
+    * 確認每一個欄位的意義
+    * 透過檢查數值範圍 (平均數、標準差、中位數、分位數(IQR)、zscore) 或畫圖(散點圖(scatter plot)、分佈圖(histogram)、直方圖、盒圖(boxplot)、次數累積分佈或其他圖)檢查是否有異常
+  * 處理方法
+    * 新增欄位用以紀錄異常與否
+    * 填補 (取代)：視情況以中位數、Min、Max 或平均數填補(有時會用 NA)
 * [](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
+* 範例與作業
+  * [範例D009]()
+  * [作業D009]()
 <br>
 
 ### D010 EDA-去除離群值(數值型)
