@@ -135,7 +135,7 @@
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
 * 前處理 Processing
-  * 資料讀取 D005 → 格式調整 D006、D007 → 填補缺值 → 去離群值 → 特徵縮放
+  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009 → 去離群值 → 特徵縮放
   * 用途
     * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
     * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
@@ -278,24 +278,139 @@
     * Label encoding：使用時機為資料類別間有順序的概念，如年齡分組
     * One Hot encoding：使用時機為資料類別間無順序的概念，如國家
 * 範例與作業
-  * [範例D006]()
+  * [範例D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_006_HW_EDA%E6%AC%84%E4%BD%8D%E7%9A%84%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E4%BB%8B%E7%B4%B9%E5%8F%8A%E8%99%95%E7%90%86/Day_006_column_data_type.ipynb)
     * 重點
       * 檢視 DataFrame 的資料型態
       * 瞭解 Label Encoding 如何寫
       * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
-  * [作業D006]()
+  * [作業D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_006_column_data_type_Ans.ipynb)
 <br>
 
 ### D007 EDA-特徵類型
-* 
+* 特徵類別：[參考資料](https://openhome.cc/Gossip/CodeData/PythonTutorial/NumericStringPy3.html)
+  * 數值型特徵：有不同轉換方式，函數/條件式都可以，如坪數、年齡
+    * 填補缺失值或直接去除離群值的方法：[去偏態](https://ithelp.ithome.com.tw/articles/10219949?sc=iThelpR)，符合常態假設
+      * 對數去偏(log1p)
+      * 方根去偏(sqrt)
+      * 分布去偏(boxcox)
+  * 類別型特徵：通常一種類別對應一種分數，如行政區、性別
+    * 標籤編碼(Label Encoding)
+    * 獨熱編碼(One Hot Encoding)
+    * 均值編碼(Mean Encoding)
+    * 計數編碼(Counting)
+    * 特徵雜湊(Feature Hash)
+  * 其他類別
+    <table border="1" width="13%">
+      <tr>
+        <th width="3%">特徵</a>
+        <th width="10%">說明</a>
+      </tr>
+      <tr>
+        <td> 二元特徵 </td>
+        <td> ● 只有 True/False 兩種數值的特徵 <br>
+             ● 可當作類別型，也可當作數值型特徵(True:1/False:0) </td>
+      </tr>
+      <tr>
+        <td> 排序型特徵 </td>
+        <td> ● 如名次/百分等級，有大小關係，但非連續數字 <br>
+             ● 通常視為數值型特徵，避免失去排序資訊 </td>
+      </tr>
+      <tr>
+        <td> 時間型特徵 </td>
+        <td> ● 不適合當作數值型或類別型特徵，可能會失去週期性、排序資訊 <br>
+             ● 特殊之處在於有週期性 <br>
+             ● 處理方式：時間特徵分解、週期循環特徵 </td>
+      </tr>
+      <tr>
+        <td> 文本型 </td>
+        <td> ● TF-IDF、詞袋、word2vec </td>
+      </tr>
+      <tr>
+        <td> 統計型 </td>
+        <td> ● 比率、次序、加減乘除平均、分位數 </td>
+      </tr>
+      <tr>
+        <td> 其他類型 </td>
+        <td> ● 組合特徵 </td>
+      </tr>
+    </table> 
+
+* [交叉驗證](https://zhuanlan.zhihu.com/p/24825503)
+  * 以 cross_val_score 顯示改善效果
+  * 方法
+    * 留出法(holdout cross validation)
+    * K 拆交叉驗證法(K fold Cross Vaildation)：將所有數據集切成 K 等分，不重複選其中一份當測試集，其他當訓練集，並計算模型在測試集上的 MSE
+    * 留一法(Leave one out cross validation; LOOCV)：只用一個數據當測試集，其他全為訓練集
+    * Bootstrap Sampling
+* 範例與作業
+  * [範例D007]()
+    * 以房價預測為範例，看特徵類型
+  * [作業D007]()
+    * 以鐵達尼生存預測為範例
+    * 目標：完成三種不同特徵類型的三種資料操作，觀察其結果(何類難處理)
 <br>
 
 ### D008 EDA-資料分佈
-* 
+* 統計量化
+  * 基本統計分析方法
+    * 描述性分析：總量分析、相對數分析、平均數、變異指數等
+    * 趨勢概率分析：計算集中趨勢 
+      * 算數平均值 Mean
+      * 中位數 Median
+      * 眾數 Mode
+    * 離散程度分析：計算資料分散程度
+      * 最小值 Min、最大值 Max、範圍 Range
+      * 四分位差 Quartiles
+      * 變異數 Variance
+      * 標準差 Standard deviation
+      * 極差、方差
+  * 列表分析
+  * 假設檢驗分析 
+    * 分布程式：[常見統計分布](https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1b-statistical-methods/statistical-distributions)
+    * 參數估計(含點、區間)
+    * 統程
+    * 多項分析與*2檢驗
+  * 多元統計分析
+    * 一元線性回歸分析
+    * 聚類分析，如KNN
+* 視覺化
+  * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
+* 範例與作業
+  * [作業D008]() 
+    * DataFrame下可用的函數
+      * .mean()、median()、.sum()
+      * .cumsum()：以上累積
+      * .describe()：描述性統計
+      * .var()、.std()
+      * .skew()、.kurt()
+      * .corr()、.cov()
+    * [視覺化](https://pandas.pydata.org/pandas-docs/version/0.23.4/visualization.html)
 <br>
 
 ### D009 EDA-Outlier及處理
-* 
+* 離群值、異常值([Outlier](https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba))
+  * 定義
+    * 數據集中有一個或一些數值與其他數值相比差異較大
+    * 一個數值偏離觀測平均值的機率小於等於 1/(2n)，則該數值應當拿掉
+    * 數據須符合常態分佈，如值大於3個標準差，則視為異常值
+  * 可能出現的原因
+    * 未知值
+    * 錯誤紀錄/手誤/系統性錯誤
+    * 例外情境
+  * 檢查流程與方法
+    * 確認每一個欄位的意義
+    * 透過檢查數值範圍 (平均數、標準差、中位數、分位數(IQR)、zscore) 或畫圖(散點圖(scatter plot)、分佈圖(histogram)、直方圖、盒圖(boxplot)、次數累積分佈或其他圖)檢查是否有異常
+  * 處理方法
+    * 視覺化：透過分佈看出離群值
+    * 新增欄位用以紀錄異常與否
+    * 填補 (取代)：視情況以中位數、Min、Max 或平均數填補(有時會用 NA)
+    * [離群值處理參考資料](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
+* 範例與作業
+  * [範例D009]()
+    * 重點
+      * 計算統計值、畫圖(直方圖)來觀察離群值
+      * 疑似離群值的資料移除後，看剩餘的資料是否正常
+  * [作業D009]()
 <br>
 
 ### D010 EDA-去除離群值(數值型)
