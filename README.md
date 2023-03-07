@@ -401,10 +401,10 @@
     * 填補 (取代)：視情況以中位數、Min、Max 或平均數填補(有時會用 NA)
     * [離群值處理參考資料](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
 * 範例與作業
-  * [範例D009]()
+  * [範例D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_009_HW_outlier%E5%8F%8A%E8%99%95%E7%90%86/Day_009_outliers_detection.ipynb)
     * 計算統計值、畫圖(直方圖)來觀察離群值
     * 疑似離群值的資料移除後，看剩餘的資料是否正常
-  * [作業D009]()
+  * [作業D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_009_outlier%E5%8F%8A%E8%99%95%E7%90%86_Ans.ipynb)
 <br>
 
 ### D010 EDA-去除離群值(數值型)
@@ -419,11 +419,11 @@
     * 捨棄離群值：離群值數量夠少時使用
     * 調整離群值：取代
 * 範例與作業
-  * [範例D010](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_010_%E6%95%B8%E5%80%BC%E5%9E%8B%E7%89%B9%E5%BE%B5/Day_010_Outliers.ipynb)
+  * [範例D010](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_010_HW_%E6%95%B8%E5%80%BC%E5%9E%8B%E7%89%B9%E5%BE%B5/Day_010_Outliers.ipynb)
     * 觀察原始數值的散佈圖及線性迴歸分數(用 cross-validation score 來評估)
     * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
     * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
-  * [作業D010]()
+  * [作業D010](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_010_Ans.ipynb)
     * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
     * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
 <br>
