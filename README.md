@@ -471,12 +471,12 @@
       * 有些指標，如相關係數不適合在有標準化的空間進行
       * 量的單位在某些特徵上是有意義的
 * 範例與作業
-  * [範例D011]()
+  * [範例D011](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_011_HW_%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B8%E5%80%BC%E5%8F%96%E4%BB%A3/Day_011_handle_outliers.ipynb)
     * 計算並觀察百分位數：不能有缺失值
     * 計算中位數的方法：不能有缺失值
     * 計算眾數：不能有缺失值
     * 計算標準化與最大最小化
-  * [作業D011]()
+  * [作業D011](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_011_handle_outliers_Ans.ipynb)
     * 填補資料
     * 標準化與最大最小化
 <br>
@@ -507,11 +507,11 @@
     * 非樹狀模型：如線性迴歸, 羅吉斯迴歸, 類神經...等，標準化/最小最大化後，對預測會有影響
     * 樹狀模型：如決策樹, 隨機森林, 梯度提升樹...等，標準化/最小最大化後，對預測不會有影響
 * 範例與作業
-  * [範例D012]()
+  * [範例D012](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_012_HW_%E8%A3%9C%E7%BC%BA%E5%A4%B1%E5%80%BC%E8%88%87%E6%A8%99%E6%BA%96%E5%8C%96/Day_012_Fill_NaN_and_Scalers.ipynb)
     * 如何查詢個欄位空缺值數量
     * 觀察替換不同補缺方式，對於特徵的影響
     * 觀察替換不同特徵縮放方式，對特徵的影響
-  * [作業D012]()
+  * [作業D012](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_012_Fill_NaN_and_Scalers_Ans.ipynb)
     * 以「鐵達尼生存預測」為例
 <br>
 
