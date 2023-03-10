@@ -47,7 +47,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-：統計值的視覺化) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -133,7 +133,7 @@
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
 * 前處理 Processing
-  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009、D011-D012 → 去離群值 D010 → 特徵縮放 D011-D012
+  * 資料讀取 D005 → 格式調整 D006-D008、D013 → 填補缺值 D009、D011-D012 → 去離群值 D010 → 特徵縮放 D011-D012
   * 用途
     * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
     * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
@@ -471,12 +471,12 @@
       * 有些指標，如相關係數不適合在有標準化的空間進行
       * 量的單位在某些特徵上是有意義的
 * 範例與作業
-  * [範例D011]()
+  * [範例D011](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_011_HW_%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B8%E5%80%BC%E5%8F%96%E4%BB%A3/Day_011_handle_outliers.ipynb)
     * 計算並觀察百分位數：不能有缺失值
     * 計算中位數的方法：不能有缺失值
     * 計算眾數：不能有缺失值
     * 計算標準化與最大最小化
-  * [作業D011]()
+  * [作業D011](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_011_handle_outliers_Ans.ipynb)
     * 填補資料
     * 標準化與最大最小化
 <br>
@@ -507,23 +507,200 @@
     * 非樹狀模型：如線性迴歸, 羅吉斯迴歸, 類神經...等，標準化/最小最大化後，對預測會有影響
     * 樹狀模型：如決策樹, 隨機森林, 梯度提升樹...等，標準化/最小最大化後，對預測不會有影響
 * 範例與作業
-  * [範例D012]()
+  * [範例D012](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_012_HW_%E8%A3%9C%E7%BC%BA%E5%A4%B1%E5%80%BC%E8%88%87%E6%A8%99%E6%BA%96%E5%8C%96/Day_012_Fill_NaN_and_Scalers.ipynb)
     * 如何查詢個欄位空缺值數量
     * 觀察替換不同補缺方式，對於特徵的影響
     * 觀察替換不同特徵縮放方式，對特徵的影響
-  * [作業D012]()
+  * [作業D012](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_012_Fill_NaN_and_Scalers_Ans.ipynb)
     * 以「鐵達尼生存預測」為例
 <br>
 
 ### D013 常見的 DataFrame 操作
-* 
+* 轉換與合併 dataframe
+  <table border="1" width="26%">
+      <tr>
+        <th width="3%">語法</a>
+        <th width="10%">用途</a>
+        <th width="3%">語法</a>
+        <th width="10%">用途</a>        
+      </tr>
+      <tr>
+        <td> pd.melt(df) </td>
+        <td> 將「欄(column)」轉成「列(row)」 </td>
+        <td> pd.pivot(columns='欄位名稱', values='值') </td>
+        <td> 將「列(row)」轉成「欄(column)」 </td>
+      </tr>
+      <tr>
+        <td> pd.concat([df1, df2]) </td>
+        <td> 沿「列(row)」合併兩個 dataframe，default：axis=0 <br>
+             對應的欄位數、名稱要一致</td>
+        <td> pd.concat([df1, df2], axis=1) </td>
+        <td> 沿「欄(column)」合併兩個 dataframe <br> 
+             可將多個表依照某欄 (key) 結合使用，default：join='outer'進行 <br>
+             可調整 join 為 'inner'，僅會以單一欄為結合</td>
+      </tr>
+      <tr>
+        <td> pd.merge(df1, df2, on='id', how='outer') </td>
+        <td> 將 df1、df2 以「id」這欄做全合併(遺失以 na 補) </td>
+        <td> pd.merge(df1, df2, on='id', how='inner') </td>
+        <td> 將 df1、df2 以「id」這欄做部分合併，自動去除重複的欄位 </td>
+      </tr>
+  </table>
+  
+* Subset
+  * 邏輯操作
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 大於 / 小於 / 等於 </td>
+        <td> >, <, == </td>
+        <td> 大於等於 / 小於等於 </td>
+        <td> >=, <= </td>
+      </tr>
+      <tr>
+        <td> 不等於 </td>
+        <td> != </td>
+        <td> 邏輯的 and, or, not, xor </td>
+        <td> &, |, ~, ^</td>
+      </tr>
+      <tr>
+        <td> 欄位中包含 value </td>
+        <td> df.column.isin(value) </td>
+        <td> 為 Nan </td>
+        <td> df.isnull(obj) </td>
+      </tr>
+      <tr>
+        <td> 非 Nan </td>
+        <td> df.notnull(obj) </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+  * 列篩選/縮減
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 邏輯操作 </td>
+        <td> df[df.age>20] </td>
+        <td> 移除重複 </td>
+        <td> df.drop_duplicates() </td>
+      </tr>
+      <tr>
+        <td> 前 n 筆 </td>
+        <td> df.head(n=10) </td>
+        <td> 後 n 筆 </td>
+        <td> df.tail(n=10)</td>
+      </tr>
+      <tr>
+        <td> 隨機抽樣 </td>
+        <td> df.sample(frac=0.5)   # 抽50% <br>
+             df.sample(n=10)       # 抽10筆 </td>
+        <td> 行第 n 到 m 筆的資料 </td>
+        <td> df.iloc[n:m] </td>
+      </tr>
+      <tr>
+        <td> 行第 n 到 m 筆且列第 a 到 b 筆的資料 </td>
+        <td> df.iloc[n:m, a:b] </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+  * 欄篩選/縮減
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 單一欄位 </td>
+        <td> df['col1'] 或 df.col1 </td>
+        <td> 複數欄位 </td>
+        <td> df[['col1', 'col2', 'col3']] # </td>
+      </tr>
+      <tr>
+        <td> Regex 篩選 </td>
+        <td> df.filter(regex=...) </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+* Group operations：常用在計算「組」統計值時會用到的功能
+  * 自訂：sub_df_object = df.groupby(['col1'])
+  * 應用
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 計算各組的數量 </td>
+        <td> sub_df_object.size() </td>
+        <td> 得到各組的基本統計值 </td>
+        <td> sub_df_object.describe() </td>
+      </tr>
+      <tr>
+        <td> 根據 col1 分組後，計算 col2 統計值(平均值、最大值、最小值等) </td>
+        <td> sub_df_object['col2'].mean() </td>
+        <td> 對依 col1 分組後的 col2 引用操作 </td>
+        <td> sub_df_object['col2'].apply() </td>
+      </tr>
+      <tr>
+        <td> 對依 col1 分組後的 col2 繪圖 (hist 為例) </td>
+        <td> sub_df_object['col2'].hist() </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+    
+* 參考資料
+  * [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+* 範例與作業
+  * [範例D013]()
+    * DataFrame 的黏合 (concat)
+    * 使用條件篩選出 DataFrame 的子集合
+    * DataFrame 的群聚 (groupby) 的各種應用方式
+  * [作業D013]() 
 <br>
 
 ### D014 程式實作 EDA-相關係數簡介
-* 
+* 相關係數
+  * 常用來了解各欄位與我們想要預測的目標之間關係的指標
+  * 衡量兩個隨機變量之間線性關係的強度和方向
+  * 數值介於 -1~1 之間的值，負值代表負相關，正值代表正相關，數值的大小代表相關性的強度
+    * .00-.19：非常弱相關
+    * .20-.39：弱相關
+    * .40-.59：中度相關
+    * .60-.79：強相關
+    * .80-1.0：非常強相關
+* 範例與作業
+  * [範例D014]()
+    * 弱相關的相關矩陣與散佈圖之間的關係
+    * 正相關的相關矩陣與散佈圖之間的關係
+  * [作業D014]()
 <br>
 
 ### D015 EDA-Correlation
+* 相關係數
+  * 功能
+    * 迅速找到和預測目標最有線性關係的變數
+    * 搭配散佈圖來了解預測目標與變數的關係
+  * 要點
+    * 遇到 y 的本質不是連續數值時，應以 y 軸方向呈現 x 變數的 boxplot 
+    * 檢視不同數值範圍的變數，將 y 軸進行轉換 (log-scale)
 * 
 <br>
 
