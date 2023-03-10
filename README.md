@@ -532,7 +532,8 @@
       </tr>
       <tr>
         <td> pd.concat([df1, df2]) </td>
-        <td> 沿「列(row)」合併兩個 dataframe，default：axis=0 </td>
+        <td> 沿「列(row)」合併兩個 dataframe，default：axis=0 <br>
+             對應的欄位數、名稱要一致</td>
         <td> pd.concat([df1, df2], axis=1) </td>
         <td> 沿「欄(column)」合併兩個 dataframe <br> 
              可將多個表依照某欄 (key) 結合使用 </td>
