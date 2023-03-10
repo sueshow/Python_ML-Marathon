@@ -527,7 +527,7 @@
       <tr>
         <td> pd.melt(df) </td>
         <td> 將「欄(column)」轉成「列(row)」 </td>
-        <td> pd.pivot(columns='var', values='val') </td>
+        <td> pd.pivot(columns='欄位名稱', values='值') </td>
         <td> 將「列(row)」轉成「欄(column)」 </td>
       </tr>
       <tr>
@@ -536,13 +536,14 @@
              對應的欄位數、名稱要一致</td>
         <td> pd.concat([df1, df2], axis=1) </td>
         <td> 沿「欄(column)」合併兩個 dataframe <br> 
-             可將多個表依照某欄 (key) 結合使用 </td>
+             可將多個表依照某欄 (key) 結合使用，default：join='outer'進行 <br>
+             可調整 join 為 'inner'，僅會以單一欄為結合</td>
       </tr>
       <tr>
         <td> pd.merge(df1, df2, on='id', how='outer') </td>
         <td> 將 df1、df2 以「id」這欄做全合併(遺失以 na 補) </td>
         <td> pd.merge(df1, df2, on='id', how='inner') </td>
-        <td> 將 df1、df2 以「id」這欄做部分合併 </td>
+        <td> 將 df1、df2 以「id」這欄做部分合併，自動去除重複的欄位 </td>
       </tr>
   </table>
   
@@ -626,7 +627,7 @@
         <td> 單一欄位 </td>
         <td> df['col1'] 或 df.col1 </td>
         <td> 複數欄位 </td>
-        <td> df[['col1', 'col2', 'col3']] </td>
+        <td> df[['col1', 'col2', 'col3']] # </td>
       </tr>
       <tr>
         <td> Regex 篩選 </td>
@@ -669,8 +670,11 @@
   * [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 * 範例與作業
   * [範例D013]()
-    * 
+    * DataFrame 的黏合 (concat)
+    * 使用條件篩選出 DataFrame 的子集合
+    * DataFrame 的群聚 (groupby) 的各種應用方式
   * [作業D013]() 
+    * 
 <br>
 
 ### D014 程式實作 EDA-相關係數簡介
