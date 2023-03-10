@@ -532,7 +532,7 @@
       </tr>
       <tr>
         <td> pd.concat([df1, df2]) </td>
-        <td> 沿「列(row)」合併兩個 dataframe </td>
+        <td> 沿「列(row)」合併兩個 dataframe，default：axis=0 </td>
         <td> pd.concat([df1, df2], axis=1) </td>
         <td> 沿「欄(column)」合併兩個 dataframe <br> 
              可將多個表依照某欄 (key) 結合使用 </td>
@@ -662,7 +662,7 @@
   * [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 * 範例與作業
   * [範例D013]()
-    *  
+    * 
   * [作業D013]() 
 <br>
 
