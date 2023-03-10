@@ -133,7 +133,7 @@
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
 * 前處理 Processing
-  * 資料讀取 D005 → 格式調整 D006-D008 → 填補缺值 D009、D011-D012 → 去離群值 D010 → 特徵縮放 D011-D012
+  * 資料讀取 D005 → 格式調整 D006-D008、D013 → 填補缺值 D009、D011-D012 → 去離群值 D010 → 特徵縮放 D011-D012
   * 用途
     * 需要把分析過程中所產生的數據或結果儲存為[結構化的資料](https://daxpowerbi.com/%e7%b5%90%e6%a7%8b%e5%8c%96%e8%b3%87%e6%96%99/) → 使用 pandas
     * 資料量太大，操作很費時，先在具有同樣結構的資料進行小樣本的測試
@@ -516,7 +516,154 @@
 <br>
 
 ### D013 常見的 DataFrame 操作
-* 
+* 轉換與合併 dataframe
+  <table border="1" width="26%">
+      <tr>
+        <th width="3%">語法</a>
+        <th width="10%">用途</a>
+        <th width="3%">語法</a>
+        <th width="10%">用途</a>        
+      </tr>
+      <tr>
+        <td> pd.melt(df) </td>
+        <td> 將「欄(column)」轉成「列(row)」 </td>
+        <td> pd.pivot(columns='var', values='val') </td>
+        <td> 將「列(row)」轉成「欄(column)」 </td>
+      </tr>
+      <tr>
+        <td> pd.concat([df1, df2]) </td>
+        <td> 沿「列(row)」合併兩個 dataframe </td>
+        <td> pd.concat([df1, df2], axis=1) </td>
+        <td> 沿「欄(column)」合併兩個 dataframe <br> 
+             可將多個表依照某欄 (key) 結合使用 </td>
+      </tr>
+      <tr>
+        <td> pd.merge(df1, df2, on='id', how='outer') </td>
+        <td> 將 df1、df2 以「id」這欄做全合併(遺失以 na 補) </td>
+        <td> pd.merge(df1, df2, on='id', how='inner') </td>
+        <td> 將 df1、df2 以「id」這欄做部分合併 </td>
+      </tr>
+  </table>
+  
+* Subset
+  * 邏輯操作
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 大於 / 小於 / 等於 </td>
+        <td> >, <, == </td>
+        <td> 大於等於 / 小於等於 </td>
+        <td> >=, <= </td>
+      </tr>
+      <tr>
+        <td> 不等於 </td>
+        <td> != </td>
+        <td> 邏輯的 and, or, not, xor </td>
+        <td> &, |, ~, ^</td>
+      </tr>
+      <tr>
+        <td> 欄位中包含 value </td>
+        <td> df.column.isin(value) </td>
+        <td> 為 Nan </td>
+        <td> df.isnull(obj) </td>
+      </tr>
+      <tr>
+        <td> 非 Nan </td>
+        <td> df.notnull(obj) </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+  * 列篩選/縮減
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 邏輯操作 </td>
+        <td> df[df.age>20] </td>
+        <td> 移除重複 </td>
+        <td> df.drop_duplicates() </td>
+      </tr>
+      <tr>
+        <td> 前 n 筆 </td>
+        <td> df.head(n=10) </td>
+        <td> 後 n 筆 </td>
+        <td> df.tail(n=10)</td>
+      </tr>
+      <tr>
+        <td> 隨機抽樣 </td>
+        <td> df.sample(frac=0.5)   # 抽50% <br>
+             df.sample(n=10)       # 抽10筆 </td>
+        <td> 第 n 到 m 筆 </td>
+        <td> df.iloc[n, m] </td>
+      </tr>
+    </table>
+  * 欄篩選/縮減
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 單一欄位 </td>
+        <td> df['col1'] 或 df.col1 </td>
+        <td> 複數欄位 </td>
+        <td> df[['col1', 'col2', 'col3']] </td>
+      </tr>
+      <tr>
+        <td> Regex 篩選 </td>
+        <td> df.filter(regex=...) </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+* Group operations：常用在計算「組」統計值時會用到的功能
+  * 自訂：sub_df_object = df.groupby(['col1'])
+  * 應用
+    <table border="1" width="30%">
+      <tr>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>
+        <th width="5%">用途</a>
+        <th width="10%">語法</a>        
+      </tr>
+      <tr>
+        <td> 計算各組的數量 </td>
+        <td> sub_df_object.size() </td>
+        <td> 得到各組的基本統計值 </td>
+        <td> sub_df_object.describe() </td>
+      </tr>
+      <tr>
+        <td> 根據 col1 分組後，計算 col2 統計值(平均值、最大值、最小值等) </td>
+        <td> sub_df_object['col2'].mean() </td>
+        <td> 對依 col1 分組後的 col2 引用操作 </td>
+        <td> sub_df_object['col2'].apply() </td>
+      </tr>
+      <tr>
+        <td> 對依 col1 分組後的 col2 繪圖 (hist 為例) </td>
+        <td> sub_df_object['col2'].hist() </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+    
+* 參考資料
+  * [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+* 範例與作業
+  * [範例D013]()
+    *  
+  * [作業D013]() 
 <br>
 
 ### D014 程式實作 EDA-相關係數簡介
