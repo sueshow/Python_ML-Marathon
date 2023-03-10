@@ -669,11 +669,11 @@
 * 參考資料
   * [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 * 範例與作業
-  * [範例D013]()
+  * [範例D013](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_013_HW_%E5%B8%B8%E7%94%A8%E7%9A%84%20DataFrame%20%E6%93%8D%E4%BD%9C/Day_013_dataFrame_operation.ipynb)
     * DataFrame 的黏合 (concat)
     * 使用條件篩選出 DataFrame 的子集合
     * DataFrame 的群聚 (groupby) 的各種應用方式
-  * [作業D013]() 
+  * [作業D013](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_013_dataFrame_operation_Ans.ipynb) 
 <br>
 
 ### D014 程式實作 EDA-相關係數簡介
@@ -687,21 +687,26 @@
     * .60-.79：強相關
     * .80-1.0：非常強相關
 * 範例與作業
-  * [範例D014]()
+  * [範例D014](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_014_HW/Day_014_correlation_example.ipynb)
     * 弱相關的相關矩陣與散佈圖之間的關係
     * 正相關的相關矩陣與散佈圖之間的關係
-  * [作業D014]()
+  * [作業D014](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_014_correlation_example_Ans.ipynb)
 <br>
 
-### D015 EDA-Correlation
-* 相關係數
+### D015 EDA-Correlation code 練習
+* 相關係數(搭配課程內容)
   * 功能
     * 迅速找到和預測目標最有線性關係的變數
     * 搭配散佈圖來了解預測目標與變數的關係
   * 要點
-    * 遇到 y 的本質不是連續數值時，應以 y 軸方向呈現 x 變數的 boxplot 
-    * 檢視不同數值範圍的變數，將 y 軸進行轉換 (log-scale)
-* 
+    * 遇到 y 的本質不是連續數值時，應以 y 軸方向呈現 x 變數的 boxplot (高下立見)
+    * 檢視不同數值範圍的變數，且有特殊例外情況(離群值)，將 y 軸進行轉換 (log-scale)
+* 範例與作業
+  * [範例D015](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_015_HW_EDA%20from%20Correlation/Day_015-supplementary_correlation_and_plot_with_different_range.ipynb)
+    * 直接列出的觀察方式
+    * 出現異常數值的資料調整方式
+    * 散佈圖異常與其調整方式
+  * [作業D015](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_015_correlation_Ans.ipynb)
 <br>
 
 ### D016 EDA-不同數值範圍間的特徵如何檢視
