@@ -604,8 +604,14 @@
         <td> 隨機抽樣 </td>
         <td> df.sample(frac=0.5)   # 抽50% <br>
              df.sample(n=10)       # 抽10筆 </td>
-        <td> 第 n 到 m 筆 </td>
-        <td> df.iloc[n, m] </td>
+        <td> 行第 n 到 m 筆的資料 </td>
+        <td> df.iloc[n:m] </td>
+      </tr>
+      <tr>
+        <td> 行第 n 到 m 筆且列第 a 到 b 筆的資料 </td>
+        <td> df.iloc[n:m, a:b] </td>
+        <td> </td>
+        <td> </td>
       </tr>
     </table>
   * 欄篩選/縮減
