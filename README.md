@@ -764,10 +764,10 @@
   * 缺點
     * 計算量大，電腦不好可能跑不動
 * 範例與作業
-  * [範例D016]()
+  * [範例D016](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_016_HW_Kernel%20Density%20Estimation_/Day_016_EDA_KDEplots.ipynb)
     * 各種樣式的長條圖(Bar)、直方圖(Histogram)
     * 不同的 KDE 曲線與繪圖設定以及切換不同 Kernel function 的效果
-  * [作業D016]()
+  * [作業D016](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_016_EDA_KDEplots_Ans.ipynb)
     * 調整對應的資料，以繪製分布圖
 <br>
 
@@ -781,16 +781,16 @@
     * 等頻劃分(對應 pandas 的 qcut)：將資料分成幾等份，每等份資料裡面的個數是一樣的
     * 聚類劃分：使用聚類演算法將資料聚成幾類，每一個類為一個劃分
 * 範例與作業
-  * [範例D017]()：數據離散化
+  * [範例D017](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_017_HW/Day_017_discretizing.ipynb)：數據離散化
     * pandas.cut 的等寬劃分效果
     * pandas.qcut 的等頻劃分效果
-  * [作業D017]()
+  * [作業D017](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_017_discretizing_Ans.ipynb)
   <br>
 
 ### D018 程式實作EDA-把連續型變數離散化
 * 把連續型的變數離散化後，可以搭配 pandas 的 groupby 畫出與預測目標的圖來判斷兩者之間是否有某種關係/趨勢
 * 範例與作業
-  * [作業D018]()
+  * [作業D018](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_018_Ans.ipynb)
     * 對較完整的資料生成離散化特徵
     * 觀察上述離散化特徵，對於目標值的預測有沒有幫助
 <br>
@@ -824,10 +824,10 @@
   * [Multiple Subplots](https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html)
   * [Seaborn.jointplot](https://seaborn.pydata.org/generated/seaborn.jointplot.html)
 * 範例與作業
-  * [範例D019]()
+  * [範例D019](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_019_HW_%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C_subplots/Day_019_EDA_subplots.ipynb)
     * 傳統的 subplot 三碼：row、column、indx 繪製法
     * subplot index 超過 10 以上的繪圖法：透過 for loop
-  * [作業D019]()
+  * [作業D019](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_019_EDA_subplots_Ans.ipynb)
 <br>
 
 ### D020 程式實作-Heatmap & Grid-plot
