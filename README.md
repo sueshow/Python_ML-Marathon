@@ -47,7 +47,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-：統計值的視覺化) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D：統計值的視覺化) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -370,6 +370,7 @@
     * 聚類分析，如KNN
 * 視覺化
   * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
+  * [The Python Graph Gallery](https://www.python-graph-gallery.com/)
 * 範例與作業
   * [作業D008](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_008_Ans.ipynb) 
     * DataFrame下可用的函數
@@ -710,7 +711,32 @@
 <br>
 
 ### D016 EDA-不同數值範圍間的特徵如何檢視
-* 
+* 繪圖風格：透過設計過的風格，讓觀看者更清楚明瞭，包含色彩選擇、線條、樣式等
+  * 語法：詳細圖示差異搭配課程內容
+    ```
+    plt.style.use('default')    # 不需設定就會使用預設
+    plt.style.use('ggplot')
+    plt.style.use('seaborn')    # 或採用 seaborn 套件繪圖
+    ```
+* Kernel Density Estimation (KDE) 
+  * 步驟
+    * 採用無母數方法畫出一個觀察變數的機率密度函數
+      * 某個 X 出現的機率為何
+    * Density plot 的特性
+      * 歸一：線下面積和為 1
+      * 對稱：K(-u) = K(u)
+    * 常用的 kernel function
+      * Gaussian esti. (Normal dist)
+      * Cosine esti.
+      * Triangular esti.
+  * 優點
+    * 無母數方法，對分布沒有假設 (使用上不需擔心是否有一些常見的特定假設，如分布為常態)
+    * 透過 KDE plot，可較為清楚的看到不同組間的分布差異
+  * 缺點
+    * 計算量大，電腦不好可能跑不動
+* 範例與作業
+  * [範例D016]()
+  * [作業D016]()
 <br>
 
 ### D017 EDA-把連續型變數離散化
