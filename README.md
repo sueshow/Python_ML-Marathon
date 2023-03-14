@@ -790,15 +790,16 @@
 ### D018 程式實作EDA-把連續型變數離散化
 * 把連續型的變數離散化後，可以搭配 pandas 的 groupby 畫出與預測目標的圖來判斷兩者之間是否有某種關係/趨勢
 * 範例與作業
-  * [範例D018]()
   * [作業D018]()
+    * 對較完整的資料生成離散化特徵
+    * 觀察上述離散化特徵，對於目標值的預測有沒有幫助
 <br>
 
 ### D019 程式實作-Subplots
 * 使用 subplot 的時機：將圖片分格呈現，有助於資訊傳達
   * 有很多相似的資訊要呈現時 (如不同組別的比較)
   * 同一組資料，但想同時用不同的圖型呈現
-* 語法：`plt.figure()`
+* 語法：`plt.figure()` 及 `plt.subplot(列-欄-位置)`
   <table border="1" width="10%">
       <tr>
         <th width="5%">第一行</a>
@@ -824,6 +825,8 @@
   * [Seaborn.jointplot](https://seaborn.pydata.org/generated/seaborn.jointplot.html)
 * 範例與作業
   * [範例D019]()
+    * 傳統的 subplot 三碼：row、column、indx 繪製法
+    * subplot index 超過 10 以上的繪圖法：透過 for loop
   * [作業D019]()
 <br>
 
