@@ -47,7 +47,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D017：統計值的視覺化) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D019：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -723,7 +723,7 @@
   * [作業D014](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_014_correlation_example_Ans.ipynb)
 <br>
 
-### D015 EDA-Correlation code 練習
+### D015 程式實作EDA-Correlation code
 * 相關係數(搭配課程內容)
   * 功能
     * 迅速找到和預測目標最有線性關係的變數
@@ -765,8 +765,10 @@
     * 計算量大，電腦不好可能跑不動
 * 範例與作業
   * [範例D016]()
-    * 
+    * 各種樣式的長條圖(Bar)、直方圖(Histogram)
+    * 不同的 KDE 曲線與繪圖設定以及切換不同 Kernel function 的效果
   * [作業D016]()
+    * 調整對應的資料，以繪製分布圖
 <br>
 
 ### D017 EDA-把連續型變數離散化
@@ -778,20 +780,63 @@
     * 等寬劃分(對應 pandas 的 cut)：按照相同寬度將資料分成幾等份，其缺點是受異常值的影響比較大
     * 等頻劃分(對應 pandas 的 qcut)：將資料分成幾等份，每等份資料裡面的個數是一樣的
     * 聚類劃分：使用聚類演算法將資料聚成幾類，每一個類為一個劃分
-<br>
+* 範例與作業
+  * [範例D017]()：數據離散化
+    * pandas.cut 的等寬劃分效果
+    * pandas.qcut 的等頻劃分效果
+  * [作業D017]()
+  <br>
 
 ### D018 程式實作EDA-把連續型變數離散化
-* 
+* 把連續型的變數離散化後，可以搭配 pandas 的 groupby 畫出與預測目標的圖來判斷兩者之間是否有某種關係/趨勢
+* 範例與作業
+  * [範例D018]()
+  * [作業D018]()
 <br>
 
 ### D019 程式實作-Subplots
-* 
+* 使用 subplot 的時機：將圖片分格呈現，有助於資訊傳達
+  * 有很多相似的資訊要呈現時 (如不同組別的比較)
+  * 同一組資料，但想同時用不同的圖型呈現
+* 語法：`plt.figure()`
+  <table border="1" width="10%">
+      <tr>
+        <th width="5%">第一行</a>
+        <th width="5%">第二行</a>       
+      </tr>
+      <tr>
+        <td> plt.subplot(321)：代表在一個 3 列 2 欄的最左上角(列1欄1) </td>
+        <td> plt.subplot(322) </td>
+      </tr>
+      <tr>
+        <td> plt.subplot(323) </td>
+        <td> plt.subplot(324) </td>
+      </tr>
+      <tr>
+        <td> plt.subplot(325) </td>
+        <td> plt.subplot(326) </td>
+      </tr>
+    </table>
+
+* 參考資料
+  * [matplotlib 官方範例](https://matplotlib.org/2.0.2/examples/pylab_examples/subplots_demo.html)
+  * [Multiple Subplots](https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html)
+  * [Seaborn.jointplot](https://seaborn.pydata.org/generated/seaborn.jointplot.html)
+* 範例與作業
+  * [範例D019]()
+  * [作業D019]()
 <br>
 
 ### D020 程式實作-Heatmap & Grid-plot
 * 
+* 範例與作業
+  * [範例D020]()
+  * [作業D020]()
 <br>
 
 ### D021 模型-Logistic Regression
 * 
+* 範例與作業
+  * [範例D021]()
+  * [作業D021]()
 <br>
