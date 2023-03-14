@@ -47,7 +47,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-：統計值的視覺化) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D019：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -271,8 +271,29 @@
   
 * 格式調整
   * 訓練模型時，字串/類別類型的資料需要轉為數值型資料，轉換方式：
-    * Label encoding：使用時機為資料類別間有順序的概念，如年齡分組
-    * One Hot encoding：使用時機為資料類別間無順序的概念，如國家
+    <table border="1" width="13%">
+      <tr>
+        <th width="3%">encode</a>
+        <th width="10%">label encode</a>
+        <th width="10%">one-hot encode</a>
+      </tr>
+      <tr>
+        <td> 類型 </td>
+        <td> 有序類別變量(如學歷)  </td>
+        <td> 無序類別變量(如國家) </td>
+      </tr>
+      <tr>
+        <td> 作法 </td>
+        <td> 將類別變數中每一個類別賦予數值，不會新增欄位 </td>
+        <td> 為每個類別新增一個欄位，0/1表示是否 </td>
+      </tr>
+      <tr>
+        <td> 使用時機 </td>
+        <td> 會讓模型學習到「順序關係」，也就是有大小之分 </td>
+        <td> 當類別之間不存在優劣、前後、高低之分的時候，也就是「無序」，就適合採用 One-Hot Encoding。但相對地，因為維度提高了，就會較費時且占用較多的空間 </td>
+      </tr>
+    </table>
+
 * 範例與作業
   * [範例D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_006_HW_EDA%E6%AC%84%E4%BD%8D%E7%9A%84%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E4%BB%8B%E7%B4%B9%E5%8F%8A%E8%99%95%E7%90%86/Day_006_column_data_type.ipynb)
     * 檢視 DataFrame 的資料型態
@@ -370,6 +391,10 @@
     * 聚類分析，如KNN
 * 視覺化
   * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
+  * [The Python Graph Gallery](https://www.python-graph-gallery.com/)
+  * [Matploitlib](https://matplotlib.org/3.2.2/gallery/index.html)
+  * [The R Graph Gallery](https://r-graph-gallery.com/)
+  * [R Graph Gallery (Interactive plot，互動圖)](https://gist.github.com/mbostock)
 * 範例與作業
   * [作業D008](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_008_Ans.ipynb) 
     * DataFrame下可用的函數
@@ -394,16 +419,21 @@
     * 例外情境
   * 檢查流程與方法
     * 確認每一個欄位的意義
-    * 透過檢查數值範圍 (平均數、標準差、中位數、分位數(IQR)、zscore) 或畫圖(散點圖(scatter plot)、分佈圖(histogram)、直方圖、盒圖(boxplot)、次數累積分佈或其他圖)檢查是否有異常
+    * 透過檢查數值範圍 (平均數、標準差、中位數、分位數(IQR)、zscore) 或畫圖(散點圖(scatter plot)、分佈圖(histogram)、直方圖、盒圖(boxplot)、次數累積分佈、[ECDF](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/exploratory-data-analysis-%E6%8E%A2%E7%B4%A2%E8%B3%87%E6%96%99-ecdf-7fa350c32897)或其他圖)檢查是否有異常
   * 處理方法
     * 視覺化：透過分佈看出離群值
-    * 新增欄位用以紀錄異常與否
-    * 填補 (取代)：視情況以中位數、Min、Max 或平均數填補(有時會用 NA)
+    * 新增欄位用以紀錄異常與否(人工再標註)
+    * 填補 (取代)：視情況以中位數、Min、Max、平均數填補(有時會用 NA)
+    * 刪除資料
     * [離群值處理參考資料](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
 * 範例與作業
   * [範例D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_009_HW_outlier%E5%8F%8A%E8%99%95%E7%90%86/Day_009_outliers_detection.ipynb)
     * 計算統計值、畫圖(直方圖)來觀察離群值
     * 疑似離群值的資料移除後，看剩餘的資料是否正常
+    * 利用變數類型對欄位進行篩選
+      * df.dtypes 給出各欄位名稱的 Seires
+      * .isin(your_list) 可以用來給出 Seires 內每個元素是否在 your_list 裡面的布林值
+      * 可以用布林值的方式進行遮罩的篩選 DataFrame
   * [作業D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_009_outlier%E5%8F%8A%E8%99%95%E7%90%86_Ans.ipynb)
 <br>
 
@@ -693,7 +723,7 @@
   * [作業D014](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_014_correlation_example_Ans.ipynb)
 <br>
 
-### D015 EDA-Correlation code 練習
+### D015 程式實作EDA-Correlation code
 * 相關係數(搭配課程內容)
   * 功能
     * 迅速找到和預測目標最有線性關係的變數
@@ -710,25 +740,106 @@
 <br>
 
 ### D016 EDA-不同數值範圍間的特徵如何檢視
-* 
+* 繪圖風格：透過設計過的風格，讓觀看者更清楚明瞭，包含色彩選擇、線條、樣式等
+  * 語法：詳細圖示差異搭配課程內容
+    ```
+    plt.style.use('default')    # 不需設定就會使用預設
+    plt.style.use('ggplot')
+    plt.style.use('seaborn')    # 或採用 seaborn 套件繪圖
+    ```
+* Kernel Density Estimation ([KDE](http://rightthewaygeek.blogspot.com/2015/09/kernel-density-estimation.html)) 
+  * 步驟
+    * 採用無母數方法畫出一個觀察變數的機率密度函數
+      * 某個 X 出現的機率為何
+    * Density plot 的特性
+      * 歸一：線下面積和為 1
+      * 對稱：K(-u) = K(u)
+    * 常用的 kernel function
+      * Gaussian esti. (Normal dist)
+      * Cosine esti.
+      * Triangular esti.
+  * 優點
+    * 無母數方法，對分布沒有假設 (使用上不需擔心是否有一些常見的特定假設，如分布為常態)
+    * 透過 KDE plot，可較為清楚的看到不同組間的分布差異
+  * 缺點
+    * 計算量大，電腦不好可能跑不動
+* 範例與作業
+  * [範例D016]()
+    * 各種樣式的長條圖(Bar)、直方圖(Histogram)
+    * 不同的 KDE 曲線與繪圖設定以及切換不同 Kernel function 的效果
+  * [作業D016]()
+    * 調整對應的資料，以繪製分布圖
 <br>
 
 ### D017 EDA-把連續型變數離散化
-* 
-<br>
+* 連續型變數離散化：變數較穩定
+  * 要點：如每 10 歲一組，若不分組，outlier 會給模型帶來很大的干擾
+    * 組的數量
+    * 組的寬度
+  * 主要方法
+    * 等寬劃分(對應 pandas 的 cut)：按照相同寬度將資料分成幾等份，其缺點是受異常值的影響比較大
+    * 等頻劃分(對應 pandas 的 qcut)：將資料分成幾等份，每等份資料裡面的個數是一樣的
+    * 聚類劃分：使用聚類演算法將資料聚成幾類，每一個類為一個劃分
+* 範例與作業
+  * [範例D017]()：數據離散化
+    * pandas.cut 的等寬劃分效果
+    * pandas.qcut 的等頻劃分效果
+  * [作業D017]()
+  <br>
 
 ### D018 程式實作EDA-把連續型變數離散化
-* 
+* 把連續型的變數離散化後，可以搭配 pandas 的 groupby 畫出與預測目標的圖來判斷兩者之間是否有某種關係/趨勢
+* 範例與作業
+  * [作業D018]()
+    * 對較完整的資料生成離散化特徵
+    * 觀察上述離散化特徵，對於目標值的預測有沒有幫助
 <br>
 
 ### D019 程式實作-Subplots
-* 
+* 使用 subplot 的時機：將圖片分格呈現，有助於資訊傳達
+  * 有很多相似的資訊要呈現時 (如不同組別的比較)
+  * 同一組資料，但想同時用不同的圖型呈現
+* 語法：`plt.figure()` 及 `plt.subplot(列-欄-位置)`
+  <table border="1" width="10%">
+      <tr>
+        <th width="5%">第一行</a>
+        <th width="5%">第二行</a>       
+      </tr>
+      <tr>
+        <td> plt.subplot(321)：代表在一個 3 列 2 欄的最左上角(列1欄1) </td>
+        <td> plt.subplot(322) </td>
+      </tr>
+      <tr>
+        <td> plt.subplot(323) </td>
+        <td> plt.subplot(324) </td>
+      </tr>
+      <tr>
+        <td> plt.subplot(325) </td>
+        <td> plt.subplot(326) </td>
+      </tr>
+    </table>
+
+* 參考資料
+  * [matplotlib 官方範例](https://matplotlib.org/2.0.2/examples/pylab_examples/subplots_demo.html)
+  * [Multiple Subplots](https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html)
+  * [Seaborn.jointplot](https://seaborn.pydata.org/generated/seaborn.jointplot.html)
+* 範例與作業
+  * [範例D019]()
+    * 傳統的 subplot 三碼：row、column、indx 繪製法
+    * subplot index 超過 10 以上的繪圖法：透過 for loop
+  * [作業D019]()
 <br>
 
 ### D020 程式實作-Heatmap & Grid-plot
 * 
+* 範例與作業
+  * [範例D020]()
+  * [作業D020]()
 <br>
 
 ### D021 模型-Logistic Regression
 * 
+* 範例與作業
+  * [範例D021]()
+  * [作業D021]()
 <br>
