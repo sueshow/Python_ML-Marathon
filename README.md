@@ -271,8 +271,29 @@
   
 * 格式調整
   * 訓練模型時，字串/類別類型的資料需要轉為數值型資料，轉換方式：
-    * Label encoding：使用時機為資料類別間有順序的概念，如年齡分組
-    * One Hot encoding：使用時機為資料類別間無順序的概念，如國家
+    <table border="1" width="13%">
+      <tr>
+        <th width="3%">encode</a>
+        <th width="10%">label encode</a>
+        <th width="10%">one-hot encode</a>
+      </tr>
+      <tr>
+        <td> 類型 </td>
+        <td> 有序類別變量(如學歷)  </td>
+        <td> 無序類別變量(如國家) </td>
+      </tr>
+      <tr>
+        <td> 作法 </td>
+        <td> 將類別變數中每一個類別賦予數值，不會新增欄位 </td>
+        <td> 為每個類別新增一個欄位，0/1表示是否 </td>
+      </tr>
+      <tr>
+        <td> 使用時機 </td>
+        <td> 會讓模型學習到「順序關係」，也就是有大小之分 </td>
+        <td> 當類別之間不存在優劣、前後、高低之分的時候，也就是「無序」，就適合採用 One-Hot Encoding。但相對地，因為維度提高了，就會較費時且占用較多的空間 </td>
+      </tr>
+    </table>
+
 * 範例與作業
   * [範例D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_006_HW_EDA%E6%AC%84%E4%BD%8D%E7%9A%84%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E4%BB%8B%E7%B4%B9%E5%8F%8A%E8%99%95%E7%90%86/Day_006_column_data_type.ipynb)
     * 檢視 DataFrame 的資料型態
@@ -371,6 +392,7 @@
 * 視覺化
   * [python 視覺化套件](https://matplotlib.org/3.2.2/gallery/index.html)
   * [The Python Graph Gallery](https://www.python-graph-gallery.com/)
+  * [Matploitlib](https://matplotlib.org/3.2.2/gallery/index.html)
 * 範例與作業
   * [作業D008](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_008_Ans.ipynb) 
     * DataFrame下可用的函數
@@ -395,16 +417,21 @@
     * 例外情境
   * 檢查流程與方法
     * 確認每一個欄位的意義
-    * 透過檢查數值範圍 (平均數、標準差、中位數、分位數(IQR)、zscore) 或畫圖(散點圖(scatter plot)、分佈圖(histogram)、直方圖、盒圖(boxplot)、次數累積分佈或其他圖)檢查是否有異常
+    * 透過檢查數值範圍 (平均數、標準差、中位數、分位數(IQR)、zscore) 或畫圖(散點圖(scatter plot)、分佈圖(histogram)、直方圖、盒圖(boxplot)、次數累積分佈、[ECDF](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/exploratory-data-analysis-%E6%8E%A2%E7%B4%A2%E8%B3%87%E6%96%99-ecdf-7fa350c32897)或其他圖)檢查是否有異常
   * 處理方法
     * 視覺化：透過分佈看出離群值
-    * 新增欄位用以紀錄異常與否
-    * 填補 (取代)：視情況以中位數、Min、Max 或平均數填補(有時會用 NA)
+    * 新增欄位用以紀錄異常與否(人工再標註)
+    * 填補 (取代)：視情況以中位數、Min、Max、平均數填補(有時會用 NA)
+    * 刪除資料
     * [離群值處理參考資料](https://andy6804tw.github.io/2021/04/02/python-outliers-clean/#%E8%B3%87%E6%96%99%E8%A7%80%E5%AF%9F)
 * 範例與作業
   * [範例D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_009_HW_outlier%E5%8F%8A%E8%99%95%E7%90%86/Day_009_outliers_detection.ipynb)
     * 計算統計值、畫圖(直方圖)來觀察離群值
     * 疑似離群值的資料移除後，看剩餘的資料是否正常
+    * 利用變數類型對欄位進行篩選
+      * df.dtypes 給出各欄位名稱的 Seires
+      * .isin(your_list) 可以用來給出 Seires 內每個元素是否在 your_list 裡面的布林值
+      * 可以用布林值的方式進行遮罩的篩選 DataFrame
   * [作業D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_009_outlier%E5%8F%8A%E8%99%95%E7%90%86_Ans.ipynb)
 <br>
 
