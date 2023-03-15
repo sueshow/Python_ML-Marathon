@@ -10,7 +10,11 @@
   * D006 EDA-欄位的資料類型介紹及處理
   * D007 EDA-特徵類型
   * D008 EDA-資料分佈
-  * 
+  * D009 EDA-Outlier及處理
+  * D010 EDA-去除離群值(數值型)
+  * D011 EDA-常用的數值取代
+  * D012 EDA-補缺失值與標準化(數值型)
+  * D013 常見的 DataFrame 操作
   * D014 程式實作 EDA-相關係數簡介
   * D015 程式實作EDA-Correlation code
   * D016 EDA-不同數值範圍間的特徵如何檢視
@@ -20,6 +24,7 @@
   * D020 程式實作-Heatmap & Grid-plot
   * D021 模型-Logistic Regression
 * 
+<br>
 <br>
 
 ## 機器學習概論
