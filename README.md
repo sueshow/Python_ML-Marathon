@@ -47,7 +47,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D019：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D020：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -831,7 +831,25 @@
 <br>
 
 ### D020 程式實作-Heatmap & Grid-plot
-* 
+* Heatmap
+  * 常用於呈現變數間的相關性、混和矩陣(confusion matrix)，以顏色深淺呈現
+  * 亦可用於呈現不同條件下，數量的高低關係
+  * 參考資料
+    * [matplotlib 官方範例](https://matplotlib.org/3.2.2/gallery/images_contours_and_fields/image_annotated_heatmap.html)
+    * [Seaborn 数据可视化基础教程](https://huhuhang.com/post/machine-learning/seaborn-basic)
+* Grid-plot：結合 scatter plot 與 historgram 的好處來呈現變數間的相關程度
+  * subplot 的延伸，但 seaborn 做得更好
+    ```
+    import seaborn as sns
+    sns.set(style='ticks', color_codes=True)
+    iris = sns.load_dataset('iris')
+    g = sns.pairplot(iris)
+    ```
+    
+    * 對角線呈現該變數的分布(distribution)
+    * 非對角線呈現兩兩變數間的散佈圖
+  * 參考資料
+    * [Seaborn 的 Pairplot](https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166)
 * 範例與作業
   * [範例D020]()
   * [作業D020]()
