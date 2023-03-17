@@ -1,5 +1,63 @@
 # Python_ML-Marathon
-
+## 學習大綱
+* <a href="#機器學習概論">機器學習概論</a>
+  * D001 資料介紹與評估資料
+  * D002 機器學習概論 
+  * D003 機器學習-流程與步驟
+  * D004 EDA/讀取資料與分析流程
+* <a href="#資料清理數據前處理">資料清理數據前處理</a>
+  * D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
+  * D006 EDA-欄位的資料類型介紹及處理
+  * D007 EDA-特徵類型
+  * D008 EDA-資料分佈
+  * D009 EDA-Outlier及處理
+  * D010 EDA-去除離群值(數值型)
+  * D011 EDA-常用的數值取代
+  * D012 EDA-補缺失值與標準化(數值型)
+  * D013 常見的 DataFrame 操作
+  * D014 程式實作 EDA-相關係數簡介
+  * D015 程式實作EDA-Correlation code
+  * D016 EDA-不同數值範圍間的特徵如何檢視
+  * D017 EDA-把連續型變數離散化
+  * D018 程式實作EDA-把連續型變數離散化
+  * D019 程式實作-Subplots
+  * D020 程式實作-Heatmap & Grid-plot
+  * D021 模型-Logistic Regression
+* <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+  * D022 特徵工程簡介
+  * D023 特徵工程(數值型)-去除偏態
+  * D024 特徵工程(類別型)-基礎處理
+  * D025 特徵工程(類別型)-均值編碼
+  * D026 特徵工程(類別型)-其他進階處理
+  * D027 特徵工程(時間型)
+  * D028 特徵工程-數值與數值組合
+  * D029 特徵工程-類別與數值組合
+  * D030 特徵選擇
+  * D031 特徵評估
+  * D032 特徵優化(分類型)-業編碼
+* <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+  * D033
+  * D034
+  * D035
+  * D036
+  * D037
+  * D038
+  * D039
+  * D040
+  * D041
+  * D042
+  * D043
+  * D044
+  * D045
+  * D046
+* <a href="#機器學習調整參數">機器學習調整參數</a>
+  * D047
+  * D048
+  * D049
+  * D050
+* 
+<br>
+<br>
 
 ## 機器學習概論
 ### D001 資料介紹與評估資料
@@ -47,7 +105,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D019：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D020：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -127,8 +185,10 @@
     * 列出資料的大小：shape
     * 列出所有欄位：columns
     * 擷取部分資料：loc、iloc
+    
+Back to <a href="#學習大綱">學習大綱</a>
 <br>
-
+<br>
 
 ## 資料清理數據前處理
 ### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
@@ -764,10 +824,10 @@
   * 缺點
     * 計算量大，電腦不好可能跑不動
 * 範例與作業
-  * [範例D016]()
+  * [範例D016](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_016_HW_Kernel%20Density%20Estimation_/Day_016_EDA_KDEplots.ipynb)
     * 各種樣式的長條圖(Bar)、直方圖(Histogram)
     * 不同的 KDE 曲線與繪圖設定以及切換不同 Kernel function 的效果
-  * [作業D016]()
+  * [作業D016](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_016_EDA_KDEplots_Ans.ipynb)
     * 調整對應的資料，以繪製分布圖
 <br>
 
@@ -781,16 +841,16 @@
     * 等頻劃分(對應 pandas 的 qcut)：將資料分成幾等份，每等份資料裡面的個數是一樣的
     * 聚類劃分：使用聚類演算法將資料聚成幾類，每一個類為一個劃分
 * 範例與作業
-  * [範例D017]()：數據離散化
+  * [範例D017](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_017_HW/Day_017_discretizing.ipynb)：數據離散化
     * pandas.cut 的等寬劃分效果
     * pandas.qcut 的等頻劃分效果
-  * [作業D017]()
+  * [作業D017](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_017_discretizing_Ans.ipynb)
   <br>
 
 ### D018 程式實作EDA-把連續型變數離散化
 * 把連續型的變數離散化後，可以搭配 pandas 的 groupby 畫出與預測目標的圖來判斷兩者之間是否有某種關係/趨勢
 * 範例與作業
-  * [作業D018]()
+  * [作業D018](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_018_Ans.ipynb)
     * 對較完整的資料生成離散化特徵
     * 觀察上述離散化特徵，對於目標值的預測有沒有幫助
 <br>
@@ -824,22 +884,90 @@
   * [Multiple Subplots](https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html)
   * [Seaborn.jointplot](https://seaborn.pydata.org/generated/seaborn.jointplot.html)
 * 範例與作業
-  * [範例D019]()
+  * [範例D019](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_019_HW_%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C_subplots/Day_019_EDA_subplots.ipynb)
     * 傳統的 subplot 三碼：row、column、indx 繪製法
     * subplot index 超過 10 以上的繪圖法：透過 for loop
-  * [作業D019]()
+  * [作業D019](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_019_EDA_subplots_Ans.ipynb)
 <br>
 
 ### D020 程式實作-Heatmap & Grid-plot
-* 
+* Heatmap
+  * 常用於呈現變數間的相關性、混和矩陣(confusion matrix)，以顏色深淺呈現
+  * 亦可用於呈現不同條件下，數量的高低關係
+  * 參考資料
+    * [matplotlib 官方範例](https://matplotlib.org/3.2.2/gallery/images_contours_and_fields/image_annotated_heatmap.html)
+    * [Seaborn 数据可视化基础教程](https://huhuhang.com/post/machine-learning/seaborn-basic)
+* Grid-plot：結合 scatter plot 與 historgram 的好處來呈現變數間的相關程度
+  * subplot 的延伸，但 seaborn 做得更好
+    ```
+    import seaborn as sns
+    sns.set(style='ticks', color_codes=True)
+    iris = sns.load_dataset('iris')
+    g = sns.pairplot(iris)
+    ```
+    
+    * 對角線呈現該變數的分布(distribution)
+    * 非對角線呈現兩兩變數間的散佈圖
+  * 參考資料
+    * [Seaborn 的 Pairplot](https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166)
 * 範例與作業
   * [範例D020]()
+    * Heatmap 的基礎用法：相關矩陣的 Heatmap
+    * Heatmap 的進階用法：散佈圖、KDE、密度圖
   * [作業D020]()
+
 <br>
 
 ### D021 模型-Logistic Regression
-* 
+* A baseline
+  * 最終的目的是要預測客戶是否會違約遲繳貸款的機率，在開始使用任何複雜模型之前，有一個最簡單的模型當作 baseline 是一個好習慣
+* Logistic Regression
+  * 參考資料：[ML-Logistic Regression-Andrew](https://www.youtube.com/watch?v=-la3q9d7AKQ&list=PLNeKWBMsAzboR8vvhnlanxCNr2V7ITuxy)
 * 範例與作業
   * [範例D021]()
+    * 資料清理
+    * 前處理
+    * Heatmap 的進階用法：散佈圖、KDE、密度圖
+    * 輸出值的紀錄
   * [作業D021]()
+  
+Back to <a href="#學習大綱">學習大綱</a>
+<br>
+<br>
+
+## 資料科學特徵工程技術
+### D022 特徵工程簡介
+<br>
+
+### D023 特徵工程(數值型)-去除偏態
+<br>
+
+### D024 特徵工程(類別型)-基礎處理
+<br>
+
+### D025 特徵工程(類別型)-均值編碼
+<br>
+
+### D026 特徵工程(類別型)-其他進階處理
+<br>
+
+### D027 特徵工程(時間型)
+<br>
+
+### D028 特徵工程-數值與數值組合
+<br>
+
+### D029 特徵工程-類別與數值組合
+<br>
+
+### D030 特徵選擇
+<br>
+
+### D031 特徵評估
+<br>
+
+### D032 特徵優化(分類型)-業編碼
+
+Back to <a href="#學習大綱">學習大綱</a>
+<br>
 <br>
