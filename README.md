@@ -164,7 +164,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D020：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering → 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering(D022-特徵工程)→ 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -996,6 +996,22 @@ Back to <a href="#學習大綱">學習大綱</a>
 
 ## 資料科學特徵工程技術
 ### D022 特徵工程簡介
+* [特徵工程](https://www.zhihu.com/question/29316149)
+  * 從事實到對應分數的轉換，點數未必直接對應到總價或機率
+  * 資料包含類別型(文字型)特徵以及數值型特徵，最小的特徵工程至少包含一種類別編碼(範例使用標籤編碼)，以及一種特徵縮放方法(範例使用最小最大化)
+* 建模語法
+  * 讀取資料：df_train、df_test
+  * 分解重組與轉換：將 df_train、df_test 合併為 df   
+  * 特徵工程：針對 df 進行轉換
+    * Label Encoder
+    * MinMax Encoder
+  * 訓練模型與預測
+    * train_X、train_Y：訓練模型
+    * test_X：模型預測，可得到 pred
+  * 合成提交檔：將預測結果存成 csv 檔
+* 範例與作業
+  * [範例D022]()
+  * [作業D022]()
 <br>
 
 ### D023 特徵工程(數值型)-去除偏態
