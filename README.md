@@ -55,7 +55,7 @@
   * D048 Kaggle 競賽平台介紹
   * D049 集成方法-混和泛化(Blending)
   * D050 集成方法-堆疊泛化(Stacking)
-* <a href="#Kaggle第一次期中考">Kaggle第一次期中考</a>
+* <a href="#Kaggle期中考">Kaggle期中考</a>
   * D051-D053 Kaggle 期中考
 * <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
