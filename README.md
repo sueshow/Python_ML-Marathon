@@ -23,6 +23,38 @@
   * D019 程式實作-Subplots
   * D020 程式實作-Heatmap & Grid-plot
   * D021 模型-Logistic Regression
+* <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+  * D022 特徵工程簡介
+  * D023 特徵工程(數值型)-去除偏態
+  * D024 特徵工程(類別型)-基礎處理
+  * D025 特徵工程(類別型)-均值編碼
+  * D026 特徵工程(類別型)-其他進階處理
+  * D027 特徵工程(時間型)
+  * D028 特徵工程-數值與數值組合
+  * D029 特徵工程-類別與數值組合
+  * D030 特徵選擇
+  * D031 特徵評估
+  * D032 特徵優化(分類型)-業編碼
+* <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+  * D033
+  * D034
+  * D035
+  * D036
+  * D037
+  * D038
+  * D039
+  * D040
+  * D041
+  * D042
+  * D043
+  * D044
+  * D045
+  * D046
+* <a href="#機器學習調整參數">機器學習調整參數</a>
+  * D047
+  * D048
+  * D049
+  * D050
 * 
 <br>
 <br>
@@ -880,14 +912,62 @@ Back to <a href="#學習大綱">學習大綱</a>
     * [Seaborn 的 Pairplot](https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166)
 * 範例與作業
   * [範例D020]()
+    * Heatmap 的基礎用法：相關矩陣的 Heatmap
+    * Heatmap 的進階用法：散佈圖、KDE、密度圖
   * [作業D020]()
+
 <br>
 
 ### D021 模型-Logistic Regression
-* 
+* A baseline
+  * 最終的目的是要預測客戶是否會違約遲繳貸款的機率，在開始使用任何複雜模型之前，有一個最簡單的模型當作 baseline 是一個好習慣
+* Logistic Regression
+  * 參考資料：[ML-Logistic Regression-Andrew](https://www.youtube.com/watch?v=-la3q9d7AKQ&list=PLNeKWBMsAzboR8vvhnlanxCNr2V7ITuxy)
 * 範例與作業
   * [範例D021]()
+    * 資料清理
+    * 前處理
+    * Heatmap 的進階用法：散佈圖、KDE、密度圖
+    * 輸出值的紀錄
   * [作業D021]()
   
 Back to <a href="#學習大綱">學習大綱</a>
+<br>
+<br>
+
+## 資料科學特徵工程技術
+### D022 特徵工程簡介
+<br>
+
+### D023 特徵工程(數值型)-去除偏態
+<br>
+
+### D024 特徵工程(類別型)-基礎處理
+<br>
+
+### D025 特徵工程(類別型)-均值編碼
+<br>
+
+### D026 特徵工程(類別型)-其他進階處理
+<br>
+
+### D027 特徵工程(時間型)
+<br>
+
+### D028 特徵工程-數值與數值組合
+<br>
+
+### D029 特徵工程-類別與數值組合
+<br>
+
+### D030 特徵選擇
+<br>
+
+### D031 特徵評估
+<br>
+
+### D032 特徵優化(分類型)-業編碼
+
+Back to <a href="#學習大綱">學習大綱</a>
+<br>
 <br>
