@@ -970,10 +970,10 @@ Back to <a href="#學習大綱">學習大綱</a>
   * 參考資料
     * [Seaborn 的 Pairplot](https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166)
 * 範例與作業
-  * [範例D020]()
+  * [範例D020](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_020_HW_Heatmap%20%26%20Grid-plot/Day_020_EDA_heatmap.ipynb)
     * Heatmap 的基礎用法：相關矩陣的 Heatmap
     * Heatmap 的進階用法：散佈圖、KDE、密度圖
-  * [作業D020]()
+  * [作業D020](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_020_EDA_heatmap_Ans.ipynb)
 
 <br>
 
@@ -983,12 +983,12 @@ Back to <a href="#學習大綱">學習大綱</a>
 * Logistic Regression
   * 參考資料：[ML-Logistic Regression-Andrew](https://www.youtube.com/watch?v=-la3q9d7AKQ&list=PLNeKWBMsAzboR8vvhnlanxCNr2V7ITuxy)
 * 範例與作業
-  * [範例D021]()
+  * [範例D021](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_021_HW_Logistic%20Regression/Day_021_first_model.ipynb)
     * 資料清理
     * 前處理
     * Heatmap 的進階用法：散佈圖、KDE、密度圖
     * 輸出值的紀錄
-  * [作業D021]()
+  * [作業D021](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_021_first_model_Ans.ipynb)
   
 Back to <a href="#學習大綱">學習大綱</a>
 <br>
