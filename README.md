@@ -1009,6 +1009,8 @@ Back to <a href="#學習大綱">學習大綱</a>
     * train_X、train_Y：訓練模型
     * test_X：模型預測，可得到 pred
   * 合成提交檔：將預測結果存成 csv 檔
+* 參考資料
+  * [特徵工程實例說明【Cupoy A咖共學】](https://www.youtube.com/watch?v=ZhyfKVvoK7I&t=261s)
 * 範例與作業
   * [範例D022]()
   * [作業D022]()
