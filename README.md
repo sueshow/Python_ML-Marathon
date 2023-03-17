@@ -997,7 +997,7 @@ Back to <a href="#學習大綱">學習大綱</a>
 ## 資料科學特徵工程技術
 ### D022 特徵工程簡介
 * [特徵工程](https://www.zhihu.com/question/29316149)
-  * 從事實到對應分數的轉換，點數未必直接對應到總價或機率
+  * 從事實到對應分數的轉換，而非直接轉換成 1 點，點數未必直接對應到總價或機率
   * 資料包含類別型(文字型)特徵以及數值型特徵，最小的特徵工程至少包含一種類別編碼(範例使用標籤編碼)，以及一種特徵縮放方法(範例使用最小最大化)
 * 建模語法
   * 讀取資料：df_train、df_test
@@ -1015,6 +1015,67 @@ Back to <a href="#學習大綱">學習大綱</a>
 <br>
 
 ### D023 特徵工程(數值型)-去除偏態
+* 去除[偏態](https://blog.csdn.net/u013555719/article/details/78530879)
+  * 範例：希望當掉的同學部要太多
+    * 標準化(平移)：高低分群體還是分得太明顯
+    * 去離群值：高分群的努力都白費，不公平
+    * 去除偏態：近似常態分佈(左右對稱、集中點在中央，讓平均值具有代表性)，如開根號乘以 10
+  * 使用時機：當離群資料比例太高，或者平均值沒有代表性
+  * 方法
+    * 對數去偏(log1p)
+      * 常見於計數/價格這類非負且可能為 0 的欄位
+      * 有 0 時應加 1 (plus one) 再取對數 (log)
+      * 還原時先取指數 (exp) 後再減一 (minus one)
+    * 方根去偏(sqrt)
+      * 將數值減去最小值後開根號，最大值有限時適用 (如成績轉換)
+    * 分布去偏(boxcox)：λ 要介於 0 到 0.5 之間，轉化前的數值不可小於等於 0
+      * 函數的 lambda(λ) 參數為 0 時等於 log 函數，lambda(λ) 為 0.5 時等於開根號 (即sqrt)，因此可藉由參數的調整更靈活地轉換數值，但要特別注意 Y 的輸入數值必須要為正 (不可為0)
+        <table border="1" width="9%">
+          <tr>
+            <th width="2%"> λ </a>
+            <th width="2%"> Y </a>
+            <th width="5%"> Y </a>
+          </tr>
+          <tr>
+            <td> -2 </td>
+            <td> 1/Y^2 </td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <td> -1 </td>
+            <td> 1/Y </td>
+            <td> inverse transformation </td>
+          </tr>
+          <tr>
+            <td> -0.5 </td>
+            <td> 1/Y^(1/2) </td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <td> 0 </td>
+            <td> log(Y) </td>
+            <td> logarithmic transformation </td>
+          </tr>
+          <tr>
+            <td> 0.5 </td>
+            <td> Y^(1/2) </td>
+            <td> square root transformation </td>
+          </tr>
+          <tr>
+            <td> 1 </td>
+            <td> Y </td>
+            <td> no transformation </td>
+          </tr>
+          <tr>
+            <td> 2 </td>
+            <td> Y^(2) </td>
+            <td> quadratic transformation </td>
+          </tr>
+        </table>
+       
+* 範例與作業
+  * [範例D023]()
+  * [作業D023]()
 <br>
 
 ### D024 特徵工程(類別型)-基礎處理
