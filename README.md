@@ -36,26 +36,85 @@
   * D031 特徵評估
   * D032 特徵優化(分類型)-業編碼
 * <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
-  * D033
-  * D034
-  * D035
-  * D036
-  * D037
-  * D038
-  * D039
-  * D040
-  * D041
-  * D042
-  * D043
-  * D044
-  * D045
-  * D046
+  * D033 機器如何學習?
+  * D034 訓練/測試集切分
+  * D035 Regression vs. classification
+  * D036 評估指標選定 evaluation metrics
+  * D037 Regression model-線性迴歸、羅吉斯回歸
+  * D038 程式實作-線性迴歸、羅吉斯回歸
+  * D039 Regression model-LASSO回歸、Ridge回歸
+  * D040 程式實作-LASSO回歸、Ridge回歸
+  * D041 Tree based model-決策樹(Decision Tree)
+  * D042 程式實作-決策樹
+  * D043 Tree based model-隨機森林(Random Forest)
+  * D044 程式實作-隨機森林
+  * D045 Tree based model-梯度提升機(Gradient Boosting Machine)
+  * D046 程式實作-梯度提升機
 * <a href="#機器學習調整參數">機器學習調整參數</a>
-  * D047
-  * D048
-  * D049
-  * D050
-* 
+  * D047 超參數調整與優化
+  * D048 Kaggle 競賽平台介紹
+  * D049 集成方法-混和泛化(Blending)
+  * D050 集成方法-堆疊泛化(Stacking)
+* <a href="#Kaggle期中考">Kaggle期中考</a>
+  * D051-D053 Kaggle 期中考
+* <a href="#非監督式的機器學習">非監督式的機器學習</a>
+  * D054 非監督式機器學習
+  * D055 非監督式-分群-K-Means 分群
+  * D056 非監督式-分群-K-Means 分群評估：使用輪廓分析
+  * D057 非監督式-分群-階層式 Hierarchical Clustering
+  * D058 非監督式-分群-Hierarchical Clustering 觀察：使用 2D 樣版資料集
+  * D059 降維方法(Dimension Reduction)-主成份分析(PCA)
+  * D060 程式實作-PCA：使用手寫辨識資料集
+  * D061 降維方法(Dimension Reduction)-T-SNE
+  * D062 程式實作-T-SNE：分群與流形還原
+* <a href="#深度學習理論與實作">深度學習理論與實作</a>
+  * D063
+  * D064
+  * D065
+* <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+  * D066
+  * D067
+  * D068
+  * D069
+  * D070
+  * D071
+  * D072
+  * D073
+  * D074
+  * D075
+  * D076
+  * D077
+  * D078
+  * D079
+  * D080
+  * D081
+  * D082
+  * D083
+  * D084
+  * D085
+  * D086
+  * D087
+  * D088
+  * D089
+  * D090
+  * D091
+* <a href="#深度學習應用卷積神經網路">深度學習應用卷積神經網路</a>
+  * D092
+  * D093
+  * D094
+  * D095
+  * D096
+  * D097
+  * D098
+  * D099
+  * D100
+* <a href="#Kaggle期末考">Kaggle期末考</a>
+  * D101-D103 影像辨識
+* <a href="#Bonus進階補充">Bonus進階補充</a>
+  * D104
+  * D105
+  * D106
+  * D107
 <br>
 <br>
 
