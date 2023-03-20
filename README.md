@@ -1012,9 +1012,9 @@ Back to <a href="#學習大綱">學習大綱</a>
 * 參考資料
   * [特徵工程實例說明【Cupoy A咖共學】](https://www.youtube.com/watch?v=ZhyfKVvoK7I&t=261s)
 * 範例與作業
-  * [範例D022]()
+  * [範例D022](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_022_HW_%E7%89%B9%E5%BE%B5%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/Day_022_Introduction_of_Feature%20Engineering.ipynb)
     * 特徵工程：補缺失值(fillna)、標籤編碼(LabelEncoder)【類別】、最小最大化(MinMaxScaler)【數值】
-  * [作業D022]()
+  * [作業D022](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_022_Introduction_of_Feature%20Engineering_Ans.ipynb)
 <br>
 
 ### D023 特徵工程(數值型)-去除偏態
@@ -1078,13 +1078,13 @@ Back to <a href="#學習大綱">學習大綱</a>
         </table>
        
 * 範例與作業
-  * [範例D023]()
+  * [範例D023](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_023_HW_%E5%8E%BB%E9%99%A4%E5%81%8F%E6%85%8B/Day_023_Reduce_Skewness.ipynb)
     * DataSet：房價預測
     * 觀察原始數值的散佈圖及線性迴歸分數
     * 使用 log1p 降偏態時，對於分布與迴歸分數的影響
     * 使用 box-cox (λ=0.15)時，對於分布與迴歸分數的影響
     * 使用 sqrt (box-cox, λ=0.5)時，對於分布與迴歸分數的影響
-  * [作業D023]()
+  * [作業D023](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_023_Reduce_Skewness_Ans.ipynb)
     * DataSet：鐵達尼生存預測
 <br>
 
@@ -1117,11 +1117,11 @@ Back to <a href="#學習大綱">學習大綱</a>
     </table>
 
 * 範例與作業
-  * [範例D024]()
+  * [範例D024](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_024_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E8%99%95%E7%90%86/Day_024_LabelEncoder_and_OneHotEncoder.ipynb)
     * 使用標籤編碼與獨熱編碼
       * 在特徵數量/線性迴歸分數/線性迴歸時間上，有什麼影響
       * 在特徵數量/梯度提升樹分數/梯度提升樹時間上，有什麼影響
-  * [作業D024]()    
+  * [作業D024](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_024_LabelEncoder_and_OneHotEncoder_Ans.ipynb)    
     * 使用標籤編碼與獨熱編碼
       * 在特徵數量/邏輯斯迴歸分數/邏輯斯迴歸時間上，有什麼影響
 <br>
