@@ -1186,10 +1186,50 @@ Back to <a href="#學習大綱">學習大綱</a>
 <br>
 
 ### D027 特徵工程(時間型)
-* 
+* 時間特徵分解
+  * 年、月、日、時、分、秒、第幾周、星期幾
+  * 週期循環特徵：關鍵在於首尾相接，須使用正弦函數(sin)或餘弦函數(cos)加以組合
+    <table border="1" width="9%">
+          <tr>
+            <th width="2%"> 週期 </a>
+            <th width="5%"> 相關性 </a>
+            <th width="3%"> 正負意義 </a>
+            <th width="5%"> 關係 </a>
+          </tr>
+          <tr>
+            <td> 年 </td>
+            <td> (季節)與春夏秋冬季節溫度相關 </td>
+            <td> 正：冷/負：熱 </td>
+            <td> cos((月/6 + 日/180 )π) </td>
+          </tr>
+          <tr>
+            <td> 月 </td>
+            <td> 與薪水、繳費相關 </td>
+            <td>  </td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <td> 周 </td>
+            <td> (例假日)與周休、消費習慣相關 </td>
+            <td> 正：精神飽滿/負：疲倦 </td>
+            <td> sin((星期幾/3.5 + 小時/84 )π) </td>
+          </tr>
+          <tr>
+            <td> 日 </td>
+            <td> (日夜與生活作息)與生理時鐘相關 </td>
+            <td> 正：精神飽滿/負：疲倦 </td>
+            <td> sin((小時/12 + 分/720 + 秒/43200 )π) </td>
+          </tr>
+    </table>
+ 
+  * 時段特徵
+    * 短暫時段內的事件計數，也可能影響事件發生的機率，如：網站銷售預測，點擊網站前 10分鐘/1小時/1天的累計點擊量
+  * Python 參考
+    * [時間日期處理](https://wklken.me/posts/2015/03/03/python-base-datetime.html)
+    * [Basic date and time types](https://docs.python.org/3/library/datetime.html)
 * 範例與作業
-  * []()
-  * []()
+  * [範例D027]()
+  * [作業D027]()
 <br>
   * DataSet：鐵達尼生存預測
 
