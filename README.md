@@ -1168,13 +1168,35 @@ Back to <a href="#學習大綱">學習大綱</a>
 ### D026 特徵工程(類別型)-其他進階處理
 * 計數編碼(Counting)
   * 情境：若類別的目標均價與類別筆數呈正相關 (或負相關或高度相關)，也可將筆數本身當成特徵，如自然語言處理時，字詞的計數編碼又稱詞頻
+  * 計算方式：計算類別在資料中出現的次數
 * 特徵雜湊([Feature Hash](https://blog.csdn.net/laolu1573/article/details/79410187))
-  * 情境：相異類別的數量非常龐大
+  * 情境：相異類別的數量非常龐大，且可能產生新的類別
+  * 計算方式
+    * 將原始值 hash 後取餘數
+    * 記錄到 hash table
+    * hash table 的長度就是增加的特徵數目
+      ```
+      function hashing_vectorizer(features : array of string, N : integer):
+          x := new vector[N]
+          for f in features:
+              h := hash(f)
+              x[h mod N] += 1
+          return x
+      ```
   * 方法
     * 將類別由[雜湊函數](https://en.wikipedia.org/wiki/Hash_function)定應到一組數字
     * 調整雜湊函數對應值的數量
     * 在計算空間/時間與鑑別度間取折衷
     * 提高訊息密度，減少無用的標籤
+  * 優缺點
+    * 優點
+      * 相較於 one-hot encoding，不需要預先維護一個變量表
+      * 可以處理新的類別
+    * 缺點
+      * 可能會把多個原始類別值 hash 到相同的位置上，出現碰撞 (hash collision)，不過實際實驗表明這種衝突對算法的精度影響很小。將高維稀疏的解空間壓縮到低維稠密的空間，壓縮到的維度越低，越容易發生碰撞，此時可通過使用多個 hash function 來減少碰撞造成的信息損失
+* bag-of-words
+  * 方法：蒐集所有的詞彙當成特徵，每個句子在有出現的詞彙特徵標 1
+  * 缺點：當句子的詞彙不固定時,特徵會就爆炸性成長，且也無法處理新出現的詞彙。而且資料分佈可能很稀疏
 * 嵌入式編碼(Embedding)：與深度學習相關，在此課程不談
 * 範例與作業
   * [範例D026]()
