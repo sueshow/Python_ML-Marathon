@@ -999,6 +999,7 @@ Back to <a href="#學習大綱">學習大綱</a>
 * [特徵工程](https://www.zhihu.com/question/29316149)
   * 從事實到對應分數的轉換，而非直接轉換成 1 點，點數未必直接對應到總價或機率
   * 資料包含類別型(文字型)特徵以及數值型特徵，最小的特徵工程至少包含一種類別編碼(範例使用標籤編碼)，以及一種特徵縮放方法(範例使用最小最大化)
+  * 從原始資料中提取有價值的資訊
 * 建模語法
   * 讀取資料：df_train、df_test
   * 分解重組與轉換：將 df_train、df_test 合併為 df   
@@ -1009,12 +1010,25 @@ Back to <a href="#學習大綱">學習大綱</a>
     * train_X、train_Y：訓練模型
     * test_X：模型預測，可得到 pred
   * 合成提交檔：將預測結果存成 csv 檔
+  * 補充
+    * 特徵重要性評估通常發生在模型後
+    * 可再用來跌代調整模型
+* 資料處理
+  * 減少：詳見資料前處理
+    * 資料清理
+    * 離群值處理
+  * 增加
+    * 基於事實的特徵轉換
+      * 標記 Label
+    * 基於數值的特徵轉換
+      * 標準化、區間縮放
+      * 二值化(連續數值->離散類別)
 * 參考資料
   * [特徵工程實例說明【Cupoy A咖共學】](https://www.youtube.com/watch?v=ZhyfKVvoK7I&t=261s)
 * 範例與作業
-  * [範例D022]()
+  * [範例D022](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_022_HW_%E7%89%B9%E5%BE%B5%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/Day_022_Introduction_of_Feature%20Engineering.ipynb)
     * 特徵工程：補缺失值(fillna)、標籤編碼(LabelEncoder)【類別】、最小最大化(MinMaxScaler)【數值】
-  * [作業D022]()
+  * [作業D022](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_022_Introduction_of_Feature%20Engineering_Ans.ipynb)
 <br>
 
 ### D023 特徵工程(數值型)-去除偏態
@@ -1078,13 +1092,13 @@ Back to <a href="#學習大綱">學習大綱</a>
         </table>
        
 * 範例與作業
-  * [範例D023]()
+  * [範例D023](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_023_HW_%E5%8E%BB%E9%99%A4%E5%81%8F%E6%85%8B/Day_023_Reduce_Skewness.ipynb)
     * DataSet：房價預測
     * 觀察原始數值的散佈圖及線性迴歸分數
     * 使用 log1p 降偏態時，對於分布與迴歸分數的影響
     * 使用 box-cox (λ=0.15)時，對於分布與迴歸分數的影響
     * 使用 sqrt (box-cox, λ=0.5)時，對於分布與迴歸分數的影響
-  * [作業D023]()
+  * [作業D023](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_023_Reduce_Skewness_Ans.ipynb)
     * DataSet：鐵達尼生存預測
 <br>
 
@@ -1117,11 +1131,13 @@ Back to <a href="#學習大綱">學習大綱</a>
     </table>
 
 * 範例與作業
-  * [範例D024]()
+  * [範例D024](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_024_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E8%99%95%E7%90%86/Day_024_LabelEncoder_and_OneHotEncoder.ipynb)
+    * DataSet：房價預測
     * 使用標籤編碼與獨熱編碼
       * 在特徵數量/線性迴歸分數/線性迴歸時間上，有什麼影響
       * 在特徵數量/梯度提升樹分數/梯度提升樹時間上，有什麼影響
-  * [作業D024]()    
+  * [作業D024](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_024_LabelEncoder_and_OneHotEncoder_Ans.ipynb)    
+    * DataSet：鐵達尼生存預測
     * 使用標籤編碼與獨熱編碼
       * 在特徵數量/邏輯斯迴歸分數/邏輯斯迴歸時間上，有什麼影響
 <br>
@@ -1141,29 +1157,138 @@ Back to <a href="#學習大綱">學習大綱</a>
         * 其中，調整因子：依總樣本數調整
 * 範例與作業
   * [範例D025]()
+    * DataSet：房價預測
+    * 使用標籤編碼與均值編碼
+      * 在特徵數量/線性迴歸分數/線性迴歸時間上，有什麼影響
+      * 在特徵數量/梯度提升樹分數/梯度提升樹時間上，有什麼影響
   * [作業D025]()
+    * DataSet：鐵達尼生存預測
 <br>
 
 ### D026 特徵工程(類別型)-其他進階處理
+* 計數編碼(Counting)
+  * 情境：若類別的目標均價與類別筆數呈正相關 (或負相關或高度相關)，也可將筆數本身當成特徵，如自然語言處理時，字詞的計數編碼又稱詞頻
+  * 計算方式：計算類別在資料中出現的次數
+* 特徵雜湊([Feature Hash](https://blog.csdn.net/laolu1573/article/details/79410187))
+  * 情境：相異類別的數量非常龐大，且可能產生新的類別
+  * 計算方式
+    * 將原始值 hash 後取餘數
+    * 記錄到 hash table
+    * hash table 的長度就是增加的特徵數目
+      ```
+      function hashing_vectorizer(features : array of string, N : integer):
+          x := new vector[N]
+          for f in features:
+              h := hash(f)
+              x[h mod N] += 1
+          return x
+      ```
+  * 方法
+    * 將類別由[雜湊函數](https://en.wikipedia.org/wiki/Hash_function)定應到一組數字
+    * 調整雜湊函數對應值的數量
+    * 在計算空間/時間與鑑別度間取折衷
+    * 提高訊息密度，減少無用的標籤
+  * 優缺點
+    * 優點
+      * 相較於 one-hot encoding，不需要預先維護一個變量表
+      * 可以處理新的類別
+    * 缺點
+      * 可能會把多個原始類別值 hash 到相同的位置上，出現碰撞 (hash collision)，不過實際實驗表明這種衝突對算法的精度影響很小。將高維稀疏的解空間壓縮到低維稠密的空間，壓縮到的維度越低，越容易發生碰撞，此時可通過使用多個 hash function 來減少碰撞造成的信息損失
+* bag-of-words
+  * 方法：蒐集所有的詞彙當成特徵，每個句子在有出現的詞彙特徵標 1
+  * 缺點：當句子的詞彙不固定時,特徵會就爆炸性成長，且也無法處理新出現的詞彙。而且資料分佈可能很稀疏
+* 嵌入式編碼(Embedding)：與深度學習相關，在此課程不談
+* 範例與作業
+  * [範例D026]()
+    * DataSet：鐵達尼生存預測，欄位：Ticket
+    * 使用計數編碼，搭配邏輯斯迴歸對於測結果有什麼影響
+    * 使用雜湊編碼及計數編碼+雜湊編碼，搭配邏輯斯迴歸對於測結果有什麼影響
+  * [作業D026]()
+    * DataSet：鐵達尼生存預測，欄位：Cabin
 <br>
 
 ### D027 特徵工程(時間型)
+* 時間特徵分解
+  * 年、月、日、時、分、秒、第幾周、星期幾
+  * 週期循環特徵：關鍵在於首尾相接，須使用正弦函數(sin)或餘弦函數(cos)加以組合
+    <table border="1" width="9%">
+          <tr>
+            <th width="2%"> 週期 </a>
+            <th width="5%"> 相關性 </a>
+            <th width="3%"> 正負意義 </a>
+            <th width="5%"> 關係 </a>
+          </tr>
+          <tr>
+            <td> 年 </td>
+            <td> (季節)與春夏秋冬季節溫度相關 </td>
+            <td> 正：冷/負：熱 </td>
+            <td> cos((月/6 + 日/180 )π) </td>
+          </tr>
+          <tr>
+            <td> 月 </td>
+            <td> 與薪水、繳費相關 </td>
+            <td>  </td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <td> 周 </td>
+            <td> (例假日)與周休、消費習慣相關 </td>
+            <td> 正：精神飽滿/負：疲倦 </td>
+            <td> sin((星期幾/3.5 + 小時/84 )π) </td>
+          </tr>
+          <tr>
+            <td> 日 </td>
+            <td> (日夜與生活作息)與生理時鐘相關 </td>
+            <td> 正：精神飽滿/負：疲倦 </td>
+            <td> sin((小時/12 + 分/720 + 秒/43200 )π) </td>
+          </tr>
+    </table>
+ 
+  * 時段特徵
+    * 短暫時段內的事件計數，也可能影響事件發生的機率，如：網站銷售預測，點擊網站前 10分鐘/1小時/1天的累計點擊量
+  * Python 參考
+    * [時間日期處理](https://wklken.me/posts/2015/03/03/python-base-datetime.html)
+    * [Basic date and time types](https://docs.python.org/3/library/datetime.html)
+* 範例與作業
+  * [範例D027]()
+  * [作業D027]()
 <br>
+  * DataSet：鐵達尼生存預測
 
 ### D028 特徵工程-數值與數值組合
+* 
+* 範例與作業
+  * []()
+  * []()
 <br>
 
 ### D029 特徵工程-類別與數值組合
+* 
+* 範例與作業
+  * []()
+  * []()
 <br>
 
 ### D030 特徵選擇
+* 
+* 範例與作業
+  * []()
+  * []()
 <br>
 
 ### D031 特徵評估
+* 
+* 範例與作業
+  * []()
+  * []()
 <br>
 
 ### D032 特徵優化(分類型)-業編碼
-
+* 
+* 範例與作業
+  * []()
+  * []()
+  
 Back to <a href="#學習大綱">學習大綱</a>
 <br>
 <br>
