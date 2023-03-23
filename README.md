@@ -1156,12 +1156,12 @@ Back to <a href="#學習大綱">學習大綱</a>
         * 新類別均值 = (原類別平均*類別樣本數+全部的總平均*調整因子)/(類別樣本數+調整因子)
         * 其中，調整因子：依總樣本數調整
 * 範例與作業
-  * [範例D025]()
+  * [範例D025](https://github.com/sueshow/Python_ML-Marathon/tree/main/Homework/Day_025_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E5%9D%87%E5%80%BC%E7%B7%A8%E7%A2%BC)
     * DataSet：房價預測
     * 使用標籤編碼與均值編碼
       * 在特徵數量/線性迴歸分數/線性迴歸時間上，有什麼影響
       * 在特徵數量/梯度提升樹分數/梯度提升樹時間上，有什麼影響
-  * [作業D025]()
+  * [作業D025](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_025_Mean_Encoder_Ans.ipynb)
     * DataSet：鐵達尼生存預測
 <br>
 
@@ -1199,11 +1199,11 @@ Back to <a href="#學習大綱">學習大綱</a>
   * 缺點：當句子的詞彙不固定時,特徵會就爆炸性成長，且也無法處理新出現的詞彙。而且資料分佈可能很稀疏
 * 嵌入式編碼(Embedding)：與深度學習相關，在此課程不談
 * 範例與作業
-  * [範例D026]()
+  * [範例D026](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_026_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E9%80%B2%E9%9A%8E%E8%99%95%E7%90%86/Day_026_CountEncoder_and_FeatureHash.ipynb)
     * DataSet：鐵達尼生存預測，欄位：Ticket
     * 使用計數編碼，搭配邏輯斯迴歸對於測結果有什麼影響
     * 使用雜湊編碼及計數編碼+雜湊編碼，搭配邏輯斯迴歸對於測結果有什麼影響
-  * [作業D026]()
+  * [作業D026](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_026_CountEncoder_and_FeatureHash_Ans.ipynb)
     * DataSet：鐵達尼生存預測，欄位：Cabin
 <br>
 
@@ -1246,14 +1246,18 @@ Back to <a href="#學習大綱">學習大綱</a>
  
   * 時段特徵
     * 短暫時段內的事件計數，也可能影響事件發生的機率，如：網站銷售預測，點擊網站前 10分鐘/1小時/1天的累計點擊量
-  * Python 參考
+  * Python 使用 datetime 
     * [時間日期處理](https://wklken.me/posts/2015/03/03/python-base-datetime.html)
     * [Basic date and time types](https://docs.python.org/3/library/datetime.html)
 * 範例與作業
-  * [範例D027]()
-  * [作業D027]()
+  * [範例D027](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_027_HW_%E6%99%82%E9%96%93%E5%9E%8B%E7%89%B9%E5%BE%B5/Day_027_DayTime_Features.ipynb)
+    * DataSet：taxi data，欄位：pickup_datetime
+    * 觀察時間特徵分解，在線性迴歸分數/梯度提升樹分數上，分別有什麼影響
+    * 觀察加入週期循環特徵，在線性迴歸分數/梯度提升樹分數上，分別有什麼影響
+  * [作業D027](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_027_DayTime_Features_Ans.ipynb)
+    * DatSet：taxi data，欄位：fire_amount
+    * 新增特徵：星期幾(day of week)與第幾周(week of year)
 <br>
-  * DataSet：鐵達尼生存預測
 
 ### D028 特徵工程-數值與數值組合
 * 
