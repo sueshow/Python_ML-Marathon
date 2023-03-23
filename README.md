@@ -1251,19 +1251,38 @@ Back to <a href="#學習大綱">學習大綱</a>
     * [Basic date and time types](https://docs.python.org/3/library/datetime.html)
 * 範例與作業
   * [範例D027](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_027_HW_%E6%99%82%E9%96%93%E5%9E%8B%E7%89%B9%E5%BE%B5/Day_027_DayTime_Features.ipynb)
-    * DataSet：taxi data，欄位：pickup_datetime
+    * DataSet：計程車費率預測，欄位：pickup_datetime
     * 觀察時間特徵分解，在線性迴歸分數/梯度提升樹分數上，分別有什麼影響
     * 觀察加入週期循環特徵，在線性迴歸分數/梯度提升樹分數上，分別有什麼影響
   * [作業D027](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_027_DayTime_Features_Ans.ipynb)
-    * DatSet：taxi data，欄位：fire_amount
+    * DatSet：計程車費率預測，欄位：fire_amount
     * 新增特徵：星期幾(day of week)與第幾周(week of year)
 <br>
 
 ### D028 特徵工程-數值與數值組合
-* 
+* 合成特徵(synthetic feature)
+  * 起點+終點位置：方向、距離
+    * 經緯度 -> 平面座標距離 -> 資料緯度集中在 40.75 度附近，可以算得經度與緯度代表的長度比為 cos(40.75度):1 = 0.75756:1，由此校正兩地距離
+  * 多個頂點位置：周長、面積
+  * 開始時間+結束時間：經過時長
+  * 長 x 寬：面積(如iris資料集的花瓣長、寬)
+* 特徵組合(feature cross)：對分線性規律進行編碼
+  * 種類
+    * [A X B]：將兩個特徵的值相乘形成特徵組合
+    * [A x B x C x D x E]：將五個特徵的值相乘形成特徵組合
+    * [A x A]：將單個特徵的值求平方形成特徵組合
+  * 組合獨熱矢量
+* 參考資料
+  * [特徵組合&特徵交叉 (Feature Crosses)](https://segmentfault.com/a/1190000014799038)
+  * [簡單高效的組合特徵自動挖掘框架](https://read01.com/jj8em6E.html#.ZBv4VnZBy5c)
 * 範例與作業
-  * []()
-  * []()
+  * [範例D028]()
+    * DatSet：計程車費率預測
+    * 增加特徵：經度差與緯度差，觀察線性迴歸與梯度提升樹的預測結果有什麼影響
+    * 增加座標距離特徵，觀察線性迴歸與梯度提升樹的預測結果有什麼影響
+  * [作業D028]()
+    * DatSet：計程車費率預測
+    * 增加特徵：經緯度一圈的長度比，觀察影響性 
 <br>
 
 ### D029 特徵工程-類別與數值組合
