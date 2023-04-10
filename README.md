@@ -4,7 +4,7 @@
   * <a href="#D001資料介紹與評估資料">D001 資料介紹與評估資料</a>
   * <a href="#D002機器學習概論">D002 機器學習概論</a>
   * <a href="#D003機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
-  * <a href="#D004EDA/讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
+  * <a href="#D004EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
 * <a href="#資料清理數據前處理">資料清理數據前處理</a>
   * D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
   * D006 EDA-欄位的資料類型介紹及處理
@@ -153,8 +153,9 @@
     * MAP@N：如 MAP@5、MAP@12
 * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
   * 目標：寫一個 MSE 函數
-<br>
+
 Back to <a href="#學習大綱">學習大綱</a>
+<br>
 <br>
 
 ### D002機器學習概論
@@ -176,8 +177,9 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 應用：Alpha GO
 * [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
   * 目標：瞭解機器學習適合應用的領域與範疇
-<br>  
+  
 Back to <a href="#學習大綱">學習大綱</a>
+<br>
 <br>
 
 ### D003機器學習-流程與步驟
@@ -217,11 +219,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 視專案需求整合前後端，資料格式使用 json、csv
 * [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
   * 閱讀文章：機器學習巨頭作的專案
-<br>
+
 Back to <a href="#學習大綱">學習大綱</a>
 <br>
+<br>
 
-### D004EDA/讀取資料與分析流程
+### D004EDA-讀取資料與分析流程
 * 範例：Home Credit Default Risk (房貸風險預測 from Kaggle)
   * 目的：預測借款者是否會還款，以還款機率作為最終輸出
   * 此問題為分類問題
@@ -250,8 +253,9 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 列出資料的大小：shape
     * 列出所有欄位：columns
     * 擷取部分資料：loc、iloc
-<br>
+
 Back to <a href="#學習大綱">學習大綱</a>
+<br>
 <br>
 
 ## 資料清理數據前處理
