@@ -1,11 +1,11 @@
 # Python_ML-Marathon
 ## 學習大綱
-* <a href="#機器學習概論">機器學習概論</a>
+### <a href="#機器學習概論">機器學習概論</a>
   * <a href="#D001資料介紹與評估資料">D001 資料介紹與評估資料</a>
   * <a href="#D002機器學習概論">D002 機器學習概論</a>
   * <a href="#D003機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
   * <a href="#D004EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
-* <a href="#資料清理數據前處理">資料清理數據前處理</a>
+### <a href="#資料清理數據前處理">資料清理數據前處理</a>
   * D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
   * D006 EDA-欄位的資料類型介紹及處理
   * D007 EDA-特徵類型
@@ -23,7 +23,7 @@
   * D019 程式實作-Subplots
   * D020 程式實作-Heatmap & Grid-plot
   * D021 模型-Logistic Regression
-* <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
   * <a href="#D022特徵工程簡介">D022 特徵工程簡介</a>
   * <a href="#D023特徵工程-數值型-去除偏態">D023 特徵工程(數值型)-去除偏態</a>
   * <a href="#D024特徵工程-類別型-基礎處理">D024 特徵工程(類別型)-基礎處理</a>
@@ -35,7 +35,7 @@
   * <a href="#D030特徵選擇">D030 特徵選擇</a>
   * <a href="#D031特徵評估">D031 特徵評估</a>
   * <a href="#D032特徵優化-分類型-葉編碼">D032 特徵優化(分類型)-葉編碼</a>
-* <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
   * D033 機器如何學習?
   * D034 訓練/測試集切分
   * D035 Regression vs. classification
@@ -50,14 +50,14 @@
   * D044 程式實作-隨機森林
   * D045 Tree based model-梯度提升機(Gradient Boosting Machine)
   * D046 程式實作-梯度提升機
-* <a href="#機器學習調整參數">機器學習調整參數</a>
+### <a href="#機器學習調整參數">機器學習調整參數</a>
   * D047 超參數調整與優化
   * D048 Kaggle 競賽平台介紹
   * D049 集成方法-混和泛化(Blending)
   * D050 集成方法-堆疊泛化(Stacking)
-* <a href="#Kaggle期中考">Kaggle期中考</a>
+### <a href="#Kaggle期中考">Kaggle期中考</a>
   * D051-D053 Kaggle 期中考
-* <a href="#非監督式的機器學習">非監督式的機器學習</a>
+### <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
   * D055 非監督式-分群-K-Means 分群
   * D056 非監督式-分群-K-Means 分群評估：使用輪廓分析
@@ -67,11 +67,11 @@
   * D060 程式實作-PCA：使用手寫辨識資料集
   * D061 降維方法(Dimension Reduction)-T-SNE
   * D062 程式實作-T-SNE：分群與流形還原
-* <a href="#深度學習理論與實作">深度學習理論與實作</a>
+### <a href="#深度學習理論與實作">深度學習理論與實作</a>
   * D063 深度學習簡介
   * D064 深度學習-模型調整與學習曲線
   * D065 深度學習-啟動函數與正規化
-* <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+### <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
   * D066 Keras安裝與介紹
   * D067 Keras Dataset
   * D068 Keras Sequential API
@@ -98,7 +98,7 @@
   * D089 神經網路-訓練細節與技巧：撰寫 Loss function
   * D090 使用傳統電腦視覺與機器學習進行影像辨識
   * D091 程式實作-使用傳統電腦視覺與機器學習進行影像辨識
-* <a href="#深度學習應用卷積神經網路">深度學習應用卷積神經網路</a>
+### <a href="#深度學習應用卷積神經網路">深度學習應用卷積神經網路</a>
   * D092 卷積神經網路(Convolution Neural Network, CNN)簡介
   * D093 CNN-架構細節
   * D094 CNN-卷積(Convolution)層與參數調整
@@ -108,9 +108,9 @@
   * D098 CNN-訓練細節與技巧：處理大量數據
   * D099 CNN-訓練細節與技巧：處理小量數據
   * D100 CNN-訓練細節與技巧：轉移學習(Transfer learning)
-* <a href="#Kaggle期末考">Kaggle期末考</a>
+### <a href="#Kaggle期末考">Kaggle期末考</a>
   * D101-D103 影像辨識
-* <a href="#Bonus進階補充">Bonus進階補充</a>
+### <a href="#Bonus進階補充">Bonus進階補充</a>
   * D104 史丹佛上 ConvNetJS 簡介
   * D105 CNN 卷積網路回顧
   * D106 電腦視覺常用公開資料集
@@ -178,7 +178,7 @@ Back to <a href="#學習大綱">學習大綱</a>
 * [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
   * 目標：瞭解機器學習適合應用的領域與範疇
   
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 <br>
 
