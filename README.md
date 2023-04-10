@@ -6,7 +6,7 @@
   * <a href="#D003機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
   * <a href="#D004EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
 ### <a href="#資料清理數據前處理">資料清理數據前處理</a>
-  * <a href="#D005如何新建一個dataframe？如何讀取其他資料？">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
+  * <a href="#D005如何新建一個dataframe如何讀取其他資料">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
   * <a href="#D006EDA-欄位的資料類型介紹及處理">D006 EDA-欄位的資料類型介紹及處理</a>
   * <a href="#D007EDA-特徵類型">D007 EDA-特徵類型</a>
   * <a href="#D008EDA-資料分佈">D008 EDA-資料分佈</a>
@@ -259,7 +259,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 
 ## 資料清理數據前處理
-### D005如何新建一個dataframe？如何讀取其他資料？
+### D005如何新建一個dataframe如何讀取其他資料
 * 前處理 Processing
   * 資料讀取 D005 → 格式調整 D006-D008、D013 → 填補缺值 D009、D011-D012 → 去離群值 D010 → 特徵縮放 D011-D012
   * 用途
@@ -542,9 +542,12 @@ Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
       * .skew()、.kurt()
       * .corr()、.cov()
     * [視覺化](https://pandas.pydata.org/pandas-docs/version/0.23.4/visualization.html)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D009 EDA-Outlier及處理
+### D009EDA-Outlier及處理
 * 離群值、異常值([Outlier](https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba))
   * 定義
     * 數據集中有一個或一些數值與其他數值相比差異較大
