@@ -6,23 +6,23 @@
   * <a href="#D003機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
   * <a href="#D004EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
 ### <a href="#資料清理數據前處理">資料清理數據前處理</a>
-  * D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
-  * D006 EDA-欄位的資料類型介紹及處理
-  * D007 EDA-特徵類型
-  * D008 EDA-資料分佈
-  * D009 EDA-Outlier及處理
-  * D010 EDA-去除離群值(數值型)
-  * D011 EDA-常用的數值取代
-  * D012 EDA-補缺失值與標準化(數值型)
-  * D013 常見的 DataFrame 操作
-  * D014 程式實作 EDA-相關係數簡介
-  * D015 程式實作EDA-Correlation code
-  * D016 EDA-不同數值範圍間的特徵如何檢視
-  * D017 EDA-把連續型變數離散化
-  * D018 程式實作EDA-把連續型變數離散化
-  * D019 程式實作-Subplots
-  * D020 程式實作-Heatmap & Grid-plot
-  * D021 模型-Logistic Regression
+  * <a href="#D005如何新建一個dataframe？如何讀取其他資料？">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
+  * <a href="#D006EDA-欄位的資料類型介紹及處理">D006 EDA-欄位的資料類型介紹及處理</a>
+  * <a href="#D007EDA-特徵類型">D007 EDA-特徵類型</a>
+  * <a href="#D008EDA-資料分佈">D008 EDA-資料分佈</a>
+  * <a href="#D009EDA-Outlier及處理">D009 EDA-Outlier及處理</a>
+  * <a href="#D010EDA-去除離群值-數值型">D010 EDA-去除離群值(數值型)</a>
+  * <a href="#D011EDA-常用的數值取代">D011 EDA-常用的數值取代</a>
+  * <a href="#D012 EDA-補缺失值與標準化-數值型">D012 EDA-補缺失值與標準化(數值型)</a>
+  * <a href="#D013常見的DataFrame操作">D013 常見的 DataFrame 操作</a>
+  * <a href="#D014程式實作EDA-相關係數簡介">D014 程式實作 EDA-相關係數簡介</a>
+  * <a href="#D015程式實作EDA-CorrelationCode">D015 程式實作EDA-Correlation code</a>
+  * <a href="#D016EDA-不同數值範圍間的特徵如何檢視">D016 EDA-不同數值範圍間的特徵如何檢視</a>
+  * <a href="#D017EDA-把連續型變數離散化">D017 EDA-把連續型變數離散化</a>
+  * <a href="#D018程式實作EDA-把連續型變數離散化">D018 程式實作EDA-把連續型變數離散化</a>
+  * <a href="#D019程式實作-Subplots">D019 程式實作-Subplots</a>
+  * <a href="#D020程式實作-Heatmap&Grid-plot">D020 程式實作-Heatmap & Grid-plot</a>
+  * <a href="#D021模型-LogisticRegression">D021 模型-Logistic Regression</a>
 ### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
   * <a href="#D022特徵工程簡介">D022 特徵工程簡介</a>
   * <a href="#D023特徵工程-數值型-去除偏態">D023 特徵工程(數值型)-去除偏態</a>
@@ -259,7 +259,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 
 ## 資料清理數據前處理
-### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
+### D005如何新建一個dataframe？如何讀取其他資料？
 * 前處理 Processing
   * 資料讀取 D005 → 格式調整 D006-D008、D013 → 填補缺值 D009、D011-D012 → 去離群值 D010 → 特徵縮放 D011-D012
   * 用途
@@ -338,9 +338,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_Ans.ipynb)  
     * 從網頁上讀取連結清單
     * 從清單網址讀取圖片
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D006 EDA-欄位的資料類型介紹及處理
+### D006EDA-欄位的資料類型介紹及處理
 * EDA (Exploratory Data Analysis)：探索式資料分析運用統計工具或是學畫，對資料有初步的瞭解，以幫助我們後續對資料進行更進一步的分析
 * 資料類型
   * 離散變數：只能用整數單位計算的變數，如房間數、性別、國家
@@ -428,9 +431,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 瞭解 Label Encoding 如何寫
     * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
   * [作業D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_006_column_data_type_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D007 EDA-特徵類型
+### D007EDA-特徵類型
 * 特徵類別：[參考資料](https://openhome.cc/Gossip/CodeData/PythonTutorial/NumericStringPy3.html)
   * 數值型特徵：有不同轉換方式，函數/條件式都可以，如坪數、年齡
     * 填補缺失值或直接去除離群值的方法：[去偏態](https://ithelp.ithome.com.tw/articles/10219949?sc=iThelpR)，符合常態假設
@@ -492,9 +498,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * [作業D007](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_007_Ans.ipynb)
     * 以鐵達尼生存預測為範例
     * 目標：完成三種不同特徵類型的三種資料操作，觀察其結果(何類難處理)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D008 EDA-資料分佈
+### D008EDA-資料分佈
 * 統計量化
   * 基本統計分析方法
     * 描述性分析：總量分析、相對數分析、平均數、變異指數等
@@ -563,9 +572,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
       * .isin(your_list) 可以用來給出 Seires 內每個元素是否在 your_list 裡面的布林值
       * 可以用布林值的方式進行遮罩的篩選 DataFrame
   * [作業D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_009_outlier%E5%8F%8A%E8%99%95%E7%90%86_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D010 EDA-去除離群值(數值型)
+### D010EDA-去除離群值(數值型)
 * [離群值](https://zhuanlan.zhihu.com/p/33468998)
   * 只有少數幾筆資料跟其他數值差異很大，標準化無法處理
     * 常態標準化：Z-score = (Xi-mean(Xi))/std(Xi)
@@ -584,9 +596,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * [作業D010](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_010_Ans.ipynb)
     * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
     * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D011 EDA-常用的數值取代
+### D011EDA-常用的數值取代
 * 處理例外值：常用以填補的統計值
   <table border="1" width="26%">
       <tr>
@@ -637,9 +652,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * [作業D011](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_011_handle_outliers_Ans.ipynb)
     * 填補資料
     * 標準化與最大最小化
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D012 EDA-補缺失值與標準化(數值型)
+### D012EDA-補缺失值與標準化-數值型
 * 填補[缺失值](https://juejin.cn/post/6844903648074416141)
   * 最重要的是欄位的領域知識與欄位中的非缺數
     * 填補指定值
@@ -671,9 +689,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 觀察替換不同特徵縮放方式，對特徵的影響
   * [作業D012](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_012_Fill_NaN_and_Scalers_Ans.ipynb)
     * 以「鐵達尼生存預測」為例
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D013 常見的 DataFrame 操作
+### D013常見的DataFrame操作
 * 轉換與合併 dataframe
   <table border="1" width="26%">
       <tr>
@@ -832,9 +853,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 使用條件篩選出 DataFrame 的子集合
     * DataFrame 的群聚 (groupby) 的各種應用方式
   * [作業D013](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_013_dataFrame_operation_Ans.ipynb) 
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D014 程式實作 EDA-相關係數簡介
+### D014程式實作 EDA-相關係數簡介
 * 相關係數
   * 常用來了解各欄位與我們想要預測的目標之間關係的指標
   * 衡量兩個隨機變量之間線性關係的強度和方向
@@ -849,9 +873,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 弱相關的相關矩陣與散佈圖之間的關係
     * 正相關的相關矩陣與散佈圖之間的關係
   * [作業D014](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_014_correlation_example_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D015 程式實作EDA-Correlation code
+### D015程式實作EDA-CorrelationCode
 * 相關係數(搭配課程內容)
   * 功能
     * 迅速找到和預測目標最有線性關係的變數
@@ -865,9 +892,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 出現異常數值的資料調整方式
     * 散佈圖異常與其調整方式
   * [作業D015](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_015_correlation_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D016 EDA-不同數值範圍間的特徵如何檢視
+### D016EDA-不同數值範圍間的特徵如何檢視
 * 繪圖風格：透過設計過的風格，讓觀看者更清楚明瞭，包含色彩選擇、線條、樣式等
   * 語法：詳細圖示差異搭配課程內容
     ```
@@ -897,9 +927,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 不同的 KDE 曲線與繪圖設定以及切換不同 Kernel function 的效果
   * [作業D016](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_016_EDA_KDEplots_Ans.ipynb)
     * 調整對應的資料，以繪製分布圖
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D017 EDA-把連續型變數離散化
+### D017EDA-把連續型變數離散化
 * 連續型變數離散化：變數較穩定
   * 要點：如每 10 歲一組，若不分組，outlier 會給模型帶來很大的干擾
     * 組的數量
@@ -913,17 +946,23 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * pandas.cut 的等寬劃分效果
     * pandas.qcut 的等頻劃分效果
   * [作業D017](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_017_discretizing_Ans.ipynb)
-  <br>
 
-### D018 程式實作EDA-把連續型變數離散化
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
+<br>
+
+### D018程式實作EDA-把連續型變數離散化
 * 把連續型的變數離散化後，可以搭配 pandas 的 groupby 畫出與預測目標的圖來判斷兩者之間是否有某種關係/趨勢
 * 範例與作業
   * [作業D018](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_018_Ans.ipynb)
     * 對較完整的資料生成離散化特徵
     * 觀察上述離散化特徵，對於目標值的預測有沒有幫助
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D019 程式實作-Subplots
+### D019程式實作-Subplots
 * 使用 subplot 的時機：將圖片分格呈現，有助於資訊傳達
   * 有很多相似的資訊要呈現時 (如不同組別的比較)
   * 同一組資料，但想同時用不同的圖型呈現
@@ -956,9 +995,12 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 傳統的 subplot 三碼：row、column、indx 繪製法
     * subplot index 超過 10 以上的繪圖法：透過 for loop
   * [作業D019](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_019_EDA_subplots_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D020 程式實作-Heatmap & Grid-plot
+### D020程式實作-Heatmap&Grid-plot
 * Heatmap
   * 常用於呈現變數間的相關性、混和矩陣(confusion matrix)，以顏色深淺呈現
   * 亦可用於呈現不同條件下，數量的高低關係
@@ -984,9 +1026,11 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * Heatmap 的進階用法：散佈圖、KDE、密度圖
   * [作業D020](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_020_EDA_heatmap_Ans.ipynb)
 
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D021 模型-Logistic Regression
+### D021模型-LogisticRegression
 * A baseline
   * 最終的目的是要預測客戶是否會違約遲繳貸款的機率，在開始使用任何複雜模型之前，有一個最簡單的模型當作 baseline 是一個好習慣
 * Logistic Regression
@@ -998,7 +1042,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * Heatmap 的進階用法：散佈圖、KDE、密度圖
     * 輸出值的紀錄
   * [作業D021](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_021_first_model_Ans.ipynb)
-  
+
 Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
 <br>
 <br>
