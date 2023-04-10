@@ -21,7 +21,7 @@
   * <a href="#D017-EDA-把連續型變數離散化">D017 EDA-把連續型變數離散化</a>
   * <a href="#D018-程式實作EDA-把連續型變數離散化">D018 程式實作EDA-把連續型變數離散化</a>
   * <a href="#D019-程式實作-Subplots">D019 程式實作-Subplots</a>
-  * <a href="#D020-程式實作-Heatmap&Grid-plot">D020 程式實作-Heatmap & Grid-plot</a>
+  * <a href="#D020-程式實作-Heatmap+Grid-plot">D020 程式實作-Heatmap & Grid-plot</a>
   * <a href="#D021-模型-LogisticRegression">D021 模型-Logistic Regression</a>
 ### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
   * <a href="#D022-特徵工程簡介">D022 特徵工程簡介</a>
@@ -1003,7 +1003,7 @@ Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
 <br>
 <br>
 
-### D020-程式實作-Heatmap&Grid-plot
+### D020-程式實作-Heatmap+Grid-plot
 * Heatmap
   * 常用於呈現變數間的相關性、混和矩陣(confusion matrix)，以顏色深淺呈現
   * 亦可用於呈現不同條件下，數量的高低關係
