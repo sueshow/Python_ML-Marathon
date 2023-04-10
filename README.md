@@ -1556,102 +1556,142 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
 
 
 ## 機器學習基礎模型建立
-### D033 機器如何學習?
+### D033-機器如何學習
 * 
 * 範例與作業(待下載)
   * [範例D033]()
   * [作業D033]()
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D034 訓練/測試集切分
+### D034-訓練/測試集切分
 * 
 * 範例與作業(待下載)
   * [範例D034]()
   * [作業D034]()
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D035 Regression vs. classification
+### D035-RegressionVS.Classification
 * 
 * 範例與作業(待下載)
   * [範例D035]()
   * [作業D035]()
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D036 評估指標選定 evaluation metrics
+### D036-評估指標選定EvaluationMetrics
 * 
 * 範例與作業(待下載)
   * [範例D036]()
   * [作業D036]()
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D037 Regression model-線性迴歸、羅吉斯回歸
+### D037-RegressionModel-線性迴歸、羅吉斯回歸
 * 
 * 範例與作業(待下載)
   * [範例D037]()
   * [作業D037]()
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D038 程式實作-線性迴歸、羅吉斯回歸
+### D038-程式實作-線性迴歸、羅吉斯回歸
 * 
 * 範例與作業(待下載)
   * [範例D038]()
   * [作業D038]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D039 Regression model-LASSO回歸、Ridge回歸
+### D039-RegressionModel-LASSO回歸、Ridge回歸
 * 
 * 範例與作業(待下載)
   * [範例D039]()
   * [作業D039]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D040 程式實作-LASSO回歸、Ridge回歸
+### D040-程式實作-LASSO回歸、Ridge回歸
 * 
 * 範例與作業(待下載)
   * [範例D040]()
   * [作業D040]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D041 Tree based model-決策樹(Decision Tree)
+### D041-TreeBasedModel-決策樹DecisionTree
 * 
 * 範例與作業(待下載)
   * [範例D041]()
   * [作業D041]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D042 程式實作-決策樹
+### D042-程式實作-決策樹
 * 
 * 範例與作業(待下載)
   * [範例D042]()
   * [作業D042]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D043 Tree based model-隨機森林(Random Forest)
+### D043-TreeBasedModel-隨機森林RandomForest
 * 
 * 範例與作業(待下載)
   * [範例D043]()
   * [作業D043]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D044 程式實作-隨機森林
+### D044-程式實作-隨機森林
 * 
 * 範例與作業(待下載)
   * [範例D044]()
   * [作業D044]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D045 Tree based model-梯度提升機(Gradient Boosting Machine)
+### D045-TreeBasedModel-梯度提升機GradientBoostingMachine
 * 
 * 範例與作業(待下載)
   * [範例D045]()
   * [作業D045]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
 
-### D046 程式實作-梯度提升機
+### D046-程式實作-梯度提升機
 * 
 * 範例與作業(待下載)
   * [範例D046]()
   * [作業D046]()
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
 <br>
