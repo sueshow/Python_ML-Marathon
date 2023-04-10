@@ -580,7 +580,7 @@ Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
 <br>
 <br>
 
-### D010-EDA-去除離群值(數值型)
+### D010-EDA-去除離群值-數值型
 * [離群值](https://zhuanlan.zhihu.com/p/33468998)
   * 只有少數幾筆資料跟其他數值差異很大，標準化無法處理
     * 常態標準化：Z-score = (Xi-mean(Xi))/std(Xi)
