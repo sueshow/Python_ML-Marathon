@@ -153,6 +153,7 @@
     * MAP@N：如 MAP@5、MAP@12
 * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
   * 目標：寫一個 MSE 函數
+
 Back to <a href="#學習大綱">學習大綱</a>
 <br>
 
@@ -175,6 +176,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 應用：Alpha GO
 * [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
   * 目標：瞭解機器學習適合應用的領域與範疇
+  
 Back to <a href="#學習大綱">學習大綱</a>
 <br>
 
@@ -215,6 +217,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 視專案需求整合前後端，資料格式使用 json、csv
 * [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
   * 閱讀文章：機器學習巨頭作的專案
+
 Back to <a href="#學習大綱">學習大綱</a>
 <br>
 
@@ -247,6 +250,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 列出資料的大小：shape
     * 列出所有欄位：columns
     * 擷取部分資料：loc、iloc
+
 Back to <a href="#學習大綱">學習大綱</a>
 <br>
 <br>
