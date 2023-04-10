@@ -48,7 +48,7 @@
   * <a href="#D042-程式實作-決策樹">D042 程式實作-決策樹</a>
   * <a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 Tree based model-隨機森林(Random Forest)</a>
   * <a href="#D044-程式實作-隨機森林">D044 程式實作-隨機森林</a>
-  * <a href="#D045-TreeBasedModel-梯度提升機(Gradient Boosting Machine)">D045 Tree based model-梯度提升機(Gradient Boosting Machine)</a>
+  * <a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 Tree based model-梯度提升機(Gradient Boosting Machine)</a>
   * <a href="#D046-程式實作-梯度提升機">D046 程式實作-梯度提升機</a>
 ### <a href="#機器學習調整參數">機器學習調整參數</a>
   * D047 超參數調整與優化
