@@ -154,7 +154,7 @@
 * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
   * 目標：寫一個 MSE 函數
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 <br>
 
@@ -220,7 +220,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
 * [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
   * 閱讀文章：機器學習巨頭作的專案
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 <br>
 
@@ -254,7 +254,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 列出所有欄位：columns
     * 擷取部分資料：loc、iloc
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 <br>
 
@@ -999,7 +999,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 輸出值的紀錄
   * [作業D021](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_021_first_model_Ans.ipynb)
   
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
 <br>
 <br>
 
@@ -1039,7 +1039,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 特徵工程：補缺失值(fillna)、標籤編碼(LabelEncoder)【類別】、最小最大化(MinMaxScaler)【數值】
   * [作業D022](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_022_Introduction_of_Feature%20Engineering_Ans.ipynb)
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1113,7 +1113,7 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D023](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_023_Reduce_Skewness_Ans.ipynb)
     * DataSet：鐵達尼生存預測
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1156,7 +1156,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 使用標籤編碼與獨熱編碼
       * 在特徵數量/邏輯斯迴歸分數/邏輯斯迴歸時間上，有什麼影響
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1182,7 +1182,7 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D025](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_025_Mean_Encoder_Ans.ipynb)
     * DataSet：鐵達尼生存預測
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1227,7 +1227,7 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D026](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_026_CountEncoder_and_FeatureHash_Ans.ipynb)
     * DataSet：鐵達尼生存預測，欄位：Cabin
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1282,7 +1282,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * DatSet：計程車費率預測，欄位：fire_amount
     * 新增特徵：星期幾(day of week)與第幾周(week of year)
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1311,7 +1311,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * DatSet：計程車費率預測
     * 增加特徵：經緯度一圈的長度比，觀察影響性 
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1356,7 +1356,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 挑選特徵的群聚編碼
     * 觀察群聚編碼，搭配邏輯迴歸，看看有什麼影響
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1417,7 +1417,7 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 相關係數過濾法有時候確實能成功提升準確度，但篩選過頭會有反效果
     * 相關係數過濾法的門檻、L1 Embedding 的 alpha 值(去除0)沒有一定的決定準則
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1493,7 +1493,7 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D031]()
     * DataSet：鐵達尼生存預測
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1503,7 +1503,7 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [範例D032]()
   * [作業D032]()
   
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
 <br>
 <br>
 
@@ -1606,5 +1606,5 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [範例D046]()
   * [作業D046]()
 
-Back to <a href="#學習大綱">學習大綱</a>
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
