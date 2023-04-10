@@ -164,7 +164,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering(D022-D030：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估)→ 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering(D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估)→ 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -1386,7 +1386,68 @@ Back to <a href="#學習大綱">學習大綱</a>
 <br>
 
 ### D031 特徵評估
-* 
+* 樹狀模型的特徵重要性
+  * 特徵重要性預設方式是取「特徵決定分支的次數」，範例中坪數x1次、房間數x3次、靠近捷運站x2次、屋齡x1次，故最重要的特徵是「房間數」
+  * 更直覺的特徵重要性：特徵覆蓋度、損失函數降低量
+    * 範例中，坪數與房間數的覆蓋度相同 (都是8)
+    * 損失函數降低量則看損失函數 (loss function) 決定
+  * 比較
+    <table border="1" width="15%">
+          <tr>
+            <th width="3%"> 方法 </a>
+            <th width="3%"> Xgboost對應參數 (importance_type) </a>
+            <th width="3%"> 計算時間 </a>
+            <th width="3%"> 估計精確性 </a>
+            <th width="3%"> Sklearn 有此功能 </a>
+          </tr>
+          <tr>
+            <td> 分支次數 </td>
+            <td> weight </td>
+            <td> 最快 </td>
+            <td> 最低 </td>
+            <td> 有 </td>
+          </tr>
+          <tr>
+            <td> 分支覆蓋度 </td>
+            <td> cover </td>
+            <td> 快 </td>
+            <td> 中 </td>
+            <td> 無 </td>
+          </tr>
+          <tr>
+            <td> 損失降低量(資訊增益度) </td>
+            <td> gain </td>
+            <td> 較慢 </td>
+            <td> 最高 </td>
+            <td> 無 </td>
+          </tr>
+    </table>
+* [機器學習](https://juejin.cn/post/6844903517799317511)中的優化循環
+  * 原始特徵 → 進階版 GDBT 模型擬合 → 用特徵重要性增刪特徵【特徵選擇(刪)、特徵組合(增)】 → 交叉驗證(cross validation)確認特徵效果是否改善 → (Y) 進階版 GDBT 模型擬合、(N) 用特徵重要性增刪特徵
+* 比較特徵 vs. 排列重要性
+  <table border="1" width="15%">
+          <tr>
+            <th width="2%"> 比較類型 </a>
+            <th width="5%"> 特徵重要性 Feature Importance </a>
+            <th width="5%"> 排序重要性 Permutation Importance </a>
+          </tr>
+          <tr>
+            <td> 適用模型 </td>
+            <td> 限定樹狀模型 </td>
+            <td> 機器學習模型 </td>
+          </tr>
+          <tr>
+            <td> 計算原理 </td>
+            <td> 樹狀模型的分歧特徵 </td>
+            <td> 打散原始資料中單一特徵的排序 </td>
+          </tr>
+          <tr>
+            <td> 額外計算時間 </td>
+            <td> 較短 </td>
+            <td> 較長 </td>
+          </tr>
+  </table>
+ 
 * 範例與作業(待下載)
   * [範例D031]()
   * [作業D031]()
