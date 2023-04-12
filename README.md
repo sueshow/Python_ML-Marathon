@@ -1586,12 +1586,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
     * 線性迴歸模型我們可以使用均方差 (mean square error) 來衡量
     * Loss 越大，代表這組參數的模型預測出的 ŷ 越不準
   * 找出讓訓練目標最佳的模型參數
-    * 梯度下降 (Gradient Descent)、增量訓練 (Additive Training) 等演算法，可幫我們找到最佳可能模型的參數
-    
-    <table border="1" width="7%">
+    * 梯度下降 (Gradient Descent)、增量訓練 (Additive Training) 等演算法，可找到最佳可能模型的參數
+  * 模型訓練的目標是將損失函數的損失降至最低
+    <table border="1" width="12%">
           <tr>
             <th width="2%"> 類型 </a>
-            <th width="2%"> 中文 </a>
+            <th width="5%"> 中文 </a>
             <th width="5%"> 說明 </a>
           </tr>
           <tr>
@@ -1602,7 +1602,7 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
           <tr>
             <td> Good Fit/Robust </td>
             <td>  </td>
-            <td>  </td>
+            <td> 預測可擬合實際結果 </td>
           </tr>
           <tr>
             <td> Overfitted </td>
@@ -1610,6 +1610,7 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
             <td> 模型可能學習到資料中的噪音，導致在實際應用時預測失準 </td>
           </tr>
   </table>
+  
 * 學習曲線 Learning curve
   * 如何知道模型已經過擬合了?
     * 觀察模型對於訓練資料的誤差與測試資料的誤差，是否有改變的趨勢
