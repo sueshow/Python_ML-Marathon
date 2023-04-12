@@ -1626,6 +1626,7 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
   * [利用學習曲線診斷模型的偏差和方差](http://bangqu.com/yjB839.html)
 * 範例與作業(待下載)
   * [作業D033]()
+    * 影片：[ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
