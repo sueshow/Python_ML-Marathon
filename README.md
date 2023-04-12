@@ -167,7 +167,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering(D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估)→ 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-) → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -1577,9 +1577,52 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
 
 ## 機器學習基礎模型建立
 ### D033-機器如何學習
-* 
+* 機器學習三步驟
+  * 定義好模型 (線性迴歸、決策樹、神經網路等)
+    * 機器學習模型中會有許多參數 (parameters)，如線性迴歸中的 w (weights) 跟 b (bias)
+    * 希望模型產生的 ŷ 跟真實答案的 y 越接近越好
+  * 評估模型的好壞
+    * 定義一個目標函數 (Objective function) 也可稱作損失函數 (Loss function)，來衡量模型的好壞
+    * 線性迴歸模型我們可以使用均方差 (mean square error) 來衡量
+    * Loss 越大，代表這組參數的模型預測出的 ŷ 越不準
+  * 找出讓訓練目標最佳的模型參數
+    * 梯度下降 (Gradient Descent)、增量訓練 (Additive Training) 等演算法，可幫我們找到最佳可能模型的參數
+    
+    <table border="1" width="7%">
+          <tr>
+            <th width="2%"> 類型 </a>
+            <th width="2%"> 中文 </a>
+            <th width="5%"> 說明 </a>
+          </tr>
+          <tr>
+            <td> Underfitted </td>
+            <td> </td>
+            <td> 預測未擬合實際結果 </td>
+          </tr>
+          <tr>
+            <td> Good Fit/Robust </td>
+            <td>  </td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <td> Overfitted </td>
+            <td> 過度擬合或欠擬合 </td>
+            <td> 模型可能學習到資料中的噪音，導致在實際應用時預測失準 </td>
+          </tr>
+  </table>
+* 學習曲線 Learning curve
+  * 如何知道模型已經過擬合了?
+    * 觀察模型對於訓練資料的誤差與測試資料的誤差，是否有改變的趨勢
+  * 解決方法過擬合或欠擬合
+    * 增加資料量
+    * 降低模型複雜度
+    * 使用正規化 (Regularization)
+    * 欠擬合
+    * 增加模型複雜度
+    * 減輕或不使用正規化：決策樹模型是非常容易過擬合的模型，必須透過適當的正規化來緩解
+* 參考資料
+  * [利用學習曲線診斷模型的偏差和方差](http://bangqu.com/yjB839.html)
 * 範例與作業(待下載)
-  * [範例D033]()
   * [作業D033]()
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
