@@ -1656,7 +1656,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * Regression：目標值為實數 (-∞ 至 ∞)
   * 回歸問題是可以轉化為分類問題，模型原本是直接預測身高 (cm)，可更改為預測是否高於中位數 (yes or no)
 * Classification：目標值為類別 (0 或 1)
-  * 二元分類 (binary-class)
+  * 二元分類 (Binary-class)
     * 目標的類別僅有兩個，如詐騙分析 (詐騙用戶 vs. 正常用戶)、瑕疵偵測 (瑕疵 vs. 正常) 
   * 多元分類 (Multi-class)
     * 目標類別有兩種以上，如手寫數字辨識有 10 個類別 (0~9)
@@ -1686,15 +1686,45 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
   * [Supervised classification和Regression的比較](http://zylix666.blogspot.com/2016/06/supervised-classificationregression.html)
 * 範例與作業(待下載)
-  * [範例D035]()
   * [作業D035]()
+    * 無程式撰寫
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
 ### D036-評估指標選定EvaluationMetrics
-* 
+* 評估指標
+  * 最常見的為準確率 (Accuracy) = 正確分類樣本數/總樣本數
+  * 迴歸
+    * 目的：觀察「預測值」 (Prediction) 與「實際值」 (Ground truth) 的差距
+    * 指標
+      * MAE, Mean Absolute Error, 範圍：[0, ∞]
+      * MSE, Mean Square Error, 範圍：[0, ∞]
+      * [常用]R-square, 範圍：[0, 1] 
+  * 分類
+    * 目的：觀察「預測值」 (prediction) 與「實際值」 (Ground truth) 的正確程度
+    * 指標
+      * [二元、不平衡]AUC, Area Under Curve, 範圍：[0, 1]
+        * 通常分類問題都需要定一個閾值 (threshold) 來決定分類的類別 (通常為機率 > 0.5 判定為 1, 機率 < 0.5 判定為 0)
+        * AUC 是衡量曲線下的面積，因此可考量所有閾值下的準確性
+        * AUC 越大則表示模型的效能越好
+      * [不平衡]F1 - Score (Precision, Recall), 範圍：[0, 1] 
+        * 分類問題中，有時會對某一類別的準確率特別有興趣，如瑕疵/正常樣本分類，希望任何瑕疵樣本都不能被漏掉
+        * F1-Score 是 Precision、Recall 的調和平均數
+          * Precision：模型判定瑕疵，佔樣本確實為瑕疵的比例 = true positives/(true+false positives)
+          * Recall：模型判定的瑕疵，佔樣本所有瑕疵的比例 = true positives/(true positives + false negative)
+      * 混淆矩陣 (Confusion Matrix)
+        * 縱軸為模型預測，橫軸為正確答案，可清楚看出每個 Class 間預測的準確率，完美的模型就會在對角線上呈現 100 % 的準確率
+      * [平衡]Accuracy
+      * [多元]top-k accuracy
+        * k 代表模型預測前 k 個類別有包含正確類別即為正確 (ImageNet 競賽通常都是比 [Top-5 Accuracy](https://www.zhihu.com/question/36463511))
+    * 比較
+      * AUC 計算時 y_pred 的值必須填入每個樣本的預測機率 (probability) 而非分類結果
+      * F1-Score 計算時則需填入每個樣本已分類的結果，如機率 >=0.5 則視為 1，而非填入機率值
+* 參考資料
+  * [深入了解超常用的指標 AUC](https://www.dataschool.io/roc-curves-and-auc-explained/)
+  * [機器學習模型評估](https://zhuanlan.zhihu.com/p/30721429)
 * 範例與作業(待下載)
   * [範例D036]()
   * [作業D036]()
