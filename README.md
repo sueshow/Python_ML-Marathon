@@ -1656,6 +1656,22 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * 
 * Regularization
   * 不需要考慮 bias，要考慮讓 function 越平滑僅需要考慮 weight
+* Variance vs. Bias
+  * Variance：資料分散程度
+  * Bias：與目標的誤差程度 → 是否瞄準
+  * 模型：希望選擇 bias 和 variance 都小的 model
+    * 簡單模型：large bias、small variance，function space 小
+    * 複雜模型：small bias、large variance，function space 大
+    * overfitting：error 來自於 variance 很大
+      * 在 training data 上得到小的 error，在 testing data 上得到大的 error
+      * 解決方法：
+        * 增加資料量
+        * Regularization：新加 term(參數越少越好) 讓 function 平滑 → 會傷害 bias
+    * underfitting：error 來自於 bias 很大
+      * model 無法 fit examples
+      * 解決方法：redesign model
+        * 增加 feature as input
+        * 使用更複雜的 model
 * 參考資料
   * [ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
