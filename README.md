@@ -1650,7 +1650,13 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D035-RegressionVSClassification
-* 
+* Regression
+  * 
+* Classification
+  * 
+* 參考資料
+  * [ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
+  * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
 * 範例與作業(待下載)
   * [範例D035]()
   * [作業D035]()
