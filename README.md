@@ -1712,8 +1712,14 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
       * [不平衡]F1 - Score (Precision, Recall), 範圍：[0, 1] 
         * 分類問題中，有時會對某一類別的準確率特別有興趣，如瑕疵/正常樣本分類，希望任何瑕疵樣本都不能被漏掉
         * F1-Score 是 Precision、Recall 的調和平均數
-          * Precision：模型判定瑕疵，佔樣本確實為瑕疵的比例 = true positives/(true+false positives)
-          * Recall：模型判定的瑕疵，佔樣本所有瑕疵的比例 = true positives/(true positives + false negative)
+          * Precision
+            * 模型判定瑕疵，佔樣本確實為瑕疵的比例 
+            * 白話：被分類器挑選(selected)出來的正體樣本究竟有多少是真正的樣本
+            * = true positives/(true+false positives)
+          * Recall
+            * 模型判定的瑕疵，佔樣本所有瑕疵的比例
+            * 白話：在全部真正的樣本裡面分類器選了多少個
+            * = true positives/(true positives + false negative)
       * 混淆矩陣 (Confusion Matrix)
         * 縱軸為模型預測，橫軸為正確答案，可清楚看出每個 Class 間預測的準確率，完美的模型就會在對角線上呈現 100 % 的準確率
       * [平衡]Accuracy
