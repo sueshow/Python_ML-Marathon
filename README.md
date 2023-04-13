@@ -1653,10 +1653,16 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D035-RegressionVSClassification
-* Regression
-  * 
-* Classification
-  * 
+* Regression：目標值為實數 (-∞ 至 ∞)
+  * 回歸問題是可以轉化為分類問題，模型原本是直接預測身高 (cm)，可更改為預測是否高於中位數 (yes or no)
+* Classification：目標值為類別 (0 或 1)
+  * 二元分類 (binary-class)
+    * 目標的類別僅有兩個，如詐騙分析 (詐騙用戶 vs. 正常用戶)、瑕疵偵測 (瑕疵 vs. 正常) 
+  * 多元分類 (Multi-class)
+    * 目標類別有兩種以上，如手寫數字辨識有 10 個類別 (0~9)
+* Multi-class vs. Multi-label
+  * 當每個樣本都只能歸在一個類別，我們稱之為多分類 (Multi-class) 問題
+  * 而一個樣本如果可以同時有多個類別，則稱為多標籤 (Multi-label)
 * Regularization
   * 不需要考慮 bias，要考慮讓 function 越平滑僅需要考慮 weight
 * Variance vs. Bias
@@ -1678,6 +1684,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 參考資料
   * [ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
+  * [Supervised classification和Regression的比較](http://zylix666.blogspot.com/2016/06/supervised-classificationregression.html)
 * 範例與作業(待下載)
   * [範例D035]()
   * [作業D035]()
