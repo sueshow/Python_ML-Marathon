@@ -1,63 +1,63 @@
 # Python_ML-Marathon
 ## 學習大綱
-* <a href="#機器學習概論">機器學習概論</a>
-  * D001 資料介紹與評估資料
-  * D002 機器學習概論 
-  * D003 機器學習-流程與步驟
-  * D004 EDA/讀取資料與分析流程
-* <a href="#資料清理數據前處理">資料清理數據前處理</a>
-  * D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
-  * D006 EDA-欄位的資料類型介紹及處理
-  * D007 EDA-特徵類型
-  * D008 EDA-資料分佈
-  * D009 EDA-Outlier及處理
-  * D010 EDA-去除離群值(數值型)
-  * D011 EDA-常用的數值取代
-  * D012 EDA-補缺失值與標準化(數值型)
-  * D013 常見的 DataFrame 操作
-  * D014 程式實作 EDA-相關係數簡介
-  * D015 程式實作EDA-Correlation code
-  * D016 EDA-不同數值範圍間的特徵如何檢視
-  * D017 EDA-把連續型變數離散化
-  * D018 程式實作EDA-把連續型變數離散化
-  * D019 程式實作-Subplots
-  * D020 程式實作-Heatmap & Grid-plot
-  * D021 模型-Logistic Regression
-* <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
-  * D022 特徵工程簡介
-  * D023 特徵工程(數值型)-去除偏態
-  * D024 特徵工程(類別型)-基礎處理
-  * D025 特徵工程(類別型)-均值編碼
-  * D026 特徵工程(類別型)-其他進階處理
-  * D027 特徵工程(時間型)
-  * D028 特徵工程-數值與數值組合
-  * D029 特徵工程-類別與數值組合
-  * D030 特徵選擇
-  * D031 特徵評估
-  * D032 特徵優化(分類型)-業編碼
-* <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
-  * D033 機器如何學習?
-  * D034 訓練/測試集切分
-  * D035 Regression vs. classification
-  * D036 評估指標選定 evaluation metrics
-  * D037 Regression model-線性迴歸、羅吉斯回歸
-  * D038 程式實作-線性迴歸、羅吉斯回歸
-  * D039 Regression model-LASSO回歸、Ridge回歸
-  * D040 程式實作-LASSO回歸、Ridge回歸
-  * D041 Tree based model-決策樹(Decision Tree)
-  * D042 程式實作-決策樹
-  * D043 Tree based model-隨機森林(Random Forest)
-  * D044 程式實作-隨機森林
-  * D045 Tree based model-梯度提升機(Gradient Boosting Machine)
-  * D046 程式實作-梯度提升機
-* <a href="#機器學習調整參數">機器學習調整參數</a>
+### <a href="#機器學習概論">機器學習概論</a>
+  * <a href="#D001-資料介紹與評估資料">D001 資料介紹與評估資料</a>
+  * <a href="#D002-機器學習概論">D002 機器學習概論</a>
+  * <a href="#D003-機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
+  * <a href="#D004-EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
+### <a href="#資料清理數據前處理">資料清理數據前處理</a>
+  * <a href="#D005-如何新建一個dataframe如何讀取其他資料">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
+  * <a href="#D006-EDA-欄位的資料類型介紹及處理">D006 EDA-欄位的資料類型介紹及處理</a>
+  * <a href="#D007-EDA-特徵類型">D007 EDA-特徵類型</a>
+  * <a href="#D008-EDA-資料分佈">D008 EDA-資料分佈</a>
+  * <a href="#D009-EDA-Outlier及處理">D009 EDA-Outlier及處理</a>
+  * <a href="#D010-EDA-去除離群值-數值型">D010 EDA-去除離群值(數值型)</a>
+  * <a href="#D011-EDA-常用的數值取代">D011 EDA-常用的數值取代</a>
+  * <a href="#D012-EDA-補缺失值與標準化-數值型">D012 EDA-補缺失值與標準化(數值型)</a>
+  * <a href="#D013-常見的DataFrame操作">D013 常見的 DataFrame 操作</a>
+  * <a href="#D014-程式實作EDA-相關係數簡介">D014 程式實作 EDA-相關係數簡介</a>
+  * <a href="#D015-程式實作EDA-CorrelationCode">D015 程式實作EDA-Correlation code</a>
+  * <a href="#D016-EDA-不同數值範圍間的特徵如何檢視">D016 EDA-不同數值範圍間的特徵如何檢視</a>
+  * <a href="#D017-EDA-把連續型變數離散化">D017 EDA-把連續型變數離散化</a>
+  * <a href="#D018-程式實作EDA-把連續型變數離散化">D018 程式實作EDA-把連續型變數離散化</a>
+  * <a href="#D019-程式實作-Subplots">D019 程式實作-Subplots</a>
+  * <a href="#D020-程式實作-HeatmapANDGrid-plot">D020 程式實作-Heatmap & Grid-plot</a>
+  * <a href="#D021-模型-LogisticRegression">D021 模型-Logistic Regression</a>
+### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+  * <a href="#D022-特徵工程簡介">D022 特徵工程簡介</a>
+  * <a href="#D023-特徵工程-數值型-去除偏態">D023 特徵工程(數值型)-去除偏態</a>
+  * <a href="#D024-特徵工程-類別型-基礎處理">D024 特徵工程(類別型)-基礎處理</a>
+  * <a href="#D025-特徵工程-類別型-均值編碼">D025 特徵工程(類別型)-均值編碼</a>
+  * <a href="#D026-特徵工程-類別型-其他進階處理">D026 特徵工程(類別型)-其他進階處理</a>
+  * <a href="#D027-特徵工程-時間型">D027 特徵工程(時間型)</a>
+  * <a href="#D028-特徵工程-數值與數值組合">D028 特徵工程-數值與數值組合</a>
+  * <a href="#D029-特徵工程-類別與數值組合">D029 特徵工程-類別與數值組合</a>
+  * <a href="#D030-特徵選擇">D030 特徵選擇</a>
+  * <a href="#D031-特徵評估">D031 特徵評估</a>
+  * <a href="#D032-特徵優化-分類型-葉編碼">D032 特徵優化(分類型)-葉編碼</a>
+### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+  * <a href="#D033-機器如何學習">D033 機器如何學習?</a>
+  * <a href="#D034-訓練AND測試集切分">D034 訓練/測試集切分</a>
+  * <a href="#D035-RegressionVSClassification">D035 Regression vs. classification</a>
+  * <a href="#D036-評估指標選定EvaluationMetrics">D036 評估指標選定 evaluation metrics</a>
+  * <a href="#D037-RegressionModel-線性迴歸AND羅吉斯回歸">D037 Regression model-線性迴歸、羅吉斯回歸</a>
+  * <a href="#D038-程式實作-線性迴歸AND羅吉斯回歸">D038 程式實作-線性迴歸、羅吉斯回歸</a>
+  * <a href="#D039-RegressionModel-LASSO回歸ANDRidge回歸">D039 Regression model-LASSO回歸、Ridge回歸</a>
+  * <a href="#D040-程式實作-LASSO回歸ANDRidge回歸">D040 程式實作-LASSO回歸、Ridge回歸</a>
+  * <a href="#D041-TreeBasedModel-決策樹DecisionTree">D041 Tree based model-決策樹(Decision Tree)</a>
+  * <a href="#D042-程式實作-決策樹">D042 程式實作-決策樹</a>
+  * <a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 Tree based model-隨機森林(Random Forest)</a>
+  * <a href="#D044-程式實作-隨機森林">D044 程式實作-隨機森林</a>
+  * <a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 Tree based model-梯度提升機(Gradient Boosting Machine)</a>
+  * <a href="#D046-程式實作-梯度提升機">D046 程式實作-梯度提升機</a>
+### <a href="#機器學習調整參數">機器學習調整參數</a>
   * D047 超參數調整與優化
   * D048 Kaggle 競賽平台介紹
   * D049 集成方法-混和泛化(Blending)
   * D050 集成方法-堆疊泛化(Stacking)
-* <a href="#Kaggle期中考">Kaggle期中考</a>
+### <a href="#Kaggle期中考">Kaggle期中考</a>
   * D051-D053 Kaggle 期中考
-* <a href="#非監督式的機器學習">非監督式的機器學習</a>
+### <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
   * D055 非監督式-分群-K-Means 分群
   * D056 非監督式-分群-K-Means 分群評估：使用輪廓分析
@@ -67,11 +67,11 @@
   * D060 程式實作-PCA：使用手寫辨識資料集
   * D061 降維方法(Dimension Reduction)-T-SNE
   * D062 程式實作-T-SNE：分群與流形還原
-* <a href="#深度學習理論與實作">深度學習理論與實作</a>
+### <a href="#深度學習理論與實作">深度學習理論與實作</a>
   * D063 深度學習簡介
   * D064 深度學習-模型調整與學習曲線
   * D065 深度學習-啟動函數與正規化
-* <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+### <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
   * D066 Keras安裝與介紹
   * D067 Keras Dataset
   * D068 Keras Sequential API
@@ -98,7 +98,7 @@
   * D089 神經網路-訓練細節與技巧：撰寫 Loss function
   * D090 使用傳統電腦視覺與機器學習進行影像辨識
   * D091 程式實作-使用傳統電腦視覺與機器學習進行影像辨識
-* <a href="#深度學習應用卷積神經網路">深度學習應用卷積神經網路</a>
+### <a href="#深度學習應用卷積神經網路">深度學習應用卷積神經網路</a>
   * D092 卷積神經網路(Convolution Neural Network, CNN)簡介
   * D093 CNN-架構細節
   * D094 CNN-卷積(Convolution)層與參數調整
@@ -108,9 +108,9 @@
   * D098 CNN-訓練細節與技巧：處理大量數據
   * D099 CNN-訓練細節與技巧：處理小量數據
   * D100 CNN-訓練細節與技巧：轉移學習(Transfer learning)
-* <a href="#Kaggle期末考">Kaggle期末考</a>
+### <a href="#Kaggle期末考">Kaggle期末考</a>
   * D101-D103 影像辨識
-* <a href="#Bonus進階補充">Bonus進階補充</a>
+### <a href="#Bonus進階補充">Bonus進階補充</a>
   * D104 史丹佛上 ConvNetJS 簡介
   * D105 CNN 卷積網路回顧
   * D106 電腦視覺常用公開資料集
@@ -119,7 +119,7 @@
 <br>
 
 ## 機器學習概論
-### D001 資料介紹與評估資料
+### D001-資料介紹與評估資料
 * 進入資料科學領域的流程
   * 找到問題：挑一個有趣的問題，並解決一個簡單的問題開始
   * 初探：在這個題目上做一個原型解決方案(prototype solution)
@@ -153,9 +153,12 @@
     * MAP@N：如 MAP@5、MAP@12
 * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
   * 目標：寫一個 MSE 函數
+
+Back to <a href="#機器學習概論">機器學習概論</a>
+<br>
 <br>
 
-### D002 機器學習概論
+### D002-機器學習概論
 * 機器學習範疇
   * 人工智慧 > 機器學習 > 深度學習
   * 白話文：讓機器從資料中找尋規律與趨勢而不需要給定特殊規則
@@ -164,7 +167,7 @@
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis(D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering(D022-特徵工程【填補缺值、去離群值、去偏態、特徵縮放】)→ 模型選擇 Model Selection → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-：驗證基礎、預測模型、評估指標) → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -174,9 +177,12 @@
     * 應用：Alpha GO
 * [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
   * 目標：瞭解機器學習適合應用的領域與範疇
+  
+Back to <a href="#機器學習概論">機器學習概論</a>
+<br>
 <br>
 
-### D003 機器學習-流程與步驟
+### D003-機器學習-流程與步驟
 * 機器學習專案開發流程
   * 資料蒐集、前處理
     * 資料來源
@@ -213,9 +219,12 @@
     * 視專案需求整合前後端，資料格式使用 json、csv
 * [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
   * 閱讀文章：機器學習巨頭作的專案
+
+Back to <a href="#機器學習概論">機器學習概論</a>
+<br>
 <br>
 
-### D004 EDA/讀取資料與分析流程
+### D004-EDA-讀取資料與分析流程
 * 範例：Home Credit Default Risk (房貸風險預測 from Kaggle)
   * 目的：預測借款者是否會還款，以還款機率作為最終輸出
   * 此問題為分類問題
@@ -244,13 +253,13 @@
     * 列出資料的大小：shape
     * 列出所有欄位：columns
     * 擷取部分資料：loc、iloc
-    
-Back to <a href="#學習大綱">學習大綱</a>
+
+Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 <br>
 
 ## 資料清理數據前處理
-### D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)
+### D005-如何新建一個dataframe如何讀取其他資料
 * 前處理 Processing
   * 資料讀取 D005 → 格式調整 D006-D008、D013 → 填補缺值 D009、D011-D012 → 去離群值 D010 → 特徵縮放 D011-D012
   * 用途
@@ -329,9 +338,12 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D005-2](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_005_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_005-2_Ans.ipynb)  
     * 從網頁上讀取連結清單
     * 從清單網址讀取圖片
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D006 EDA-欄位的資料類型介紹及處理
+### D006-EDA-欄位的資料類型介紹及處理
 * EDA (Exploratory Data Analysis)：探索式資料分析運用統計工具或是學畫，對資料有初步的瞭解，以幫助我們後續對資料進行更進一步的分析
 * 資料類型
   * 離散變數：只能用整數單位計算的變數，如房間數、性別、國家
@@ -419,9 +431,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 瞭解 Label Encoding 如何寫
     * 瞭解 One Hot Encoding 如何寫(pd.get_dummies)
   * [作業D006](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_006_column_data_type_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D007 EDA-特徵類型
+### D007-EDA-特徵類型
 * 特徵類別：[參考資料](https://openhome.cc/Gossip/CodeData/PythonTutorial/NumericStringPy3.html)
   * 數值型特徵：有不同轉換方式，函數/條件式都可以，如坪數、年齡
     * 填補缺失值或直接去除離群值的方法：[去偏態](https://ithelp.ithome.com.tw/articles/10219949?sc=iThelpR)，符合常態假設
@@ -483,9 +498,12 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D007](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_007_Ans.ipynb)
     * 以鐵達尼生存預測為範例
     * 目標：完成三種不同特徵類型的三種資料操作，觀察其結果(何類難處理)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D008 EDA-資料分佈
+### D008-EDA-資料分佈
 * 統計量化
   * 基本統計分析方法
     * 描述性分析：總量分析、相對數分析、平均數、變異指數等
@@ -524,9 +542,12 @@ Back to <a href="#學習大綱">學習大綱</a>
       * .skew()、.kurt()
       * .corr()、.cov()
     * [視覺化](https://pandas.pydata.org/pandas-docs/version/0.23.4/visualization.html)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D009 EDA-Outlier及處理
+### D009-EDA-Outlier及處理
 * 離群值、異常值([Outlier](https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba))
   * 定義
     * 數據集中有一個或一些數值與其他數值相比差異較大
@@ -554,9 +575,12 @@ Back to <a href="#學習大綱">學習大綱</a>
       * .isin(your_list) 可以用來給出 Seires 內每個元素是否在 your_list 裡面的布林值
       * 可以用布林值的方式進行遮罩的篩選 DataFrame
   * [作業D009](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_009_outlier%E5%8F%8A%E8%99%95%E7%90%86_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D010 EDA-去除離群值(數值型)
+### D010-EDA-去除離群值-數值型
 * [離群值](https://zhuanlan.zhihu.com/p/33468998)
   * 只有少數幾筆資料跟其他數值差異很大，標準化無法處理
     * 常態標準化：Z-score = (Xi-mean(Xi))/std(Xi)
@@ -575,9 +599,12 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D010](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_010_Ans.ipynb)
     * 觀察將極端值以上下限值取代，對於分布與迴歸分數的影響
     * 觀察將極端值資料直接刪除，對於分布與迴歸分數的影響
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D011 EDA-常用的數值取代
+### D011-EDA-常用的數值取代
 * 處理例外值：常用以填補的統計值
   <table border="1" width="26%">
       <tr>
@@ -628,9 +655,12 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D011](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_011_handle_outliers_Ans.ipynb)
     * 填補資料
     * 標準化與最大最小化
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D012 EDA-補缺失值與標準化(數值型)
+### D012-EDA-補缺失值與標準化-數值型
 * 填補[缺失值](https://juejin.cn/post/6844903648074416141)
   * 最重要的是欄位的領域知識與欄位中的非缺數
     * 填補指定值
@@ -662,9 +692,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 觀察替換不同特徵縮放方式，對特徵的影響
   * [作業D012](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_012_Fill_NaN_and_Scalers_Ans.ipynb)
     * 以「鐵達尼生存預測」為例
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D013 常見的 DataFrame 操作
+### D013-常見的DataFrame操作
 * 轉換與合併 dataframe
   <table border="1" width="26%">
       <tr>
@@ -823,9 +856,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 使用條件篩選出 DataFrame 的子集合
     * DataFrame 的群聚 (groupby) 的各種應用方式
   * [作業D013](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_013_dataFrame_operation_Ans.ipynb) 
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D014 程式實作 EDA-相關係數簡介
+### D014-程式實作EDA-相關係數簡介
 * 相關係數
   * 常用來了解各欄位與我們想要預測的目標之間關係的指標
   * 衡量兩個隨機變量之間線性關係的強度和方向
@@ -840,9 +876,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 弱相關的相關矩陣與散佈圖之間的關係
     * 正相關的相關矩陣與散佈圖之間的關係
   * [作業D014](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_014_correlation_example_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D015 程式實作EDA-Correlation code
+### D015-程式實作EDA-CorrelationCode
 * 相關係數(搭配課程內容)
   * 功能
     * 迅速找到和預測目標最有線性關係的變數
@@ -856,9 +895,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 出現異常數值的資料調整方式
     * 散佈圖異常與其調整方式
   * [作業D015](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_015_correlation_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D016 EDA-不同數值範圍間的特徵如何檢視
+### D016-EDA-不同數值範圍間的特徵如何檢視
 * 繪圖風格：透過設計過的風格，讓觀看者更清楚明瞭，包含色彩選擇、線條、樣式等
   * 語法：詳細圖示差異搭配課程內容
     ```
@@ -888,9 +930,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 不同的 KDE 曲線與繪圖設定以及切換不同 Kernel function 的效果
   * [作業D016](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_016_EDA_KDEplots_Ans.ipynb)
     * 調整對應的資料，以繪製分布圖
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D017 EDA-把連續型變數離散化
+### D017-EDA-把連續型變數離散化
 * 連續型變數離散化：變數較穩定
   * 要點：如每 10 歲一組，若不分組，outlier 會給模型帶來很大的干擾
     * 組的數量
@@ -904,17 +949,23 @@ Back to <a href="#學習大綱">學習大綱</a>
     * pandas.cut 的等寬劃分效果
     * pandas.qcut 的等頻劃分效果
   * [作業D017](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_017_discretizing_Ans.ipynb)
-  <br>
 
-### D018 程式實作EDA-把連續型變數離散化
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
+<br>
+
+### D018-程式實作EDA-把連續型變數離散化
 * 把連續型的變數離散化後，可以搭配 pandas 的 groupby 畫出與預測目標的圖來判斷兩者之間是否有某種關係/趨勢
 * 範例與作業
   * [作業D018](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_018_Ans.ipynb)
     * 對較完整的資料生成離散化特徵
     * 觀察上述離散化特徵，對於目標值的預測有沒有幫助
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D019 程式實作-Subplots
+### D019-程式實作-Subplots
 * 使用 subplot 的時機：將圖片分格呈現，有助於資訊傳達
   * 有很多相似的資訊要呈現時 (如不同組別的比較)
   * 同一組資料，但想同時用不同的圖型呈現
@@ -947,9 +998,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 傳統的 subplot 三碼：row、column、indx 繪製法
     * subplot index 超過 10 以上的繪圖法：透過 for loop
   * [作業D019](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_019_EDA_subplots_Ans.ipynb)
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D020 程式實作-Heatmap & Grid-plot
+### D020-程式實作-HeatmapANDGrid-plot
 * Heatmap
   * 常用於呈現變數間的相關性、混和矩陣(confusion matrix)，以顏色深淺呈現
   * 亦可用於呈現不同條件下，數量的高低關係
@@ -975,9 +1029,11 @@ Back to <a href="#學習大綱">學習大綱</a>
     * Heatmap 的進階用法：散佈圖、KDE、密度圖
   * [作業D020](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_020_EDA_heatmap_Ans.ipynb)
 
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
+<br>
 <br>
 
-### D021 模型-Logistic Regression
+### D021-模型-LogisticRegression
 * A baseline
   * 最終的目的是要預測客戶是否會違約遲繳貸款的機率，在開始使用任何複雜模型之前，有一個最簡單的模型當作 baseline 是一個好習慣
 * Logistic Regression
@@ -989,13 +1045,13 @@ Back to <a href="#學習大綱">學習大綱</a>
     * Heatmap 的進階用法：散佈圖、KDE、密度圖
     * 輸出值的紀錄
   * [作業D021](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_021_first_model_Ans.ipynb)
-  
-Back to <a href="#學習大綱">學習大綱</a>
+
+Back to <a href="#資料清理數據前處理">資料清理數據前處理</a>
 <br>
 <br>
 
 ## 資料科學特徵工程技術
-### D022 特徵工程簡介
+### D022-特徵工程簡介
 * [特徵工程](https://www.zhihu.com/question/29316149)
   * 從事實到對應分數的轉換，而非直接轉換成 1 點，點數未必直接對應到總價或機率
   * 資料包含類別型(文字型)特徵以及數值型特徵，最小的特徵工程至少包含一種類別編碼(範例使用標籤編碼)，以及一種特徵縮放方法(範例使用最小最大化)
@@ -1029,9 +1085,12 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [範例D022](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_022_HW_%E7%89%B9%E5%BE%B5%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/Day_022_Introduction_of_Feature%20Engineering.ipynb)
     * 特徵工程：補缺失值(fillna)、標籤編碼(LabelEncoder)【類別】、最小最大化(MinMaxScaler)【數值】
   * [作業D022](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_022_Introduction_of_Feature%20Engineering_Ans.ipynb)
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D023 特徵工程(數值型)-去除偏態
+### D023-特徵工程-數值型-去除偏態
 * 去除[偏態](https://blog.csdn.net/u013555719/article/details/78530879)
   * 範例：希望當掉的同學部要太多
     * 標準化(平移)：高低分群體還是分得太明顯
@@ -1100,9 +1159,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 使用 sqrt (box-cox, λ=0.5)時，對於分布與迴歸分數的影響
   * [作業D023](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_023_Reduce_Skewness_Ans.ipynb)
     * DataSet：鐵達尼生存預測
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D024 特徵工程(類別型)-基礎處理
+### D024-特徵工程-類別型-基礎處理
 * 類別型特徵處理
   * 標籤編碼 (Label Encoding)
     * 類似於流水號，依序將新出現的類別依序編上新代碼
@@ -1140,9 +1202,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * DataSet：鐵達尼生存預測
     * 使用標籤編碼與獨熱編碼
       * 在特徵數量/邏輯斯迴歸分數/邏輯斯迴歸時間上，有什麼影響
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D025 特徵工程(類別型)-均值編碼
+### D025-特徵工程-類別型-均值編碼
 * [均值編碼](https://zhuanlan.zhihu.com/p/26308272)：用 cross validation 確認使用前後分數
   * 類別特徵看起來與目標值有顯著相關，容易 overfitting
   * 使用同一類別目標的平均值取代原本的類別型特徵
@@ -1163,9 +1228,12 @@ Back to <a href="#學習大綱">學習大綱</a>
       * 在特徵數量/梯度提升樹分數/梯度提升樹時間上，有什麼影響
   * [作業D025](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_025_Mean_Encoder_Ans.ipynb)
     * DataSet：鐵達尼生存預測
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D026 特徵工程(類別型)-其他進階處理
+### D026-特徵工程-類別型-其他進階處理
 * 計數編碼(Counting)
   * 情境：若類別的目標均價與類別筆數呈正相關 (或負相關或高度相關)，也可將筆數本身當成特徵，如自然語言處理時，字詞的計數編碼又稱詞頻
   * 計算方式：計算類別在資料中出現的次數
@@ -1205,9 +1273,12 @@ Back to <a href="#學習大綱">學習大綱</a>
     * 使用雜湊編碼及計數編碼+雜湊編碼，搭配邏輯斯迴歸對於測結果有什麼影響
   * [作業D026](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_026_CountEncoder_and_FeatureHash_Ans.ipynb)
     * DataSet：鐵達尼生存預測，欄位：Cabin
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D027 特徵工程(時間型)
+### D027-特徵工程-時間型
 * 時間特徵分解
   * 年、月、日、時、分、秒、第幾周、星期幾
   * 週期循環特徵：關鍵在於首尾相接，須使用正弦函數(sin)或餘弦函數(cos)加以組合
@@ -1257,9 +1328,12 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D027](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_027_DayTime_Features_Ans.ipynb)
     * DatSet：計程車費率預測，欄位：fire_amount
     * 新增特徵：星期幾(day of week)與第幾周(week of year)
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D028 特徵工程-數值與數值組合
+### D028-特徵工程-數值與數值組合
 * 合成特徵(synthetic feature)
   * 起點+終點位置：方向、距離
     * 經緯度 -> 平面座標距離 -> 資料緯度集中在 40.75 度附近，可以算得經度與緯度代表的長度比為 cos(40.75度):1 = 0.75756:1，由此校正兩地距離
@@ -1275,7 +1349,7 @@ Back to <a href="#學習大綱">學習大綱</a>
 * 參考資料
   * [特徵組合&特徵交叉 (Feature Crosses)](https://segmentfault.com/a/1190000014799038)
   * [簡單高效的組合特徵自動挖掘框架](https://read01.com/jj8em6E.html#.ZBv4VnZBy5c)
-* 範例與作業
+* 範例與作業(待下載)
   * [範例D028]()
     * DatSet：計程車費率預測
     * 增加特徵：經度差與緯度差，觀察線性迴歸與梯度提升樹的預測結果有什麼影響
@@ -1283,35 +1357,487 @@ Back to <a href="#學習大綱">學習大綱</a>
   * [作業D028]()
     * DatSet：計程車費率預測
     * 增加特徵：經緯度一圈的長度比，觀察影響性 
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D029 特徵工程-類別與數值組合
-* 
-* 範例與作業
-  * []()
-  * []()
+### D029-特徵工程-類別與數值組合
+* 群聚編碼(Group by Encoding)
+  * 數值型特徵之間能合成新特徵，而類別與數值型之間也能類似均值編碼的概念，如取類別型中的平均值(Mean)、中位數(Median)、眾數(Mode)、最大值(Max)、最小值(Min)、次數(Count)等可取代類別作為編碼
+  * 重要性(D031)
+    * 與數值特徵組合相同，先以「領域知識」或「特徵重要性」挑選強力特徵後，再將特徵組成更強的特徵，兩個特徵都是數值就用特徵組合，其中之一是類別型就用聚類編碼
+    * 機器學習的特徵是「寧濫勿缺」的，因為以前以非樹狀模型為主，為了避免共線性，會很注意類似的特徵不要增加太多，但現在強力的模型都是樹狀模型，所以只要有可能就通通做特徵囉！
+  * 與均值編碼 (Mean Encoding) 的比較
+    <table border="1" width="9%">
+          <tr>
+            <th width="3%"> 名稱 </a>
+            <th width="3%"> 均值編碼 Mean Encoding </a>
+            <th width="3%"> 群聚編碼 Group by Encoding </a>
+          </tr>
+          <tr>
+            <td> 平均對象 </td>
+            <td> 目標值 </td>
+            <td> 其他數值型特徵 </td>
+          </tr>
+          <tr>
+            <td> 過擬合 Overfitting </td>
+            <td> 容易 </td>
+            <td> 不容易 </td>
+          </tr>
+          <tr>
+            <td> 對均值平滑化 Smoothing </td>
+            <td> 需要 </td>
+            <td> 不需要 </td>
+          </tr>
+    </table>
+  * 參考資料
+    * [利用python数据分析之数据聚合与分组](https://zhuanlan.zhihu.com/p/27590154)
+* 範例與作業(待下載)
+  * [範例D029]()
+    * DataSet：房價預測
+    * 了解群聚編碼的語法
+    * 觀察群聚編碼，搭配線性迴歸以及隨機森林分別有什麼影響
+  * [作業D029]()
+    * DataSet：鐵達尼生存預測
+    * 挑選特徵的群聚編碼
+    * 觀察群聚編碼，搭配邏輯迴歸，看看有什麼影響
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D030 特徵選擇
-* 
-* 範例與作業
-  * []()
-  * []()
+### D030-特徵選擇
+* 特徵選擇
+  * 概念：特徵需適當的增加與減少，以提升精確度並減少計算時間
+    * 增加特徵：特徵組合(Day028)、群聚編碼(Day029)
+    * 減少特徵：特徵選擇(Day030)
+  * 方法
+    * 過濾法(Filter)：選定統計數值與設定門檻，刪除低於門檻的特徵
+      * 相關係數過濾法
+        * 找到目標值後，觀察其他特徵與目標值的相關係數
+        * 預設顏色越紅表越正相關，越藍越負相關
+        * 刪除顏色較淺的特徵：訂出相關係數門檻值，特徵相關係數絕對值低於門檻者刪除
+    * 包裝法(Wrapper)：根據目標函數，逐步加入特徵或刪除特徵
+    * 嵌入法(Embedded)：使用機器學習模型，根據擬合後的係數，刪除係數低於門檻的特徵
+      * L1(Lasso)嵌入法
+        * 使用 Lasso Regression 時，調整不同的正規化程度，就會自然使得一部分的特徵係數為０，因此刪除的是係數為０的特徵，不須額外指定門檻，但需調整正規化程度
+      * GDBT(梯度提升樹)嵌入法
+        * 使用梯度提升樹擬合後，以特徵在節點出現的頻率當作特徵重要性，以此刪除重要性低於門檻的特徵
+        * 由於特徵重要性不只可以刪除特徵，也是增加特徵的關鍵參考
+  * 比較
+    <table border="1" width="12%">
+          <tr>
+            <th width="3%"> 方法 </a>
+            <th width="3%"> 計算時間 </a>
+            <th width="3%"> 共線性 </a>
+            <th width="3%"> 特徵穩定性 </a>
+          </tr>
+          <tr>
+            <td> 相關係數過濾法 </td>
+            <td> 快速 </td>
+            <td> 無法排除 </td>
+            <td> 穩定 </td>
+          </tr>
+          <tr>
+            <td> Lasso 嵌入法 </td>
+            <td> 快速 </td>
+            <td> 能排除 </td>
+            <td> 不穩定 </td>
+          </tr>
+          <tr>
+            <td> GDBT 嵌入法 </td>
+            <td> 較慢，Xgboost等改善計算時間，成為特徵選擇的主流 </td>
+            <td> 能排除 </td>
+            <td> 穩定 </td>
+          </tr>
+    </table>
+  * 參考資料
+    * [特徵選擇](https://zhuanlan.zhihu.com/p/32749489)
+* 範例與作業(待下載)
+  * [範例D030]()
+    * DataSet：房價預測
+    * 觀察相關係數過濾法對線性迴歸與梯度提升機有什麼影響
+    * 觀察 L1 嵌入法對線性迴歸與梯度提升機有什麼影響
+  * [作業D030]()
+    * DataSet：鐵達尼生存預測
+    * 相關係數過濾法有時候確實能成功提升準確度，但篩選過頭會有反效果
+    * 相關係數過濾法的門檻、L1 Embedding 的 alpha 值(去除0)沒有一定的決定準則
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D031 特徵評估
-* 
-* 範例與作業
-  * []()
-  * []()
+### D031-特徵評估
+* 樹狀模型的特徵重要性
+  * 特徵重要性預設方式是取「特徵決定分支的次數」，範例中坪數x1次、房間數x3次、靠近捷運站x2次、屋齡x1次，故最重要的特徵是「房間數」
+  * 更直覺的特徵重要性：特徵覆蓋度、損失函數降低量
+    * 範例中，坪數與房間數的覆蓋度相同 (都是8)
+    * 損失函數降低量則看損失函數 (loss function) 決定
+  * 比較
+    <table border="1" width="15%">
+          <tr>
+            <th width="3%"> 方法 </a>
+            <th width="3%"> Xgboost對應參數 (importance_type) </a>
+            <th width="3%"> 計算時間 </a>
+            <th width="3%"> 估計精確性 </a>
+            <th width="3%"> Sklearn 有此功能 </a>
+          </tr>
+          <tr>
+            <td> 分支次數 </td>
+            <td> weight </td>
+            <td> 最快 </td>
+            <td> 最低 </td>
+            <td> 有 </td>
+          </tr>
+          <tr>
+            <td> 分支覆蓋度 </td>
+            <td> cover </td>
+            <td> 快 </td>
+            <td> 中 </td>
+            <td> 無 </td>
+          </tr>
+          <tr>
+            <td> 損失降低量(資訊增益度) </td>
+            <td> gain </td>
+            <td> 較慢 </td>
+            <td> 最高 </td>
+            <td> 無 </td>
+          </tr>
+    </table>
+* [機器學習](https://juejin.cn/post/6844903517799317511)中的優化循環
+  * 原始特徵 → 進階版 GDBT 模型擬合 → 用特徵重要性增刪特徵【特徵選擇(刪)、特徵組合(增)】 → 交叉驗證(cross validation)確認特徵效果是否改善 → (Y) 進階版 GDBT 模型擬合、(N) 用特徵重要性增刪特徵
+* 比較特徵 vs. 排列重要性
+  <table border="1" width="15%">
+          <tr>
+            <th width="2%"> 比較類型 </a>
+            <th width="5%"> 特徵重要性 Feature Importance </a>
+            <th width="5%"> 排序重要性 Permutation Importance </a>
+          </tr>
+          <tr>
+            <td> 適用模型 </td>
+            <td> 限定樹狀模型 </td>
+            <td> 機器學習模型 </td>
+          </tr>
+          <tr>
+            <td> 計算原理 </td>
+            <td> 樹狀模型的分歧特徵 </td>
+            <td> 打散原始資料中單一特徵的排序 </td>
+          </tr>
+          <tr>
+            <td> 額外計算時間 </td>
+            <td> 較短 </td>
+            <td> 較長 </td>
+          </tr>
+  </table>
+ 
+* 範例與作業(待下載)
+  * [範例D031]()
+    * DataSet：房價預測
+    * 使用擬合過的模型，計算特徵重要性
+    * 對照原始特徵，觀察特徵重要性較高的一半特徵，搭配隨機森林對於預測結果的影響
+    * 重組重要性最高的特徵作為新特徵，觀察效果如何
+  * [作業D031]()
+    * DataSet：鐵達尼生存預測
+
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
 <br>
 
-### D032 特徵優化(分類型)-業編碼
-* 
-* 範例與作業
-  * []()
-  * []()
+### D032-特徵優化-分類型-葉編碼
+* 分類預測的集成
+  * 分類的預測結果，在意義上是對的預估機率
+  * 範例：估計鐵達尼號上的生存機率，已知來自法國的旅客生存機率是 0.8，且年齡 40 到 50 區間的生存機率也是 0.8，那麼同時符合兩種條件的旅客，生存機率應該是多少呢？
+    * 邏輯斯迴歸 (logistic regression) 可理解成「線性迴歸 + Sigmoid 函數」，而「Sigmoid 函數」理解成「成功可能性與機率的交換」，可能性正表示更可能，負表示較不可能
+    * 使用 Sigmoid 反函數將機率重新轉為可能性的值，相加完再用 Sigmoid 函數轉回機率，以此例為例，最後加成的結果是介於 0.9 到 1 之間的機率
+* 葉編碼 (leaf encoding) 原理
+  * 樹狀模型做出預測時，會將資料重新分成好幾個區塊，決策樹最末端的點稱之為葉點，每個葉點的性質接近，可視為資料的一種分組方式
+  * 雖然不適合直接沿用樹狀模型機率，但分組方式有代表性，因此按照葉點將資料「離散化」，比之前提過的離散化方式更精確，這樣的編碼稱為「葉編碼」
+  * 葉編碼 (leaf encoding) 是採用決策樹的葉點作為編碼依據重新編碼，每棵樹視為一個新特徵，每個新特徵均為分類型特徵，決策樹的葉點與該特徵標籤一一對應，最後再以邏輯斯迴歸(重新賦予機率)或分解機 (Factorization Machine) 進行合併預測
+* 葉編碼 + 邏輯斯迴歸
+  * 葉編碼需要先對樹狀模型擬合後才能生成，如已挑選較佳的參數，後續處理效果也會較好
+  * 在分類預測中使用樹狀模型，再對這些擬合完的樹狀模型進行葉編碼+邏輯斯迴歸，通常會將預測效果再進一步提升
+* 參考資料
+  * [Feature transformations with ensembles of trees](https://scikit-learn.org/stable/auto_examples/ensemble/plot_feature_transformation.html)
+  * [Algorithm-GBDT Encoder](https://zhuanlan.zhihu.com/p/31734283)
+* 範例與作業(待下載)
+  * [範例D032]()
+    * DataSet：鐵達尼生存預測
+    * 了解葉編碼搭配梯度提升樹的效果
+    * 觀察葉編碼搭配邏輯斯迴歸的效果
+  * [作業D032]()
+    * DataSet：鐵達尼生存預測
+    * 觀察葉編碼搭配隨機森林的效果
+    * 觀察葉編碼搭配邏輯斯迴歸的效果
+    
+Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
+<br>
+<br>
+
+
+## 機器學習基礎模型建立
+### D033-機器如何學習
+* 機器學習三步驟
+  * 定義好模型 (線性迴歸、決策樹、神經網路等)
+    * 機器學習模型中會有許多參數 (parameters)，如線性迴歸中的 w (weights) 跟 b (bias)
+    * 希望模型產生的 ŷ 跟真實答案的 y 越接近越好
+  * 評估模型的好壞
+    * 定義一個目標函數 (Objective function) 也可稱作損失函數 (Loss function)，來衡量模型的好壞
+    * 線性迴歸模型我們可以使用均方差 (mean square error) 來衡量
+    * Loss 越大，代表這組參數的模型預測出的 ŷ 越不準
+  * 找出讓訓練目標最佳的模型參數
+    * 梯度下降 (Gradient Descent)、增量訓練 (Additive Training) 等演算法，可找到最佳可能模型的參數
+  * 模型訓練的目標是將損失函數的損失降至最低
+    <table border="1" width="12%">
+          <tr>
+            <th width="2%"> 類型 </a>
+            <th width="5%"> 中文 </a>
+            <th width="5%"> 說明 </a>
+          </tr>
+          <tr>
+            <td> Underfitted </td>
+            <td> 欠擬合</td>
+            <td> 預測未擬合實際結果 </td>
+          </tr>
+          <tr>
+            <td> Good Fit/Robust </td>
+            <td>  </td>
+            <td> 預測可擬合實際結果 </td>
+          </tr>
+          <tr>
+            <td> Overfitted </td>
+            <td> 過度擬合 </td>
+            <td> 模型可能學習到資料中的噪音，導致在實際應用時預測失準 </td>
+          </tr>
+  </table>
   
-Back to <a href="#學習大綱">學習大綱</a>
+* 學習曲線 Learning curve
+  * 如何知道模型已經過擬合了?
+    * 觀察模型對於訓練資料的誤差與測試資料的誤差，是否有改變的趨勢
+  * 解決方法
+    * 過擬合
+      * 增加資料量
+      * 降低模型複雜度
+      * 使用正規化 (Regularization)：決策樹模型是非常容易過擬合的模型，必須透過適當的正規化來緩解
+    * 欠擬合
+      * 增加模型複雜度
+      * 減輕或不使用正規化
+* 參考資料
+  * [利用學習曲線診斷模型的偏差和方差](http://bangqu.com/yjB839.html)
+* 範例與作業(待下載)
+  * [作業D033]()
+    * 影片：[ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D034-訓練AND測試集切分
+* 為何需要切分訓練/測試集：透過驗證/測試集評估模型是否過擬合
+* 方法：使用 Python 中 Scikit-learn 進行資料切分，透過 [train-test split 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)快速對資料進行切分
+* K-fold Cross-validation
+  * 若僅做一次訓練/測試集切分，有些資料會沒有被拿來訓練過，因此後續就有 cross-validation 的方法，可以讓結果更為穩定，Ｋ為 fold 數量
+  * 每筆資料都曾經當過一次驗證集，再取平均得到最終結果
+  * 方法：使用 Python 中 Scikit-learn 進行 Cross-validation，透過 [KFold 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)快速運用 Cross-validation
+* 參考資料
+  * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
+* 範例與作業(待下載)
+  * [範例D034]()
+    * 使用 train_test_split 函數進行切分
+    * 使用 K-fold Cross-validation 來切分資料
+  * [作業D034]()
+    * 切出固定大小的資料集：適用於 unblance data
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D035-RegressionVSClassification
+* Regression：目標值為實數 (-∞ 至 ∞)
+  * 回歸問題是可以轉化為分類問題，模型原本是直接預測身高 (cm)，可更改為預測是否高於中位數 (yes or no)
+* Classification：目標值為類別 (0 或 1)
+  * 二元分類 (Binary-class)
+    * 目標的類別僅有兩個，如詐騙分析 (詐騙用戶 vs. 正常用戶)、瑕疵偵測 (瑕疵 vs. 正常) 
+  * 多元分類 (Multi-class)
+    * 目標類別有兩種以上，如手寫數字辨識有 10 個類別 (0~9)
+* Multi-class vs. Multi-label
+  * 當每個樣本都只能歸在一個類別，我們稱之為多分類 (Multi-class) 問題
+  * 而一個樣本如果可以同時有多個類別，則稱為多標籤 (Multi-label)
+* Regularization
+  * 不需要考慮 bias，要考慮讓 function 越平滑僅需要考慮 weight
+* Variance vs. Bias
+  * Variance：資料分散程度
+  * Bias：與目標的誤差程度 → 是否瞄準
+  * 模型：希望選擇 bias 和 variance 都小的 model
+    * 簡單模型：large bias、small variance，function space 小
+    * 複雜模型：small bias、large variance，function space 大
+    * overfitting：error 來自於 variance 很大
+      * 在 training data 上得到小的 error，在 testing data 上得到大的 error
+      * 解決方法：
+        * 增加資料量
+        * Regularization：新加 term(參數越少越好) 讓 function 平滑 → 會傷害 bias
+    * underfitting：error 來自於 bias 很大
+      * model 無法 fit examples
+      * 解決方法：redesign model
+        * 增加 feature as input
+        * 使用更複雜的 model
+* 參考資料
+  * [ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
+  * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
+  * [Supervised classification和Regression的比較](http://zylix666.blogspot.com/2016/06/supervised-classificationregression.html)
+* 範例與作業(待下載)
+  * [作業D035]()
+    * 無程式撰寫
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D036-評估指標選定EvaluationMetrics
+* 評估指標
+  * 最常見的為準確率 (Accuracy) = 正確分類樣本數/總樣本數
+  * 迴歸
+    * 目的：觀察「預測值」 (Prediction) 與「實際值」 (Ground truth) 的差距
+    * 指標
+      * MAE, Mean Absolute Error, 範圍：[0, ∞]
+      * MSE, Mean Square Error, 範圍：[0, ∞]
+      * [常用]R-square, 範圍：[0, 1] 
+  * 分類
+    * 目的：觀察「預測值」 (prediction) 與「實際值」 (Ground truth) 的正確程度
+    * 指標
+      * [二元、不平衡]AUC, Area Under ROC Curve, 範圍：[0, 1]
+        * 通常分類問題都需要定一個閾值 (threshold) 來決定分類的類別 (通常為機率 > 0.5 判定為 1, 機率 < 0.5 判定為 0)
+        * AUC 是衡量曲線下的面積，因此可考量所有閾值下的準確性
+        * AUC 越大則表示模型的效能越好
+      * [不平衡]F1 - Score (Precision, Recall), 範圍：[0, 1] 
+        * 分類問題中，有時會對某一類別的準確率特別有興趣，如瑕疵/正常樣本分類，希望任何瑕疵樣本都不能被漏掉
+        * F1-Score 是 Precision、Recall 的調和平均數
+          * Precision
+            * 模型判定瑕疵，佔樣本確實為瑕疵的比例 
+            * 白話：被分類器挑選(selected)出來的正體樣本究竟有多少是真正的樣本
+            * = true positives/(true+false positives)
+          * Recall
+            * 模型判定的瑕疵，佔樣本所有瑕疵的比例
+            * 白話：在全部真正的樣本裡面分類器選了多少個
+            * = true positives/(true positives + false negative)
+      * 混淆矩陣 (Confusion Matrix)
+        * 縱軸為模型預測，橫軸為正確答案，可清楚看出每個 Class 間預測的準確率，完美的模型就會在對角線上呈現 100 % 的準確率
+      * [平衡]Accuracy
+      * [多元]top-k accuracy
+        * k 代表模型預測前 k 個類別有包含正確類別即為正確 (ImageNet 競賽通常都是比 [Top-5 Accuracy](https://www.zhihu.com/question/36463511))
+    * 比較
+      * AUC 計算時 y_pred 的值必須填入每個樣本的預測機率 (probability) 而非分類結果
+      * F1-Score 計算時則需填入每個樣本已分類的結果，如機率 >=0.5 則視為 1，而非填入機率值
+* 參考資料
+  * [深入了解超常用的指標 AUC](https://www.dataschool.io/roc-curves-and-auc-explained/)
+  * [機器學習模型評估](https://zhuanlan.zhihu.com/p/30721429)
+* 範例與作業(待下載)
+  * [範例D036]()
+    * 觀察各指標的數值範圍，及輸入函數中的資料格式
+  * [作業D036]()
+    * F1-Score 其實是 F-Score 中的 β 值為 1 的特例
+    * 撰寫 F2-Score 的程式碼
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D037-RegressionModel-線性迴歸AND羅吉斯回歸
+* 
+* 範例與作業(待下載)
+  * [範例D037]()
+  * [作業D037]()
+  
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D038-程式實作-線性迴歸AND羅吉斯回歸
+* 
+* 範例與作業(待下載)
+  * [範例D038]()
+  * [作業D038]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D039-RegressionModel-LASSO回歸ANDRidge回歸
+* 
+* 範例與作業(待下載)
+  * [範例D039]()
+  * [作業D039]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D040-程式實作-LASSO回歸ANDRidge回歸
+* 
+* 範例與作業(待下載)
+  * [範例D040]()
+  * [作業D040]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D041-TreeBasedModel-決策樹DecisionTree
+* 
+* 範例與作業(待下載)
+  * [範例D041]()
+  * [作業D041]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D042-程式實作-決策樹
+* 
+* 範例與作業(待下載)
+  * [範例D042]()
+  * [作業D042]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D043-TreeBasedModel-隨機森林RandomForest
+* 
+* 範例與作業(待下載)
+  * [範例D043]()
+  * [作業D043]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D044-程式實作-隨機森林
+* 
+* 範例與作業(待下載)
+  * [範例D044]()
+  * [作業D044]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D045-TreeBasedModel-梯度提升機GradientBoostingMachine
+* 
+* 範例與作業(待下載)
+  * [範例D045]()
+  * [作業D045]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+### D046-程式實作-梯度提升機
+* 
+* 範例與作業(待下載)
+  * [範例D046]()
+  * [作業D046]()
+
+Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
