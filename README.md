@@ -1349,12 +1349,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
 * 參考資料
   * [特徵組合&特徵交叉 (Feature Crosses)](https://segmentfault.com/a/1190000014799038)
   * [簡單高效的組合特徵自動挖掘框架](https://read01.com/jj8em6E.html#.ZBv4VnZBy5c)
-* 範例與作業(待下載)
-  * [範例D028]()
+* 範例與作業
+  * [範例D028](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_028_HW_%E7%89%B9%E5%BE%B5%E7%B5%84%E5%90%88_%E6%95%B8%E5%80%BC%E8%88%87%E6%95%B8%E5%80%BC%E7%B5%84%E5%90%88/Day_028_Feature_Combination.ipynb)
     * DatSet：計程車費率預測
     * 增加特徵：經度差與緯度差，觀察線性迴歸與梯度提升樹的預測結果有什麼影響
     * 增加座標距離特徵，觀察線性迴歸與梯度提升樹的預測結果有什麼影響
-  * [作業D028]()
+  * [作業D028](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_028_Feature_Combination_Ans.ipynb)
     * DatSet：計程車費率預測
     * 增加特徵：經緯度一圈的長度比，觀察影響性 
 
@@ -1393,12 +1393,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
     </table>
   * 參考資料
     * [利用python数据分析之数据聚合与分组](https://zhuanlan.zhihu.com/p/27590154)
-* 範例與作業(待下載)
-  * [範例D029]()
+* 範例與作業
+  * [範例D029](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_029_HW_%E7%89%B9%E5%BE%B5%E7%B5%84%E5%90%88_%E9%A1%9E%E5%88%A5%E8%88%87%E6%95%B8%E5%80%BC%E7%B5%84%E5%90%88/Day_029_GroupBy_Encoder.ipynb)
     * DataSet：房價預測
     * 了解群聚編碼的語法
     * 觀察群聚編碼，搭配線性迴歸以及隨機森林分別有什麼影響
-  * [作業D029]()
+  * [作業D029](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_029_GroupBy_Encoder_Ans.ipynb)
     * DataSet：鐵達尼生存預測
     * 挑選特徵的群聚編碼
     * 觀察群聚編碼，搭配邏輯迴歸，看看有什麼影響
@@ -1454,12 +1454,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
     </table>
   * 參考資料
     * [特徵選擇](https://zhuanlan.zhihu.com/p/32749489)
-* 範例與作業(待下載)
-  * [範例D030]()
+* 範例與作業
+  * [範例D030](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_030_HW_%E7%89%B9%E5%BE%B5%E9%81%B8%E6%93%87/Day_030_Feature_Selection.ipynb)
     * DataSet：房價預測
     * 觀察相關係數過濾法對線性迴歸與梯度提升機有什麼影響
     * 觀察 L1 嵌入法對線性迴歸與梯度提升機有什麼影響
-  * [作業D030]()
+  * [作業D030](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_030_Feature_Selection_Ans.ipynb)
     * DataSet：鐵達尼生存預測
     * 相關係數過濾法有時候確實能成功提升準確度，但篩選過頭會有反效果
     * 相關係數過濾法的門檻、L1 Embedding 的 alpha 值(去除0)沒有一定的決定準則
@@ -1531,13 +1531,13 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
           </tr>
   </table>
  
-* 範例與作業(待下載)
-  * [範例D031]()
+* 範例與作業
+  * [範例D031](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_031_HW_%E7%89%B9%E5%BE%B5%E8%A9%95%E4%BC%B0/Day_031_Feature_Importance.ipynb)
     * DataSet：房價預測
     * 使用擬合過的模型，計算特徵重要性
     * 對照原始特徵，觀察特徵重要性較高的一半特徵，搭配隨機森林對於預測結果的影響
     * 重組重要性最高的特徵作為新特徵，觀察效果如何
-  * [作業D031]()
+  * [作業D031](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_031_Feature_Importance_Ans.ipynb)
     * DataSet：鐵達尼生存預測
 
 Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
@@ -1560,12 +1560,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
 * 參考資料
   * [Feature transformations with ensembles of trees](https://scikit-learn.org/stable/auto_examples/ensemble/plot_feature_transformation.html)
   * [Algorithm-GBDT Encoder](https://zhuanlan.zhihu.com/p/31734283)
-* 範例與作業(待下載)
-  * [範例D032]()
+* 範例與作業
+  * [範例D032](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_032_HW_%E7%89%B9%E5%BE%B5%E5%84%AA%E5%8C%96_%E8%91%89%E7%B7%A8%E7%A2%BC/Day_032_Leaf_Encoding.ipynb)
     * DataSet：鐵達尼生存預測
     * 了解葉編碼搭配梯度提升樹的效果
     * 觀察葉編碼搭配邏輯斯迴歸的效果
-  * [作業D032]()
+  * [作業D032](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_032_Leaf_Encoding_Ans.ipynb)
     * DataSet：鐵達尼生存預測
     * 觀察葉編碼搭配隨機森林的效果
     * 觀察葉編碼搭配邏輯斯迴歸的效果
@@ -1624,8 +1624,8 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
       * 減輕或不使用正規化
 * 參考資料
   * [利用學習曲線診斷模型的偏差和方差](http://bangqu.com/yjB839.html)
-* 範例與作業(待下載)
-  * [作業D033]()
+* 範例與作業
+  * [作業D033](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_033_Ans.ipynb)
     * 影片：[ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1641,11 +1641,11 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * 方法：使用 Python 中 Scikit-learn 進行 Cross-validation，透過 [KFold 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)快速運用 Cross-validation
 * 參考資料
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
-* 範例與作業(待下載)
-  * [範例D034]()
+* 範例與作業
+  * [範例D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_034_HW/Day_034_train_test_split.ipynb)
     * 使用 train_test_split 函數進行切分
     * 使用 K-fold Cross-validation 來切分資料
-  * [作業D034]()
+  * [作業D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_034_Ans.ipynb)
     * 切出固定大小的資料集：適用於 unblance data
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1685,8 +1685,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * [ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
   * [Supervised classification和Regression的比較](http://zylix666.blogspot.com/2016/06/supervised-classificationregression.html)
-* 範例與作業(待下載)
-  * [作業D035]()
+* 範例與作業
+  * [作業D035](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_035_Ans.ipynb)
     * 無程式撰寫
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1731,10 +1731,10 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 參考資料
   * [深入了解超常用的指標 AUC](https://www.dataschool.io/roc-curves-and-auc-explained/)
   * [機器學習模型評估](https://zhuanlan.zhihu.com/p/30721429)
-* 範例與作業(待下載)
-  * [範例D036]()
+* 範例與作業
+  * [範例D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_036_HW/Day_036_evaluation_metrics.ipynb)
     * 觀察各指標的數值範圍，及輸入函數中的資料格式
-  * [作業D036]()
+  * [作業D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_036_Ans.ipynb)
     * F1-Score 其實是 F-Score 中的 β 值為 1 的特例
     * 撰寫 F2-Score 的程式碼
   
