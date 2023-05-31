@@ -1774,11 +1774,11 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 ### D038-程式實作-線性迴歸AND羅吉斯回歸
 * 線性迴歸
   * 語法
-    > from sklearn.linear_model import LinearRegression 
+    > from sklearn.linear_model import LinearRegression <br>
     > reg = LinearRegression().fit(X, y)
 * 羅吉斯回歸
   * 語法
-    > from sklearn.linear_model import LogisticRegression 
+    > from sklearn.linear_model import LogisticRegression <br>
     > reg = LogisticRegression().fit(X, y)
   * 參數
     * Penalty：'L1'、'L2'。使用 L1 或 L2 的正則化參數，後續有更詳細介紹
