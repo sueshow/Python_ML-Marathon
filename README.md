@@ -167,7 +167,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D0：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -1824,15 +1824,15 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 ### D040-程式實作-LASSO回歸ANDRidge回歸
 * LASSO回歸
   * 語法
-    > from sklearn.linear_model import Lasso
-    > reg = Lasso(alpha=0.1)
-    > reg.fit(X, y)
+    > from sklearn.linear_model import Lasso <br>
+    > reg = Lasso(alpha=0.1) <br>
+    > reg.fit(X, y) <br>
     > print(reg.coef_) # 印出訓練後的模型參數
 * Ridge回歸
   * 語法
-    > from sklearn.linear_model import Ridge
-    > reg = Ridge (alpha=0.1)
-    > reg.fit(X, y)
+    > from sklearn.linear_model import Ridge <br>
+    > reg = Ridge (alpha=0.1) <br>
+    > reg.fit(X, y) <br>
     > print(reg.coef_) # 印出訓練後的模型參數
 * 範例與作業
   * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW/Day_040_lasso_ridge_regression.ipynb) 
@@ -1869,7 +1869,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * 回歸型
     > from sklearn.tree_model import DecisionTreeRegressor
   * 分類型
-    > from sklearn.tree_model import DecisionTreeClassifier
+    > from sklearn.tree_model import DecisionTreeClassifier <br>
     > clf = DecisionTreeClassifier()
 * 超參數
   * Criterion：衡量資料相似程度的 metric
@@ -1890,20 +1890,38 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D043-TreeBasedModel-隨機森林RandomForest
-* 
-* 範例與作業(待下載)
-  * [範例D043]()
+* 決策樹的缺點
+  * 決策樹生成時考慮所有資料與特徵來做切分的
+  * 若不對決策樹進行限制 (樹深度、葉子上至少要有多少樣本等)，決策樹非常容易 Over-fitting
+* 隨機森林 (Random Forest)
+  * 集成 (Ensemble) 是將多個模型的結果組合在一起，透過投票或是加權的方式得到最終結果
+  * 隨機森林的每一棵樹在生成過程中，都是隨機使用一部份的訓練資料與特徵，代表每棵樹都是用隨機的資料訓練而成的
+  * [feature 數](http://hhtucode.blogspot.com/2013/06/ml-random-forest.html)
+    * 設定最 少要 bagging 出 (k/2)+1 或 square(k)[有夠多] 的 feature，才比較有顯著結果，k 為原本的 feature 數量
+* 範例與作業(待上傳)
   * [作業D043]()
+    * 無程式撰寫
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
 ### D044-程式實作-隨機森林
-* 
-* 範例與作業(待下載)
+* 語法
+  > from sklearn.ensemble import RandomForestClassifier <br>
+  > from sklearn.ensemble import RandomForestRegressor <br>
+  > clf = RandomForestRegressor()
+* 超參數
+  * 與決策樹相同
+  * 生成樹的數量，越多越不容易過度擬和，但運算時間會變長
+  * 如何選取 features：auto
+* 範例與作業(待上傳)
   * [範例D044]()
+    * 資料集：Iris
+    * 瞭解隨機森林的建模方法與超參數的意義
   * [作業D044]()
+    * 資料集：boston、wine
+    * 調整超參數對於隨機森林的影響
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
