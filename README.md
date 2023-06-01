@@ -1763,9 +1763,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 羅吉斯回歸模型(Logistics Regression)
   * 特性
     * 用於二元分類模型，將線性迴歸加上 Sigmoid 函數
-* 範例與作業(待上傳)
-  * [範例D037]()
-  * [作業D037]()
+* 範例與作業
+  * [作業D037](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_037_Ans.ipynb)
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
@@ -1785,29 +1784,53 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * C：正則化的強度，數字越小，模型越簡單
     * [Solver](https://blog.csdn.net/lc574260570/article/details/82116197)：對損失函數不同的優化方法
     * Multi-class：選擇 one-vs-rest 或 multi-nominal 分類方式，當目標是 multi-class 時要特別注意，若有 10 個 class， ovr 是訓練 10 個二分類模型，第一個模型負責分類 (class1, non-class1)；第二個負責 (class2, non-class2)，以此類推
-* 範例與作業(待上傳)
-  * [範例D038]()
-  * [作業D038]()
+* 範例與作業
+  * [範例D038](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_038_HW_regression%20model/Day_038_regression_model.ipynb)
+  * [作業D038](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_038_Ans.ipynb)
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
 ### D039-RegressionModel-LASSO回歸ANDRidge回歸
-* 
-* 範例與作業(待下載)
-  * [範例D039]()
-  * [作業D039]()
+* 目標函數中重要的知識
+  * 損失函數 (Loss function)：衡量預測值與實際值的差異，讓模型能往正確的方向學習
+  * 正則化 (Regularization)：
+    * 說明
+      * 可懲罰模型的複雜度，避免模型變得過於複雜，造成過擬合 (Over-fitting)，當模型越複雜時其值就會越大
+      * 希望模型的參數數值不要太大，原因是參數的數值變小，噪音對最終輸出的結果影響越小，提升模型的泛化能力，但也讓模型的擬合能力下降
+    * 類型
+      * L1 函數：$$ \alpha \sum |weights| $$
+      * L2 函數：$$ \alpha \sum (weights)^2 $$
+  * 為了避免 Over-fitting，目標函數 = 損失函數 + 正則化
+* LASSO 回歸
+  * Linear Regression 加上 L1，其中有個超參數 α 可以調整正則化的強度
+  * L1 regularization 會讓模型變得較為稀疏，除了能做特徵選取外，也會讓模型變得更輕量，速度較快
+* Ridge 回歸
+  * Linear Regression 加上 L2，其中有個超參數 α 可以調整正則化的強度
+* 範例與作業
+  * [作業D039](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_039_Ans.ipynb)
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
 ### D040-程式實作-LASSO回歸ANDRidge回歸
-* 
-* 範例與作業(待下載)
-  * [範例D040]()
-  * [作業D040]()
+* LASSO回歸
+  * 語法
+    > from sklearn.linear_model import Lasso
+    > reg = Lasso(alpha=0.1)
+    > reg.fit(X, y)
+    > print(reg.coef_) # 印出訓練後的模型參數
+* Ridge回歸
+  * 語法
+    > from sklearn.linear_model import Ridge
+    > reg = Ridge (alpha=0.1)
+    > reg.fit(X, y)
+    > print(reg.coef_) # 印出訓練後的模型參數
+* 範例與作業
+  * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW/Day_040_lasso_ridge_regression.ipynb)
+  * [作業D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_040_Ans.ipynb)
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
