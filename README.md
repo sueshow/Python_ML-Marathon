@@ -1954,6 +1954,10 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
             <td> Reduce bias & variance </td>
           </tr>
     </table>
+* 參考資料
+  * [ML Lecture 22: Ensemble](https://www.youtube.com/watch?v=tH9FH1DH5n0)
+  * [Kaggle Winning Solution Xgboost Algorithm](https://www.youtube.com/watch?v=ufHo8vbk6g4)
+  * [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html)
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
