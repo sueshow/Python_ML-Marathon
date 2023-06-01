@@ -1928,10 +1928,32 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D045-TreeBasedModel-梯度提升機GradientBoostingMachine
-* 
-* 範例與作業(待下載)
-  * [範例D045]()
-  * [作業D045]()
+* Gradient Boosting Machine
+  * 下一棵樹是為了修正前一棵樹的錯誤，故每一棵樹皆有相關聯
+  * GBDT(Gradient Boosting Decision Tree)用來做回歸預測，調整後也可以用于分類
+* Boosting 與 Bagging 的差異
+    <table border="1" width="15%">
+          <tr>
+            <th width="5%"> </a>
+            <th width="5%"> Bagging </a>
+            <th width="5%"> Boosting </a>
+          </tr>
+          <tr>
+            <td> 關係 </td>
+            <td> 透過抽樣(sampling)的方式來生成每一棵樹，樹與樹之間是獨立生成的 (Independent classifiers) </td>
+            <td> 透過序列(additive)的方式來生成每一顆樹，後面的樹要能夠修正前一棵樹，每棵樹都會與前面的樹有關聯 (Sequential classifiers) </td>
+          </tr>
+          <tr>
+            <td> fitting </td>
+            <td> Handles overfitting </td>
+            <td> Can overfit </td>
+          </tr>
+          <tr>
+            <td> 優點 </td>
+            <td> Reduce variance </td>
+            <td> Reduce bias & variance </td>
+          </tr>
+    </table>
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
