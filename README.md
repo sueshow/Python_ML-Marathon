@@ -167,7 +167,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-：驗證基礎、預測模型、評估指標) → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D0：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -1349,12 +1349,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
 * 參考資料
   * [特徵組合&特徵交叉 (Feature Crosses)](https://segmentfault.com/a/1190000014799038)
   * [簡單高效的組合特徵自動挖掘框架](https://read01.com/jj8em6E.html#.ZBv4VnZBy5c)
-* 範例與作業(待下載)
-  * [範例D028]()
+* 範例與作業
+  * [範例D028](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_028_HW_%E7%89%B9%E5%BE%B5%E7%B5%84%E5%90%88_%E6%95%B8%E5%80%BC%E8%88%87%E6%95%B8%E5%80%BC%E7%B5%84%E5%90%88/Day_028_Feature_Combination.ipynb)
     * DatSet：計程車費率預測
     * 增加特徵：經度差與緯度差，觀察線性迴歸與梯度提升樹的預測結果有什麼影響
     * 增加座標距離特徵，觀察線性迴歸與梯度提升樹的預測結果有什麼影響
-  * [作業D028]()
+  * [作業D028](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_028_Feature_Combination_Ans.ipynb)
     * DatSet：計程車費率預測
     * 增加特徵：經緯度一圈的長度比，觀察影響性 
 
@@ -1393,12 +1393,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
     </table>
   * 參考資料
     * [利用python数据分析之数据聚合与分组](https://zhuanlan.zhihu.com/p/27590154)
-* 範例與作業(待下載)
-  * [範例D029]()
+* 範例與作業
+  * [範例D029](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_029_HW_%E7%89%B9%E5%BE%B5%E7%B5%84%E5%90%88_%E9%A1%9E%E5%88%A5%E8%88%87%E6%95%B8%E5%80%BC%E7%B5%84%E5%90%88/Day_029_GroupBy_Encoder.ipynb)
     * DataSet：房價預測
     * 了解群聚編碼的語法
     * 觀察群聚編碼，搭配線性迴歸以及隨機森林分別有什麼影響
-  * [作業D029]()
+  * [作業D029](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_029_GroupBy_Encoder_Ans.ipynb)
     * DataSet：鐵達尼生存預測
     * 挑選特徵的群聚編碼
     * 觀察群聚編碼，搭配邏輯迴歸，看看有什麼影響
@@ -1454,12 +1454,12 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
     </table>
   * 參考資料
     * [特徵選擇](https://zhuanlan.zhihu.com/p/32749489)
-* 範例與作業(待下載)
-  * [範例D030]()
+* 範例與作業
+  * [範例D030](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_030_HW_%E7%89%B9%E5%BE%B5%E9%81%B8%E6%93%87/Day_030_Feature_Selection.ipynb)
     * DataSet：房價預測
     * 觀察相關係數過濾法對線性迴歸與梯度提升機有什麼影響
     * 觀察 L1 嵌入法對線性迴歸與梯度提升機有什麼影響
-  * [作業D030]()
+  * [作業D030](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_030_Feature_Selection_Ans.ipynb)
     * DataSet：鐵達尼生存預測
     * 相關係數過濾法有時候確實能成功提升準確度，但篩選過頭會有反效果
     * 相關係數過濾法的門檻、L1 Embedding 的 alpha 值(去除0)沒有一定的決定準則
@@ -1531,13 +1531,13 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
           </tr>
   </table>
  
-* 範例與作業(待下載)
-  * [範例D031]()
+* 範例與作業
+  * [範例D031](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_031_HW_%E7%89%B9%E5%BE%B5%E8%A9%95%E4%BC%B0/Day_031_Feature_Importance.ipynb)
     * DataSet：房價預測
     * 使用擬合過的模型，計算特徵重要性
     * 對照原始特徵，觀察特徵重要性較高的一半特徵，搭配隨機森林對於預測結果的影響
     * 重組重要性最高的特徵作為新特徵，觀察效果如何
-  * [作業D031]()
+  * [作業D031](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_031_Feature_Importance_Ans.ipynb)
     * DataSet：鐵達尼生存預測
 
 Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
@@ -1554,18 +1554,30 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
   * 樹狀模型做出預測時，會將資料重新分成好幾個區塊，決策樹最末端的點稱之為葉點，每個葉點的性質接近，可視為資料的一種分組方式
   * 雖然不適合直接沿用樹狀模型機率，但分組方式有代表性，因此按照葉點將資料「離散化」，比之前提過的離散化方式更精確，這樣的編碼稱為「葉編碼」
   * 葉編碼 (leaf encoding) 是採用決策樹的葉點作為編碼依據重新編碼，每棵樹視為一個新特徵，每個新特徵均為分類型特徵，決策樹的葉點與該特徵標籤一一對應，最後再以邏輯斯迴歸(重新賦予機率)或分解機 (Factorization Machine) 進行合併預測
+  * 說明
+    * 假設有 300 棵樹，每棵數有3片葉
+      * 3 => 第 i 筆資料在第 1 棵樹位於第 3 片葉子
+      * 2 => 第 i 筆資料在第 2 棵樹位於第 2 片葉子
+      * ...
+      * 1 => 第 i 筆資料第 300 棵樹位於第 1 片葉子
+        > gbdt.apply(train_X)[:, :, 0][0] 
+    * 代表第 1 筆資料在 300 棵樹分別的 index 為 [2, 1,...., 0]
+    * 將每一棵樹的葉子進行 one-hot encoding，新特徵的長度等於所有樹的葉子數量相加
+      > [0,0,1, 0,1,0, ... ,1,0,0] 共有 300*3=900 elements
+    * 將上述結果當成新的 input，進行 logistic regression
 * 葉編碼 + 邏輯斯迴歸
   * 葉編碼需要先對樹狀模型擬合後才能生成，如已挑選較佳的參數，後續處理效果也會較好
   * 在分類預測中使用樹狀模型，再對這些擬合完的樹狀模型進行葉編碼+邏輯斯迴歸，通常會將預測效果再進一步提升
 * 參考資料
   * [Feature transformations with ensembles of trees](https://scikit-learn.org/stable/auto_examples/ensemble/plot_feature_transformation.html)
   * [Algorithm-GBDT Encoder](https://zhuanlan.zhihu.com/p/31734283)
-* 範例與作業(待下載)
-  * [範例D032]()
+  * [GBDT + LR for Binary Classification](https://towardsdatascience.com/next-better-player-gbdt-lr-for-binary-classification-f8dc6f32628e)
+* 範例與作業
+  * [範例D032](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_032_HW_%E7%89%B9%E5%BE%B5%E5%84%AA%E5%8C%96_%E8%91%89%E7%B7%A8%E7%A2%BC/Day_032_Leaf_Encoding.ipynb)
     * DataSet：鐵達尼生存預測
     * 了解葉編碼搭配梯度提升樹的效果
     * 觀察葉編碼搭配邏輯斯迴歸的效果
-  * [作業D032]()
+  * [作業D032](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_032_Leaf_Encoding_Ans.ipynb)
     * DataSet：鐵達尼生存預測
     * 觀察葉編碼搭配隨機森林的效果
     * 觀察葉編碼搭配邏輯斯迴歸的效果
@@ -1624,8 +1636,8 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
       * 減輕或不使用正規化
 * 參考資料
   * [利用學習曲線診斷模型的偏差和方差](http://bangqu.com/yjB839.html)
-* 範例與作業(待下載)
-  * [作業D033]()
+* 範例與作業
+  * [作業D033](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_033_Ans.ipynb)
     * 影片：[ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1641,11 +1653,11 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * 方法：使用 Python 中 Scikit-learn 進行 Cross-validation，透過 [KFold 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)快速運用 Cross-validation
 * 參考資料
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
-* 範例與作業(待下載)
-  * [範例D034]()
+* 範例與作業
+  * [範例D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_034_HW/Day_034_train_test_split.ipynb)
     * 使用 train_test_split 函數進行切分
     * 使用 K-fold Cross-validation 來切分資料
-  * [作業D034]()
+  * [作業D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_034_Ans.ipynb)
     * 切出固定大小的資料集：適用於 unblance data
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1685,8 +1697,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * [ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
   * [Supervised classification和Regression的比較](http://zylix666.blogspot.com/2016/06/supervised-classificationregression.html)
-* 範例與作業(待下載)
-  * [作業D035]()
+* 範例與作業
+  * [作業D035](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_035_Ans.ipynb)
     * 無程式撰寫
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1731,10 +1743,10 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 參考資料
   * [深入了解超常用的指標 AUC](https://www.dataschool.io/roc-curves-and-auc-explained/)
   * [機器學習模型評估](https://zhuanlan.zhihu.com/p/30721429)
-* 範例與作業(待下載)
-  * [範例D036]()
+* 範例與作業
+  * [範例D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_036_HW/Day_036_evaluation_metrics.ipynb)
     * 觀察各指標的數值範圍，及輸入函數中的資料格式
-  * [作業D036]()
+  * [作業D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_036_Ans.ipynb)
     * F1-Score 其實是 F-Score 中的 β 值為 1 的特例
     * 撰寫 F2-Score 的程式碼
   
@@ -1743,8 +1755,15 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D037-RegressionModel-線性迴歸AND羅吉斯回歸
-* 
-* 範例與作業(待下載)
+* 線性迴歸模型(Linear Regression)
+  * 特性
+    * 用於迴歸問題
+    * 訓練速度非常快，但須注意資料共線性、資料標準化等限制
+    * 可作為 baseline 模型作為參考點
+* 羅吉斯回歸模型(Logistics Regression)
+  * 特性
+    * 用於二元分類模型，將線性迴歸加上 Sigmoid 函數
+* 範例與作業(待上傳)
   * [範例D037]()
   * [作業D037]()
   
@@ -1753,8 +1772,20 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D038-程式實作-線性迴歸AND羅吉斯回歸
-* 
-* 範例與作業(待下載)
+* 線性迴歸
+  * 語法
+    > from sklearn.linear_model import LinearRegression <br>
+    > reg = LinearRegression().fit(X, y)
+* 羅吉斯回歸
+  * 語法
+    > from sklearn.linear_model import LogisticRegression <br>
+    > reg = LogisticRegression().fit(X, y)
+  * 參數
+    * Penalty：'L1'、'L2'。使用 L1 或 L2 的正則化參數，後續有更詳細介紹
+    * C：正則化的強度，數字越小，模型越簡單
+    * [Solver](https://blog.csdn.net/lc574260570/article/details/82116197)：對損失函數不同的優化方法
+    * Multi-class：選擇 one-vs-rest 或 multi-nominal 分類方式，當目標是 multi-class 時要特別注意，若有 10 個 class， ovr 是訓練 10 個二分類模型，第一個模型負責分類 (class1, non-class1)；第二個負責 (class2, non-class2)，以此類推
+* 範例與作業(待上傳)
   * [範例D038]()
   * [作業D038]()
 
