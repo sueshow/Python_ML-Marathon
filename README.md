@@ -1765,6 +1765,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 用於二元分類模型，將線性迴歸加上 Sigmoid 函數
 * 範例與作業
   * [作業D037](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_037_Ans.ipynb)
+    * 無程式撰寫
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
@@ -1786,7 +1787,10 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * Multi-class：選擇 one-vs-rest 或 multi-nominal 分類方式，當目標是 multi-class 時要特別注意，若有 10 個 class， ovr 是訓練 10 個二分類模型，第一個模型負責分類 (class1, non-class1)；第二個負責 (class2, non-class2)，以此類推
 * 範例與作業
   * [範例D038](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_038_HW_regression%20model/Day_038_regression_model.ipynb)
+    * 理解 linear regression 的參數意義
+    * 觀察 linear regression 與 logistic regression 有什麼差異
   * [作業D038](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_038_Ans.ipynb)
+    * 確定資料集的目標是分類還是迴歸，選擇正確的模型
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
@@ -1810,6 +1814,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * Linear Regression 加上 L2，其中有個超參數 α 可以調整正則化的強度
 * 範例與作業
   * [作業D039](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_039_Ans.ipynb)
+    * 瞭解 L1、L2 的意義與差異
+    * 理解 LASSO 與 Ridge 之間的差異與使用情境
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
@@ -1829,28 +1835,55 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     > reg.fit(X, y)
     > print(reg.coef_) # 印出訓練後的模型參數
 * 範例與作業
-  * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW/Day_040_lasso_ridge_regression.ipynb)
+  * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW/Day_040_lasso_ridge_regression.ipynb) 
+    * 資料集：糖尿病
+    * 比較 linear regression 與 LASOO 的差異
   * [作業D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_040_Ans.ipynb)
+    * 資料集：boston
+    * 比較 linear regression 與 ridge 的差異
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
 ### D041-TreeBasedModel-決策樹DecisionTree
-* 
-* 範例與作業(待下載)
-  * [範例D041]()
+* 決策樹 Decision Tree
+  * 透過一系列的是非問題，將資料進行切分
+  * 從訓練資料中找出規則，讓每一次決策能使訊息增益 (Information Gain) 最大化，訊息增益越大代表切分後的兩群資料，群內相似程度越高
+    * 吉尼係數(Gini-Index)
+      $$ Gini = 1-\sum_j p_j^2 $$
+    * 熵(Entropy)
+      $$ Entropy = -\sum_j p_j log_2 P_j$$
+  * 從構建樹的過程中，透過 feature 被用來切分的次數，來得知哪些 features 是相對有用的，實務上可以使用 feature importance 來了解模型如何進行分類，總和為 1
+  * 可視覺化每個決策的過程，是個具有非常高解釋性的模型
+* 範例與作業(待上傳)
   * [作業D041]()
+    * 無程式撰寫
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
 ### D042-程式實作-決策樹
-* 
-* 範例與作業(待下載)
+* 類型
+  * 回歸型
+    > from sklearn.tree_model import DecisionTreeRegressor
+  * 分類型
+    > from sklearn.tree_model import DecisionTreeClassifier
+    > clf = DecisionTreeClassifier()
+* 超參數
+  * Criterion：衡量資料相似程度的 metric
+  * Max_depth：樹能生長的最深限制
+  * Min_samples_split：至少要多少樣本以上才進行切分
+  * Min_samples_leaf：最終的葉子 (節點) 上至少要有多少樣本
+* 可安裝額外的套件 [graphviz](https://medium.com/@rnbrown/creating-and-visualizing-decision-trees-with-python-f8e8fa394176)，畫出決策樹的圖形幫助理解模型分類的準則
+* 範例與作業(待上傳)
   * [範例D042]()
+    * 資料集：Iris
+    * 建立模型四步驟：讀進資料 → 資料切分 → 建立模型 → 評估模型
   * [作業D042]()
+    * 資料集：wine、boston
+    * 調整 Decision Tree 的超參數是否會影響結果
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
