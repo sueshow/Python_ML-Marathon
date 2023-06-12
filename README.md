@@ -1856,8 +1856,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
       $$ Entropy = -\sum_j p_j log_2 P_j$$
   * 從構建樹的過程中，透過 feature 被用來切分的次數，來得知哪些 features 是相對有用的，實務上可以使用 feature importance 來了解模型如何進行分類，總和為 1
   * 可視覺化每個決策的過程，是個具有非常高解釋性的模型
-* 範例與作業(待上傳)
-  * [作業D041]()
+* 範例與作業
+  * [作業D041](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_041_Ans.ipynb)
     * 無程式撰寫
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1888,11 +1888,11 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     clf.feature_importances_
     ```
 * 可安裝額外的套件 [graphviz](https://medium.com/@rnbrown/creating-and-visualizing-decision-trees-with-python-f8e8fa394176)，畫出決策樹的圖形幫助理解模型分類的準則
-* 範例與作業(待上傳)
-  * [範例D042]()
+* 範例與作業
+  * [範例D042](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_042_HW_decision_tree/Day_042_decision_tree.ipynb)
     * 資料集：Iris
     * 建立模型四步驟：讀進資料 → 資料切分 → 建立模型 → 評估模型
-  * [作業D042]()
+  * [作業D042](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_042_Ans.ipynb)
     * 資料集：wine、boston
     * 調整 Decision Tree 的超參數是否會影響結果
 
@@ -1909,8 +1909,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * 隨機森林的每一棵樹在生成過程中，都是隨機使用一部份的訓練資料與特徵，代表每棵樹都是用隨機的資料訓練而成的
   * [feature 數](http://hhtucode.blogspot.com/2013/06/ml-random-forest.html)
     * 設定最 少要 bagging 出 (k/2)+1 或 square(k)[有夠多] 的 feature，才比較有顯著結果，k 為原本的 feature 數量
-* 範例與作業(待上傳)
-  * [作業D043]()
+* 範例與作業
+  * [作業D043](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_043_Ans.ipynb)
     * 無程式撰寫
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
@@ -1939,11 +1939,11 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
         )
     ```
   * 如何選取 features：auto
-* 範例與作業(待上傳)
-  * [範例D044]()
+* 範例與作業
+  * [範例D044](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_044_HW_random_forest/Day_044_random_forest.ipynb)
     * 資料集：Iris
     * 瞭解隨機森林的建模方法與超參數的意義
-  * [作業D044]()
+  * [作業D044](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_044_Ans.ipynb)
     * 資料集：boston、wine
     * 調整超參數對於隨機森林的影響
 
@@ -2013,10 +2013,40 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 決策樹計算特徵重要性的概念是，觀察某一特徵被用來切分的次數而定
     * 假設有兩個一模一樣的特徵，在隨機森林中每棵樹皆為獨立，因此兩個特徵皆有可能被使用，最終統計出來的次數會被均分
     * 在梯度提升機中，每棵樹皆有關連，因此模型僅會使用其中一個特徵，另一個相同特徵的重要性則會消失
-* 範例與作業(待上傳)
-  * [範例D046]()
-  * [作業D046]()
+* 範例與作業
+  * [範例D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_046_HW_gradient_boosting_machine/Day_046_gradient_boosting_machine.ipynb)
+  * [作業D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_046_Ans.ipynb)
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
+<br>
+<br>
+
+# D047 超參數調整與優化
+* 範例與作業(待觀看)
+  * [範例D047]()
+  * [作業D047]()
+# D048 Kaggle 競賽平台介紹
+* 範例與作業(待觀看)
+  * [範例D048]()
+  * [作業D048]()
+# D049 集成方法-混和泛化(Blending)
+* 範例與作業(待觀看)
+  * [範例D049]()
+  * [作業D049]()
+# D050 集成方法-堆疊泛化(Stacking)
+* 範例與作業(待觀看)
+  * [範例D050]()
+  * [作業D050]()
+
+Back to <a href="#機器學習調整參數">機器學習調整參數</a>
+<br>
+<br>
+
+# D051-D053 Kaggle 期中考
+* 範例與作業(待觀看)
+  * [範例D051]()
+  * [作業D051]()
+
+Back to <a href="#Kaggle期中考"></a>
 <br>
 <br>
