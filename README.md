@@ -151,8 +151,9 @@
   * [其他衡量指標](https://blog.csdn.net/aws3217150/article/details/50479457)
     * ROC(Receiver Operating Curve)：客群樣貌、素材好壞
     * MAP@N：如 MAP@5、MAP@12
-* [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
-  * 目標：寫一個 MSE 函數
+* 範例與作業
+  * [作業D001](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_001_example_of_metrics_Ans.ipynb) 
+    * 目標：寫一個 MSE 函數
 
 Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
@@ -175,8 +176,9 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
-* [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
-  * 目標：瞭解機器學習適合應用的領域與範疇
+* 範例與作業
+  * [作業D002](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_002_Ans.ipynb) 
+    * 目標：瞭解機器學習適合應用的領域與範疇
   
 Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
@@ -217,8 +219,9 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 送進模型進行預測
     * 輸出預測結果
     * 視專案需求整合前後端，資料格式使用 json、csv
-* [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
-  * 閱讀文章：機器學習巨頭作的專案
+* 範例與作業
+  * [作業D003](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_003_Ans.ipynb)
+    * 閱讀文章：機器學習巨頭作的專案
 
 Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
