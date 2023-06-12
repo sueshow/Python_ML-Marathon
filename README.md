@@ -1876,6 +1876,17 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * Max_depth：樹能生長的最深限制
   * Min_samples_split：至少要多少樣本以上才進行切分
   * Min_samples_leaf：最終的葉子 (節點) 上至少要有多少樣本
+    ```
+    from sklearn.tree import DecisionTreeClassifier
+    clf = DecisionTreeClassifier(
+                  criterion = 'gini',
+                  max_depth = None,
+                  min_samples_split = 2,
+                  min_samples_leaf = 1
+          )
+    # feature importance
+    clf.feature_importances_
+    ```
 * 可安裝額外的套件 [graphviz](https://medium.com/@rnbrown/creating-and-visualizing-decision-trees-with-python-f8e8fa394176)，畫出決策樹的圖形幫助理解模型分類的準則
 * 範例與作業(待上傳)
   * [範例D042]()
@@ -1908,12 +1919,25 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 
 ### D044-程式實作-隨機森林
 * 語法
-  > from sklearn.ensemble import RandomForestClassifier <br>
-  > from sklearn.ensemble import RandomForestRegressor <br>
-  > clf = RandomForestRegressor()
+  ```
+  from sklearn.ensemble import RandomForestClassifier 
+  from sklearn.ensemble import RandomForestRegressor 
+  clf = RandomForestRegressor()
+  ```
 * 超參數
-  * 與決策樹相同
+  * 與決策樹相同(max_depth, min_samples_split)
   * 生成樹的數量，越多越不容易過度擬和，但運算時間會變長
+    ```
+    from sklearn.ensemble import RandomForestClassifier
+    clf = RandomForestClassifier(    
+                n_estimators=10, #決策樹的數量
+                criterion="gini",
+                max_features="auto", #如何選取 features
+                max_depth=10,
+                min_samples_split=2,
+                min_samples_leaf=1
+        )
+    ```
   * 如何選取 features：auto
 * 範例與作業(待上傳)
   * [範例D044]()
@@ -1964,8 +1988,32 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D046-程式實作-梯度提升機
-* 
-* 範例與作業(待下載)
+* 使用 Sklearn 中的梯度提升機
+  * 如同隨機森林，從 sklearn.ensemble 這裏 import 進來，代表梯度提升機同樣是個集成模型
+  * 透過多棵決策樹依序生成來得到結果，緩解原本決策樹容易過擬和的問題，實務上的結果通常也會比決策樹來得好
+  * 語法
+    ```
+    from sklearn.ensemble import GradientBoostingClassifier
+    from sklearn.ensemble import GradientBoostingRegressor
+    clf = GradientBoostingClassifier()
+    ```
+  * 超參數
+    * 與決策樹相同(max_depth, min_samples_split)
+    * 可決定要生成數的數量，越多越不容易過擬和，但是運算時間會變長
+      ```
+      from sklearn.ensemble import GradientBoostingClassifier
+      clf = GradientBoostingClassifier(
+                loss="deviance", #Loss 的選擇，若改為 exponential 則會變成 Adaboosting 演算法，概念相同但實作稍微不同
+                learning_rate=0.1, #每棵樹對最終結果的影響，應與 n_estimators 成反比
+                n_estimators=100 #決策樹的數量
+            )
+      ```
+    * [如何使用 Python 調整梯度提升機的超參數](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/)
+  * 常見問題：隨機森林與梯度提升機的特徵重要性結果不相同？
+    * 決策樹計算特徵重要性的概念是，觀察某一特徵被用來切分的次數而定
+    * 假設有兩個一模一樣的特徵，在隨機森林中每棵樹皆為獨立，因此兩個特徵皆有可能被使用，最終統計出來的次數會被均分
+    * 在梯度提升機中，每棵樹皆有關連，因此模型僅會使用其中一個特徵，另一個相同特徵的重要性則會消失
+* 範例與作業(待上傳)
   * [範例D046]()
   * [作業D046]()
 
