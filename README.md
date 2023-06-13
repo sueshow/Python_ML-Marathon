@@ -2046,11 +2046,17 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 用 grid/random search 的超參數進行訓練與評估
     * 選出最佳的參數，用該參數與全部訓練集建模
     * 最後使用測試集評估結果
+  * 影響性
+    * 超參數調整通常都是機器學習專案的最後步驟，這對於最終的結果影響不會太多，多半是近一步提升 3-5 % 的準確率
+    * 好的特徵工程與資料清理是能夠一口氣提升 10-20 ％ 的準確率
 * 機器學習模型訓練步驟
   * Loading and pre-processing dataset of interest
   * Hyperparameter optimization using cross-validation
   * Fitting tuned algorithm to the training data
   * Applying learned model to test data
+* 參考資料
+  * [劍橋實驗室教你如何調參數](https://cambridgecoding.wordpress.com/2016/04/03/scanning-hyperspace-how-to-tune-machine-learning-models/)
+  * [教你使用 Python 調整隨機森林參數](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
 * 範例與作業(待觀看)
   * [範例D047]()
   * [作業D047]()
