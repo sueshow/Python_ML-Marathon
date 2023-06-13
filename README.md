@@ -1747,7 +1747,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * [深入了解超常用的指標 AUC](https://www.dataschool.io/roc-curves-and-auc-explained/)
   * [機器學習模型評估](https://zhuanlan.zhihu.com/p/30721429)
 * 範例與作業
-  * [範例D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_036_HW/Day_036_evaluation_metrics.ipynb)
+  * [範例D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_036_HW_evaluation_metrics/Day_036_evaluation_metrics.ipynb)
     * 觀察各指標的數值範圍，及輸入函數中的資料格式
   * [作業D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_036_Ans.ipynb)
     * F1-Score 其實是 F-Score 中的 β 值為 1 的特例
