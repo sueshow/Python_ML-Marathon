@@ -2018,9 +2018,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 在梯度提升機中，每棵樹皆有關連，因此模型僅會使用其中一個特徵，另一個相同特徵的重要性則會消失
 * 範例與作業
   * [範例D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_046_HW_gradient_boosting_machine/Day_046_gradient_boosting_machine.ipynb)
-    * 
+    * 資料集：Iris
   * [作業D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_046_Ans.ipynb)
-    * 
+    * 資料集：手寫辨識資料集
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
