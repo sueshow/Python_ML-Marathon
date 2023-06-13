@@ -1224,7 +1224,7 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
         * 新類別均值 = (原類別平均*類別樣本數+全部的總平均*調整因子)/(類別樣本數+調整因子)
         * 其中，調整因子：依總樣本數調整
 * 範例與作業
-  * [範例D025](https://github.com/sueshow/Python_ML-Marathon/tree/main/Homework/Day_025_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E5%9D%87%E5%80%BC%E7%B7%A8%E7%A2%BC)
+  * [範例D025](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_025_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E5%9D%87%E5%80%BC%E7%B7%A8%E7%A2%BC/Day_025_Mean_Encoder.ipynb)
     * DataSet：房價預測
     * 使用標籤編碼與均值編碼
       * 在特徵數量/線性迴歸分數/線性迴歸時間上，有什麼影響
