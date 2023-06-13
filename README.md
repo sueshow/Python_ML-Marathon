@@ -1657,7 +1657,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 參考資料
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
 * 範例與作業
-  * [範例D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_034_HW/Day_034_train_test_split.ipynb)
+  * [範例D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_034_HW_train_test_split/Day_034_train_test_split.ipynb)
     * 使用 train_test_split 函數進行切分
     * 使用 K-fold Cross-validation 來切分資料
   * [作業D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_034_Ans.ipynb)
