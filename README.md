@@ -168,7 +168,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning (D047-D050：網格搜尋、隨機搜尋、Kaggle平台) → 集成 Ensemble
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -2027,7 +2027,30 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 
 ### D047-超參數調整與優化
-* 
+* 超參數：會影響模型訓練的結果，建議先使用預設值，再慢慢進行調整
+  * 類型
+    * LASSO，Ridge：α 的大小
+    * 決策樹：樹的深度、節點最小樣本數
+    * 隨機森林：樹的數量
+  * 重要
+    * 超參數會影響模型訓練的結果，建議先使用預設值，再慢慢進行調整
+    * 超參數會影響結果，但提升的效果有限，資料清理與特徵工程才能最有效的提升準確率，調整參數只是一個加分的工具
+  * 調整方法
+    * 網格搜尋 [Grid Search](https://medium.com/rants-on-machine-learning/smarter-parameter-sweeps-or-why-grid-search-is-plain-stupid-c17d97a0e881)
+      * 直接指定超參數的組合範圍，每一組參數都訓練完成，再根據驗證集 (validation) 的結果選擇最佳參數
+    * 隨機搜尋 Random Search
+      * 指定超參數的範圍，用均勻分布進行參數抽樣，用抽到的參數進行訓練，再根據驗證集的結果選擇最佳參數
+  * 調整步驟：若持續使用同一份驗證集 (validation) 來調參，可能讓模型的參數過於擬合該驗證集，正確的步驟是使用 Cross-validation 確保模型泛化性
+    * 先將資料切分為訓練/測試集，測試集保留不使用
+    * 將剛切分好的訓練集，再使用 Cross-validation 切分 K 份訓練/驗證集
+    * 用 grid/random search 的超參數進行訓練與評估
+    * 選出最佳的參數，用該參數與全部訓練集建模
+    * 最後使用測試集評估結果
+* 機器學習模型訓練步驟
+  * Loading and pre-processing dataset of interest
+  * Hyperparameter optimization using cross-validation
+  * Fitting tuned algorithm to the training data
+  * Applying learned model to test data
 * 範例與作業(待觀看)
   * [範例D047]()
   * [作業D047]()
