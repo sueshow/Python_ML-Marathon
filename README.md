@@ -1838,7 +1838,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     > reg.fit(X, y) <br>
     > print(reg.coef_) # 印出訓練後的模型參數
 * 範例與作業
-  * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW/Day_040_lasso_ridge_regression.ipynb) 
+  * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW_lasso_ridge_regression/Day_040_lasso_ridge_regression.ipynb)
     * 資料集：糖尿病
     * 比較 linear regression 與 LASOO 的差異
   * [作業D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_040_Ans.ipynb)
