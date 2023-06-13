@@ -51,12 +51,12 @@
   * <a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 Tree based model-梯度提升機(Gradient Boosting Machine)</a>
   * <a href="#D046-程式實作-梯度提升機">D046 程式實作-梯度提升機</a>
 ### <a href="#機器學習調整參數">機器學習調整參數</a>
-  * D047 超參數調整與優化
-  * D048 Kaggle 競賽平台介紹
-  * D049 集成方法-混和泛化(Blending)
-  * D050 集成方法-堆疊泛化(Stacking)
+  * <a href="#D047-超參數調整與優化">D047 超參數調整與優化</a>
+  * <a href="#D048-Kaggle競賽平台介紹">D048 Kaggle競賽平台介紹</a>
+  * <a href="#D049-集成方法-混和泛化-Blending">D049 集成方法-混和泛化(Blending)</a>
+  * <a href="#D050-集成方法-堆疊泛化-Stacking">D050 集成方法-堆疊泛化(Stacking)</a>
 ### <a href="#Kaggle期中考">Kaggle期中考</a>
-  * D051-D053 Kaggle 期中考
+  * <a href="#D051-D053-Kaggle期中考">D051-D053 Kaggle 期中考</a>
 ### <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
   * D055 非監督式-分群-K-Means 分群
@@ -2018,25 +2018,46 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 在梯度提升機中，每棵樹皆有關連，因此模型僅會使用其中一個特徵，另一個相同特徵的重要性則會消失
 * 範例與作業
   * [範例D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_046_HW_gradient_boosting_machine/Day_046_gradient_boosting_machine.ipynb)
+    * 
   * [作業D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_046_Ans.ipynb)
+    * 
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
-# D047 超參數調整與優化
+### D047-超參數調整與優化
+* 
 * 範例與作業(待觀看)
   * [範例D047]()
   * [作業D047]()
-# D048 Kaggle 競賽平台介紹
+
+Back to <a href="#機器學習調整參數">機器學習調整參數</a>
+<br>
+<br>
+
+### D048-Kaggle競賽平台介紹
+* 
 * 範例與作業(待觀看)
   * [範例D048]()
   * [作業D048]()
-# D049 集成方法-混和泛化(Blending)
+
+Back to <a href="#機器學習調整參數">機器學習調整參數</a>
+<br>
+<br>
+
+### D049-集成方法-混和泛化-Blending
+* 
 * 範例與作業(待觀看)
   * [範例D049]()
   * [作業D049]()
-# D050 集成方法-堆疊泛化(Stacking)
+
+Back to <a href="#機器學習調整參數">機器學習調整參數</a>
+<br>
+<br>
+
+### D050-集成方法-堆疊泛化-Stacking
+* 
 * 範例與作業(待觀看)
   * [範例D050]()
   * [作業D050]()
@@ -2045,7 +2066,8 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 <br>
 <br>
 
-# D051-D053 Kaggle 期中考
+### D051-D053 Kaggle 期中考
+* 
 * 範例與作業(待觀看)
   * [範例D051]()
   * [作業D051]()
