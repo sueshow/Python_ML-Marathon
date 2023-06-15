@@ -2040,6 +2040,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
       * 直接指定超參數的組合範圍，每一組參數都訓練完成，再根據驗證集 (validation) 的結果選擇最佳參數
     * 隨機搜尋 Random Search
       * 指定超參數的範圍，用均勻分布進行參數抽樣，用抽到的參數進行訓練，再根據驗證集的結果選擇最佳參數
+    * 貝葉斯優化演算法
   * 調整步驟：若持續使用同一份驗證集 (validation) 來調參，可能讓模型的參數過於擬合該驗證集，正確的步驟是使用 Cross-validation 確保模型泛化性
     * 先將資料切分為訓練/測試集，測試集保留不使用
     * 將剛切分好的訓練集，再使用 Cross-validation 切分 K 份訓練/驗證集
@@ -2059,7 +2060,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * [教你使用 Python 調整隨機森林參數](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
 * 範例與作業(待觀看)
   * [範例D047]()
+    * 資料集：boston
   * [作業D047]()
+    * 
 
 Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 <br>
