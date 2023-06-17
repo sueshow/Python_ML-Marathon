@@ -2058,19 +2058,30 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 參考資料
   * [劍橋實驗室教你如何調參數](https://cambridgecoding.wordpress.com/2016/04/03/scanning-hyperspace-how-to-tune-machine-learning-models/)
   * [教你使用 Python 調整隨機森林參數](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
-* 範例與作業(待觀看)
+* 範例與作業(待上傳)
   * [範例D047]()
     * 資料集：boston
+    * 模型：regressor
+    * 方法：GridSearch
   * [作業D047]()
-    * 
+    * 資料集：breast_cancer、Iris
+    * 模型：GradientBoostingClassifier
+    * 方法：GridSearchCV
 
 Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 <br>
 <br>
 
 ### D048-Kaggle競賽平台介紹
-* 
-* 範例與作業(待觀看)
+* Kaggle 競賽平台
+  * 為全球資料科學競賽的網站，許多資料科學的競賽均會在此舉辦
+  * 名列前茅的參賽者都會分享自己的作法與程式碼供參考，非常具有參考價值
+  * 排行榜
+    * 主辦單位通常會把測試資料分為 public set 與 private set，參賽者上傳預測結果可以看到 public set 的成績，但比賽最終會使用 private set 的成績作為排名
+  * Kernels 與 Discussion
+    * Kernels 可以看見許多高手們分享的程式碼與結果，多半會以 jupyter notebook 呈現
+    * Discussion 可以看到高手們互相討論可能的做法，或是資料中是否存在某些問題
+* 範例與作業(待上傳)
   * [範例D048]()
   * [作業D048]()
 
