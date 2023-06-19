@@ -2092,8 +2092,8 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 ### D049-集成方法-混和泛化-Blending
 * 集成 Aggregation
   * 使用不同方式結合多個/多種不同分類器，作為綜合預測的做法統稱
-    * select the most trust-worthy friend from their usual performance
-      → $G(x) = g_{t_*}(x)$ with 
+    * select the most trust-worthy friend from their usual performance <br>
+      → $G(x) = g_{t_*}(x)$ with t_* = argmin_{t /in (1,2,...T)} E_{val}(g_t^-) 
     * mix the predictions from all your friends uniformly
     *
     * mix the predictions from all your friends non-uniformly
