@@ -2095,8 +2095,11 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
   * 將模型截長補短，也就是機器學習的和議制/多數決
   * 類型
     * 資料面
-      * 裝袋法(Bagging)：將資料放入袋中抽取，每回合結束後全部放回袋中重抽，再搭配弱分類器取平均/多數決結果，如<a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 隨機森林(Random Forest)
-      * 提升法(Boosting)：由之前模型的預測結果，去改變資料被抽到的權重或目標值，將錯判資料被抽中的機率放大，正確的縮小，就是自適應提升，如AdaBoost、Adaptive Boosting
+      * 裝袋法(Bagging)
+        * 將資料放入袋中抽取，每回合結束後全部放回袋中重抽，再搭配弱分類器取平均/多數決結果，如<a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 隨機森林(Random Forest)</a>
+      * 提升法(Boosting)
+        * 由之前模型的預測結果，去改變資料被抽到的權重或目標值，將錯判資料被抽中的機率放大，正確的縮小，就是自適應提升，如AdaBoost、Adaptive Boosting
+        * 若依照估計誤差的殘差項調整新目標值，就是<a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 梯度提升機(Gradient Boosting Machine)</a>，只是梯度提升機還加上用梯度來選擇決策樹分支
     * 模型與特徵
       * 混合泛化(Blending)
       * 堆疊泛化(Stacking)
