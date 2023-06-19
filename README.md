@@ -2100,7 +2100,7 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
       → $G(x) = sign(\sum\limits_{t=1}^T 1 * g_t(x))$
     * mix the predictions from all your friends non-uniformly <br>
       → 進行投票表決，每人票數不一樣 <br>
-      → $G(x) = sign(\sum\limits_{t=1}^T \alpha_t * g_t(x))$      
+      → $G(x) = sign(\sum\limits_{t=1}^T \alpha_t * g_t(x)), \alpha_t \geq 0$      
     * combine the predictions conditionally
   * 將模型截長補短，也就是機器學習的和議制/多數決
   * 類型
