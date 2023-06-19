@@ -53,8 +53,10 @@
 ### <a href="#機器學習調整參數">機器學習調整參數</a>
   * <a href="#D047-超參數調整與優化">D047 超參數調整與優化</a>
   * <a href="#D048-Kaggle競賽平台介紹">D048 Kaggle競賽平台介紹</a>
-  * <a href="#D049-集成方法-混和泛化-Blending">D049 集成方法-混和泛化(Blending)</a>
-  * <a href="#D050-集成方法-堆疊泛化-Stacking">D050 集成方法-堆疊泛化(Stacking)</a>
+  * <a href="#D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking">D049 集成方法-混和泛化(Blending)</a>
+  * <a href="#D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking">D050 集成方法-堆疊泛化(Stacking)</a>
+
+
 ### <a href="#Kaggle期中考">Kaggle期中考</a>
   * <a href="#D051-D053-Kaggle期中考">D051-D053 Kaggle 期中考</a>
 ### <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2089,7 +2091,7 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 <br>
 <br>
 
-### D049-集成方法-混和泛化-Blending
+### D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking
 * 集成 Aggregation
   * 使用不同方式結合多個/多種不同分類器，作為綜合預測的做法統稱
     * select the most trust-worthy friend from their usual performance <br>
@@ -2108,9 +2110,17 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
   * 類型
     * 資料集成
       * 裝袋法(Bagging)
-        * 將資料放入袋中抽取，每回合結束後全部放回袋中重抽，再搭配弱分類器取平均/多數決結果，如<a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 隨機森林(Random Forest)</a>
+        * 說明：將資料放入袋中抽取，每回合結束後全部放回袋中重抽，再搭配弱分類器取平均/多數決結果，如<a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 隨機森林(Random Forest)</a>，這種組織的方法在統計上稱為 bootstrap
+        * 優點：當訓練資料中有噪聲資料(不好的資料)，透過 bagging 抽樣就有機會讓這些噪聲資料不被訓練到，因此可以降低模型的不確定性
       * 提升法(Boosting)
-        * 由之前模型的預測結果，去改變資料被抽到的權重或目標值，將錯判資料被抽中的機率放大，正確的縮小，就是自適應提升，如 AdaBoost、Adaptive Boosting
+        * 說明
+          * 將許多弱分類器(weak classifier)合成變成一個強分類器，與 bagging 不同的點在於分類器之間是有關聯性的，透過將就分類器的錯誤資料權重提高、正確資料權重降低，接著重新訓練新的分類器，這樣新的分類器就可以學到錯誤分類的資料，以提升分類結果的準確性
+          * 改進 Boosting 的演算法，如 AdaBoost、Adaptive Boosting
+            * AdaBoost
+              * 將前幾個分類器線性組合的錯誤樣本的權重提高，這樣可以讓每次訓練新分類器的時候都聚焦在容易分類錯誤的訓練數據上
+              * 每個弱分類不再採用平均投票機制，而是採用加權投票機制
+              * 準確率較大的弱分類器會擁有較大的權重，準確率較小的弱分類器權重就會比較低
+            * [LightGBM](https://matters.town/@CHWang/233779-machine-learning-%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-kaggle%E7%AB%B6%E8%B3%BD%E5%BF%85%E5%82%99-light-gbm-light-gradient-boosting-machine-%E5%AF%A6%E4%BD%9C%E6%BC%94%E7%B7%B4-%E7%AD%86%E8%A8%98-%E4%BA%8C-bafyreigqihgvixmnnikwmxaxgxzihuzbnj7bwsnus77izo2j7x34zx24nq)
         * 若依照估計誤差的殘差項調整新目標值，就是<a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 梯度提升機(Gradient Boosting Machine)</a>，只是梯度提升機還加上用梯度來選擇決策樹分支
     * 模型與特徵集成
       * 混合泛化(Blending)
@@ -2133,14 +2143,6 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 * 範例與作業(待觀看)
   * [範例D049]()
   * [作業D049]()
-
-Back to <a href="#機器學習調整參數">機器學習調整參數</a>
-<br>
-<br>
-
-### D050-集成方法-堆疊泛化-Stacking
-* 
-* 範例與作業(待觀看)
   * [範例D050]()
   * [作業D050]()
 
