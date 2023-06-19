@@ -37,7 +37,7 @@
   * <a href="#D032-特徵優化-分類型-葉編碼">D032 特徵優化(分類型)-葉編碼</a>
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
   * <a href="#D033-機器如何學習">D033 機器如何學習?</a>
-  * <a href="#D034-訓練AND測試集切分">D034 訓練/測試集切分</a>
+  * <a href="#D034-訓練AND測試集切分">D034 訓練&測試集切分</a>
   * <a href="#D035-RegressionVSClassification">D035 Regression vs. classification</a>
   * <a href="#D036-評估指標選定EvaluationMetrics">D036 評估指標選定 evaluation metrics</a>
   * <a href="#D037-RegressionModel-線性迴歸AND羅吉斯回歸">D037 Regression model-線性迴歸、羅吉斯回歸</a>
