@@ -2099,10 +2099,10 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
       → 進行投票表決，每人票數一樣 <br>
       → $G(x) = sign(\sum\limits_{t=1}^T 1 * g_t(x))$
     * mix the predictions from all your friends non-uniformly <br>
-      → 進行投票表決，每人票數不一樣 <br>
+      → 進行投票表決，每人票數不一樣，前 2 種情形為此的特例 <br>
       → $G(x) = sign(\sum\limits_{t=1}^T \alpha_t * g_t(x)), \alpha_t \geq 0$      
     * combine the predictions conditionally <br>
-      → 依據特性選擇不同投票方式 <br>
+      → 依據特性選擇不同投票方式，前 3 種情形為此的特例 <br>
       → $G(x) = sign(\sum\limits_{t=1}^T q_t * g_t(x)), q_t \geq 0$      
   * 將模型截長補短，也就是機器學習的和議制/多數決
   * 類型
@@ -2116,7 +2116,7 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
       * 混合泛化(Blending)
         * 將不同模型的預測值加權合成，權重和為 1，如果取預測的平均 or 一人一票多數決(每個模型權重相同)，則又稱為投票泛化(Voting)
         * 容易使用
-          * 只要有預測值(Submit 檔案)就可以使用，許多跨國隊伍就是靠這個方式合作
+          * 只要有[預測值(Submit 檔案)](https://www.kaggle.com/code/tunguz/superblend/script)就可以使用，許多跨國隊伍就是靠這個方式合作
           * 也因為只要用預測值就能計算，在競賽中可以快速合成多種比例的答案，妥善消耗掉每一天剩餘的 Submit 次數
         * 效果顯著
           * Kaggle 競賽截止日前的 Kernel，有許多只是對其他人的輸出結果做 Blending，但是因為分數較高，因此也有許多人樂於推薦與發表
