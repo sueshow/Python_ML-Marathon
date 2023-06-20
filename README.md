@@ -2135,6 +2135,19 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
         * 個別單模效果都很好(有調參)並且模型差異大，單模要好尤其重要，如果單模效果差異太大，Blending 的效果提升就相當有限
         * 混合泛化提升預測力的原因是基於模型差異度大，在預測細節上能互補，因此預測模型只要各自調參優化過且原理不同，通常都能使用混合泛化集成
       * 堆疊泛化(Stacking)
+        * 2012 年由 [David H. Wolpert 發布](http://www.machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf)，2014 年底被廣泛應用於 Kaggle 競賽開始，後來出現加速混合與計算速度的 StackNet
+        * 相對於 Blending 的改 良
+          * 不只將預測結果混合，而是使用預測結果當新特徵
+          * 更進一步地運用資料輔助集成，使得 Stacking 複雜許多
+        * Stacking 的設計
+          * Stacking 把模型當作下一階的特徵編碼器來使用，但待編碼資料與用來訓練編碼器的資料不可重複，但待編碼資料太少，下一層的資料筆數就會太少；訓練編碼器的資料太少，則編碼器的強度就會不夠
+          * 利用 K-Fold 概念將資料拆成 K 份，每 1/K 的資料要編碼時，使用其他的 K-1 組資料訓練模型/編碼器 → 問題：計算時間隨 K 變大而變長，但 K 可以調整，相對深度學習所需的時間來說，這樣的時間長度還可接受
+          * 自我遞迴：在原本特徵上用模型造出新特徵
+            * 新舊特徵能一起用，再用模型預測，須謹慎切分 Fold 及新增次數
+            * 新的特徵可以再搭配模型創特徵，第三層第四層...一直下去，但精準度可能會下降
+            * 既然同層新特徵會 Overfitting，層數加深會增加泛化，同時使用能把缺點互相抵銷，但程式複雜且運算時間長，故難以實踐
+      * 參考資料
+        * [StackingCVClassifier](http://rasbt.github.io/mlxtend/user_guide/classifier/StackingCVClassifier/)
     * 資料集成 VS. 模型與特徵集成差異
       * 資料集成
         * 如 Bagging/Boosting，詳如：<a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 梯度提升機(Gradient Boosting Machine)</a>
