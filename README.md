@@ -46,22 +46,22 @@
   * D037 Regression model-線性迴歸、羅吉斯回歸
   * D038 程式實作-線性迴歸、羅吉斯回歸
   * D039 Regression model-LASSO回歸、Ridge回歸
-  * <a href="#D040-程式實作-LASSO回歸ANDRidge回歸">D040 程式實作-LASSO回歸、Ridge回歸</a>
-  * <a href="#D041-TreeBasedModel-決策樹DecisionTree">D041 Tree based model-決策樹(Decision Tree)</a>
-  * <a href="#D042-程式實作-決策樹">D042 程式實作-決策樹</a>
-  * <a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 Tree based model-隨機森林(Random Forest)</a>
-  * <a href="#D044-程式實作-隨機森林">D044 程式實作-隨機森林</a>
-  * <a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 Tree based model-梯度提升機(Gradient Boosting Machine)</a>
-  * <a href="#D046-程式實作-梯度提升機">D046 程式實作-梯度提升機</a>
+  * D040 程式實作-LASSO回歸、Ridge回歸
+  * D041 Tree based model-決策樹(Decision Tree)
+  * D042 程式實作-決策樹
+  * D043 Tree based model-隨機森林(Random Forest)
+  * D044 程式實作-隨機森林
+  * D045 Tree based model-梯度提升機(Gradient Boosting Machine)
+  * D046 程式實作-梯度提升機
 
 ### <a href="#機器學習調整參數">機器學習調整參數</a>
-  * <a href="#D047-超參數調整與優化">D047 超參數調整與優化</a>
-  * <a href="#D048-Kaggle競賽平台介紹">D048 Kaggle競賽平台介紹</a>
-  * <a href="#D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking">D049 集成方法-混和泛化(Blending)</a>
-  * <a href="#D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking">D050 集成方法-堆疊泛化(Stacking)</a>
+  * D047 超參數調整與優化
+  * D048 Kaggle競賽平台介紹
+  * D049 集成方法-混和泛化(Blending)
+  * D050 集成方法-堆疊泛化(Stacking)
   
 ### <a href="#Kaggle期中考">Kaggle期中考</a>
-  * <a href="#D051-D053-Kaggle期中考">D051-D053 Kaggle 期中考</a>
+  * D051-D053 Kaggle 期中考
 
 ### <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
