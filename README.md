@@ -40,7 +40,7 @@
 
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
   * <a href="#D033-機器如何學習">D033 機器如何學習</a>
-  * <a href="#D033-機器如何學習">D034 訓練及測試集切分</a>
+  * <a href="#D034-機器如何學習">D034 訓練及測試集切分</a>
   * <a href="#D035-RegressionVSClassification">D035 Regression vs. classification</a>
   * <a href="#D036-評估指標選定EvaluationMetrics">D036 評估指標選定 evaluation metrics</a>
   * <a href="#D037-RegressionModel-線性迴歸AND羅吉斯回歸">D037 Regression model-線性迴歸、羅吉斯回歸</a>
@@ -1659,7 +1659,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 <br> 
 
-### D034-訓練及測試集切分
+### D034-機器如何學習
 * 為何需要切分訓練/測試集：透過驗證/測試集評估模型是否過擬合
 * 方法：使用 Python 中 Scikit-learn 進行資料切分，透過 [train-test split 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)快速對資料進行切分
 * K-fold Cross-validation
