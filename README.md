@@ -5,6 +5,7 @@
   * <a href="#D002-機器學習概論">D002 機器學習概論</a>
   * <a href="#D003-機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
   * <a href="#D004-EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
+  
 ### <a href="#資料清理數據前處理">資料清理數據前處理</a>
   * <a href="#D005-如何新建一個dataframe如何讀取其他資料">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
   * <a href="#D006-EDA-欄位的資料類型介紹及處理">D006 EDA-欄位的資料類型介紹及處理</a>
@@ -23,6 +24,7 @@
   * <a href="#D019-程式實作-Subplots">D019 程式實作-Subplots</a>
   * <a href="#D020-程式實作-HeatmapANDGrid-plot">D020 程式實作-Heatmap & Grid-plot</a>
   * <a href="#D021-模型-LogisticRegression">D021 模型-Logistic Regression</a>
+
 ### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
   * <a href="#D022-特徵工程簡介">D022 特徵工程簡介</a>
   * <a href="#D023-特徵工程-數值型-去除偏態">D023 特徵工程(數值型)-去除偏態</a>
@@ -35,9 +37,10 @@
   * <a href="#D030-特徵選擇">D030 特徵選擇</a>
   * <a href="#D031-特徵評估">D031 特徵評估</a>
   * <a href="#D032-特徵優化-分類型-葉編碼">D032 特徵優化(分類型)-葉編碼</a>
+
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
-  * <a href="#D033-機器如何學習">D033 機器如何學習?</a>
-  * <a href="#D034-機器如何學習">D034 訓練及測試集切分</a>
+  * <a href="#D033-機器如何學習">D033 機器如何學習</a>
+  * <a href="#D034-訓練及測試集切分">D034 訓練及測試集切分</a>
   * <a href="#D035-RegressionVSClassification">D035 Regression vs. classification</a>
   * <a href="#D036-評估指標選定EvaluationMetrics">D036 評估指標選定 evaluation metrics</a>
   * <a href="#D037-RegressionModel-線性迴歸AND羅吉斯回歸">D037 Regression model-線性迴歸、羅吉斯回歸</a>
@@ -50,15 +53,16 @@
   * <a href="#D044-程式實作-隨機森林">D044 程式實作-隨機森林</a>
   * <a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 Tree based model-梯度提升機(Gradient Boosting Machine)</a>
   * <a href="#D046-程式實作-梯度提升機">D046 程式實作-梯度提升機</a>
+
 ### <a href="#機器學習調整參數">機器學習調整參數</a>
   * <a href="#D047-超參數調整與優化">D047 超參數調整與優化</a>
   * <a href="#D048-Kaggle競賽平台介紹">D048 Kaggle競賽平台介紹</a>
   * <a href="#D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking">D049 集成方法-混和泛化(Blending)</a>
   * <a href="#D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking">D050 集成方法-堆疊泛化(Stacking)</a>
-
-
+  
 ### <a href="#Kaggle期中考">Kaggle期中考</a>
   * <a href="#D051-D053-Kaggle期中考">D051-D053 Kaggle 期中考</a>
+
 ### <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
   * D055 非監督式-分群-K-Means 分群
@@ -69,10 +73,12 @@
   * D060 程式實作-PCA：使用手寫辨識資料集
   * D061 降維方法(Dimension Reduction)-T-SNE
   * D062 程式實作-T-SNE：分群與流形還原
+
 ### <a href="#深度學習理論與實作">深度學習理論與實作</a>
   * D063 深度學習簡介
   * D064 深度學習-模型調整與學習曲線
   * D065 深度學習-啟動函數與正規化
+
 ### <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
   * D066 Keras安裝與介紹
   * D067 Keras Dataset
@@ -100,6 +106,7 @@
   * D089 神經網路-訓練細節與技巧：撰寫 Loss function
   * D090 使用傳統電腦視覺與機器學習進行影像辨識
   * D091 程式實作-使用傳統電腦視覺與機器學習進行影像辨識
+
 ### <a href="#深度學習應用卷積神經網路">深度學習應用卷積神經網路</a>
   * D092 卷積神經網路(Convolution Neural Network, CNN)簡介
   * D093 CNN-架構細節
@@ -110,8 +117,10 @@
   * D098 CNN-訓練細節與技巧：處理大量數據
   * D099 CNN-訓練細節與技巧：處理小量數據
   * D100 CNN-訓練細節與技巧：轉移學習(Transfer learning)
+
 ### <a href="#Kaggle期末考">Kaggle期末考</a>
   * D101-D103 影像辨識
+
 ### <a href="#Bonus進階補充">Bonus進階補充</a>
   * D104 史丹佛上 ConvNetJS 簡介
   * D105 CNN 卷積網路回顧
@@ -119,6 +128,7 @@
   * D107 電腦視覺應用介紹
 <br>
 <br>
+
 
 ## 機器學習概論
 ### D001-資料介紹與評估資料
