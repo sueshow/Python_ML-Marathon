@@ -43,9 +43,9 @@
   * D034 訓練及測試集切分
   * D035 Regression vs. classification
   * D036 評估指標選定 evaluation metrics
-  * <a href="#D037-RegressionModel-線性迴歸AND羅吉斯回歸">D037 Regression model-線性迴歸、羅吉斯回歸</a>
-  * <a href="#D038-程式實作-線性迴歸AND羅吉斯回歸">D038 程式實作-線性迴歸、羅吉斯回歸</a>
-  * <a href="#D039-RegressionModel-LASSO回歸ANDRidge回歸">D039 Regression model-LASSO回歸、Ridge回歸</a>
+  * D037 Regression model-線性迴歸、羅吉斯回歸
+  * D038 程式實作-線性迴歸、羅吉斯回歸
+  * D039 Regression model-LASSO回歸、Ridge回歸
   * <a href="#D040-程式實作-LASSO回歸ANDRidge回歸">D040 程式實作-LASSO回歸、Ridge回歸</a>
   * <a href="#D041-TreeBasedModel-決策樹DecisionTree">D041 Tree based model-決策樹(Decision Tree)</a>
   * <a href="#D042-程式實作-決策樹">D042 程式實作-決策樹</a>
