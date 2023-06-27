@@ -40,6 +40,7 @@
 
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
   * <a href="#D033-機器如何學習">D033 機器如何學習</a>
+  * [跳转至 D034-訓練及測試集切分](#d034-訓練及測試集切分)
   * <a href="#D034-訓練及測試集切分">D034 訓練及測試集切分</a>
   * D035 Regression vs. classification
   * D036 評估指標選定 evaluation metrics
