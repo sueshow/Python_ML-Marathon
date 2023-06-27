@@ -1660,6 +1660,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 <br> 
 
+<h3 id="D034-訓練及測試集切分">D034-訓練及測試集切分</h3>
 ### D034-訓練及測試集切分
 * 為何需要切分訓練/測試集：透過驗證/測試集評估模型是否過擬合
 * 方法：使用 Python 中 Scikit-learn 進行資料切分，透過 [train-test split 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)快速對資料進行切分
