@@ -2,61 +2,67 @@
 ## 學習大綱
 ### <a href="#機器學習概論">機器學習概論</a>
   * <a href="#D001-資料介紹與評估資料">D001 資料介紹與評估資料</a>
-  * <a href="#D002-機器學習概論">D002 機器學習概論</a>
-  * <a href="#D003-機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
-  * <a href="#D004-EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程</a>
+  * D002 機器學習概論
+  * D003 機器學習-流程與步驟
+  * D004 EDA/讀取資料與分析流程
+  
 ### <a href="#資料清理數據前處理">資料清理數據前處理</a>
   * <a href="#D005-如何新建一個dataframe如何讀取其他資料">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
-  * <a href="#D006-EDA-欄位的資料類型介紹及處理">D006 EDA-欄位的資料類型介紹及處理</a>
-  * <a href="#D007-EDA-特徵類型">D007 EDA-特徵類型</a>
-  * <a href="#D008-EDA-資料分佈">D008 EDA-資料分佈</a>
-  * <a href="#D009-EDA-Outlier及處理">D009 EDA-Outlier及處理</a>
-  * <a href="#D010-EDA-去除離群值-數值型">D010 EDA-去除離群值(數值型)</a>
-  * <a href="#D011-EDA-常用的數值取代">D011 EDA-常用的數值取代</a>
-  * <a href="#D012-EDA-補缺失值與標準化-數值型">D012 EDA-補缺失值與標準化(數值型)</a>
-  * <a href="#D013-常見的DataFrame操作">D013 常見的 DataFrame 操作</a>
-  * <a href="#D014-程式實作EDA-相關係數簡介">D014 程式實作 EDA-相關係數簡介</a>
-  * <a href="#D015-程式實作EDA-CorrelationCode">D015 程式實作EDA-Correlation code</a>
-  * <a href="#D016-EDA-不同數值範圍間的特徵如何檢視">D016 EDA-不同數值範圍間的特徵如何檢視</a>
-  * <a href="#D017-EDA-把連續型變數離散化">D017 EDA-把連續型變數離散化</a>
-  * <a href="#D018-程式實作EDA-把連續型變數離散化">D018 程式實作EDA-把連續型變數離散化</a>
-  * <a href="#D019-程式實作-Subplots">D019 程式實作-Subplots</a>
-  * <a href="#D020-程式實作-HeatmapANDGrid-plot">D020 程式實作-Heatmap & Grid-plot</a>
-  * <a href="#D021-模型-LogisticRegression">D021 模型-Logistic Regression</a>
+  * D006 EDA-欄位的資料類型介紹及處理
+  * D007 EDA-特徵類型
+  * D008 EDA-資料分佈
+  * D009 EDA-Outlier及處理
+  * D010 EDA-去除離群值(數值型)
+  * D011 EDA-常用的數值取代
+  * D012 EDA-補缺失值與標準化(數值型)
+  * D013 常見的 DataFrame 操作
+  * D014 程式實作 EDA-相關係數簡介
+  * D015 程式實作EDA-Correlation code
+  * D016 EDA-不同數值範圍間的特徵如何檢視
+  * D017 EDA-把連續型變數離散化
+  * D018 程式實作EDA-把連續型變數離散化
+  * D019 程式實作-Subplots
+  * D020 程式實作-Heatmap & Grid-plot
+  * D021 模型-Logistic Regression
+
 ### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
   * <a href="#D022-特徵工程簡介">D022 特徵工程簡介</a>
-  * <a href="#D023-特徵工程-數值型-去除偏態">D023 特徵工程(數值型)-去除偏態</a>
-  * <a href="#D024-特徵工程-類別型-基礎處理">D024 特徵工程(類別型)-基礎處理</a>
-  * <a href="#D025-特徵工程-類別型-均值編碼">D025 特徵工程(類別型)-均值編碼</a>
-  * <a href="#D026-特徵工程-類別型-其他進階處理">D026 特徵工程(類別型)-其他進階處理</a>
-  * <a href="#D027-特徵工程-時間型">D027 特徵工程(時間型)</a>
-  * <a href="#D028-特徵工程-數值與數值組合">D028 特徵工程-數值與數值組合</a>
-  * <a href="#D029-特徵工程-類別與數值組合">D029 特徵工程-類別與數值組合</a>
-  * <a href="#D030-特徵選擇">D030 特徵選擇</a>
-  * <a href="#D031-特徵評估">D031 特徵評估</a>
-  * <a href="#D032-特徵優化-分類型-葉編碼">D032 特徵優化(分類型)-葉編碼</a>
+  * D023 特徵工程(數值型)-去除偏態
+  * D024 特徵工程(類別型)-基礎處理
+  * D025 特徵工程(類別型)-均值編碼
+  * D026 特徵工程(類別型)-其他進階處理
+  * D027 特徵工程(時間型)
+  * D028 特徵工程-數值與數值組合
+  * D029 特徵工程-類別與數值組合
+  * D030 特徵選擇
+  * D031 特徵評估
+  * D032 特徵優化(分類型)-葉編碼
+
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
-  * <a href="#D033-機器如何學習">D033 機器如何學習?</a>
-  * <a href="#D034-訓練AND測試集切分">D034 訓練/測試集切分</a>
-  * <a href="#D035-RegressionVSClassification">D035 Regression vs. classification</a>
-  * <a href="#D036-評估指標選定EvaluationMetrics">D036 評估指標選定 evaluation metrics</a>
-  * <a href="#D037-RegressionModel-線性迴歸AND羅吉斯回歸">D037 Regression model-線性迴歸、羅吉斯回歸</a>
-  * <a href="#D038-程式實作-線性迴歸AND羅吉斯回歸">D038 程式實作-線性迴歸、羅吉斯回歸</a>
-  * <a href="#D039-RegressionModel-LASSO回歸ANDRidge回歸">D039 Regression model-LASSO回歸、Ridge回歸</a>
-  * <a href="#D040-程式實作-LASSO回歸ANDRidge回歸">D040 程式實作-LASSO回歸、Ridge回歸</a>
-  * <a href="#D041-TreeBasedModel-決策樹DecisionTree">D041 Tree based model-決策樹(Decision Tree)</a>
-  * <a href="#D042-程式實作-決策樹">D042 程式實作-決策樹</a>
-  * <a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 Tree based model-隨機森林(Random Forest)</a>
-  * <a href="#D044-程式實作-隨機森林">D044 程式實作-隨機森林</a>
-  * <a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 Tree based model-梯度提升機(Gradient Boosting Machine)</a>
-  * <a href="#D046-程式實作-梯度提升機">D046 程式實作-梯度提升機</a>
+  * <a href="#D033-機器如何學習">D033 機器如何學習</a>
+  * D034 訓練及測試集切分
+  * D035 Regression vs. classification
+  * D036 評估指標選定 evaluation metrics
+  * D037 Regression model-線性迴歸、羅吉斯回歸
+  * D038 程式實作-線性迴歸、羅吉斯回歸
+  * D039 Regression model-LASSO回歸、Ridge回歸
+  * D040 程式實作-LASSO回歸、Ridge回歸
+  * D041 Tree based model-決策樹(Decision Tree)
+  * D042 程式實作-決策樹
+  * D043 Tree based model-隨機森林(Random Forest)
+  * D044 程式實作-隨機森林
+  * D045 Tree based model-梯度提升機(Gradient Boosting Machine)
+  * D046 程式實作-梯度提升機
+
 ### <a href="#機器學習調整參數">機器學習調整參數</a>
-  * D047 超參數調整與優化
-  * D048 Kaggle 競賽平台介紹
+  * <a href="#D047-超參數調整與優化">D047 超參數調整與優化</a>
+  * D048 Kaggle競賽平台介紹
   * D049 集成方法-混和泛化(Blending)
   * D050 集成方法-堆疊泛化(Stacking)
+  
 ### <a href="#Kaggle期中考">Kaggle期中考</a>
   * D051-D053 Kaggle 期中考
+
 ### <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
   * D055 非監督式-分群-K-Means 分群
@@ -67,10 +73,12 @@
   * D060 程式實作-PCA：使用手寫辨識資料集
   * D061 降維方法(Dimension Reduction)-T-SNE
   * D062 程式實作-T-SNE：分群與流形還原
+
 ### <a href="#深度學習理論與實作">深度學習理論與實作</a>
   * D063 深度學習簡介
   * D064 深度學習-模型調整與學習曲線
   * D065 深度學習-啟動函數與正規化
+
 ### <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
   * D066 Keras安裝與介紹
   * D067 Keras Dataset
@@ -98,6 +106,7 @@
   * D089 神經網路-訓練細節與技巧：撰寫 Loss function
   * D090 使用傳統電腦視覺與機器學習進行影像辨識
   * D091 程式實作-使用傳統電腦視覺與機器學習進行影像辨識
+
 ### <a href="#深度學習應用卷積神經網路">深度學習應用卷積神經網路</a>
   * D092 卷積神經網路(Convolution Neural Network, CNN)簡介
   * D093 CNN-架構細節
@@ -108,8 +117,10 @@
   * D098 CNN-訓練細節與技巧：處理大量數據
   * D099 CNN-訓練細節與技巧：處理小量數據
   * D100 CNN-訓練細節與技巧：轉移學習(Transfer learning)
+
 ### <a href="#Kaggle期末考">Kaggle期末考</a>
   * D101-D103 影像辨識
+
 ### <a href="#Bonus進階補充">Bonus進階補充</a>
   * D104 史丹佛上 ConvNetJS 簡介
   * D105 CNN 卷積網路回顧
@@ -117,6 +128,7 @@
   * D107 電腦視覺應用介紹
 <br>
 <br>
+
 
 ## 機器學習概論
 ### D001-資料介紹與評估資料
@@ -168,7 +180,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * 監督式學習：如圖像分類、詐騙偵測
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
-    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning → 集成 Ensemble
+    * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning (D047-D050：網格搜尋、隨機搜尋、Kaggle平台) → 集成 Ensemble (D048-D049：混和泛化 Blending、堆疊泛化 Stacking)
   * 非監督式學習：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
@@ -260,6 +272,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
 Back to <a href="#機器學習概論">機器學習概論</a>
 <br>
 <br>
+
 
 ## 資料清理數據前處理
 ### D005-如何新建一個dataframe如何讀取其他資料
@@ -1224,7 +1237,7 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
         * 新類別均值 = (原類別平均*類別樣本數+全部的總平均*調整因子)/(類別樣本數+調整因子)
         * 其中，調整因子：依總樣本數調整
 * 範例與作業
-  * [範例D025](https://github.com/sueshow/Python_ML-Marathon/tree/main/Homework/Day_025_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E5%9D%87%E5%80%BC%E7%B7%A8%E7%A2%BC)
+  * [範例D025](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_025_HW_%E9%A1%9E%E5%88%A5%E5%9E%8B%E7%89%B9%E5%BE%B5%E5%9D%87%E5%80%BC%E7%B7%A8%E7%A2%BC/Day_025_Mean_Encoder.ipynb)
     * DataSet：房價預測
     * 使用標籤編碼與均值編碼
       * 在特徵數量/線性迴歸分數/線性迴歸時間上，有什麼影響
@@ -1645,9 +1658,9 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
   
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
-<br>
+<br> 
 
-### D034-訓練AND測試集切分
+### D034-訓練及測試集切分
 * 為何需要切分訓練/測試集：透過驗證/測試集評估模型是否過擬合
 * 方法：使用 Python 中 Scikit-learn 進行資料切分，透過 [train-test split 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)快速對資料進行切分
 * K-fold Cross-validation
@@ -1657,7 +1670,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 參考資料
   * [ML Lecture 2: Where does the error come from?](https://www.youtube.com/watch?v=D_S6y0Jm6dQ&embeds_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=MjM4NTE&feature=emb_title)
 * 範例與作業
-  * [範例D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_034_HW/Day_034_train_test_split.ipynb)
+  * [範例D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_034_HW_train_test_split/Day_034_train_test_split.ipynb)
     * 使用 train_test_split 函數進行切分
     * 使用 K-fold Cross-validation 來切分資料
   * [作業D034](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_034_Ans.ipynb)
@@ -1747,7 +1760,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * [深入了解超常用的指標 AUC](https://www.dataschool.io/roc-curves-and-auc-explained/)
   * [機器學習模型評估](https://zhuanlan.zhihu.com/p/30721429)
 * 範例與作業
-  * [範例D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_036_HW/Day_036_evaluation_metrics.ipynb)
+  * [範例D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_036_HW_evaluation_metrics/Day_036_evaluation_metrics.ipynb)
     * 觀察各指標的數值範圍，及輸入函數中的資料格式
   * [作業D036](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_036_Ans.ipynb)
     * F1-Score 其實是 F-Score 中的 β 值為 1 的特例
@@ -1838,7 +1851,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     > reg.fit(X, y) <br>
     > print(reg.coef_) # 印出訓練後的模型參數
 * 範例與作業
-  * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW/Day_040_lasso_ridge_regression.ipynb) 
+  * [範例D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_040_HW_lasso_ridge_regression/Day_040_lasso_ridge_regression.ipynb)
     * 資料集：糖尿病
     * 比較 linear regression 與 LASOO 的差異
   * [作業D040](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_040_Ans.ipynb)
@@ -2018,38 +2031,174 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 在梯度提升機中，每棵樹皆有關連，因此模型僅會使用其中一個特徵，另一個相同特徵的重要性則會消失
 * 範例與作業
   * [範例D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_046_HW_gradient_boosting_machine/Day_046_gradient_boosting_machine.ipynb)
+    * 資料集：Iris
   * [作業D046](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_046_Ans.ipynb)
+    * 資料集：手寫辨識資料集
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
 <br>
 
-# D047 超參數調整與優化
-* 範例與作業(待觀看)
+
+## 機器學習調整參數
+### D047-超參數調整與優化
+* 超參數：會影響模型訓練的結果，建議先使用預設值，再慢慢人工進行調整
+  * 類型
+    * LASSO，Ridge：α 的大小 
+    * 決策樹：樹的深度、節點最小樣本數
+    * 隨機森林：樹的數量
+  * 重要
+    * 超參數會影響模型訓練的結果，建議先使用預設值，再慢慢進行調整
+    * 超參數會影響結果，但提升的效果有限，資料清理與特徵工程才能最有效的提升準確率，調整參數只是一個加分的工具
+  * 調整方法
+    * 網格搜尋 [Grid Search](https://medium.com/rants-on-machine-learning/smarter-parameter-sweeps-or-why-grid-search-is-plain-stupid-c17d97a0e881)
+      * 直接指定超參數的組合範圍，每一組參數都訓練完成，再根據驗證集 (validation) 的結果選擇最佳參數
+    * 隨機搜尋 Random Search
+      * 指定超參數的範圍，用均勻分布進行參數抽樣，用抽到的參數進行訓練，再根據驗證集的結果選擇最佳參數
+    * 貝葉斯優化演算法
+  * 調整步驟：若持續使用同一份驗證集 (validation) 來調參，可能讓模型的參數過於擬合該驗證集，正確的步驟是使用 Cross-validation 確保模型泛化性
+    * 先將資料切分為訓練/測試集，測試集保留不使用
+    * 將剛切分好的訓練集，再使用 Cross-validation 切分 K 份訓練/驗證集
+    * 用 grid/random search 的超參數進行訓練與評估
+    * 選出最佳的參數，用該參數與全部訓練集建模
+    * 最後使用測試集評估結果
+  * 影響性
+    * 超參數調整通常都是機器學習專案的最後步驟，這對於最終的結果影響不會太多，多半是近一步提升 3-5 % 的準確率
+    * 好的特徵工程與資料清理是能夠一口氣提升 10-20 ％ 的準確率
+* 機器學習模型訓練步驟
+  * Loading and pre-processing dataset of interest
+  * Hyperparameter optimization using cross-validation
+  * Fitting tuned algorithm to the training data
+  * Applying learned model to test data
+* 參考資料
+  * [劍橋實驗室教你如何調參數](https://cambridgecoding.wordpress.com/2016/04/03/scanning-hyperspace-how-to-tune-machine-learning-models/)
+  * [教你使用 Python 調整隨機森林參數](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
+* 範例與作業(待上傳)
   * [範例D047]()
+    * 資料集：boston
+    * 模型：regressor
+    * 方法：GridSearch
   * [作業D047]()
-# D048 Kaggle 競賽平台介紹
-* 範例與作業(待觀看)
-  * [範例D048]()
-  * [作業D048]()
-# D049 集成方法-混和泛化(Blending)
-* 範例與作業(待觀看)
-  * [範例D049]()
-  * [作業D049]()
-# D050 集成方法-堆疊泛化(Stacking)
-* 範例與作業(待觀看)
-  * [範例D050]()
-  * [作業D050]()
+    * 資料集：breast_cancer、Iris
+    * 模型：GradientBoostingClassifier
+    * 方法：GridSearchCV
 
 Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 <br>
 <br>
 
-# D051-D053 Kaggle 期中考
-* 範例與作業(待觀看)
-  * [範例D051]()
+### D048-Kaggle競賽平台介紹
+* Kaggle 競賽平台(有實際操作說明)
+  * 為全球資料科學競賽的網站，許多資料科學的競賽均會在此舉辦
+  * 名列前茅的參賽者都會分享自己的作法與程式碼供參考，非常具有參考價值
+  * 排行榜
+    * 主辦單位通常會把測試資料分為 public set 與 private set，參賽者上傳預測結果可以看到 public set 的成績，但比賽最終會使用 private set 的成績作為排名
+  * Kernels 與 Discussion
+    * Kernels 可以看見許多高手們分享的程式碼與結果，多半會以 jupyter notebook 呈現
+    * Discussion 可以看到高手們互相討論可能的做法，或是資料中是否存在某些問題
+* 範例與作業(待上傳)
+  * [作業D048]()
+    * 範例練習
+
+Back to <a href="#機器學習調整參數">機器學習調整參數</a>
+<br>
+<br>
+
+### D049D050-集成方法-混和泛化AND堆疊泛化-BlendingANDStacking
+* 集成 Aggregation
+  * 使用不同方式結合多個/多種不同分類器，作為綜合預測的做法統稱
+    * select the most trust-worthy friend from their usual performance <br>
+      → 從中選出最小的 Validation error <br>
+      → $G(x) = g_{t_i}(x), t_i = argmin_{t \in (1,2,...T)} E_{val}(g_t^-)$
+    * mix the predictions from all your friends uniformly <br>
+      → 進行投票表決，每人票數一樣 <br>
+      → $G(x) = sign(\sum\limits_{t=1}^T 1 * g_t(x))$
+    * mix the predictions from all your friends non-uniformly <br>
+      → 進行投票表決，每人票數不一樣，前 2 種情形為此的特例 <br>
+      → $G(x) = sign(\sum\limits_{t=1}^T \alpha_t * g_t(x)), \alpha_t \geq 0$      
+    * combine the predictions conditionally <br>
+      → 依據特性選擇不同投票方式，前 3 種情形為此的特例 <br>
+      → $G(x) = sign(\sum\limits_{t=1}^T q_t * g_t(x)), q_t \geq 0$      
+  * 將模型截長補短，也就是機器學習的和議制/多數決
+  * 類型
+    * 資料集成
+      * 裝袋法(Bagging)
+        * 說明：將資料放入袋中抽取，每回合結束後全部放回袋中重抽，再搭配弱分類器取平均/多數決結果，如<a href="#D043-TreeBasedModel-隨機森林RandomForest">D043 隨機森林(Random Forest)</a>，這種組織的方法在統計上稱為 bootstrap
+        * 優點：當訓練資料中有噪聲資料(不好的資料)，透過 bagging 抽樣就有機會讓這些噪聲資料不被訓練到，因此可以降低模型的不確定性
+      * 提升法(Boosting)
+        * 說明
+          * 將許多弱分類器(weak classifier)合成變成一個強分類器，與 bagging 不同的點在於分類器之間是有關聯性的，透過將就分類器的錯誤資料權重提高、正確資料權重降低，接著重新訓練新的分類器，這樣新的分類器就可以學到錯誤分類的資料，以提升分類結果的準確性
+          * 改進 Boosting 的演算法，如 AdaBoost、Adaptive Boosting
+            * AdaBoost
+              * 將前幾個分類器線性組合的錯誤樣本的權重提高，這樣可以讓每次訓練新分類器的時候都聚焦在容易分類錯誤的訓練數據上
+              * 每個弱分類不再採用平均投票機制，而是採用加權投票機制
+              * 準確率較大的弱分類器會擁有較大的權重，準確率較小的弱分類器權重就會比較低
+            * [LightGBM](https://matters.town/@CHWang/233779-machine-learning-%E7%B5%A6%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-kaggle%E7%AB%B6%E8%B3%BD%E5%BF%85%E5%82%99-light-gbm-light-gradient-boosting-machine-%E5%AF%A6%E4%BD%9C%E6%BC%94%E7%B7%B4-%E7%AD%86%E8%A8%98-%E4%BA%8C-bafyreigqihgvixmnnikwmxaxgxzihuzbnj7bwsnus77izo2j7x34zx24nq)
+        * 若依照估計誤差的殘差項調整新目標值，就是<a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 梯度提升機(Gradient Boosting Machine)</a>，只是梯度提升機還加上用梯度來選擇決策樹分支
+    * 模型與特徵集成
+      * 混合泛化(Blending)
+        * 將不同模型的預測值加權合成，權重和為 1，如果取預測的平均 or 一人一票多數決(每個模型權重相同)，則又稱為投票泛化(Voting)
+        * 容易使用
+          * 只要有[預測值(Submit 檔案)](https://www.kaggle.com/code/tunguz/superblend/script)就可以使用，許多跨國隊伍就是靠這個方式合作
+          * 也因為只要用預測值就能計算，在競賽中可以快速合成多種比例的答案，妥善消耗掉每一天剩餘的 Submit 次數
+        * 效果顯著
+          * Kaggle 競賽截止日前的 Kernel，有許多只是對其他人的輸出結果做 Blending，但是因為分數較高，因此也有許多人樂於推薦與發表
+          * 在2015年前的大賽中，Blending 仍是主流，如[林軒田老師曾在機器學習技法 Lecture 7: Blending and Bagging 的課程中提及](https://www.youtube.com/watch?v=mjUKsp0MvMI)：有競賽的送出結果，是上百個模型的 Blending
+        * 個別單模效果都很好(有調參)並且模型差異大，單模要好尤其重要，如果單模效果差異太大，Blending 的效果提升就相當有限
+        * 混合泛化提升預測力的原因是基於模型差異度大，在預測細節上能互補，因此預測模型只要各自調參優化過且原理不同，通常都能使用混合泛化集成
+      * 堆疊泛化(Stacking)
+        * 2012 年由 [David H. Wolpert 發布](http://www.machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf)，2014 年底被廣泛應用於 Kaggle 競賽開始，後來出現加速混合與計算速度的 StackNet
+        * 相對於 Blending 的改良
+          * 不只將預測結果混合，而是使用預測結果當新特徵
+          * 更進一步地運用資料輔助集成，使得 Stacking 複雜許多
+        * Stacking 的設計
+          * Stacking 把模型當作下一階的特徵編碼器來使用，但待編碼資料與用來訓練編碼器的資料不可重複，但待編碼資料太少，下一層的資料筆數就會太少；訓練編碼器的資料太少，則編碼器的強度就會不夠
+          * 利用 K-Fold 概念將資料拆成 K 份，每 1/K 的資料要編碼時，使用其他的 K-1 組資料訓練模型/編碼器 → 問題：計算時間隨 K 變大而變長，但 K 可以調整，相對深度學習所需的時間來說，這樣的時間長度還可接受
+          * 自我遞迴的 Sracking：在原本特徵上用模型造出新特徵
+            * 新舊特徵能一起用，再用模型預測，須謹慎切分 Fold 及新增次數
+            * 新的特徵可以再搭配模型創特徵，第三層第四層...一直下去，但精準度可能會下降
+            * 既然同層新特徵會 Overfitting，層數加深會增加泛化，同時使用能把缺點互相抵銷，但程式複雜且運算時間長，故難以實踐且較少人使用
+      * 好處：利用一系列性能良好的模型在分類或迴歸任務上的能力，並做出比集成中的任何一個模型更好的預測
+      * 參考資料
+        * [StackingCVClassifier](http://rasbt.github.io/mlxtend/user_guide/classifier/StackingCVClassifier/)
+    * 資料集成 VS. 模型與特徵集成差異
+      * 資料集成
+        * 如 Bagging/Boosting，詳如：<a href="#D045-TreeBasedModel-梯度提升機GradientBoostingMachine">D045 梯度提升機(Gradient Boosting Machine)</a>
+        * 使用「不同訓練資料」且同一模型，多次估計的結果合成最終預測
+      * 模型與特徵集成
+        * 如 Voting/Blending/stacking，使用同一資料且「不同模型」，合成出不同預測結果
+* 範例與作業(待下載)
+  * [範例D049]()
+    * 混和泛化
+    * 資料集：房價預測
+    * 模型：線性迴歸/梯度提升機/隨機森林，參數使用 Random Search 尋找
+    * 重點
+      * 觀察混合泛化的準確度
+      * 自行調整權重
+  * [作業D049]()
+    * 分類預測要用權重混合時，需以機率的形式混合
+    * 資料集：鐵達尼號
+    * 模型：羅吉斯迴歸/梯度提升機/隨機森林，參數使用 Random Search 尋找
+    * 重點：
+      * 觀察混和泛化的準確度
+      * 自行調整權重
+  * [範例D050]()
+    * 堆疊泛化
+    * 資料集：房價預測
+    * 模型：線性迴歸/梯度提升機/隨機森林
+    * 重點：觀察堆疊泛化的準確度是否比單一模型準確度為高
+  * [作業D050]()
+    * 資料集：鐵達尼號
+    * 模型：羅吉斯迴歸/梯度提升機/隨機森林
+
+Back to <a href="#機器學習調整參數">機器學習調整參數</a>
+<br>
+<br>
+ 
+### D051-D053-Kaggle期中考
+* 範例與作業(待下載、並確認sample)
   * [作業D051]()
 
-Back to <a href="#Kaggle期中考"></a>
+Back to <a href="#Kaggle期中考">Kaggle期中考</a>
 <br>
 <br>
