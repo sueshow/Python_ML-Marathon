@@ -40,7 +40,7 @@
 
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
   * D033 機器如何學習
-  * D034 訓練及測試集切分
+  * <a href="#D034-訓練及測試集切分">D034 訓練及測試集切分</a>
   * D035 Regression vs. classification
   * D036 評估指標選定 evaluation metrics
   * D037 Regression model-線性迴歸、羅吉斯回歸
@@ -1603,7 +1603,7 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
 
 
 ## 機器學習基礎模型建立
-### D033 機器如何學習
+### D033-機器如何學習
 * 機器學習三步驟
   * 定義好模型 (線性迴歸、決策樹、神經網路等)
     * 機器學習模型中會有許多參數 (parameters)，如線性迴歸中的 w (weights) 跟 b (bias)
@@ -1659,7 +1659,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 <br>
 <br> 
 
-### D034 訓練及測試集切分
+### D034-訓練及測試集切分
 * 為何需要切分訓練/測試集：透過驗證/測試集評估模型是否過擬合
 * 方法：使用 Python 中 Scikit-learn 進行資料切分，透過 [train-test split 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)快速對資料進行切分
 * K-fold Cross-validation
