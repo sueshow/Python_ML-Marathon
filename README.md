@@ -61,7 +61,7 @@
   * D050 集成方法-堆疊泛化(Stacking)
   
 ### <a href="#Kaggle期中考">Kaggle期中考</a>
-  * D051-D053 Kaggle 期中考
+  * <a href="#D051-D053-Kaggle期中考">D051-D053 Kaggle 期中考</a>
 
 ### <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * D054 非監督式機器學習
@@ -2073,12 +2073,12 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 參考資料
   * [劍橋實驗室教你如何調參數](https://cambridgecoding.wordpress.com/2016/04/03/scanning-hyperspace-how-to-tune-machine-learning-models/)
   * [教你使用 Python 調整隨機森林參數](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
-* 範例與作業(待上傳)
-  * [範例D047]()
+* 範例與作業
+  * [範例D047](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_047_HW_hyper_parameter_tunning/Day_047_hyper_parameter_tunning.ipynb)
     * 資料集：boston
     * 模型：regressor
     * 方法：GridSearch
-  * [作業D047]()
+  * [作業D047](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_047_Ans.ipynb)
     * 資料集：breast_cancer、Iris
     * 模型：GradientBoostingClassifier
     * 方法：GridSearchCV
@@ -2096,8 +2096,8 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
   * Kernels 與 Discussion
     * Kernels 可以看見許多高手們分享的程式碼與結果，多半會以 jupyter notebook 呈現
     * Discussion 可以看到高手們互相討論可能的做法，或是資料中是否存在某些問題
-* 範例與作業(待上傳)
-  * [作業D048]()
+* 範例與作業
+  * [作業D048](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_048_HW.ipynb)
     * 範例練習
 
 Back to <a href="#機器學習調整參數">機器學習調整參數</a>
@@ -2167,38 +2167,136 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
         * 使用「不同訓練資料」且同一模型，多次估計的結果合成最終預測
       * 模型與特徵集成
         * 如 Voting/Blending/stacking，使用同一資料且「不同模型」，合成出不同預測結果
-* 範例與作業(待下載)
-  * [範例D049]()
+* 範例與作業
+  * [範例D049](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_049_HW_blending/Day_049_Blending.ipynb)
     * 混和泛化
     * 資料集：房價預測
     * 模型：線性迴歸/梯度提升機/隨機森林，參數使用 Random Search 尋找
     * 重點
       * 觀察混合泛化的準確度
       * 自行調整權重
-  * [作業D049]()
+  * [作業D049](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_049_Blending_Ans.ipynb)
     * 分類預測要用權重混合時，需以機率的形式混合
     * 資料集：鐵達尼號
     * 模型：羅吉斯迴歸/梯度提升機/隨機森林，參數使用 Random Search 尋找
     * 重點：
       * 觀察混和泛化的準確度
       * 自行調整權重
-  * [範例D050]()
+  * [範例D050](https://github.com/sueshow/Python_ML-Marathon/tree/main/Homework/Day_050_HW_stacking)
     * 堆疊泛化
     * 資料集：房價預測
     * 模型：線性迴歸/梯度提升機/隨機森林
     * 重點：觀察堆疊泛化的準確度是否比單一模型準確度為高
-  * [作業D050]()
+  * [作業D050](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_050_Stacking_Ans.ipynb)
     * 資料集：鐵達尼號
     * 模型：羅吉斯迴歸/梯度提升機/隨機森林
 
 Back to <a href="#機器學習調整參數">機器學習調整參數</a>
 <br>
 <br>
- 
+
+
+## Kaggle期中考 
 ### D051-D053-Kaggle期中考
-* 範例與作業(待下載、並確認sample)
-  * [作業D051]()
+* 範例與作業(待練習sample)
+  * [作業D051](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_051_053_Midterm_Enron_Fraud.ipynb)
 
 Back to <a href="#Kaggle期中考">Kaggle期中考</a>
+<br>
+<br>
+
+
+### <a href="#非監督式的機器學習">非監督式的機器學習</a>
+  * D054 非監督式機器學習
+  * D055 非監督式-分群-K-Means 分群
+  * D056 非監督式-分群-K-Means 分群評估：使用輪廓分析
+  * D057 非監督式-分群-階層式 Hierarchical Clustering
+  * D058 非監督式-分群-Hierarchical Clustering 觀察：使用 2D 樣版資料集
+  * D059 降維方法(Dimension Reduction)-主成份分析(PCA)
+  * D060 程式實作-PCA：使用手寫辨識資料集
+  * D061 降維方法(Dimension Reduction)-T-SNE
+  * D062 程式實作-T-SNE：分群與流形還原
+
+
+## 非監督式的機器學習
+### D054-非監督式機器學習
+* 範例與作業
+  * [範例D054]()
+  * [作業D054]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+### D055-非監督式-分群-K-Means分群
+* 範例與作業
+  * [範例D055]()
+  * [作業D055]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+### D056-非監督式-分群-K-Means分群評估-使用輪廓分析
+* 範例與作業
+  * [範例D056]()
+  * [作業D056]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+### D057-非監督式-分群-階層式HierarchicalClustering
+* 範例與作業
+  * [範例D057]()
+  * [作業D057]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+### D058-非監督式-分群-HierarchicalClustering觀察-使用2D樣版資料集
+* 範例與作業
+  * [範例D058]()
+  * [作業D058]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+### D059-降維方法DimensionReduction-主成份分析PCA
+* 範例與作業
+  * [範例D059]()
+  * [作業D059]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+### D060-程式實作-PCA-使用手寫辨識資料集
+* 範例與作業
+  * [範例D060]()
+  * [作業D060]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+### D061-降維方法DimensionReduction-T-SNE
+* 範例與作業
+  * [範例D061]()
+  * [作業D061]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+
+### D062-程式實作-T-SNE-分群與流形還原
+* 範例與作業
+  * [範例D062]()
+  * [作業D062]()
+
+Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
