@@ -2293,7 +2293,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 然後把群心移到同一群樣本點的中心點(*update centroid)
     * 反覆進行上述的 *cluster assignment 及 *update centroid，直到樣本點不再被 assign 到與上一次不同的群，便是算法成功收斂完畢
   * 最佳化目標：分群算法執行的目的是希望產出品質最好的分群結果，使總體群內平方誤差最小
-    $$\sum\limits_{i=0}^n min\limits_{u_j \in C}(||x_i-u_j||^2)$$
+    $$\sum\limits_{i=0}^n min_{u_j \in C}(||x_i-u_j||^2)$$
   * 
 * 範例與作業
   * [範例D055]()
