@@ -2182,7 +2182,7 @@ Back to <a href="#機器學習調整參數">機器學習調整參數</a>
     * 重點：
       * 觀察混和泛化的準確度
       * 自行調整權重
-  * [範例D050](https://github.com/sueshow/Python_ML-Marathon/tree/main/Homework/Day_050_HW_stacking)
+  * [範例D050](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_050_HW_stacking/Day_050_Stacking.ipynb)
     * 堆疊泛化
     * 資料集：房價預測
     * 模型：線性迴歸/梯度提升機/隨機森林
