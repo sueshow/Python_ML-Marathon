@@ -2267,6 +2267,7 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
   * [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning)
 * 範例與作業(待上傳)
   * [作業D054]()
+    * 無程式撰寫
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
@@ -2294,16 +2295,27 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 反覆進行上述的 *cluster assignment 及 *update centroid，直到樣本點不再被 assign 到與上一次不同的群，便是算法成功收斂完畢
   * 最佳化目標：分群算法執行的目的是希望產出品質最好的分群結果，使總體群內平方誤差最小
     $$\sum\limits_{i=0}^n min_{u_j \in C}(||x_i-u_j||^2)$$
-  * 
-* 範例與作業
+  * 要點
+    * 初始值設定 Random initialization：一開始隨機選擇的群中心不同將會得到不同的分群結果！可能導致 local optima(區域最佳解)，而非 global optima(全域最佳解)
+    * 因爲沒有預先標記，群數多少才是最佳解，沒有標準答案，需視資料集情況而定。其中一個方式是使用輪廓係數衡量群內距與群間距，係數越高表示群分得越開、群內越聚集
+    * 分群的目的是為了更好的解讀資料特性，因此也可將群的特徵量化來對各群觀察，群數的設定建議小於訓練特徵維度數，各群的差異會更加顯著
+    * K-means 分群算法需要事先定義群數，而群數多少才是最佳解，可透過衡量不同群數時的輪廓係數，或以各群樣本特徵指標來觀察是否產生具代表意義的群
+* 參考資料
+  * [StatQuest: K-means clustering](https://www.youtube.com/watch?v=4b5d3muPQmA)
+  * [Kaggle kernel 示範用 K-means Clustering 做消費者區隔](https://www.kaggle.com/code/kushal1996/customer-segmentation-k-means-analysis/notebook)
+* 範例與作業(待上傳)
   * [範例D055]()
+    * 資料集：toy
   * [作業D055]()
+    * 資料集：Iris
+    * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D056-非監督式-分群-K-Means分群評估-使用輪廓分析
+* 
 * 範例與作業
   * [範例D056]()
   * [作業D056]()
