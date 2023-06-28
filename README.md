@@ -181,10 +181,10 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
     * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning (D047-D050：網格搜尋、隨機搜尋、Kaggle平台) → 集成 Ensemble (D048-D049：混和泛化 Blending、堆疊泛化 Stacking)
-  * 非監督式學習：如維度縮減、分群、壓縮
+  * 非監督式學習(D054-)：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
-    * 應用：降維 Dimension Reduction、分群 Clustering
+    * 應用：降維 Dimension Reduction(如：PCA、t-SNE)、分群 Clustering(如：K-mean、Hierarchical Clustering)
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
@@ -2206,22 +2206,65 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
 <br>
 
 
-### <a href="#非監督式的機器學習">非監督式的機器學習</a>
-  * D054 非監督式機器學習
-  * D055 非監督式-分群-K-Means 分群
-  * D056 非監督式-分群-K-Means 分群評估：使用輪廓分析
-  * D057 非監督式-分群-階層式 Hierarchical Clustering
-  * D058 非監督式-分群-Hierarchical Clustering 觀察：使用 2D 樣版資料集
-  * D059 降維方法(Dimension Reduction)-主成份分析(PCA)
-  * D060 程式實作-PCA：使用手寫辨識資料集
-  * D061 降維方法(Dimension Reduction)-T-SNE
-  * D062 程式實作-T-SNE：分群與流形還原
-
-
 ## 非監督式的機器學習
 ### D054-非監督式機器學習
+* 非監督式學習
+  * 簡介
+    * 非監督式學習演算法只基於輸入資料找出模式，當無法確定尋找內容或無標記 (y) 資料時，通常會使用這個演算法，以幫助了解資料模式、資料特性，或作為提升監督式學習效能的預處理步驟
+    * 非監督式學習由於沒有監督式學習算法所參照的 ground truth，不易判斷模型是否真的學到隱藏資料中的模式，需要透過像是「輪廓分析」等方法評估分群的品質
+  * 應用情境
+    * 分群(Clustering)
+      * 又稱聚類分析、集群分析，將擁有各自相似屬性的樣本聚到各自一群，使其成為不同的群體。分群結果會給予每個樣本點一個標籤(label)
+      * 常見應用案例，如：用戶/文章/影片/語音貼標，目的為行銷自動化、數位媒體投放等
+      * 重要概念
+        * 通常分群後計算各群特徵的統計指標(如群內樣本、平均指標)，方便我們比較不同群間的差異，也可當作分群解釋方法
+        * 建議群數不超過資料集的特徵維度數，如此一來各群的特徵差異(前一步所算出的統計指標)會更容易顯現
+      * 方法
+        * 聚合式階層分群法(Agglomerative Hierarchical Clustering)
+          * 將每個樣本視為一個群聚，從樹狀結構底部不斷融合相近的樣本；假如生成的群數多於預期的群數，則反覆重複聚合最近距離的兩群的動作，直到群數降到條件範圍內
+          * 完成的分群會以樹狀結構呈現，稱作 dendrogram
+          * 在階層式分群中常見的距離定義方式
+            * Single Linkage：群與群的距離為不同群中最接近兩點間的距離，容易產生大者恆大的分群結果
+            * Average Linkage：群與群的距離為不同群中各點與各點間距離總和平均，相比 Single Linkage 則較容易產生齊頭並進、各群規模相近的分群結果
+            * Complete Linkage：群與群的距離為不同群中最遠兩點間的距離
+            * Ward's Method：將兩群合併後，各點到合併後的群中心的距離平方和
+        * 分割式分群(Partitional Clustering)
+          * K-Means
+            * 把 n 個點切分到 k 個群中，不斷重複調整群心、重新分群，最後達到每個點都隸屬於與其群心最近的聚類(群)中
+    * 關聯規則(Association Rule)
+      * 從大量數據中發現變數間隱藏關係的方法
+      * 常見應用案例，如購物籃分析，可作為銷售團隊線上或線下商品組合的決策參考
+      * 方法
+        * Apriori
+          * 逐層搜索的迭代方法，先找出出現頻次為 1 的項目集合，高頻次存為 L1；再用 L1 找出現頻次為 2 的項目集合 L2，L2 再用來找 L3，依此類推，直到不能找到更多頻次共同出現的項目集合
+    * 異常檢測(Anomaly Detection)
+      * 透過樣本特徵的群聚，將相對異常的模式、樣本或事件辨識出來
+      * 常見應用案例，如交易詐欺、結構缺陷檢測、醫療問題、文字錯誤辨識、入侵檢測
+      * 方法
+        * LOF (Local Outlier Factor)
+          * 如果樣本點 p 的 LOF 得分接近 1，表示 p 的局部密度與相鄰點差不多
+          * 如果 p 的 LOF 得分小於 1，表示 p 落在一個相對密集的區域，最不像是異常點
+          * 如果 p 的 LOF 得分遠大於 1，表示 p 跟其他樣本點相對疏遠，很有可能是異常點
+    * 降維(Dimension Reduction)
+      * 當特徵數太多難於理解及呈現的情況下，藉由抽象化的技術轉換原資料的表示方式、降低資料維度、組合成新的特徵，同時不失去原有的資訊
+      * 方法
+        * 主成分分析(Principle Component Analysis, PCA)
+          * 對一系列可能相關的特徵進行線性轉換，將他們投影成另一系列「線性不相關」的特徵值，這些不相關特徵稱為「主成分」
+    * 結構化資料分析
+    * 非結構化資料分析
+      * 非結構化資料如文字、影像等，可藉由非監督式學習技術，幫助呈現、描述並在一系列資料中萃取關鍵字
+      * 常見案例，如主題模型(topic model)
+      * 方法
+        * 隱含狄利克雷分布(Latent Dirichlet Allocation, LDA)
+          * 事先定義好有限的主題，並透過觀察文件與朋友用詞來計算出主題之間的關聯，以及各個文件的主題分佈，如此一來，只要文件夠多，就可以有效的快速理解不同文件的主題分佈
+* 參考資料
+  * [Unsupervised learning](https://scikit-learn.org/stable/unsupervised_learning.html)
+  * [階層式分群法 Clustering: Hierarchical Clustering](https://www.mropengate.com/2015/06/ai-ch17-6-clustering-hierarchical.html)
+  * [Apriori 演算法詳解及 Python實作](https://matters.town/@CHWang/75663-machine-learning-%E9%97%9C%E8%81%AF%E5%88%86%E6%9E%90-apriori%E6%BC%94%E7%AE%97%E6%B3%95-%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AA%E5%95%A4%E9%85%92%E8%88%87%E5%B0%BF%E5%B8%83%E7%9A%84%E8%83%8C%E5%BE%8C%E5%8E%9F%E7%90%86-python%E5%AF%A6%E4%BD%9C-scikit-learn%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E6%95%99%E5%AD%B8-bafyreiblhbu7qc3go3aatvabovx2yykd5t4azssw56c5ewcezshjkr74m4)
+  * [基於密度的經典異常偵測算法：LOF 算法詳解](https://zhuanlan.zhihu.com/p/28178476)
+  * [Unsupervised learning：PCA](http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/PCA.mp4)
+  * [主題模型與 LDA 概念理解](https://tengyuanchang.medium.com/%E7%9B%B4%E8%A7%80%E7%90%86%E8%A7%A3-lda-latent-dirichlet-allocation-%E8%88%87%E6%96%87%E4%BB%B6%E4%B8%BB%E9%A1%8C%E6%A8%A1%E5%9E%8B-ab4f26c27184)
 * 範例與作業
-  * [範例D054]()
   * [作業D054]()
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
