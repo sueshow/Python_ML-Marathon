@@ -40,7 +40,7 @@
 
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
   * <a href="#D033-機器如何學習">D033 機器如何學習</a>
-  * D034 訓練及測試集切分
+  * <a href="#D034-訓練及測試集切分">D034 訓練及測試集切分</a>
   * D035 Regression vs. classification
   * D036 評估指標選定 evaluation metrics
   * D037 Regression model-線性迴歸、羅吉斯回歸
@@ -1604,62 +1604,6 @@ Back to <a href="#資料科學特徵工程技術">資料科學特徵工程技術
 
 
 ## 機器學習基礎模型建立
-### D033-機器如何學習
-* 機器學習三步驟
-  * 定義好模型 (線性迴歸、決策樹、神經網路等)
-    * 機器學習模型中會有許多參數 (parameters)，如線性迴歸中的 w (weights) 跟 b (bias)
-    * 希望模型產生的 ŷ 跟真實答案的 y 越接近越好
-  * 評估模型的好壞
-    * 定義一個目標函數 (Objective function) 也可稱作損失函數 (Loss function)，來衡量模型的好壞
-    * 線性迴歸模型我們可以使用均方差 (mean square error) 來衡量
-    * Loss 越大，代表這組參數的模型預測出的 ŷ 越不準
-  * 找出讓訓練目標最佳的模型參數
-    * 梯度下降 (Gradient Descent)、增量訓練 (Additive Training) 等演算法，可找到最佳可能模型的參數
-  * 模型訓練的目標是將損失函數的損失降至最低
-    <table border="1" width="12%">
-          <tr>
-            <th width="2%"> 類型 </a>
-            <th width="5%"> 中文 </a>
-            <th width="5%"> 說明 </a>
-          </tr>
-          <tr>
-            <td> Underfitted </td>
-            <td> 欠擬合</td>
-            <td> 預測未擬合實際結果 </td>
-          </tr>
-          <tr>
-            <td> Good Fit/Robust </td>
-            <td>  </td>
-            <td> 預測可擬合實際結果 </td>
-          </tr>
-          <tr>
-            <td> Overfitted </td>
-            <td> 過度擬合 </td>
-            <td> 模型可能學習到資料中的噪音，導致在實際應用時預測失準 </td>
-          </tr>
-  </table>
-  
-* 學習曲線 Learning curve
-  * 如何知道模型已經過擬合了?
-    * 觀察模型對於訓練資料的誤差與測試資料的誤差，是否有改變的趨勢
-  * 解決方法
-    * 過擬合
-      * 增加資料量
-      * 降低模型複雜度
-      * 使用正規化 (Regularization)：決策樹模型是非常容易過擬合的模型，必須透過適當的正規化來緩解
-    * 欠擬合
-      * 增加模型複雜度
-      * 減輕或不使用正規化
-* 參考資料
-  * [利用學習曲線診斷模型的偏差和方差](http://bangqu.com/yjB839.html)
-* 範例與作業
-  * [作業D033](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_033_Ans.ipynb)
-    * 影片：[ML Lecture 1:Regression - Case Study](https://www.youtube.com/watch?v=fegAeph9UaA)
-  
-Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
-<br>
-<br> 
-
 ### D034-訓練及測試集切分
 * 為何需要切分訓練/測試集：透過驗證/測試集評估模型是否過擬合
 * 方法：使用 Python 中 Scikit-learn 進行資料切分，透過 [train-test split 函數](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)快速對資料進行切分
