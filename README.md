@@ -2265,14 +2265,36 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
   * [Unsupervised learning：PCA](http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/PCA.mp4)
   * [主題模型與 LDA 概念理解](https://tengyuanchang.medium.com/%E7%9B%B4%E8%A7%80%E7%90%86%E8%A7%A3-lda-latent-dirichlet-allocation-%E8%88%87%E6%96%87%E4%BB%B6%E4%B8%BB%E9%A1%8C%E6%A8%A1%E5%9E%8B-ab4f26c27184)
   * [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning)
-* 範例與作業
+* 範例與作業(待上傳)
   * [作業D054]()
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
-### D055-非監督式-分群-K-Means分群
+### D055-非監督式-分群-K-Means
+* 監督式與非監督式學習
+  * 監督式學習目標在於找出決策邊界(decision boundary)
+  * 非監督式學習-分群目標在於找出資料結構
+    * 分群算法(或稱聚類算法)用於把族群或資料點分隔成一系列的組合，使得相同 cluster 中的資料點比其他的組更相似
+    * 分群算法依照他們區分樣本點的方式不同，還可分為幾個類別：
+      * 階層式分群(Hierarchical)
+      * 分割式分群(Partitional)：如 K-means、K-Medoids
+      * 基於密度的分群：如 DBSCAN
+      * 基於機率的分群：如 高斯混合模型(Gaussian Mixture Model, GMM)
+* K-Means
+  * 簡介
+    * 把所有資料點分成 k 個 clusters，使得相同 cluster 中的所有資料點彼此儘量相似，而不同 cluster 的資料點儘量不同
+    * 距離測量(e.g. 歐氏距離)用於計算資料點的相似度和相異度，每個 cluster 有一個中心點，中心點可理解為最能代表 cluster 的點
+  * 分群算法流程
+    * 目標是將 training set 分成 2 群
+    * 隨機選取 2 個點，稱爲 cluster centroid(群心、中心點)
+    * 對每一個樣本點根據它距離哪一群的中心點較近，標記為落在該群之一的點(*cluster assignment)
+    * 然後把群心移到同一群樣本點的中心點(*update centroid)
+    * 反覆進行上述的 *cluster assignment 及 *update centroid，直到樣本點不再被 assign 到與上一次不同的群，便是算法成功收斂完畢
+  * 最佳化目標：分群算法執行的目的是希望產出品質最好的分群結果，使總體群內平方誤差最小
+    $$\sum\limits_{i=0}^n min_{u_j \in C}(||x_i-u_j||^2)$$
+  * 
 * 範例與作業
   * [範例D055]()
   * [作業D055]()
