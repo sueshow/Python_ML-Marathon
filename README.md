@@ -2264,6 +2264,7 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
   * [基於密度的經典異常偵測算法：LOF 算法詳解](https://zhuanlan.zhihu.com/p/28178476)
   * [Unsupervised learning：PCA](http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/PCA.mp4)
   * [主題模型與 LDA 概念理解](https://tengyuanchang.medium.com/%E7%9B%B4%E8%A7%80%E7%90%86%E8%A7%A3-lda-latent-dirichlet-allocation-%E8%88%87%E6%96%87%E4%BB%B6%E4%B8%BB%E9%A1%8C%E6%A8%A1%E5%9E%8B-ab4f26c27184)
+  * [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning)
 * 範例與作業
   * [作業D054]()
 
