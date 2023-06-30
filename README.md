@@ -2364,18 +2364,28 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 不指定分群的數量
   * 每筆資料為一個 cluster，計算每兩群之間的距離
     * Single-link：群聚間的距離定義為不同群聚中最接近兩點間的距離
-      $$d(C_i,C_j) = min_{a \in C_i, b \in C_j}$$
+      $$d(C_i,C_j) = min_{a \in C_i,&b \in C_j} d(a,b)$$
     * Complete-link：群聚間的距離定義為不同群聚中最遠兩點間的距離，這樣可以保證這兩個集合合併後，任何一對的距離不會大於 d
+      $$d(C_i,C_j) = max_{a \in C_i,&b \in C_j} d(a,b)$$
     * Average-link：群聚間的距離定義為不同群聚間各點與各點間距離總和的平均
-    * [Ward's Method](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-83-%E6%B2%83%E5%BE%B7%E9%9A%8E%E5%B1%A4%E5%88%86%E7%BE%A4%E6%B3%95-ward-hierarchical-clustering-273c0e21050)：群聚間的距離定義為各點到兩群合併後的群中心的距離平方和
-      * Distance Between Clusters A and B
-        $$$$
+      $$d(C_i,C_j) = \sum\limits_{a \in C_i,&b \in C_j} \frac{d(a,b)}{|C_i||C_j|}$$
+      where $|C_i|$ and $|C_j|$ are the sizes for $C_i$ and $C_j$, respectively
+    * 沃德法[Ward's Method](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-83-%E6%B2%83%E5%BE%B7%E9%9A%8E%E5%B1%A4%E5%88%86%E7%BE%A4%E6%B3%95-ward-hierarchical-clustering-273c0e21050)：群聚間的距離定義為各點到兩群合併後的群中心的距離平方和
+        $$d(C_i,C_j) = \sum\limits_{a \in C_i \cup C_j} ||a-\mu||$$
+        where $\mu$ is the mean vector of $C_i \cup C_j$
+    * 特性
+      * single linkage 會在群聚的過程中產生「大者恆大」的效果
+      * complete linkage 和 average linkage 比較容易產生「齊頭並進」的效果
   * 將最近的兩群合併成一群，重覆步驟 2、3，直到所有資料合併成同一 cluster
 * 參考資料
   * [階層式分群法](http://mirlab.org/jang/books/dcpr/dcHierClustering.asp?title=3-2%20Hierarchical%20Clustering%20(%B6%A5%BCh%A6%A1%A4%C0%B8s%AAk)&language=chinese)
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D057]()
+    * 資料集：toy
+    * 重點：設定模型估計參數集資料建模
   * [作業D057]()
+    * 資料集：Iris
+    * 重點：設定模型估計參數集資料建模
   * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2383,15 +2393,25 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 
 ### D058-非監督式-分群-HierarchicalClustering觀察-使用2D樣版資料集
-* 範例與作業
+* 2D 樣版資料集(2d toy dataset)
+  * 2D 樣版資料集著重於圖形的人機差異：挑選人眼容易分群，但非監督模型常常有困難的圖案樣板來展示
+  * 用途：用來讓人眼評估非監督模型的好壞，因為非監督模型的任務包含分群(對應於監督的分類)與流形還原(對應監督的迴歸)，所以 2D 樣板資料集在設計上也包含這兩種類型的資料集
+* sklearn 的資料集
+  * 主要分為
+    * 載入式(Loaders)：固定資料 
+    * 生成式(Samples generator)：先有既定模式，在模式下有限度的隨機生成每次使用的資料集
+  * 2D 樣版資料集屬於生成式資料集(Samples generator)，使用不同分布，用以顯示各種非監督模型的優缺點
+* 範例與作業(待上傳)
   * [範例D058]()
   * [作業D058]()
-
+  * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
+ 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D059-降維方法DimensionReduction-主成份分析PCA
+*
 * 範例與作業
   * [範例D059]()
   * [作業D059]()
