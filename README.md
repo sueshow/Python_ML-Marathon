@@ -2360,6 +2360,19 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 * K-means vs. 階層分群
   * K-means：預先定義群數(n of clusters)
   * 階層分群：依據定義距離來分群(bottom-up)，也可以決定群數做分群(top-down)
+* 階層分群演算法
+  * 不指定分群的數量
+  * 每筆資料為一個 cluster，計算每兩群之間的距離
+    * Single-link：群聚間的距離定義為不同群聚中最接近兩點間的距離
+      $$d(C_i,C_j) = min_{a \in C_i, b \in C_j}$$
+    * Complete-link：群聚間的距離定義為不同群聚中最遠兩點間的距離，這樣可以保證這兩個集合合併後，任何一對的距離不會大於 d
+    * Average-link：群聚間的距離定義為不同群聚間各點與各點間距離總和的平均
+    * [Ward's Method](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-83-%E6%B2%83%E5%BE%B7%E9%9A%8E%E5%B1%A4%E5%88%86%E7%BE%A4%E6%B3%95-ward-hierarchical-clustering-273c0e21050)：群聚間的距離定義為各點到兩群合併後的群中心的距離平方和
+      * Distance Between Clusters A and B
+        $$$$
+  * 將最近的兩群合併成一群，重覆步驟 2、3，直到所有資料合併成同一 cluster
+* 參考資料
+  * [階層式分群法](http://mirlab.org/jang/books/dcpr/dcHierClustering.asp?title=3-2%20Hierarchical%20Clustering%20(%B6%A5%BCh%A6%A1%A4%C0%B8s%AAk)&language=chinese)
 * 範例與作業
   * [範例D057]()
   * [作業D057]()
