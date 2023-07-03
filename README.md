@@ -2364,12 +2364,12 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 不指定分群的數量
   * 每筆資料為一個 cluster，計算每兩群之間的距離
     * Single-link：群聚間的距離定義為不同群聚中最接近兩點間的距離
-      $$d(C_i,C_j) = min_{a \in C_i,&b \in C_j} d(a,b)$$
+        $$d(C_i,C_j) = min_{a \in C_i,&b \in C_j} d(a,b)$$
     * Complete-link：群聚間的距離定義為不同群聚中最遠兩點間的距離，這樣可以保證這兩個集合合併後，任何一對的距離不會大於 d
-      $$d(C_i,C_j) = max_{a \in C_i,&b \in C_j} d(a,b)$$
+        $$d(C_i,C_j) = max_{a \in C_i,&b \in C_j} d(a,b)$$
     * Average-link：群聚間的距離定義為不同群聚間各點與各點間距離總和的平均
-      $$d(C_i,C_j) = \sum\limits_{a \in C_i,&b \in C_j} \frac{d(a,b)}{|C_i||C_j|}$$
-      where $|C_i|$ and $|C_j|$ are the sizes for $C_i$ and $C_j$, respectively
+        $$d(C_i,C_j) = \sum\limits_{a \in C_i,&b \in C_j} \frac{d(a,b)}{|C_i||C_j|}$$
+        where $|C_i|$ and $|C_j|$ are the sizes for $C_i$ and $C_j$, respectively
     * 沃德法[Ward's Method](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-83-%E6%B2%83%E5%BE%B7%E9%9A%8E%E5%B1%A4%E5%88%86%E7%BE%A4%E6%B3%95-ward-hierarchical-clustering-273c0e21050)：群聚間的距離定義為各點到兩群合併後的群中心的距離平方和
         $$d(C_i,C_j) = \sum\limits_{a \in C_i \cup C_j} ||a-\mu||$$
         where $\mu$ is the mean vector of $C_i \cup C_j$
