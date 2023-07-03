@@ -2440,7 +2440,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
           * Cov(X, Y)<0，表 X 與 Y 負相關
           * Cov(X, Y)=0，表 X 與 Y 不相關
         * 皮爾森相關係數(Pearson correlation coefficient)：探討各變數之間的線性關係，值介於 -1~1 之間
-          * 公式：$Corr(x,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X) Var(Y)}} = \frac{Cov(x,Y)}{\sigma_x \sigma_y}$ 
+          * 公式：$Corr(x,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X) Var(Y)}} = \frac{Cov(x,Y)}{}$ 
       * 將共變異數矩陣(covariance matrix)分解為特徵向量(eigenvector)與特徵值(eigenvalues)
         * [特徵值(EVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
         * [奇異值(SVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
