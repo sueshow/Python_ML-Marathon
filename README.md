@@ -2432,16 +2432,25 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 特性
       * 原始資料特徵之間表現出較強的相關性，若相關性較弱，降維效果較差
       * 新 features 為舊 features 的線性組合
-    * 流程
+    * 流程：PCA 保證樣本投影後方差最大
       * 標準化 d 維原資料集，使各特徵具有相同的重要性，若無標準化，則會容易導致 PCA 偏向數值較大的特徵
       * 建立共變異數矩陣(covariance matrix)
         * 衡量 2 個變數的相關程度
-          * Cov(X, Y)>0，表 X 與 Y 正相關
-          * Cov(X, Y)<0，表 X 與 Y 負相關
+          * Cov(X, Y)>0，表 X 與 Y 正相關，X 增加 → Y 增加
+          * Cov(X, Y)<0，表 X 與 Y 負相關，X 增加 → Y 減少
           * Cov(X, Y)=0，表 X 與 Y 不相關
         * 皮爾森相關係數(Pearson correlation coefficient)：探討各變數之間的線性關係，值介於 -1~1 之間
           * 公式：
-            $$Corr(x,Y)=\frac{Cov(X,Y)}{\sqrt[2]{Var(X) Var(Y)}}=\frac{Cov(X,Y)}{\sigma_x \sigma_y}$$ 
+            $$Corr(x,Y)=\frac{Cov(X,Y)}{\sqrt[2]{Var(X) Var(Y)}}=\frac{Cov(X,Y)}{\sigma_x \sigma_y}$$
+          * 性質：
+            * $|corr(X,Y)| \leq 1$
+            * $corr(X,Y)=1 \leftrightarrow X、Y$ 線性相關
+            * corr(X,Y)=0 表示X、Y不存在線性相關
+            * $corr(X,Y)=corr(Y,X)$
+          * 相關性(correlation)與獨立性(independence)
+            * 若 X 和 Y 的線性不相關，則 |corr(X,Y)| = 0
+            * 若 X 和 Y 的彼此獨立，則 |corr(X,Y)| = 0 且 X 和 Y 不存在任何線性或非線性關係
+            * 獨立係指兩個變量彼此之間不相互影響，故獨立一定不相關，但不相關不一定相互獨立
       * 將共變異數矩陣(covariance matrix)分解為特徵向量(eigenvector)與特徵值(eigenvalues)
         * [特徵值(EVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
         * [奇異值(SVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
