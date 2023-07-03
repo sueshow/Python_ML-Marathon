@@ -181,10 +181,10 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
     * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning (D047-D050：網格搜尋、隨機搜尋、Kaggle平台) → 集成 Ensemble (D048-D049：混和泛化 Blending、堆疊泛化 Stacking)
-  * 非監督式學習(D054-)：如維度縮減、分群、壓縮
+  * 非監督式學習(D054-D062)：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
-    * 應用：降維 Dimension Reduction(如：PCA、t-SNE)、分群 Clustering(如：K-mean、Hierarchical Clustering)
+    * 應用：降維 Dimension Reduction(如：PCA(D059-D060)、t-SNE(D061-D061))、分群 Clustering(如：K-mean、Hierarchical Clustering)
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
@@ -2411,7 +2411,59 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 
 ### D059-降維方法DimensionReduction-主成份分析PCA
-*
+* 為何需要降維(Dimensionlit Reduction)
+  * 數據為度過大 → 提高模型的複雜度，當資料樣本不足時，模型訓練的結果較差
+  * 壓縮資料
+    * 有助於使用較少的 RAM 或 disk space，也助於加速 learning algorithms
+    * 影像壓縮：壓縮後圖片可能變得模糊，但依然保有明顯的輪廓和特徵
+  * 特徵組合及抽象化：壓縮後可組合出新的、抽象化的特徵，減少冗餘、無用的資訊
+  * 資料視覺化
+    * 特徵太多時，很難 visualize data，不容易觀察資料
+    * 將資料維度(特徵)降至 2 到 3 個，能夠用一般的 2D 或 3D 圖表呈現資料
+* 降維度的目的
+  * 減少特徵的個數、去除特徵間的共線性問題
+  * 降低模型的計算量，減少模型執行時間
+  * 減少雜訊對模型的影響
+  * 確保特徵間互相獨立
+* 常見降維方法
+  * 主成分分析 PCA (Principal components analysis)
+    * 利用線性轉換，將資料從高雄(k維)映射到低維(m維)空間，並提取(m維)資料的主要特徵，保有原始資料的重要資訊
+    * PCA 不是從原始資料中捨棄不重要的特徵來降維，而是由這些特徵與其向量(eigenvector)的線性組合，降維至二維平面上，所產生的新特徵來代表原始資料
+    * 特性
+      * 原始資料特徵之間表現出較強的相關性，若相關性較弱，降維效果較差
+      * 新 features 為舊 features 的線性組合
+    * 流程
+      * 標準化 d 維原資料集，使各特徵具有相同的重要性，若無標準化，則會容易導致 PCA 偏向數值較大的特徵
+      * 建立共變異數矩陣(covariance matrix)
+        * 衡量 2 個變數的相關程度
+          * Cov(X, Y)>0，表 X 與 Y 正相關
+          * Cov(X, Y)<0，表 X 與 Y 負相關
+          * Cov(X, Y)=0，表 X 與 Y 不相關
+        * 皮爾森相關係數(Pearson correlation)：探討各變數之間的線性關係，值介於 -1~1 之間
+      * 將共變異數矩陣(covariance matrix)分解為特徵向量(eigenvector)與特徵值(eigenvalues)
+        * [特徵值(EVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
+        * [奇異值(SVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
+        * 其他參考資料
+          * [特徵值分解](https://blog.csdn.net/Sunshine_in_Moon/article/details/51513880)
+          * [分解原理與計算](https://blog.csdn.net/weixin_42462804/article/details/83905320?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase)
+      * 選取 k 個最大特徵值(eigenvalues)相對應 k 個的特徵向量(eigenvector)，其中 k 即為新特徵子空間的維度
+      * 使用排序最上面的 k 個的特徵向量(eigenvector)，建立投影矩陣(project matrix) W
+      * 使用投影矩陣(project matrix) W 轉換原本 d 維的原數據至新的 k 維特徵子空間
+    * 優點
+      * 組合出來後新的 feature 可用來做 supervised learning 預測模型
+      * 以判斷人臉為例，最重要的特徵都可以捨棄，將不必要的資訊捨棄除可加速 learning，也可避免 overfitting
+    * 要點
+      * 不建議在早期就做，否則可能會丟失重要的 features 而 underfitting
+      * 可在 optimization 階段時，考慮 PCA，並觀察運用後對準確度的影響
+    * 參考資料
+      * [主成份分析](https://www.youtube.com/watch?v=5MbjJOnUZDc&t=2s)
+      * [PCA降維概述](https://www.youtube.com/watch?v=IvgYo1qeGZc)
+      * [PCA要優化的目標](https://www.youtube.com/watch?v=HU8WuvMdTVE)
+      * [PCA求解](https://www.youtube.com/watch?v=lsJmWBZvzf0)
+      * [Visual Explanation of Principal Component Analysis, Covariance, SVD](https://www.youtube.com/watch?v=5HNr_j6LmPc)
+      * [Principal Component Analysis (PCA)](https://www.youtube.com/watch?v=g-Hb26agBFg)
+      * [Eigenvectors and eigenvalues | Essence of linear algebra, chapter 14 (特徵轉換)](https://www.youtube.com/watch?v=PFDu9oVAE-g)
+  * t-SNE
 * 範例與作業
   * [範例D059]()
   * [作業D059]()
