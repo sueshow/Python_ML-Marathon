@@ -1903,6 +1903,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     # feature importance
     clf.feature_importances_
     ```
+  * 參考資料
+    * [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+    * [資料分類--Decision Tree](https://ithelp.ithome.com.tw/articles/10204450)
 * 可安裝額外的套件 [graphviz](https://medium.com/@rnbrown/creating-and-visualizing-decision-trees-with-python-f8e8fa394176)，畫出決策樹的圖形幫助理解模型分類的準則
 * 範例與作業
   * [範例D042](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_042_HW_decision_tree/Day_042_decision_tree.ipynb)
@@ -1921,8 +1924,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * 決策樹生成時考慮所有資料與特徵來做切分的
   * 若不對決策樹進行限制 (樹深度、葉子上至少要有多少樣本等)，決策樹非常容易 Over-fitting
 * 隨機森林 (Random Forest)
-  * 集成 (Ensemble) 是將多個模型的結果組合在一起，透過投票或是加權的方式得到最終結果
-  * 隨機森林的每一棵樹在生成過程中，都是隨機使用一部份的訓練資料與特徵，代表每棵樹都是用隨機的資料訓練而成的
+  * 可以處理分類(classification)問題也可以處理迴歸(regression)問題
+  * 集成 (Ensemble) 是將多個模型的結果組合在一起，透過投票或是加權的方式得到最終結果(多數決或平均數)
+  * 隨機森林的每一棵樹在生成過程中，都是「隨機」使用「一部份」的訓練資料與特徵，代表每棵樹都是用隨機的資料訓練而成的，且不剪枝(prune) => bootstrap
   * [feature 數](http://hhtucode.blogspot.com/2013/06/ml-random-forest.html)
     * 設定最 少要 bagging 出 (k/2)+1 或 square(k)[有夠多] 的 feature，才比較有顯著結果，k 為原本的 feature 數量
 * 範例與作業
@@ -1955,6 +1959,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
         )
     ```
   * 如何選取 features：auto
+  * 參考資料
+    * [分類問題 RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+    * [迴歸問題 RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor)
 * 範例與作業
   * [範例D044](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_044_HW_random_forest/Day_044_random_forest.ipynb)
     * 資料集：Iris
@@ -1994,10 +2001,49 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
             <td> Reduce bias & variance </td>
           </tr>
     </table>
+  * 參考語法
+    ```
+    from sklearn import datasets, metrics
+    from sklearn.model_selection import train_test_split, KFold, GridSearchCV
+    ## 梯度提升樹算法 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html
+    ## 梯度提升用法 補充資料: https://sklearn.apachecn.org/docs/master/12.html 
+    from sklearn.ensemble import GradientBoostingRegressor
+
+    # 設定要訓練的超參數組合
+    n_estimators = [100, 200, 300, 400, 500]
+    max_depth = [1, 3, 5, 7, 9]
+    param_grid = dict(n_estimators=n_estimators, max_depth=max_depth)
+
+    ## 建立搜尋物件，放入模型及參數組合字典 (n_jobs=-1 會使用全部 cpu 平行運算)
+    ## GridSearchCV:https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+    ## scoring選擇 https://scikit-learn.org/stable/modules/model_evaluation.html#scoring-parameter
+    grid_search = GridSearchCV(clf, param_grid, scoring="neg_mean_squared_error", n_jobs=-1, verbose=1)
+    # 開始搜尋最佳參數
+    grid_result = grid_search.fit(x_train, y_train)
+    # 預設會跑 5-fold cross-validadtion，總共 9 種參數組合，總共要 train 27 次模型
+
+    # 印出最佳結果與最佳參數
+    print("Best Accuracy: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
+
+    grid_result.best_params_
+
+    # 使用最佳參數重新建立模型
+    clf_bestparam = GradientBoostingRegressor(max_depth=grid_result.best_params_['max_depth'], n_estimators=grid_result.best_params_['n_estimators'])
+    # 訓練模型
+    clf_bestparam.fit(x_train, y_train)
+
+    # 預測測試集
+    y_pred = clf_bestparam.predict(x_test)
+    y_pred
+
+    # 調整參數後約可降至 8.30 的 MSE
+    print(metrics.mean_squared_error(y_test, y_pred))
+    ```  
 * 參考資料
   * [ML Lecture 22: Ensemble](https://www.youtube.com/watch?v=tH9FH1DH5n0)
   * [Kaggle Winning Solution Xgboost Algorithm](https://www.youtube.com/watch?v=ufHo8vbk6g4)
   * [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html)
+  * [決策樹的案例(TSMC)](https://sci-hub.se/10.1109/issm.2006.4493094)
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
@@ -2042,6 +2088,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 
 ## 機器學習調整參數
 ### D047-超參數調整及優化
+* 參數：訓練模型中，模型根據數據學習出來的變量
 * 超參數：會影響模型訓練的結果，建議先使用預設值，再慢慢人工進行調整
   * 類型
     * LASSO，Ridge：α 的大小 
@@ -2051,8 +2098,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 超參數會影響模型訓練的結果，建議先使用預設值，再慢慢進行調整
     * 超參數會影響結果，但提升的效果有限，資料清理與特徵工程才能最有效的提升準確率，調整參數只是一個加分的工具
   * 調整方法
-    * 網格搜尋 [Grid Search](https://medium.com/rants-on-machine-learning/smarter-parameter-sweeps-or-why-grid-search-is-plain-stupid-c17d97a0e881)
-      * 直接指定超參數的組合範圍，每一組參數都訓練完成，再根據驗證集 (validation) 的結果選擇最佳參數
+    * 網格搜尋(窮舉法) [Grid Search](https://medium.com/rants-on-machine-learning/smarter-parameter-sweeps-or-why-grid-search-is-plain-stupid-c17d97a0e881)
+      * 直接指定超參數的組合範圍，每一組參數都訓練完成，再根據驗證集 (validation) 的結果選擇最佳參數，即為暴力破解法
     * 隨機搜尋 Random Search
       * 指定超參數的範圍，用均勻分布進行參數抽樣，用抽到的參數進行訓練，再根據驗證集的結果選擇最佳參數
     * 貝葉斯優化演算法
@@ -2235,8 +2282,51 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
       * 從大量數據中發現變數間隱藏關係的方法
       * 常見應用案例，如購物籃分析，可作為銷售團隊線上或線下商品組合的決策參考
       * 方法
-        * Apriori
-          * 逐層搜索的迭代方法，先找出出現頻次為 1 的項目集合，高頻次存為 L1；再用 L1 找出現頻次為 2 的項目集合 L2，L2 再用來找 L3，依此類推，直到不能找到更多頻次共同出現的項目集合
+        <table border="1" width="25%">
+          <tr>
+            <th width="5%"> 演算法 </a>
+            <th width="5%"> 主要特色 </a>
+            <th width="5%"> 缺點 </a>
+            <th width="5%"> 搜尋方式 </a>
+            <th width="5%"> 資料配置方式 </a>
+          </tr>
+          <tr>
+            <td> Apriori </td>
+            <td> ● 反覆產生候選項目集，找出所有高頻項目集，進而推倒規則 <br>
+                 ● 逐層搜索的迭代方法，先找出出現頻次為 1 的項目集合，高頻次存為 L1；再用 L1 找出現頻次為 2 的項目集合 L2，L2 再用來找 L3，依此類推，直到不能找到更多頻次共同出現的項目集合 </td>
+            <td> 需反覆搜尋資料庫，花費I/O時間 </td>
+            <td> 廣度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+          <tr>
+            <td> Partition Apriori </td>
+            <td> 將資料庫分區段，找出各區段之高頻項目集加以集合，再次搜尋資料庫找出真正高頻項目集 </td>
+            <td> 在各區段中會產生較多的非相關項目集 </td>
+            <td> 廣度優先 </td>
+            <td> 垂直資料配置 </td>
+          </tr>
+          <tr>
+            <td> DHP </td>
+            <td> 利用雜湊表(hash table)刪減部必要的候選項目集 </td>
+            <td> 一開始需花時間建立雜湊表 </td>
+            <td> 廣度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+          <tr>
+            <td> MSApriori </td>
+            <td> 在資料項目出現頻率不一致的情況下，挖掘低頻率但重要事件之關聯規則 </td>
+            <td> 需多加探討多重最小支持度與演算法中參數的主觀訂定 </td>
+            <td> 廣度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+          <tr>
+            <td> FP-Growth </td>
+            <td> 頻率樣式成長為演算法的演繹基礎，可改善Apriori無法有效處理大量資料缺點 </td>
+            <td> 需較多的額外處理時間及儲存空間來存放FP樹 </td>
+            <td> 深度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+        </table>         
     * 異常檢測(Anomaly Detection)
       * 透過樣本特徵的群聚，將相對異常的模式、樣本或事件辨識出來
       * 常見應用案例，如交易詐欺、結構缺陷檢測、醫療問題、文字錯誤辨識、入侵檢測
@@ -2303,6 +2393,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 * 參考資料
   * [StatQuest: K-means clustering](https://www.youtube.com/watch?v=4b5d3muPQmA)
   * [Kaggle kernel 示範用 K-means Clustering 做消費者區隔](https://www.kaggle.com/code/kushal1996/customer-segmentation-k-means-analysis/notebook)
+  * [ravel()、flatten()、squeeze()的用法與區別](https://blog.csdn.net/tymatlab/article/details/79009618)
 * 範例與作業(待上傳)
   * [範例D055]()
     * 資料集：toy
