@@ -2391,7 +2391,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 分群的目的是為了更好的解讀資料特性，因此也可將群的特徵量化來對各群觀察，群數的設定建議小於訓練特徵維度數，各群的差異會更加顯著
     * K-means 分群算法需要事先定義群數，而群數多少才是最佳解，可透過衡量不同群數時的輪廓係數，或以各群樣本特徵指標來觀察是否產生具代表意義的群
 * 參考資料
-  * [StatQuest: K-means clustering](https://www.youtube.com/watch?v=4b5d3muPQmA)
+  * K應該為多少？[StatQuest: K-means clustering](https://www.youtube.com/watch?v=4b5d3muPQmA)
   * [Kaggle kernel 示範用 K-means Clustering 做消費者區隔](https://www.kaggle.com/code/kushal1996/customer-segmentation-k-means-analysis/notebook)
   * [ravel()、flatten()、squeeze()的用法與區別](https://blog.csdn.net/tymatlab/article/details/79009618)
 * 範例與作業(待上傳)
@@ -2419,12 +2419,24 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 「與 i 不同群」的資料點中，不同群距離 i 平均中，最近的稱為 $b_i$ (其實就是要取第二靠近 i 的那一群平均，滿足交界上分數為 0 的設計)
     * i 點的輪廓分數 $s_i$ 值總和越大，表示效果越好，適合作為 K
       $$ \frac{b_i-a_i}{max(b_i, a_i)} $$
+      * 凝聚度($a_i$)是指與相同群內其他點的平均距離
+      * 分離度($b_i$)是指與不同群其他點的平均距離
+      * S 是指以一個點作為計算的值
+      * 輪廓係數法是將所有的點都計算 S 後再取平均。平均值越大，表示效果越好，適合作為 K
     * 只要不是刻意分錯，$b_i$ 通常會大於等於 $a_i$，上述公式在此條件下可以化簡為 $1-a_i/b_i$
+    * 解讀
+      ![輪廓係數]()
+      * 依照不同類別將同類別的輪廓分數排序後顯示，分數越大代表分群結果越好
+      * 黃綠兩組的輪廓值大多在平均以下，且比例上接近零的點也比較多，顯示這兩組沒有分得那麼開
+      * 平均值(紅色虛線)：計算分群的輪廓分數總平均，分的群數分數越多應該分數越小
+    * 輪廓分析套件[sklearn.metrics.silhouette_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html)
   * [整體的輪廓分析](https://scikit-learn.org.cn/view/74.html)
     * 分組觀察：將同類別的輪廓分數排序後，可發現黃綠兩組的輪廓值大多在平均以下，且比例上接近 0 的點也比較多，這些情況都表示這兩組似乎沒分得那麼開
     * 平均值觀察：計算分群的輪廓分數總平均，分的群數越多應該分數越小，說明了那些分數較不洽當
     * 輪廓分數是一種「同群資料點越近/不同群資料點越遠」時會越大的分數，除可評估資料點分群是否得當，也可用來評估分群效果
     * 要以輪廓分析觀察 K-means，除可將每個資料點分組觀察以評估資料點分群是否得當，也可用平均值觀察評估不同 K 值的分群效果
+* 其他評估方法[Clustering performance evaluatio](https://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation)
+  * 手肘法(elbow method)：基於 SSE(sum of the squared errors，誤差平方和)作為指標，去計算每一個群中的每一個點，到群中心的距離，
 * 範例與作業(待上傳)
   * [範例D056]()
     * 資料集：Iris
