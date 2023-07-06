@@ -6,7 +6,7 @@
   * D003 機器學習-流程與步驟
   * D004 EDA/讀取資料與分析流程
   
-### <a href="#資料清理數據前處理">資料清理數據前處理</a>
+### <a href="#資料清理數據前處理">資料清理數據前處理</a> 
   * <a href="#D005-如何新建一個dataframe如何讀取其他資料">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
   * D006 EDA-欄位的資料類型介紹及處理
   * D007 EDA-特徵類型
@@ -181,10 +181,10 @@ Back to <a href="#機器學習概論">機器學習概論</a>
     * 有成對的 (x,y) 資料，且 x 與 y 之間具有某種關係
     * 如圖像分類，每張圖都有對應到的標記(y)
     * 流程：前處理 Processing → 探索式數據分析 Exploratory Data Analysis (D014-D021：統計值【相關係數、核密度函數、離散化】的視覺化【繪圖排版、常用圖形、模型體驗】) → 特徵工程 Feature Engineering (D022-D032：填補缺值、去離群值、去偏態、特徵縮放、特徵組合、特徵評估) → 模型選擇 Model Selection (D033-D046：驗證基礎、預測模型、評估指標、基本模型、樹狀模型) → 參數調整 Fine Tuning (D047-D050：網格搜尋、隨機搜尋、Kaggle平台) → 集成 Ensemble (D048-D049：混和泛化 Blending、堆疊泛化 Stacking)
-  * 非監督式學習(D054-)：如維度縮減、分群、壓縮
+  * 非監督式學習(D054-D062)：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
-    * 應用：降維 Dimension Reduction(如：PCA、t-SNE)、分群 Clustering(如：K-mean、Hierarchical Clustering)
+    * 應用：降維 Dimension Reduction(如：PCA(D059-D060)、t-SNE(D061-D061))、分群 Clustering(如：K-mean、Hierarchical Clustering)
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
@@ -1903,6 +1903,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     # feature importance
     clf.feature_importances_
     ```
+  * 參考資料
+    * [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+    * [資料分類--Decision Tree](https://ithelp.ithome.com.tw/articles/10204450)
 * 可安裝額外的套件 [graphviz](https://medium.com/@rnbrown/creating-and-visualizing-decision-trees-with-python-f8e8fa394176)，畫出決策樹的圖形幫助理解模型分類的準則
 * 範例與作業
   * [範例D042](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_042_HW_decision_tree/Day_042_decision_tree.ipynb)
@@ -1921,8 +1924,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
   * 決策樹生成時考慮所有資料與特徵來做切分的
   * 若不對決策樹進行限制 (樹深度、葉子上至少要有多少樣本等)，決策樹非常容易 Over-fitting
 * 隨機森林 (Random Forest)
-  * 集成 (Ensemble) 是將多個模型的結果組合在一起，透過投票或是加權的方式得到最終結果
-  * 隨機森林的每一棵樹在生成過程中，都是隨機使用一部份的訓練資料與特徵，代表每棵樹都是用隨機的資料訓練而成的
+  * 可以處理分類(classification)問題也可以處理迴歸(regression)問題
+  * 集成 (Ensemble) 是將多個模型的結果組合在一起，透過投票或是加權的方式得到最終結果(多數決或平均數)
+  * 隨機森林的每一棵樹在生成過程中，都是「隨機」使用「一部份」的訓練資料與特徵，代表每棵樹都是用隨機的資料訓練而成的，且不剪枝(prune) => bootstrap
   * [feature 數](http://hhtucode.blogspot.com/2013/06/ml-random-forest.html)
     * 設定最 少要 bagging 出 (k/2)+1 或 square(k)[有夠多] 的 feature，才比較有顯著結果，k 為原本的 feature 數量
 * 範例與作業
@@ -1955,6 +1959,9 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
         )
     ```
   * 如何選取 features：auto
+  * 參考資料
+    * [分類問題 RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+    * [迴歸問題 RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor)
 * 範例與作業
   * [範例D044](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_044_HW_random_forest/Day_044_random_forest.ipynb)
     * 資料集：Iris
@@ -1994,10 +2001,49 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
             <td> Reduce bias & variance </td>
           </tr>
     </table>
+  * 參考語法
+    ```
+    from sklearn import datasets, metrics
+    from sklearn.model_selection import train_test_split, KFold, GridSearchCV
+    ## 梯度提升樹算法 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html
+    ## 梯度提升用法 補充資料: https://sklearn.apachecn.org/docs/master/12.html 
+    from sklearn.ensemble import GradientBoostingRegressor
+
+    # 設定要訓練的超參數組合
+    n_estimators = [100, 200, 300, 400, 500]
+    max_depth = [1, 3, 5, 7, 9]
+    param_grid = dict(n_estimators=n_estimators, max_depth=max_depth)
+
+    ## 建立搜尋物件，放入模型及參數組合字典 (n_jobs=-1 會使用全部 cpu 平行運算)
+    ## GridSearchCV:https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+    ## scoring選擇 https://scikit-learn.org/stable/modules/model_evaluation.html#scoring-parameter
+    grid_search = GridSearchCV(clf, param_grid, scoring="neg_mean_squared_error", n_jobs=-1, verbose=1)
+    # 開始搜尋最佳參數
+    grid_result = grid_search.fit(x_train, y_train)
+    # 預設會跑 5-fold cross-validadtion，總共 9 種參數組合，總共要 train 27 次模型
+
+    # 印出最佳結果與最佳參數
+    print("Best Accuracy: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
+
+    grid_result.best_params_
+
+    # 使用最佳參數重新建立模型
+    clf_bestparam = GradientBoostingRegressor(max_depth=grid_result.best_params_['max_depth'], n_estimators=grid_result.best_params_['n_estimators'])
+    # 訓練模型
+    clf_bestparam.fit(x_train, y_train)
+
+    # 預測測試集
+    y_pred = clf_bestparam.predict(x_test)
+    y_pred
+
+    # 調整參數後約可降至 8.30 的 MSE
+    print(metrics.mean_squared_error(y_test, y_pred))
+    ```  
 * 參考資料
   * [ML Lecture 22: Ensemble](https://www.youtube.com/watch?v=tH9FH1DH5n0)
   * [Kaggle Winning Solution Xgboost Algorithm](https://www.youtube.com/watch?v=ufHo8vbk6g4)
   * [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html)
+  * [決策樹的案例(TSMC)](https://sci-hub.se/10.1109/issm.2006.4493094)
 
 Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
 <br>
@@ -2042,6 +2088,7 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 
 ## 機器學習調整參數
 ### D047-超參數調整及優化
+* 參數：訓練模型中，模型根據數據學習出來的變量
 * 超參數：會影響模型訓練的結果，建議先使用預設值，再慢慢人工進行調整
   * 類型
     * LASSO，Ridge：α 的大小 
@@ -2051,8 +2098,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
     * 超參數會影響模型訓練的結果，建議先使用預設值，再慢慢進行調整
     * 超參數會影響結果，但提升的效果有限，資料清理與特徵工程才能最有效的提升準確率，調整參數只是一個加分的工具
   * 調整方法
-    * 網格搜尋 [Grid Search](https://medium.com/rants-on-machine-learning/smarter-parameter-sweeps-or-why-grid-search-is-plain-stupid-c17d97a0e881)
-      * 直接指定超參數的組合範圍，每一組參數都訓練完成，再根據驗證集 (validation) 的結果選擇最佳參數
+    * 網格搜尋(窮舉法) [Grid Search](https://medium.com/rants-on-machine-learning/smarter-parameter-sweeps-or-why-grid-search-is-plain-stupid-c17d97a0e881)
+      * 直接指定超參數的組合範圍，每一組參數都訓練完成，再根據驗證集 (validation) 的結果選擇最佳參數，即為暴力破解法
     * 隨機搜尋 Random Search
       * 指定超參數的範圍，用均勻分布進行參數抽樣，用抽到的參數進行訓練，再根據驗證集的結果選擇最佳參數
     * 貝葉斯優化演算法
@@ -2235,8 +2282,51 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
       * 從大量數據中發現變數間隱藏關係的方法
       * 常見應用案例，如購物籃分析，可作為銷售團隊線上或線下商品組合的決策參考
       * 方法
-        * Apriori
-          * 逐層搜索的迭代方法，先找出出現頻次為 1 的項目集合，高頻次存為 L1；再用 L1 找出現頻次為 2 的項目集合 L2，L2 再用來找 L3，依此類推，直到不能找到更多頻次共同出現的項目集合
+        <table border="1" width="25%">
+          <tr>
+            <th width="5%"> 演算法 </a>
+            <th width="5%"> 主要特色 </a>
+            <th width="5%"> 缺點 </a>
+            <th width="5%"> 搜尋方式 </a>
+            <th width="5%"> 資料配置方式 </a>
+          </tr>
+          <tr>
+            <td> Apriori </td>
+            <td> ● 反覆產生候選項目集，找出所有高頻項目集，進而推倒規則 <br>
+                 ● 逐層搜索的迭代方法，先找出出現頻次為 1 的項目集合，高頻次存為 L1；再用 L1 找出現頻次為 2 的項目集合 L2，L2 再用來找 L3，依此類推，直到不能找到更多頻次共同出現的項目集合 </td>
+            <td> 需反覆搜尋資料庫，花費I/O時間 </td>
+            <td> 廣度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+          <tr>
+            <td> Partition Apriori </td>
+            <td> 將資料庫分區段，找出各區段之高頻項目集加以集合，再次搜尋資料庫找出真正高頻項目集 </td>
+            <td> 在各區段中會產生較多的非相關項目集 </td>
+            <td> 廣度優先 </td>
+            <td> 垂直資料配置 </td>
+          </tr>
+          <tr>
+            <td> DHP </td>
+            <td> 利用雜湊表(hash table)刪減部必要的候選項目集 </td>
+            <td> 一開始需花時間建立雜湊表 </td>
+            <td> 廣度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+          <tr>
+            <td> MSApriori </td>
+            <td> 在資料項目出現頻率不一致的情況下，挖掘低頻率但重要事件之關聯規則 </td>
+            <td> 需多加探討多重最小支持度與演算法中參數的主觀訂定 </td>
+            <td> 廣度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+          <tr>
+            <td> FP-Growth </td>
+            <td> 頻率樣式成長為演算法的演繹基礎，可改善Apriori無法有效處理大量資料缺點 </td>
+            <td> 需較多的額外處理時間及儲存空間來存放FP樹 </td>
+            <td> 深度優先 </td>
+            <td> 水平資料配置 </td>
+          </tr>
+        </table>         
     * 異常檢測(Anomaly Detection)
       * 透過樣本特徵的群聚，將相對異常的模式、樣本或事件辨識出來
       * 常見應用案例，如交易詐欺、結構缺陷檢測、醫療問題、文字錯誤辨識、入侵檢測
@@ -2264,50 +2354,230 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
   * [基於密度的經典異常偵測算法：LOF 算法詳解](https://zhuanlan.zhihu.com/p/28178476)
   * [Unsupervised learning：PCA](http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/PCA.mp4)
   * [主題模型與 LDA 概念理解](https://tengyuanchang.medium.com/%E7%9B%B4%E8%A7%80%E7%90%86%E8%A7%A3-lda-latent-dirichlet-allocation-%E8%88%87%E6%96%87%E4%BB%B6%E4%B8%BB%E9%A1%8C%E6%A8%A1%E5%9E%8B-ab4f26c27184)
-* 範例與作業
+  * [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning)
+* 範例與作業(待上傳)
   * [作業D054]()
+    * 無程式撰寫
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
-### D055-非監督式-分群-K-Means分群
-* 範例與作業
+### D055-非監督式-分群-K-Means
+* 監督式與非監督式學習
+  * 監督式學習目標在於找出決策邊界(decision boundary)
+  * 非監督式學習-分群目標在於找出資料結構
+    * 分群算法(或稱聚類算法)用於把族群或資料點分隔成一系列的組合，使得相同 cluster 中的資料點比其他的組更相似
+    * 分群算法依照他們區分樣本點的方式不同，還可分為幾個類別：
+      * 階層式分群(Hierarchical)
+      * 分割式分群(Partitional)：如 K-means、K-Medoids
+      * 基於密度的分群：如 DBSCAN
+      * 基於機率的分群：如 高斯混合模型(Gaussian Mixture Model, GMM)
+* K-Means
+  * 簡介
+    * 把所有資料點分成 k 個 clusters，使得相同 cluster 中的所有資料點彼此儘量相似，而不同 cluster 的資料點儘量不同
+    * 距離測量(e.g. 歐氏距離)用於計算資料點的相似度和相異度，每個 cluster 有一個中心點，中心點可理解為最能代表 cluster 的點
+  * 分群算法流程
+    * 目標是將 training set 分成 2 群
+    * 隨機選取 2 個點，稱爲 cluster centroid(群心、中心點)
+    * 對每一個樣本點根據它距離哪一群的中心點較近，標記為落在該群之一的點(*cluster assignment)
+    * 然後把群心移到同一群樣本點的中心點(*update centroid)
+    * 反覆進行上述的 *cluster assignment 及 *update centroid，直到樣本點不再被 assign 到與上一次不同的群，便是算法成功收斂完畢
+  * 最佳化目標：分群算法執行的目的是希望產出品質最好的分群結果，使總體群內平方誤差最小
+    $$\sum\limits_{i=0}^n min_{u_j \in C}(||x_i-u_j||^2)$$
+  * 要點
+    * 初始值設定 Random initialization：一開始隨機選擇的群中心不同將會得到不同的分群結果！可能導致 local optima(區域最佳解)，而非 global optima(全域最佳解)
+    * 因爲沒有預先標記，群數多少才是最佳解，沒有標準答案，需視資料集情況而定。其中一個方式是使用輪廓係數衡量群內距與群間距，係數越高表示群分得越開、群內越聚集
+    * 分群的目的是為了更好的解讀資料特性，因此也可將群的特徵量化來對各群觀察，群數的設定建議小於訓練特徵維度數，各群的差異會更加顯著
+    * K-means 分群算法需要事先定義群數，而群數多少才是最佳解，可透過衡量不同群數時的輪廓係數，或以各群樣本特徵指標來觀察是否產生具代表意義的群
+* 參考資料
+  * K應該為多少？[StatQuest: K-means clustering](https://www.youtube.com/watch?v=4b5d3muPQmA)
+  * [Kaggle kernel 示範用 K-means Clustering 做消費者區隔](https://www.kaggle.com/code/kushal1996/customer-segmentation-k-means-analysis/notebook)
+  * [ravel()、flatten()、squeeze()的用法與區別](https://blog.csdn.net/tymatlab/article/details/79009618)
+* 範例與作業(待上傳)
   * [範例D055]()
+    * 資料集：toy
   * [作業D055]()
+    * 資料集：Iris
+  * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D056-非監督式-分群-K-Means分群評估-使用輪廓分析
-* 範例與作業
+* 分群模型的評估
+  * 有目標值的分群：資料具有目標值，只是先忽略目標值做非監督學習，則只要微調後，就可以使用原本監督的測量函數評估準確性
+  * 無目標值的分群：但通常沒有目標值/目標值非常少才會用非監督模型，這種情況下，只能使用資料本身的分布資訊，來做模型的評估
+* 輪廓分析(Silhouette analysis)
+  * 歷史：最早由 Peter J. Rousseeuw 於 1986 提出，同時考慮群內及相鄰群的距離，除可評估資料點分群是否得當，也可用來評估不同分群方式對於資料的分群效果
+  * 設計精神
+    * 同一群的資料點應該很近，不同群的資料點應該很遠，設計一種當同群資料點越近/不同群資料點越遠時越大的分數
+    * 當資料點在兩群交界附近，希望分數接近 0
+  * [單點輪廓值](https://ithelp.ithome.com.tw/articles/10304848)：「找出相同群凝聚度越小、不同群分離度越高」的值，也就是滿足 Cluster 一開始的目標
+    * 對任意單一資料點 i，「與 i 同一群」的資料點，距離 i 的平均稱為 $a_i$
+    * 「與 i 不同群」的資料點中，不同群距離 i 平均中，最近的稱為 $b_i$ (其實就是要取第二靠近 i 的那一群平均，滿足交界上分數為 0 的設計)
+    * i 點的輪廓分數 $s_i$ 值總和越大，表示效果越好，適合作為 K
+      $$ \frac{b_i-a_i}{max(b_i, a_i)} $$
+      * 凝聚度($a_i$)是指與相同群內其他點的平均距離
+      * 分離度($b_i$)是指與不同群其他點的平均距離
+      * S 是指以一個點作為計算的值
+      * 輪廓係數法是將所有的點都計算 S 後再取平均。平均值越大，表示效果越好，適合作為 K
+    * 只要不是刻意分錯，$b_i$ 通常會大於等於 $a_i$，上述公式在此條件下可以化簡為 $1-a_i/b_i$
+    * 解讀
+      ![輪廓係數]()
+      * 依照不同類別將同類別的輪廓分數排序後顯示，分數越大代表分群結果越好
+      * 黃綠兩組的輪廓值大多在平均以下，且比例上接近零的點也比較多，顯示這兩組沒有分得那麼開
+      * 平均值(紅色虛線)：計算分群的輪廓分數總平均，分的群數分數越多應該分數越小
+    * 輪廓分析套件[sklearn.metrics.silhouette_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html)
+  * [整體的輪廓分析](https://scikit-learn.org.cn/view/74.html)
+    * 分組觀察：將同類別的輪廓分數排序後，可發現黃綠兩組的輪廓值大多在平均以下，且比例上接近 0 的點也比較多，這些情況都表示這兩組似乎沒分得那麼開
+    * 平均值觀察：計算分群的輪廓分數總平均，分的群數越多應該分數越小，說明了那些分數較不洽當
+    * 輪廓分數是一種「同群資料點越近/不同群資料點越遠」時會越大的分數，除可評估資料點分群是否得當，也可用來評估分群效果
+    * 要以輪廓分析觀察 K-means，除可將每個資料點分組觀察以評估資料點分群是否得當，也可用平均值觀察評估不同 K 值的分群效果
+* 其他評估方法[Clustering performance evaluatio](https://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation)
+  * 手肘法(elbow method)：基於 SSE(sum of the squared errors，誤差平方和)作為指標，去計算每一個群中的每一個點，到群中心的距離，
+* 範例與作業(待上傳)
   * [範例D056]()
+    * 資料集：Iris
   * [作業D056]()
+    * 資料集：隨機生成 5 群高斯分布資料
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D057-非監督式-分群-階層式HierarchicalClustering
-* 範例與作業
+* 階層式分群
+  * 概念：測量樣本點間的距離後，以樹狀資料結構進行聚類。又分為 Top-down(由上而下分裂)及 Bottom-up(由下而上聚合)兩種算法。本日聚焦介紹使用 Bottom-up 策略的「聚合式階層分群法」
+  * 優點
+    * 以樹狀結構表示計算過程更易懂
+    * 只以樣本間的距離就可以進行，無需指定群數、也無需樣本的實際座標位置
+  * 缺點
+    * 適合少量樣本，面對大量資料時效能不佳
+  * 聚合式階層分群法
+    * 運作方式：將每個樣本視為一個群聚，從樹狀結構底部不斷融合相近的樣本；假如生成的群數多於我們預期的群數，則反覆重複聚合最近距離的兩群的動作，直到群數降到條件範圍內
+    * 判讀方式
+      * 樹狀結構圖 dendrogram
+        * 透過一張樹狀結構圖(dendrogram)來呈現分群的過程和結果，看水平線切過多少「樹枝」，「樹枝」水平線以下代表是同一群
+* K-means vs. 階層分群
+  * K-means：預先定義群數(n of clusters)
+  * 階層分群：依據定義距離來分群(bottom-up)，也可以決定群數做分群(top-down)
+* 階層分群演算法
+  * 不指定分群的數量
+  * 每筆資料為一個 cluster，計算每兩群之間的距離
+    * Single-link：群聚間的距離定義為不同群聚中最接近兩點間的距離
+        $$d(C_i,C_j)=min_{a\in C_i,b\in C_j} d(a,b)$$
+    * Complete-link：群聚間的距離定義為不同群聚中最遠兩點間的距離，這樣可以保證這兩個集合合併後，任何一對的距離不會大於 d
+        $$d(C_i,C_j)=max_{a\in C_i,b\in C_j} d(a,b)$$ 
+    * Average-link：群聚間的距離定義為不同群聚間各點與各點間距離總和的平均
+        $$d(C_i,C_j)=\sum\limits_{a\in C_i,b\in C_j}\frac{d(a,b)}{|C_i||C_j|}$$
+        where $|C_i|$ and $|C_j|$ are the sizes for $C_i$ and $C_j$, respectively
+    * 沃德法[Ward's Method](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-83-%E6%B2%83%E5%BE%B7%E9%9A%8E%E5%B1%A4%E5%88%86%E7%BE%A4%E6%B3%95-ward-hierarchical-clustering-273c0e21050)：群聚間的距離定義為各點到兩群合併後的群中心的距離平方和
+        $$d(C_i,C_j)=\sum\limits_{a \in C_i \cup C_j} ||a-\mu||$$
+        where $\mu$ is the mean vector of $C_i \cup C_j$
+    * 特性
+      * single linkage 會在群聚的過程中產生「大者恆大」的效果
+      * complete linkage 和 average linkage 比較容易產生「齊頭並進」的效果
+  * 將最近的兩群合併成一群，重覆步驟 2、3，直到所有資料合併成同一 cluster
+* 參考資料
+  * [階層式分群法](http://mirlab.org/jang/books/dcpr/dcHierClustering.asp?title=3-2%20Hierarchical%20Clustering%20(%B6%A5%BCh%A6%A1%A4%C0%B8s%AAk)&language=chinese)
+* 範例與作業(待上傳)
   * [範例D057]()
+    * 資料集：toy
+    * 重點：設定模型估計參數集資料建模
   * [作業D057]()
+    * 資料集：Iris
+    * 重點：設定模型估計參數集資料建模
+  * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D058-非監督式-分群-HierarchicalClustering觀察-使用2D樣版資料集
-* 範例與作業
+* 2D 樣版資料集(2d toy dataset)
+  * 2D 樣版資料集著重於圖形的人機差異：挑選人眼容易分群，但非監督模型常常有困難的圖案樣板來展示
+  * 用途：用來讓人眼評估非監督模型的好壞，因為非監督模型的任務包含分群(對應於監督的分類)與流形還原(對應監督的迴歸)，所以 2D 樣板資料集在設計上也包含這兩種類型的資料集
+* sklearn 的資料集
+  * 主要分為
+    * 載入式(Loaders)：固定資料 
+    * 生成式(Samples generator)：先有既定模式，在模式下有限度的隨機生成每次使用的資料集
+  * 2D 樣版資料集屬於生成式資料集(Samples generator)，使用不同分布，用以顯示各種非監督模型的優缺點
+* 範例與作業(待上傳)
   * [範例D058]()
   * [作業D058]()
-
+  * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
+ 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D059-降維方法DimensionReduction-主成份分析PCA
+* 為何需要降維(Dimensionlit Reduction)
+  * 數據為度過大 → 提高模型的複雜度，當資料樣本不足時，模型訓練的結果較差
+  * 壓縮資料
+    * 有助於使用較少的 RAM 或 disk space，也助於加速 learning algorithms
+    * 影像壓縮：壓縮後圖片可能變得模糊，但依然保有明顯的輪廓和特徵
+  * 特徵組合及抽象化：壓縮後可組合出新的、抽象化的特徵，減少冗餘、無用的資訊
+  * 資料視覺化
+    * 特徵太多時，很難 visualize data，不容易觀察資料
+    * 將資料維度(特徵)降至 2 到 3 個，能夠用一般的 2D 或 3D 圖表呈現資料
+* 降維度的目的
+  * 減少特徵的個數、去除特徵間的共線性問題
+  * 降低模型的計算量，減少模型執行時間
+  * 減少雜訊對模型的影響
+  * 確保特徵間互相獨立
+* 常見降維方法
+  * 主成分分析 PCA (Principal components analysis)
+    * 利用線性轉換，將資料從高雄(k維)映射到低維(m維)空間，並提取(m維)資料的主要特徵，保有原始資料的重要資訊
+    * PCA 不是從原始資料中捨棄不重要的特徵來降維，而是由這些特徵與其向量(eigenvector)的線性組合，降維至二維平面上，所產生的新特徵來代表原始資料
+    * 特性
+      * 原始資料特徵之間表現出較強的相關性，若相關性較弱，降維效果較差
+      * 新 features 為舊 features 的線性組合
+    * 流程：PCA 保證樣本投影後方差最大
+      * 標準化 d 維原資料集，使各特徵具有相同的重要性，若無標準化，則會容易導致 PCA 偏向數值較大的特徵
+      * 建立共變異數矩陣(covariance matrix)
+        * 衡量 2 個變數的相關程度
+          * Cov(X, Y)>0，表 X 與 Y 正相關，X 增加 → Y 增加
+          * Cov(X, Y)<0，表 X 與 Y 負相關，X 增加 → Y 減少
+          * Cov(X, Y)=0，表 X 與 Y 不相關
+        * 皮爾森相關係數(Pearson correlation coefficient)：探討各變數之間的線性關係，值介於 -1~1 之間
+          * 公式：
+            $$Corr(x,Y)=\frac{Cov(X,Y)}{\sqrt[2]{Var(X) Var(Y)}}=\frac{Cov(X,Y)}{\sigma_x \sigma_y}$$
+          * 性質：
+            * $|corr(X,Y)| \leq 1$
+            * $corr(X,Y)=1 \leftrightarrow X、Y$ 線性相關
+            * corr(X,Y)=0 表示X、Y不存在線性相關
+            * $corr(X,Y)=corr(Y,X)$
+          * 相關性(correlation)與獨立性(independence)
+            * 若 X 和 Y 的線性不相關，則 |corr(X,Y)| = 0
+            * 若 X 和 Y 的彼此獨立，則 |corr(X,Y)| = 0 且 X 和 Y 不存在任何線性或非線性關係
+            * 獨立係指兩個變量彼此之間不相互影響，故獨立一定不相關，但不相關不一定相互獨立
+      * 將共變異數矩陣(covariance matrix)分解為特徵向量(eigenvector)與特徵值(eigenvalues)
+        * [特徵值(EVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
+        * [奇異值(SVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
+        * 其他參考資料
+          * [特徵值分解](https://blog.csdn.net/Sunshine_in_Moon/article/details/51513880)
+          * [分解原理與計算](https://blog.csdn.net/weixin_42462804/article/details/83905320?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase)
+      * 選取 k 個最大特徵值(eigenvalues)相對應 k 個的特徵向量(eigenvector)，其中 k 即為新特徵子空間的維度
+      * 使用排序最上面的 k 個的特徵向量(eigenvector)，建立投影矩陣(project matrix) W
+      * 使用投影矩陣(project matrix) W 轉換原本 d 維的原數據至新的 k 維特徵子空間
+    * 優點
+      * 組合出來後新的 feature 可用來做 supervised learning 預測模型
+      * 以判斷人臉為例，最重要的特徵都可以捨棄，將不必要的資訊捨棄除可加速 learning，也可避免 overfitting
+    * 要點
+      * 不建議在早期就做，否則可能會丟失重要的 features 而 underfitting
+      * 可在 optimization 階段時，考慮 PCA，並觀察運用後對準確度的影響
+    * 參考資料
+      * [主成份分析](https://www.youtube.com/watch?v=5MbjJOnUZDc&t=2s)
+      * [PCA降維概述](https://www.youtube.com/watch?v=IvgYo1qeGZc)
+      * [PCA要優化的目標](https://www.youtube.com/watch?v=HU8WuvMdTVE)
+      * [PCA求解](https://www.youtube.com/watch?v=lsJmWBZvzf0)
+      * [Visual Explanation of Principal Component Analysis, Covariance, SVD](https://www.youtube.com/watch?v=5HNr_j6LmPc)
+      * [Principal Component Analysis (PCA)](https://www.youtube.com/watch?v=g-Hb26agBFg)
+      * [Eigenvectors and eigenvalues | Essence of linear algebra, chapter 14 (特徵轉換)](https://www.youtube.com/watch?v=PFDu9oVAE-g)
+  * t-SNE
 * 範例與作業
   * [範例D059]()
   * [作業D059]()
