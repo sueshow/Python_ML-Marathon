@@ -2587,9 +2587,11 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * [Principal Component Analysis (PCA)](https://www.youtube.com/watch?v=g-Hb26agBFg)
       * [Eigenvectors and eigenvalues | Essence of linear algebra, chapter 14 (特徵轉換)](https://www.youtube.com/watch?v=PFDu9oVAE-g)
   * t-SNE
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D059]()
+    * 資料集：Iris
   * [作業D059]()
+    * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
