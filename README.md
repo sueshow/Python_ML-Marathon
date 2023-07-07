@@ -2547,10 +2547,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 流程：PCA 保證樣本投影後方差最大
       * 標準化 d 維原資料集，使各特徵具有相同的重要性，若無標準化，則會容易導致 PCA 偏向數值較大的特徵
       * 建立共變異數矩陣(covariance matrix)
-        * 衡量 2 個變數的相關程度
-          * Cov(X, Y)>0，表 X 與 Y 正相關，X 增加 → Y 增加
-          * Cov(X, Y)<0，表 X 與 Y 負相關，X 增加 → Y 減少
-          * Cov(X, Y)=0，表 X 與 Y 不相關
+        * 協方差：衡量 2 個變數的相關程度
+          * Cov(X, Y)>0，表 X 與 Y 線性正相關，X 增加 → Y 增加
+          * Cov(X, Y)<0，表 X 與 Y 線性負相關，X 增加 → Y 減少
+          * Cov(X, Y)=0，表 X 與 Y 線性不相關
         * 皮爾森相關係數(Pearson correlation coefficient)：探討各變數之間的線性關係，值介於 -1~1 之間
           * 公式：
             $$Corr(x,Y)=\frac{Cov(X,Y)}{\sqrt[2]{Var(X) Var(Y)}}=\frac{Cov(X,Y)}{\sigma_x \sigma_y}$$
