@@ -2587,10 +2587,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * [Principal Component Analysis (PCA)](https://www.youtube.com/watch?v=g-Hb26agBFg)
       * [Eigenvectors and eigenvalues | Essence of linear algebra, chapter 14 (特徵轉換)](https://www.youtube.com/watch?v=PFDu9oVAE-g)
   * t-SNE
-* 範例與作業(待上傳)
-  * [範例D059]()
+* 範例與作業
+  * [範例D059](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_059_HW_PCA/Day_059_PCA_sample.ipynb)
     * 資料集：Iris
-  * [作業D059]()
+  * [作業D059](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_059_PCA_Ans.ipynb)
     * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2607,12 +2607,12 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * 由於 PCA 的強大，如果資料有意義的維度太低，則前幾個主成分就可以將資料解釋完畢
       * 使用一般圖形資料，維度又會太高，因此我們使用 sklearn 版本的 MNIST 檢驗 PCA，以兼顧內容的複雜性與可理解性
       * 由範例的折線圖可以看出來：前幾個維度就能解釋 75% 以上的變數
-* 範例與作業(待上傳)
-  * [範例D060]()
+* 範例與作業
+  * [範例D060](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_060_HW_PCA/Day_060_PCA.ipynb)
     * 資料集：手寫辨識資料集
     * 方法：羅吉斯迴歸 + PCA
     * penalty component：l2
-  * [作業D060]()
+  * [作業D060](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_060_PCA_Ans.ipynb)
     * 資料集：手寫辨識資料集
     * 方法：羅吉斯迴歸 + PCA
     * penalty component：l1
@@ -2634,10 +2634,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 缺點：t-SNE 的需要比較多的時間執行
   * 參考資料
     * [資料降維與視覺化：t-SNE 理論與應用](https://www.mropengate.com/2019/06/t-sne.html)
-* 範例與作業(待上傳)
-  * [範例D061]()
+* 範例與作業
+  * [範例D061](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_061_HW_tsne/Day_061_tsne_sample.ipynb)
     * 資料集：digits(4個數字)
-  * [作業D061]()
+  * [作業D061](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_061_tsne_Ans.ipynb)
     * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2654,12 +2654,12 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * LLE
     * MDS 
 * 範例與作業(待上傳)
-  * [範例D062]()
+  * [範例D062](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_062_HW_tsne/Day_062_tsne.ipynb)
     * 使用同心圓的資料，觀察 t-sne 在不同困惑度(perplexity)下，分群的效果如何變化
     * 觀察結果
       * perplexity 越低時，圓形越零散，越高時不僅分群好，也讓圖形更接近原圖
       * perplexity 越高，執行時間也越久
-  * [作業D062]()
+  * [作業D062](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_062_tsne_Ans.ipynb)
     * 使用 S 形資料集，觀察 t-sne 在困惑度(perplexity)有所不同時，流行還原的效果如何變化
     * 觀察結果
       * perplexity 越高，流形效果越好，但並不會接近原圖，主要是因為資料不像同心圓需要首尾相接，因此在還原流行時會變成一直線
