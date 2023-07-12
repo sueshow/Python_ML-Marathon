@@ -2355,8 +2355,8 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
   * [Unsupervised learning：PCA](http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/PCA.mp4)
   * [主題模型與 LDA 概念理解](https://tengyuanchang.medium.com/%E7%9B%B4%E8%A7%80%E7%90%86%E8%A7%A3-lda-latent-dirichlet-allocation-%E8%88%87%E6%96%87%E4%BB%B6%E4%B8%BB%E9%A1%8C%E6%A8%A1%E5%9E%8B-ab4f26c27184)
   * [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning)
-* 範例與作業(待上傳)
-  * [作業D054]()
+* 範例與作業
+  * [作業D054](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_054_Clustering_Ans.ipynb)
     * 無程式撰寫
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2394,10 +2394,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * K應該為多少？[StatQuest: K-means clustering](https://www.youtube.com/watch?v=4b5d3muPQmA)
   * [Kaggle kernel 示範用 K-means Clustering 做消費者區隔](https://www.kaggle.com/code/kushal1996/customer-segmentation-k-means-analysis/notebook)
   * [ravel()、flatten()、squeeze()的用法與區別](https://blog.csdn.net/tymatlab/article/details/79009618)
-* 範例與作業(待上傳)
-  * [範例D055]()
+* 範例與作業
+  * [範例D055](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_055_HW_kmean/Day_055_kmean_sample.ipynb)
     * 資料集：toy
-  * [作業D055]()
+  * [作業D055](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_055_kmean_Ans.ipynb)
     * 資料集：Iris
   * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
 
@@ -2425,7 +2425,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * 輪廓係數法是將所有的點都計算 S 後再取平均。平均值越大，表示效果越好，適合作為 K
     * 只要不是刻意分錯，$b_i$ 通常會大於等於 $a_i$，上述公式在此條件下可以化簡為 $1-a_i/b_i$
     * 解讀
-      ![輪廓係數]()
+      ![輪廓係數](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E8%81%9A%E9%A1%9E%E8%A9%95%E4%BC%B0%E7%AE%97%E6%B3%95-%E8%BC%AA%E5%BB%93%E4%BF%82%E6%95%B8.png)
       * 依照不同類別將同類別的輪廓分數排序後顯示，分數越大代表分群結果越好
       * 黃綠兩組的輪廓值大多在平均以下，且比例上接近零的點也比較多，顯示這兩組沒有分得那麼開
       * 平均值(紅色虛線)：計算分群的輪廓分數總平均，分的群數分數越多應該分數越小
@@ -2437,10 +2437,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 要以輪廓分析觀察 K-means，除可將每個資料點分組觀察以評估資料點分群是否得當，也可用平均值觀察評估不同 K 值的分群效果
 * 其他評估方法[Clustering performance evaluatio](https://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation)
   * 手肘法(elbow method)：基於 SSE(sum of the squared errors，誤差平方和)作為指標，去計算每一個群中的每一個點，到群中心的距離，
-* 範例與作業(待上傳)
-  * [範例D056]()
+* 範例與作業
+  * [範例D056](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_056_HW_kmean/Day_056_kmean.ipynb)
     * 資料集：Iris
-  * [作業D056]()
+  * [作業D056](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_056_kmean_Ans.ipynb)
     * 資料集：隨機生成 5 群高斯分布資料
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2449,14 +2449,19 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 
 ### D057-非監督式-分群-階層式HierarchicalClustering
 * 階層式分群
-  * 概念：測量樣本點間的距離後，以樹狀資料結構進行聚類。又分為 Top-down(由上而下分裂)及 Bottom-up(由下而上聚合)兩種算法。本日聚焦介紹使用 Bottom-up 策略的「聚合式階層分群法」
+  * 概念
+    * 測量樣本點間的距離後，以樹狀資料結構進行聚類。又分為 Top-down(由上而下分裂)及 Bottom-up(由下而上聚合)兩種算法
+    * 小族群逐漸融合成大族群的算法
+  * 使用時機
+    * 資料量不大的時候
+    * data 所蘊含的內容比起明確的 feature 更多由彼此直接的關係所影響
   * 優點
     * 以樹狀結構表示計算過程更易懂
     * 只以樣本間的距離就可以進行，無需指定群數、也無需樣本的實際座標位置
   * 缺點
-    * 適合少量樣本，面對大量資料時效能不佳
+    * 適合少量樣本，面對大量資料時效能不佳(計算量：$O(n^2)~O(n^3)$，內存佔用：$O(n^2)$)
   * 聚合式階層分群法
-    * 運作方式：將每個樣本視為一個群聚，從樹狀結構底部不斷融合相近的樣本；假如生成的群數多於我們預期的群數，則反覆重複聚合最近距離的兩群的動作，直到群數降到條件範圍內
+    * 運作方式：將每個樣本視為一個群聚(Cluster)，計算族群兩兩之間的距離，從樹狀結構底部不斷融合相近的樣本；假如生成的群數多於我們預期的群數，則反覆重複聚合最近距離的兩群的動作，直到群數降到條件範圍內，最後再根據條件進行分群(族群數量、族群距離)
     * 判讀方式
       * 樹狀結構圖 dendrogram
         * 透過一張樹狀結構圖(dendrogram)來呈現分群的過程和結果，看水平線切過多少「樹枝」，「樹枝」水平線以下代表是同一群
@@ -2482,11 +2487,12 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 將最近的兩群合併成一群，重覆步驟 2、3，直到所有資料合併成同一 cluster
 * 參考資料
   * [階層式分群法](http://mirlab.org/jang/books/dcpr/dcHierClustering.asp?title=3-2%20Hierarchical%20Clustering%20(%B6%A5%BCh%A6%A1%A4%C0%B8s%AAk)&language=chinese)
-* 範例與作業(待上傳)
-  * [範例D057]()
+  * [使用階層式分群用來尋找圖片中的區塊(英文)](https://scikit-learn.org/stable/auto_examples/cluster/plot_coin_ward_segmentation.html#sphx-glr-auto-examples-cluster-plot-coin-ward-segmentation-py)
+* 範例與作業
+  * [範例D057](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_057_HW_hierarchical_clustering/Day_057_hierarchical_clustering_sample.ipynb)
     * 資料集：toy
     * 重點：設定模型估計參數集資料建模
-  * [作業D057]()
+  * [作業D057](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_057_hierarchical_clustering_Ans.ipynb)
     * 資料集：Iris
     * 重點：設定模型估計參數集資料建模
   * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
@@ -2503,10 +2509,13 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 主要分為
     * 載入式(Loaders)：固定資料 
     * 生成式(Samples generator)：先有既定模式，在模式下有限度的隨機生成每次使用的資料集
-  * 2D 樣版資料集屬於生成式資料集(Samples generator)，使用不同分布，用以顯示各種非監督模型的優缺點
-* 範例與作業(待上傳)
-  * [範例D058]()
-  * [作業D058]()
+  * 2D 樣版資料集
+    * 屬於生成式資料集(Samples generator)，使用不同分布，用以顯示各種非監督模型的優缺點
+    * 參考資料
+      * [使用 2D 樣版資料集](https://lemon-dolomite-062.notion.site/Day-58-2D-bc40d32b0c65479b8c93011d9609ec21)
+* 範例與作業
+  * [範例D058](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_058_HW_hierarchical_clustering/Day_058_hierarchical_clustering.ipynb)
+  * [作業D058](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_058_hierarchical_clustering_Ans.ipynb)
   * 其他參考資料：[非監督式學習範例](https://github.com/sueshow/Python_Machine-Learning-Base/blob/main/%E9%9D%9E%E7%9B%A3%E7%9D%A3_%E5%AE%8C%E6%95%B4%E7%89%88_Iris.ipynb)
  
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2538,10 +2547,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 流程：PCA 保證樣本投影後方差最大
       * 標準化 d 維原資料集，使各特徵具有相同的重要性，若無標準化，則會容易導致 PCA 偏向數值較大的特徵
       * 建立共變異數矩陣(covariance matrix)
-        * 衡量 2 個變數的相關程度
-          * Cov(X, Y)>0，表 X 與 Y 正相關，X 增加 → Y 增加
-          * Cov(X, Y)<0，表 X 與 Y 負相關，X 增加 → Y 減少
-          * Cov(X, Y)=0，表 X 與 Y 不相關
+        * 協方差：衡量 2 個變數的相關程度
+          * Cov(X, Y)>0，表 X 與 Y 線性正相關，X 增加 → Y 增加
+          * Cov(X, Y)<0，表 X 與 Y 線性負相關，X 增加 → Y 減少
+          * Cov(X, Y)=0，表 X 與 Y 線性不相關
         * 皮爾森相關係數(Pearson correlation coefficient)：探討各變數之間的線性關係，值介於 -1~1 之間
           * 公式：
             $$Corr(x,Y)=\frac{Cov(X,Y)}{\sqrt[2]{Var(X) Var(Y)}}=\frac{Cov(X,Y)}{\sigma_x \sigma_y}$$
@@ -2578,27 +2587,58 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * [Principal Component Analysis (PCA)](https://www.youtube.com/watch?v=g-Hb26agBFg)
       * [Eigenvectors and eigenvalues | Essence of linear algebra, chapter 14 (特徵轉換)](https://www.youtube.com/watch?v=PFDu9oVAE-g)
   * t-SNE
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D059]()
+    * 資料集：Iris
   * [作業D059]()
+    * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D060-程式實作-PCA-使用手寫辨識資料集
-* 範例與作業
+* 程式實作
+  * 資料集：手寫辨識資料集(MNIST)
+    * 簡介：手寫辨識資料集 (MNIST, Modified National Institute of Standards and Technology databas) 原始來源的NIST，應該是來自於美國人口普查局的員工以及學生手寫所得，其中的 Modified 指的是資料集為了適合機器學習做了一些調整 : 將原始圖案一律轉成黑底白字，做了對應的抗鋸齒的調整，最後存成 28x28 的灰階圖案，成為了目前最常聽到的基礎影像資料集
+    * sklearn 中的手寫辨識資料集：與完整的MNIST不同，sklearn為了方便非深度學習的計算，再一次將圖片的大小壓縮到 8*8 的大小，雖然仍是灰階，但就形狀上已經有點難以用肉眼辨識，但壓縮到如此大小時，每張手寫圖就可以當作 64(8*8=64) 個特徵的一筆資料，搭配一般的機器學習模型做出學習與預測
+  * 挑選原因
+    * 高維度.高複雜性 → 人可理解的資料集
+      * 由於 PCA 的強大，如果資料有意義的維度太低，則前幾個主成分就可以將資料解釋完畢
+      * 使用一般圖形資料，維度又會太高，因此我們使用 sklearn 版本的 MNIST 檢驗 PCA，以兼顧內容的複雜性與可理解性
+      * 由範例的折線圖可以看出來：前幾個維度就能解釋 75% 以上的變數
+* 範例與作業(待上傳)
   * [範例D060]()
+    * 資料集：手寫辨識資料集
+    * 方法：羅吉斯迴歸 + PCA
+    * penalty component：l2
   * [作業D060]()
+    * 資料集：手寫辨識資料集
+    * 方法：羅吉斯迴歸 + PCA
+    * penalty component：l1
+    * 在取不同 component 時，使用羅吉斯迴歸 + PCA 觀察解釋度與分類準確率的變化
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 <br>
 
 ### D061-降維方法DimensionReduction-T-SNE
-* 範例與作業
+* PCA 限制 
+  * 求共變異數矩陣進行奇異值分解，因此會被資料的差異性影響，無法很好的表現相似性及分佈
+  * PCA 是一種線性降維方式，因此若特徵間是非線性關係，會有 underfitting 的問題
+* t-SNE
+  * 簡介：主要是將高維的資料用 gaussian distribution 的機率密度函數近似，而低維資料的部分用 t 分佈來近似，在用 KL divergence 計算相似度，再以梯度下降 (gradient descent) 求最佳解
+  * 視覺化
+    ![t-SNE視覺化]()
+  * 優點：當特徵數量過多時，使用 PCA 可能會造成降維後的 underfitting，這個可以考慮使用 t-SNE 來降維
+  * 缺點：t-SNE 的需要比較多的時間執行
+  * 參考資料
+    * [資料降維與視覺化：t-SNE 理論與應用](https://www.mropengate.com/2019/06/t-sne.html)
+* 範例與作業(待上傳)
   * [範例D061]()
+    * 資料集：digits(4個數字)
   * [作業D061]()
+    * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
@@ -2606,9 +2646,24 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 
 
 ### D062-程式實作-T-SNE-分群與流形還原
-* 範例與作業
+* 流形還原
+  * 意義：將高維度上相近的點，對應到低維度上相近的點，沒有資料點的地方不列入考量範圍。簡單的說，如果資料結構像瑞士捲一樣，那麼流形還原就是把它攤開鋪平 (流形還原資料集的其中一種，就是叫做瑞士捲-Swiss Roll)
+  * 模型
+    * t-sne：較實用
+    * Isomap
+    * LLE
+    * MDS 
+* 範例與作業(待上傳)
   * [範例D062]()
+    * 使用同心圓的資料，觀察 t-sne 在不同困惑度(perplexity)下，分群的效果如何變化
+    * 觀察結果
+      * perplexity 越低時，圓形越零散，越高時不僅分群好，也讓圖形更接近原圖
+      * perplexity 越高，執行時間也越久
   * [作業D062]()
+    * 使用 S 形資料集，觀察 t-sne 在困惑度(perplexity)有所不同時，流行還原的效果如何變化
+    * 觀察結果
+      * perplexity 越高，流形效果越好，但並不會接近原圖，主要是因為資料不像同心圓需要首尾相接，因此在還原流行時會變成一直線
+      * perplexity 越高，執行時間也越久，效果越好
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
