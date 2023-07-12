@@ -8,22 +8,22 @@
   
 ### <a href="#資料清理數據前處理">資料清理數據前處理</a> 
   * <a href="#D005-如何新建一個dataframe如何讀取其他資料">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
-  * D006 EDA-欄位的資料類型介紹及處理
-  * D007 EDA-特徵類型
-  * D008 EDA-資料分佈
-  * D009 EDA-Outlier及處理
-  * D010 EDA-去除離群值(數值型)
-  * D011 EDA-常用的數值取代
-  * D012 EDA-補缺失值與標準化(數值型)
-  * D013 常見的 DataFrame 操作
-  * D014 程式實作 EDA-相關係數簡介
-  * D015 程式實作EDA-Correlation code
-  * D016 EDA-不同數值範圍間的特徵如何檢視
-  * D017 EDA-把連續型變數離散化
-  * D018 程式實作EDA-把連續型變數離散化
-  * D019 程式實作-Subplots
-  * D020 程式實作-Heatmap & Grid-plot
-  * D021 模型-Logistic Regression
+  * <a href="#D006-EDA-欄位的資料類型介紹及處理">D006 EDA-欄位的資料類型介紹及處理</a>
+  * <a href="#D007-EDA-特徵類型">D007 EDA-特徵類型</a>
+  * <a href="#D008-EDA-資料分佈">D008 EDA-資料分佈</a>
+  * <a href="#D009-EDA-Outlier及處理">D009 EDA-Outlier及處理</a>
+  * <a href="#D010-EDA-去除離群值-數值型">D010 EDA-去除離群值(數值型)</a>
+  * <a href="#D011-EDA-常用的數值取代">D011 EDA-常用的數值取代</a>
+  * <a href="#D012-EDA-補缺失值與標準化-數值型">D012 EDA-補缺失值與標準化(數值型)</a>
+  * <a href="#D013-常見的DataFrame操作">D013 常見的 DataFrame 操作</a>
+  * <a href="#D014-程式實作EDA-相關係數簡介">D014 程式實作 EDA-相關係數簡介</a>
+  * <a href="#D015-程式實作EDA-CorrelationCode">D015 程式實作EDA-Correlation code</a>
+  * <a href="#D016-EDA-不同數值範圍間的特徵如何檢視">D016 EDA-不同數值範圍間的特徵如何檢視</a>
+  * <a href="#D017-EDA-把連續型變數離散化">D017 EDA-把連續型變數離散化</a>
+  * <a href="#D018-程式實作EDA-把連續型變數離散化">D018 程式實作EDA-把連續型變數離散化</a>
+  * <a href="#D019-程式實作-Subplots">D019 程式實作-Subplots</a>
+  * <a href="#D020-程式實作-HeatmapANDGrid-plot">D020 程式實作-Heatmap & Grid-plot</a>
+  * <a href="#D021-模型-LogisticRegression">D021 模型-Logistic Regression</a>
 
 ### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
   * <a href="#D022-特徵工程簡介">D022 特徵工程簡介</a>
@@ -2653,7 +2653,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * Isomap
     * LLE
     * MDS 
-* 範例與作業(待上傳)
+* 範例與作業
   * [範例D062](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_062_HW_tsne/Day_062_tsne.ipynb)
     * 使用同心圓的資料，觀察 t-sne 在不同困惑度(perplexity)下，分群的效果如何變化
     * 觀察結果
@@ -2666,5 +2666,34 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * perplexity 越高，執行時間也越久，效果越好
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+
+## 深度學習理論與實作
+### D063 深度學習簡介
+* 範例與作業
+  * [範例D063]()
+  * [作業D063]()
+
+Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
+<br>
+<br>
+
+### D064 深度學習-模型調整與學習曲線
+* 範例與作業
+  * [範例D064]()
+  * [作業D064]()
+
+Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
+<br>
+<br>
+
+### D065 深度學習-啟動函數與正規化
+* 範例與作業
+  * [範例D065]()
+  * [作業D065]()
+
+Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
 <br>
 <br>
