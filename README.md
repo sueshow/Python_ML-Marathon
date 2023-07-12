@@ -2623,9 +2623,22 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
 
 ### D061-降維方法DimensionReduction-T-SNE
-* 範例與作業
+* PCA 限制 
+  * 求共變異數矩陣進行奇異值分解，因此會被資料的差異性影響，無法很好的表現相似性及分佈
+  * PCA 是一種線性降維方式，因此若特徵間是非線性關係，會有 underfitting 的問題
+* t-SNE
+  * 簡介：主要是將高維的資料用 gaussian distribution 的機率密度函數近似，而低維資料的部分用 t 分佈來近似，在用 KL divergence 計算相似度，再以梯度下降 (gradient descent) 求最佳解
+  * 視覺化
+    ![t-SNE視覺化]()
+  * 優點：當特徵數量過多時，使用 PCA 可能會造成降維後的 underfitting，這個可以考慮使用 t-SNE 來降維
+  * 缺點：t-SNE 的需要比較多的時間執行
+  * 參考資料
+    * [資料降維與視覺化：t-SNE 理論與應用](https://www.mropengate.com/2019/06/t-sne.html)
+* 範例與作業(待上傳)
   * [範例D061]()
+    * 資料集：digits(4個數字)
   * [作業D061]()
+    * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 <br>
