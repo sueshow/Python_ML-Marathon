@@ -2632,11 +2632,11 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 視覺化<br>
     ![t-SNE 視覺化](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_%E6%B5%81%E5%9E%8B%E9%82%84%E5%8E%9F.jpg)<br>
     ![t-SNE MNIST視覺化](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_MNIST%E8%A6%96%E8%A6%BA%E5%8C%96.jpg)
-    * S 型的展開
+    * S 型的展開<br>
       ![S Curve](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_S%20Curve.png)
-    * 瑞士捲的展開
+    * 瑞士捲的展開<br>
       ![Swiss Roll](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_Swiss%20Roll.png)
-    * 斷球面地展開
+    * 斷球面地展開<br>
       ![Severed Sphere](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_Severed%20Sphere.png)
   * 優點：當特徵數量過多時，使用 PCA 可能會造成降維後的 underfitting，這個可以考慮使用 t-SNE 來降維
   * 缺點：t-SNE 的需要比較多的時間執行
