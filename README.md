@@ -2736,7 +2736,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 在 1956 年在達特茅斯會議中誕生，以數學模擬神經傳導輸出預測，在初期人工智慧領域中就是重要分支
     * 因層數一多計算量就大幅增加等問題，過去無法解決，雖不斷有學者試圖改善，在歷史中仍不免大起大落
     * 直到近幾年在算法、硬體能力與巨量資料的改善下，多層的類神經網路才重新成為當前人工智慧的應用主流<br>
-      ![類神經網路]https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%A1%9E%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF.png()
+      ![類神經網路](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%A1%9E%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF.png)
   * 比較
     * 機器學習 vs. 深度學習
       <table border="1" width="15%">
