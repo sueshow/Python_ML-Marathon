@@ -184,7 +184,7 @@ Back to <a href="#機器學習概論">機器學習概論</a>
   * 非監督式學習(D054-D062)：如維度縮減、分群、壓縮
     * 僅有 x 資料而沒有標註的 y
     * 如有圖像資料，但沒有標記
-    * 應用：降維 Dimension Reduction(如：PCA(D059-D060)、t-SNE(D061-D061))、分群 Clustering(如：K-mean、Hierarchical Clustering)
+    * 應用：降維 Dimension Reduction(如：PCA(D059-D060)、t-SNE(D061-D062))、分群 Clustering(如：K-mean、Hierarchical Clustering)
   * 強化學習：如下圍棋、打電玩
     * 又稱增強式學習，透過定義環境(Environment)、代理機器人(Agent)及獎勵(Reward)，讓機器人透過與環境的互動學習如何獲取最高的獎勵
     * 應用：Alpha GO
