@@ -2657,7 +2657,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 * 流形還原
   * 意義：將高維度上相近的點，對應到低維度上相近的點，沒有資料點的地方不列入考量範圍。簡單的說，如果資料結構像瑞士捲一樣，那麼流形還原就是把它攤開鋪平 (流形還原資料集的其中一種，就是叫做瑞士捲-Swiss Roll)
   * 模型
-    * t-sne：較實用
+    * t-sne：較實用<br>
       ![流行還原](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_%E6%B5%81%E5%9E%8B%E9%82%84%E5%8E%9F.jpg)
     * Isomap
     * LLE
@@ -2686,8 +2686,8 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 電腦透過資料中的不同特徵進行學習進而產生預測結果
   * 深度學習
     * 將影像、文字匯入電腦中經由大量運算，使得電腦能夠自動判別
-    * 人工智能發展歷史
-      ![人工智能發展歷史](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%99%BC%E5%B1%95%E6%AD%B7%E5%8F%B201.png)
+    * 人工智能發展歷史<br>
+      ![人工智能發展歷史](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%99%BC%E5%B1%95%E6%AD%B7%E5%8F%B201.png)<br>
       ![人工智能發展歷史](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%99%BC%E5%B1%95%E6%AD%B7%E5%8F%B202.png)
     * 應用爆發的關鍵：類神經應用直到 2012 年 AlexNet 在 ImageNet 圖像分類競賽獲得驚艷表現後，才重回主流舞台
       * 算法改良
@@ -2701,15 +2701,15 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 巨觀結構
       * 輸入層：輸入資料進入的位置
       * 輸出層：輸出預測值的最後一層
-      * 隱藏層：除上述兩層外，其他層都稱為隱藏層
+      * 隱藏層：除上述兩層外，其他層都稱為隱藏層<br>
         ![巨觀結構](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E5%85%B7%E8%A7%80%E7%B5%90%E6%A7%8B.png)
     * 微觀結構
       * 啟動函數(Activation Function)：位於神經元內部，將上一層神經元的輸入總和，轉換成這一個神經元輸出值的函數
       * 損失函數(Loss Function)：定義預測值與實際值的誤差大小
-      * 倒傳遞(Back-Propagation)：將損失值，轉換成類神經全種更新的方法
+      * 倒傳遞(Back-Propagation)：將損失值，轉換成類神經全種更新的方法<br>
         ![微觀結構](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E5%BE%AE%E8%A7%80%E7%B5%90%E6%A7%8B.png)    
   * 神經網路
-    * 架構示意圖介紹
+    * 架構示意圖介紹<br>
       ![架構示意圖](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF_%E6%9E%B6%E6%A7%8B%E7%A4%BA%E6%84%8F%E5%9C%96%E4%BB%8B%E7%B4%B9.png)
     * 架構介紹：一個最簡單的神經網路，架構分成輸入層、隱藏層、輸出層(稱為正向傳播)
       * 輸入層(input layer)
@@ -2721,9 +2721,9 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
         * 輸出層主要功能為處理隱藏層所輸出的資料，此層呈現神經網路之輸出變數
     * 實務應用
       * 卷積神經網路(CNN，Convolutional Neural Network)
-        * 概念
+        * 概念<br>
           ![CNN概念](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/CNN%E6%A6%82%E5%BF%B5.png)
-        * 神經元結構
+        * 神經元結構<br>
           ![神經元結構](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E7%A5%9E%E7%B6%93%E5%85%83%E7%B5%90%E6%A7%8B_CNN.png)
           * 設計目標：影像處理
           * 結構改進：CNN 參考像素遠近省略神經元，並且用影像特徵的平移不變性來共用權重，大幅減少了影像計算的負擔
@@ -2813,6 +2813,8 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
             <td> 影像、自然語言處理等多樣問題 </td>
           </tr>
         </table>
+* 參考資料
+  * []()
 * 範例與作業
   * [範例D063]()
   * [作業D063]()
