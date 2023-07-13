@@ -2698,9 +2698,9 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * 計算機硬體能力提升：圖形處理器(GPU)的誕生，持續了晶片摩爾定律，讓計算成為可行
       * 巨量資料
         * 細節改良：個人行動裝置的普及及網路速度的持續提升，帶來巨量的資料，使得深度學習有了可以學習的素材
-    * 巨觀結構
+    * 巨觀結構：又為端到端學習，通過卷積、池化和誤差反向傳播等步驟，進行特徵學習
       * 輸入層：輸入資料進入的位置
-      * 輸出層：輸出預測值的最後一層
+      * 輸出層：輸出預測值的最後一層 → 視覺對象
       * 隱藏層：除上述兩層外，其他層都稱為隱藏層<br>
         ![巨觀結構](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E5%85%B7%E8%A7%80%E7%B5%90%E6%A7%8B.png)
     * 微觀結構
@@ -2720,6 +2720,13 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * 輸出層(output layer)
         * 輸出層主要功能為處理隱藏層所輸出的資料，此層呈現神經網路之輸出變數
     * 實務應用
+      * 前饋神經網絡(Feedforward Neural Network)<br>
+        ![前饋神經網絡](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E5%89%8D%E9%A5%8B%E7%A5%9E%E7%B6%93%E7%B6%B2%E7%B5%A1.jpg)  
+        * 各個神經元接受前一級的輸入，並輸出到下一級，模型中(層與層間、層內間)沒有反饋
+        * 層與層之間通過「全連接」進行連接，即兩個相鄰層之間的神經元完全成對連接，但層內的神經元不相互連接
+        * 感知機網絡(Perceptron Networks)是一種特殊的前饋神經網落
+          * 無隱藏層，只有輸入層/輸出層
+          * 無法擬合複雜的數據
       * 卷積神經網路(CNN，Convolutional Neural Network)
         * 概念<br>
           ![CNN概念](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/CNN%E6%A6%82%E5%BF%B5.png)
@@ -2820,7 +2827,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 * 參考資料
   * [Machine Learning VS Deep Learning: Whats The Difference](https://www.youtube.com/watch?v=LhVY0-S7cAM&embeds_referring_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=OTY3MTQ&feature=emb_imp_woyt)
   * [Deep Learning In 5 Minutes | What Is Deep Learning? | Deep Learning Explained Simply | Simplilearn](https://www.youtube.com/watch?v=6M5VXKLf4D4)
-  * [深度學習基本概念](https://www.youtube.com/watch?v=TrhwJQ12EN4)
+  * 【重要】[深度學習基本概念](https://www.youtube.com/watch?v=TrhwJQ12EN4)
   * [人工神經網路 VS 生物神經網路](https://www.youtube.com/watch?v=lAaCeiqE6CE)
   * [人工智慧大歷史](https://suipichen.medium.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%A4%A7%E6%AD%B7%E5%8F%B2-ffe46a350543)
   * [機器學習簡介](https://developers.google.com/machine-learning?hl=zh-tw)
