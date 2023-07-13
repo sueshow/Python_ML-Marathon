@@ -2,41 +2,41 @@
 ## 學習大綱
 ### <a href="#機器學習概論">機器學習概論</a>
   * <a href="#D001-資料介紹與評估資料">D001 資料介紹與評估資料</a>
-  * D002 機器學習概論
-  * D003 機器學習-流程與步驟
-  * D004 EDA/讀取資料與分析流程
+  * <a href="#D002-機器學習概論">D002 機器學習概論</a>
+  * <a href="#D003-機器學習-流程與步驟">D003 機器學習-流程與步驟</a>
+  * <a href="#D004-EDA-讀取資料與分析流程">D004 EDA/讀取資料與分析流程
   
 ### <a href="#資料清理數據前處理">資料清理數據前處理</a> 
   * <a href="#D005-如何新建一個dataframe如何讀取其他資料">D005 如何新建一個 dataframe？如何讀取其他資料？(非csv的資料)</a>
-  * D006 EDA-欄位的資料類型介紹及處理
-  * D007 EDA-特徵類型
-  * D008 EDA-資料分佈
-  * D009 EDA-Outlier及處理
-  * D010 EDA-去除離群值(數值型)
-  * D011 EDA-常用的數值取代
-  * D012 EDA-補缺失值與標準化(數值型)
-  * D013 常見的 DataFrame 操作
-  * D014 程式實作 EDA-相關係數簡介
-  * D015 程式實作EDA-Correlation code
-  * D016 EDA-不同數值範圍間的特徵如何檢視
-  * D017 EDA-把連續型變數離散化
-  * D018 程式實作EDA-把連續型變數離散化
-  * D019 程式實作-Subplots
-  * D020 程式實作-Heatmap & Grid-plot
-  * D021 模型-Logistic Regression
+  * <a href="#D006-EDA-欄位的資料類型介紹及處理">D006 EDA-欄位的資料類型介紹及處理</a>
+  * <a href="#D007-EDA-特徵類型">D007 EDA-特徵類型</a>
+  * <a href="#D008-EDA-資料分佈">D008 EDA-資料分佈</a>
+  * <a href="#D009-EDA-Outlier及處理">D009 EDA-Outlier及處理</a>
+  * <a href="#D010-EDA-去除離群值-數值型">D010 EDA-去除離群值(數值型)</a>
+  * <a href="#D011-EDA-常用的數值取代">D011 EDA-常用的數值取代</a>
+  * <a href="#D012-EDA-補缺失值與標準化-數值型">D012 EDA-補缺失值與標準化(數值型)</a>
+  * <a href="#D013-常見的DataFrame操作">D013 常見的 DataFrame 操作</a>
+  * <a href="#D014-程式實作EDA-相關係數簡介">D014 程式實作 EDA-相關係數簡介</a>
+  * <a href="#D015-程式實作EDA-CorrelationCode">D015 程式實作EDA-Correlation code</a>
+  * <a href="#D016-EDA-不同數值範圍間的特徵如何檢視">D016 EDA-不同數值範圍間的特徵如何檢視</a>
+  * <a href="#D017-EDA-把連續型變數離散化">D017 EDA-把連續型變數離散化</a>
+  * <a href="#D018-程式實作EDA-把連續型變數離散化">D018 程式實作EDA-把連續型變數離散化</a>
+  * <a href="#D019-程式實作-Subplots">D019 程式實作-Subplots</a>
+  * <a href="#D020-程式實作-HeatmapANDGrid-plot">D020 程式實作-Heatmap & Grid-plot</a>
+  * <a href="#D021-模型-LogisticRegression">D021 模型-Logistic Regression</a>
 
 ### <a href="#資料科學特徵工程技術">資料科學特徵工程技術</a>
   * <a href="#D022-特徵工程簡介">D022 特徵工程簡介</a>
-  * D023 特徵工程(數值型)-去除偏態
-  * D024 特徵工程(類別型)-基礎處理
-  * D025 特徵工程(類別型)-均值編碼
-  * D026 特徵工程(類別型)-其他進階處理
-  * D027 特徵工程(時間型)
-  * D028 特徵工程-數值與數值組合
-  * D029 特徵工程-類別與數值組合
-  * D030 特徵選擇
-  * D031 特徵評估
-  * D032 特徵優化(分類型)-葉編碼
+  * <a href="#D023-特徵工程-數值型-去除偏態">D023 特徵工程(數值型)-去除偏態</a>
+  * <a href="#D024-特徵工程-類別型-基礎處理">D024 特徵工程(類別型)-基礎處理</a>
+  * <a href="#D025-特徵工程-類別型-均值編碼">D025 特徵工程(類別型)-均值編碼</a>
+  * <a href="#D026-特徵工程-類別型-其他進階處理">D026 特徵工程(類別型)-其他進階處理</a>
+  * <a href="#D027-特徵工程-時間型">D027 特徵工程(時間型)</a>
+  * <a href="#D028-特徵工程-數值與數值組合">D028 特徵工程-數值與數值組合</a>
+  * <a href="#D029-特徵工程-類別與數值組合">D029 特徵工程-類別與數值組合</a>
+  * <a href="#D030-特徵選擇">D030 特徵選擇</a>
+  * <a href="#D031-特徵評估">D031 特徵評估</a>
+  * <a href="#D032-特徵優化-分類型-葉編碼">D032 特徵優化(分類型)-葉編碼</a>
 
 ### <a href="#機器學習基礎模型建立">機器學習基礎模型建立</a>
   * <a href="#D033-機器如何學習">D033 機器如何學習</a>
@@ -2587,10 +2587,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * [Principal Component Analysis (PCA)](https://www.youtube.com/watch?v=g-Hb26agBFg)
       * [Eigenvectors and eigenvalues | Essence of linear algebra, chapter 14 (特徵轉換)](https://www.youtube.com/watch?v=PFDu9oVAE-g)
   * t-SNE
-* 範例與作業(待上傳)
-  * [範例D059]()
+* 範例與作業
+  * [範例D059](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_059_HW_PCA/Day_059_PCA_sample.ipynb)
     * 資料集：Iris
-  * [作業D059]()
+  * [作業D059](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_059_PCA_Ans.ipynb)
     * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2607,12 +2607,12 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * 由於 PCA 的強大，如果資料有意義的維度太低，則前幾個主成分就可以將資料解釋完畢
       * 使用一般圖形資料，維度又會太高，因此我們使用 sklearn 版本的 MNIST 檢驗 PCA，以兼顧內容的複雜性與可理解性
       * 由範例的折線圖可以看出來：前幾個維度就能解釋 75% 以上的變數
-* 範例與作業(待上傳)
-  * [範例D060]()
+* 範例與作業
+  * [範例D060](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_060_HW_PCA/Day_060_PCA.ipynb)
     * 資料集：手寫辨識資料集
     * 方法：羅吉斯迴歸 + PCA
     * penalty component：l2
-  * [作業D060]()
+  * [作業D060](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_060_PCA_Ans.ipynb)
     * 資料集：手寫辨識資料集
     * 方法：羅吉斯迴歸 + PCA
     * penalty component：l1
@@ -2634,10 +2634,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 缺點：t-SNE 的需要比較多的時間執行
   * 參考資料
     * [資料降維與視覺化：t-SNE 理論與應用](https://www.mropengate.com/2019/06/t-sne.html)
-* 範例與作業(待上傳)
-  * [範例D061]()
+* 範例與作業
+  * [範例D061](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_061_HW_tsne/Day_061_tsne_sample.ipynb)
     * 資料集：digits(4個數字)
-  * [作業D061]()
+  * [作業D061](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_061_tsne_Ans.ipynb)
     * 資料集：digits
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
@@ -2653,18 +2653,177 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * Isomap
     * LLE
     * MDS 
-* 範例與作業(待上傳)
-  * [範例D062]()
+* 範例與作業
+  * [範例D062](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_062_HW_tsne/Day_062_tsne.ipynb)
     * 使用同心圓的資料，觀察 t-sne 在不同困惑度(perplexity)下，分群的效果如何變化
     * 觀察結果
       * perplexity 越低時，圓形越零散，越高時不僅分群好，也讓圖形更接近原圖
       * perplexity 越高，執行時間也越久
-  * [作業D062]()
+  * [作業D062](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_062_tsne_Ans.ipynb)
     * 使用 S 形資料集，觀察 t-sne 在困惑度(perplexity)有所不同時，流行還原的效果如何變化
     * 觀察結果
       * perplexity 越高，流形效果越好，但並不會接近原圖，主要是因為資料不像同心圓需要首尾相接，因此在還原流行時會變成一直線
       * perplexity 越高，執行時間也越久，效果越好
 
 Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
+<br>
+<br>
+
+
+## 深度學習理論與實作
+### D063-深度學習簡介
+* 機器學習與深度學習
+  * 機器學習
+    * 電腦透過資料中的不同特徵進行學習進而產生預測結果
+  * 深度學習
+    * 將影像、文字匯入電腦中經由大量運算，使得電腦能夠自動判別
+    * 人工智能發展歷史
+      ![]()
+      ![]()
+    * 應用爆發的關鍵：類神經應用直到 2012 年 AlexNet 在 ImageNet 圖像分類競賽獲得驚艷表現後，才重回主流舞台
+      * 算法改良
+        * 網路結構：CNN 與 RNN 等結構在神經連結上做有意義的精省，使得計算力得以用在刀口
+        * 細節改良
+          * DropOut(隨機移除)：同時有節省連結與集成的效果
+          * BatchNormalization(批次正規化)：讓神經層間有更好的傳導力
+      * 計算機硬體能力提升：圖形處理器(GPU)的誕生，持續了晶片摩爾定律，讓計算成為可行
+      * 巨量資料
+        * 細節改良：個人行動裝置的普及及網路速度的持續提升，帶來巨量的資料，使得深度學習有了可以學習的素材
+    * 巨觀結構
+      * 輸入層：輸入資料進入的位置
+      * 輸出層：輸出預測值的最後一層
+      * 隱藏層：除上述兩層外，其他層都稱為隱藏層
+        ![]()
+    * 微觀結構
+      * 啟動函數(Activation Function)：位於神經元內部，將上一層神經元的輸入總和，轉換成這一個神經元輸出值的函數
+      * 損失函數(Loss Function)：定義預測值與實際值的誤差大小
+      * 倒傳遞(Back-Propagation)：將損失值，轉換成類神經全種更新的方法
+        ![]()    
+  * 神經網路
+    * 架構示意圖介紹
+      ![]()
+    * 架構介紹：一個最簡單的神經網路，架構分成輸入層、隱藏層、輸出層(稱為正向傳播)
+      * 輸入層(input layer)
+        * 輸入層由多個節點所構成，主要功能為接收資料並輸入訊息，此層呈現神經網路之輸入變數，神經元數目會依照輸入的參數決定輸入之數量
+      * 隱藏層(hidden layer)
+        * 隱藏層介於輸入層與輸出層之間，表示輸入變數間的交互影響。利用活化函數將神經元以非線性的模式，從輸入層至隱藏層及輸出層，以解決較複雜的非線性問題
+        * 隱藏層的數量沒有明確規定，若隱藏層數量較多，神經網路複雜程度較高，在學習過程中可能會有難以收斂之情形，因此必須衡量隱藏層的數量再做訓練
+      * 輸出層(output layer)
+        * 輸出層主要功能為處理隱藏層所輸出的資料，此層呈現神經網路之輸出變數
+    * 實務應用
+      * 卷積神經網路(CNN，Convolutional Neural Network)
+        * 神經元結構
+          ![]()
+          * 設計目標：影像處理
+          * 結構改進：CNN 參考像素遠近省略神經元，並且用影像特徵的平移不變性來共用權重，大幅減少了影像計算的負擔
+          * 衍伸應用：只要符合上述兩種特性的應用，都可以使用 CNN 來計算，例如 AlphaGo 的 v18 版的兩個主網路都是 CNN
+    * 遞歸神經網路 (RNN, Recurrent Neural Network)
+      * 設計目標：時序資料處理
+      * 結構改進：RNN 雖然看似在 NN 外增加了時序間的橫向傳遞，但實際上還是依照時間遠近省略了部分連結
+      * 衍伸應用：只要資料是有順序性的應用，都可以使用 RNN 來計算，近年在自然語言處理 (NLP) 上的應用反而成為大宗
+  * 類神經網路(Neural Network)
+    * 在 1956 年在達特茅斯會議中誕生，以數學模擬神經傳導輸出預測，在初期人工智慧領域中就是重要分支
+    * 因層數一多計算量就大幅增加等問題，過去無法解決，雖不斷有學者試圖改善，在歷史中仍不免大起大落
+    * 直到近幾年在算法、硬體能力與巨量資料的改善下，多層的類神經網路才重新成為當前人工智慧的應用主流
+  * 比較
+    * 機器學習 vs. 深度學習
+      <table border="1" width="15%">
+        <tr>
+          <th width="5%"> </a>
+          <th width="5%"> Machine Learning</a>
+          <th width="5%"> Deep Learning</a>
+        </tr>
+        <tr>
+          <td> Amount of Data </td>
+          <td> Small </td>
+          <td> Big </td>
+        </tr>
+        <tr>
+          <td> Features </td>
+          <td> Create your own </td>
+          <td> Learns automatically </td>
+        </tr>
+        <tr>
+          <td> Time </td>
+          <td> Short </td>
+          <td> Long </td>
+        </tr>
+        <tr>
+          <td> Accuracy </td>
+          <td> Good </td>
+          <td> Best </td>
+        </tr>
+        <tr>
+          <td> Debugging </td>
+          <td> Easy </td>
+          <td> Very Tough </td>
+        </tr>
+        <tr>
+          <td> Expensive </td>
+          <td> Less </td>
+          <td> More </td>
+        </tr>
+        <tr>
+          <td> Decision Path </td>
+          <td> Yes </td>
+          <td> No </td>
+        </tr>
+      </table>
+      
+    * 類神經網路 vs. 深度學習
+      * 基礎：深度學習是「比較多層」的類神經網路
+      * 實務：因著設計思路與連結架構的不同，兩者有了很大的差異性
+        <table border="1" width="15%">
+          <tr>
+            <th width="5%"> </a>
+            <th width="5%"> 類神經網路(Neural Network) </a>
+            <th width="5%"> 深度學習(Deep Learning)</a>
+          </tr>
+          <tr>
+            <td> 隱藏層數量 </td>
+            <td> 1~2層 </td>
+            <td> 十數層到百層以上不等 </td>
+          </tr>
+          <tr>
+            <td> 活躍年代 </td>
+            <td> 1956~1974 </td>
+            <td> 2011至今 </td>
+          </tr>
+          <tr>
+            <td> 代表結構 </td>
+            <td> 感知器(Perceptron)<br>
+                 啟動函數(Activation Function) </td>
+            <td> 卷積神經網路(CNN)<br>
+                 遞歸神經網路(RNN) </td>
+          </tr>
+          <tr>
+            <td> 解決問題 </td>
+            <td> 基礎迴歸問題 </td>
+            <td> 影像、自然語言處理等多樣問題 </td>
+          </tr>
+        </table>
+* 範例與作業
+  * [範例D063]()
+  * [作業D063]()
+
+Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
+<br>
+<br>
+
+### D064-深度學習-模型調整與學習曲線
+* 範例與作業
+  * [範例D064]()
+  * [作業D064]()
+
+Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
+<br>
+<br>
+
+### D065-深度學習-啟動函數與正規化
+* 範例與作業
+  * [範例D065]()
+  * [作業D065]()
+
+Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
 <br>
 <br>
