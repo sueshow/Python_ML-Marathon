@@ -2727,11 +2727,13 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
           ![神經元結構](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E7%A5%9E%E7%B6%93%E5%85%83%E7%B5%90%E6%A7%8B_CNN.png)
           * 設計目標：影像處理
           * 結構改進：CNN 參考像素遠近省略神經元，並且用影像特徵的平移不變性來共用權重，大幅減少了影像計算的負擔
-          * 衍伸應用：只要符合上述兩種特性的應用，都可以使用 CNN 來計算，例如 AlphaGo 的 v18 版的兩個主網路都是 CNN
+          * 衍伸應用：只要符合上述兩種特性的應用，都可以使用 CNN 來計算，例如 AlphaGo 的 v18 版的兩個主網路都是 CNN<br>
+         ![CNN屬於前饋神經網路](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/CNN%E5%B1%AC%E6%96%BC%E5%89%8D%E9%A5%8B%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF.jpg)   
     * 遞歸神經網路 (RNN, Recurrent Neural Network)
       * 設計目標：時序資料處理、自然語言處理
       * 結構改進：RNN 雖然看似在 NN 外增加了時序間的橫向傳遞，但實際上還是依照時間遠近省略了部分連結
       * 衍伸應用：只要資料是有順序性的應用，都可以使用 RNN 來計算，近年在自然語言處理 (NLP) 上的應用反而成為大宗
+      ![RNN不屬於前饋神經網路](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/RNN%E4%B8%8D%E5%B1%AC%E6%96%BC%E5%89%8D%E9%A5%8B%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF.jpg)
   * 類神經網路(Neural Network)
     * 在 1956 年在達特茅斯會議中誕生，以數學模擬神經傳導輸出預測，在初期人工智慧領域中就是重要分支
     * 因層數一多計算量就大幅增加等問題，過去無法解決，雖不斷有學者試圖改善，在歷史中仍不免大起大落
