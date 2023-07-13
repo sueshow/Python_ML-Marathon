@@ -2824,8 +2824,8 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * [機器學習簡介](https://developers.google.com/machine-learning?hl=zh-tw)
   * [跟著大神學 AI：Google 免費機器學習課程上線，影片都有中文字幕超佛心](https://buzzorange.com/techorange/2018/03/02/learn-with-google/)
 * 範例與作業
-  * [範例D063]()
   * [作業D063]()
+    * 無程式撰寫，有補充教材
 
 Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
 <br>
