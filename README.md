@@ -2729,7 +2729,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
           * 結構改進：CNN 參考像素遠近省略神經元，並且用影像特徵的平移不變性來共用權重，大幅減少了影像計算的負擔
           * 衍伸應用：只要符合上述兩種特性的應用，都可以使用 CNN 來計算，例如 AlphaGo 的 v18 版的兩個主網路都是 CNN
     * 遞歸神經網路 (RNN, Recurrent Neural Network)
-      * 設計目標：時序資料處理
+      * 設計目標：時序資料處理、自然語言處理
       * 結構改進：RNN 雖然看似在 NN 外增加了時序間的橫向傳遞，但實際上還是依照時間遠近省略了部分連結
       * 衍伸應用：只要資料是有順序性的應用，都可以使用 RNN 來計算，近年在自然語言處理 (NLP) 上的應用反而成為大宗
   * 類神經網路(Neural Network)
@@ -2814,8 +2814,15 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
             <td> 影像、自然語言處理等多樣問題 </td>
           </tr>
         </table>
+        
 * 參考資料
-  * []()
+  * [Machine Learning VS Deep Learning: Whats The Difference](https://www.youtube.com/watch?v=LhVY0-S7cAM&embeds_referring_euri=https%3A%2F%2Fwww.cupoy.com%2F&source_ve_path=OTY3MTQ&feature=emb_imp_woyt)
+  * [Deep Learning In 5 Minutes | What Is Deep Learning? | Deep Learning Explained Simply | Simplilearn](https://www.youtube.com/watch?v=6M5VXKLf4D4)
+  * [深度學習基本概念](https://www.youtube.com/watch?v=TrhwJQ12EN4)
+  * [人工神經網路 VS 生物神經網路](https://www.youtube.com/watch?v=lAaCeiqE6CE)
+  * [人工智慧大歷史](https://suipichen.medium.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%A4%A7%E6%AD%B7%E5%8F%B2-ffe46a350543)
+  * [機器學習簡介](https://developers.google.com/machine-learning?hl=zh-tw)
+  * [跟著大神學 AI：Google 免費機器學習課程上線，影片都有中文字幕超佛心](https://buzzorange.com/techorange/2018/03/02/learn-with-google/)
 * 範例與作業
   * [範例D063]()
   * [作業D063]()
