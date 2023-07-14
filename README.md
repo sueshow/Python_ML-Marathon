@@ -2832,8 +2832,8 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * [人工智慧大歷史](https://suipichen.medium.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%A4%A7%E6%AD%B7%E5%8F%B2-ffe46a350543)
   * [機器學習簡介](https://developers.google.com/machine-learning?hl=zh-tw)
   * [跟著大神學 AI：Google 免費機器學習課程上線，影片都有中文字幕超佛心](https://buzzorange.com/techorange/2018/03/02/learn-with-google/)
-* 範例與作業(待上傳)
-  * [作業D063]()
+* 範例與作業
+  * [作業D063](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_063_Intro_of_DNN_Ans.ipynb)
     * 無程式撰寫，有補充教材
 
 Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
@@ -2889,8 +2889,8 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
       * 雖然圖像化更直覺，但並非量化指標且可視畫不容易，故深度學習的觀察指標仍以「損失函數/誤差」為主
       * 對於不同資料類型，適合加深與加寬的問題都有，但「加深」適合的問題類型較多
       * 輸入特徵的選擇影響結果甚鉅，因此深度學習也需要考慮「特徵工程」
-* 範例與作業(待上傳)
-  * [作業D064]()
+* 範例與作業
+  * [作業D064](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_064_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_064_Experience_of_DNN1_Ans.ipynb)
     * 選擇迴歸資料集(右)-交錯六群，挑戰測試誤差(Test Loss)最低能到多少
       * 在其他參數(特徵X1、X2)保持預設值的情況下，只允許調整隱藏層層數與神經元數量
       * 隱藏層神經元總數最多 8 個 (即 : 可以單層 8 個，或兩層 5 個與 3 個)
@@ -2946,10 +2946,8 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
     * 學習速率：學習速率越大學習曲線越不穩定、但收斂越快，但是與批次的大小不同的是學習速率大於一定以上時，有可能不穩定到無法收斂
     * 啟動函數：當類神經網路層數不多時，啟動函數 Sigmoid/Tanh  的效果比 Relu 更好
     * 正規化：L1/L2 正規化在非深度學習上效果較明顯，而正規化參數較小才有效果
-* 範例與作業(待上傳)
-  * [範例D065]()
-    * 練習 5 ~ 8
-  * [作業D065]()
+* 範例與作業
+  * [作業D065](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_065_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_065_Experience_of_DNN2_Ans.ipynb)
     * 選擇分類資料集(右下)-螺旋雙臂-交錯六群
       * 限定特徵只能使用前兩個(X1、X2)
       * 隱藏層 2 層滿 (共 8 * 2 =16 個神經元)
@@ -3055,10 +3053,10 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
         * import tensorflow
         * import keras
 * 範例與作業
-  * [範例D066]()
+  * [範例D066](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_066_HW/Day_066_Introduction_of_Keras.ipynb)
     * Keras 的使用方法及常見錯誤
     * 檔案：Day_066_Introduction_of_Keras.ipynb
-  * [作業D066]()
+  * [作業D066](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_066_Keras_Introduction_Ans.ipynb)
     * 檢查 Keras 的 backend
     * 使用 fuzz factor 產生 1e-99
     * 設定 Keras 浮點運算為 float16
