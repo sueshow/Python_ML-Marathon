@@ -2843,7 +2843,14 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
 ### D064-深度學習-模型調整與學習曲線
 * 深度學習
   * 深度神經網路(Supervised LearningDeep Neural Network)
-    * 簡介[D064-D065]、套件介紹、組成概念、訓練技巧、應用案例
+    * 簡介[D064-D065]
+    * 套件介紹[D066-]
+      * Keras 簡介與安裝
+      * Keras 內建資料集下載
+      * 如何用 Keras 搭建類神經網路
+    * 組成概念
+    * 訓練技巧
+    * 應用案例
   * 卷積神經網路(Convolutional Neural Network，CNN)
     * 簡介、套件介紹、訓練技巧、電腦視覺
   * 深度學習簡介：神經網路歷史、深度學習概念、深度學習體驗[D064-D065]
@@ -3065,6 +3072,65 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 
 ### D067-Keras Dataset
+* Keras
+  * 資料集
+    * CIFAR10 小圖像分類
+      * 數據集 50,000 張 32X32 彩色訓練圖像，標註超過 10 個類別，10,000 張測試圖像
+      * 語法
+        ```
+        from keras.datasets import cifar10
+        (x_train, y_train), (x_test, y_test) = cifar10.load_data() 
+        ```
+    * CIFAR100 小圖像分類
+      * 數據集 50,000 張 32X32 彩色訓練圖像，標註超過 100 個類別，10,000 張測試圖像
+      * 語法
+        ```
+        from keras.datasets import cifar100
+        (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine') 
+        ```
+    * IMDB 電影評論情緒分類
+      * 來自 IMDB 的 25,000 部電影評論的數據集，標有情緒(正面/負面)。評論已經過預處理，每個評論都被編碼為一系列單詞索引(整數)
+      * 單詞由數據集中的整體頻率索引
+        * 整數「3」編碼數據中第 3 個最頻繁的單詞
+        * 「0」不代表特定單詞，而是用於編碼任何位知單詞
+      * 語法
+        ```
+        from keras.datasets import imdb
+        (x_train, y_train), (x_test, y_test) = imdb.load_data(path=“imdb.npz”,num_words= None,skip_top=0,maxlen=None, seed=113,start_char=1,oov_char=2,index_from=3)
+        ```
+        * path：如果沒有本地數據('~/.keras/datasets/'+path)，數據集將被下載到此位置
+        * 
+        *
+    * 路透社 newswire 話題分類
+    * 手寫數字的 MNIST 數據庫
+      * 數據集包含 10 個數字的 60,000 個 28x28 灰度圖像，及 10,000 個圖像的測試集
+      * 語法
+        ```
+        from keras.datasets import mnist
+        (x_train, y_train), (x_test, y_test) = mnsit.load_data() 
+        ```
+    * 時尚文章的時尚 MNIST 數據庫
+      * 數據集包含 10 個時尚類別的 60,000 個 28x28 灰度圖像，及 10,000 個圖像的測試集
+      * 語法
+        ```
+        from keras.datasets import fashion_mnsit
+        (x_train, y_train), (x_test, y_test) = fashion_mnsit.load_data()
+        ```
+    * 波士頓房屋價格迴歸數據集
+      * 數據集取自卡內基梅隆大學維護的 StatLib 庫
+      * 20 世紀 70 年代後期，樣本在波士頓郊區的不同位置包含 13 個房屋屬性。目標是一個地點房屋的中位值(單位：k$)
+      * 語法
+        ```
+        from keras.datasets import boston_housing
+        (x_train, y_train), (x_test, y_test) = boston_housing.load_data() 
+        ```
+  * 資料夾：在 Windows 環境，使用 Anaconda 安裝
+    * Anaconda 應用程式安裝目錄下的 Keras 子資料夾，需要搜索找到
+    * Anaconda 影用程式存儲 Keras 模型和資料集檔，用對應的用戶資料夾下的「.keras」資料夾下
+    * 資料集下載後預設存儲目錄「C:Users\Administrator\.keras\datasets」下的同名檔
+  * 執行下載
+    > from keras.datasets import cifar10    #從 Keras 導入相應的模組<br>
+    > (x_train, y_train), (x_validate, y_validate) = cifar10.load_data()   #從網路即時下載<br>
 * 範例與作業
   * [範例D067]()
   * [作業D067]()
