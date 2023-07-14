@@ -80,7 +80,7 @@
   * D065 深度學習-啟動函數與正規化
 
 ### <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
-  * D066 Keras安裝與介紹
+  * <a href="#D066-Keras安裝與介紹">D066 Keras安裝與介紹
   * D067 Keras Dataset
   * D068 Keras Sequential API
   * D069 Keras Module API
@@ -2832,11 +2832,11 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * [人工智慧大歷史](https://suipichen.medium.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%A4%A7%E6%AD%B7%E5%8F%B2-ffe46a350543)
   * [機器學習簡介](https://developers.google.com/machine-learning?hl=zh-tw)
   * [跟著大神學 AI：Google 免費機器學習課程上線，影片都有中文字幕超佛心](https://buzzorange.com/techorange/2018/03/02/learn-with-google/)
-* 範例與作業
+* 範例與作業(待上傳)
   * [作業D063]()
     * 無程式撰寫，有補充教材
 
-Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
+Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
 <br>
 <br>
 
@@ -2889,7 +2889,7 @@ Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
       * 雖然圖像化更直覺，但並非量化指標且可視畫不容易，故深度學習的觀察指標仍以「損失函數/誤差」為主
       * 對於不同資料類型，適合加深與加寬的問題都有，但「加深」適合的問題類型較多
       * 輸入特徵的選擇影響結果甚鉅，因此深度學習也需要考慮「特徵工程」
-* 範例與作業
+* 範例與作業(待上傳)
   * [作業D064]()
     * 選擇迴歸資料集(右)-交錯六群，挑戰測試誤差(Test Loss)最低能到多少
       * 在其他參數(特徵X1、X2)保持預設值的情況下，只允許調整隱藏層層數與神經元數量
@@ -2898,7 +2898,7 @@ Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
       * 練習設定
         * 隱藏層神經元單層 8 個 → Test loss=0.014、Training loss=0.014
         * 隱藏層神經元兩層 5 個與 3 個 → Test loss=0.013、Training loss=0.011
-Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
+Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
 <br>
 <br>
 
@@ -2914,7 +2914,7 @@ Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
       * 調整「不同的批次大小」後執行 500 次遞迴，看看學習效果
     * 實驗結果：批次的影響
       * 批次很小時，雖然收斂過程非常不穩定，但平均而言會收斂到較好的結果，但仍會受到 sample size 的影響<br>
-        ![切換批次大小]()
+        ![切換批次大小](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/TF%20PlayGround_%E5%88%87%E6%8F%9B%E6%89%B9%E6%AC%A1%E5%A4%A7%E5%B0%8F.png)
       * 實務上，批次如果極小，效果確實比較好，但計算時間會相當久，因此通常會依照時間需要而折衷
   * 6：切換學習速率
     * 練習
@@ -2924,7 +2924,7 @@ Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
       * 學習率會先設定較大，經過幾個 Epoch 後再調小
       * 小於 0.3 時，學習速率較大時，收斂過程會越不穩定，但會收斂到較好的結果
       * 大於 1 時，因為過度不穩定而導致無法收斂<br>
-        ![切換學習速率]()
+        ![切換學習速率](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/TF%20PlayGround_%E5%88%87%E6%8F%9B%E5%AD%B8%E7%BF%92%E9%80%9F%E7%8E%87.png)
   * 7：切換啟動函數
     * 練習
       * 資料集切換：分類資料集(右下)-螺旋雙臂，特徵全選，隱藏層 1 層/ 8 神經元，批次大小固定 10，學習速率固定 1
@@ -2932,7 +2932,7 @@ Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
     * 實驗結果：啟動函數的影響
       * 在這種極端的情形下，Tanh 會無法收斂，Relu 很快就穩定在很糟糕的分類狀態，惟有 Sigmoid 還可以收斂到不錯的效果
       * 實務上，Sigmoid 需要大量計算時間，而 Relu 則相對快得很多，這也是需要取捨的，在本例中因位只有一層，所以上述狀況不太明顯<br>
-        ![切換啟動函數]()
+        ![切換啟動函數](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/TF%20PlayGround_%E5%88%87%E6%8F%9B%E5%95%9F%E5%8B%95%E5%87%BD%E6%95%B8.png)
   * 8：切換正規化選項與參數(正規化對於模型的影響性)
     * 練習
       * 資料集切換：分類資料集(右下)-螺旋雙臂，特徵全選，隱藏層 1 層/ 8 神經元，批次大小固定 10，學習速率固定 0.3，啟動函數設為 Tanh
@@ -2943,10 +2943,10 @@ Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
       * 實務上，L1/L2 較常使用在非深度學習上，深度學習上效果有限
   * 重點
     * 批次：批次越小學習曲線越不穩定、但收斂越快
-    * 學習速率：學習速率越大學習曲線越不穩定、但收斂越快，但是與批次大小不同的是 -> 學習速率大於一定以上時，有可能不穩定到無法收斂
+    * 學習速率：學習速率越大學習曲線越不穩定、但收斂越快，但是與批次的大小不同的是學習速率大於一定以上時，有可能不穩定到無法收斂
     * 啟動函數：當類神經網路層數不多時，啟動函數 Sigmoid/Tanh  的效果比 Relu 更好
     * 正規化：L1/L2 正規化在非深度學習上效果較明顯，而正規化參數較小才有效果
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D065]()
     * 練習 5 ~ 8
   * [作業D065]()
@@ -2956,8 +2956,339 @@ Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
       * 遞迴次數只允許跑到 500 次
       * 可自由調整批次大小、學習速率、啟動函數、正規化選項與參數
         * 批次大小=3、學習速率=0.03、啟動函數=Tanh、正規化選項=None、正規化參數=0.001 → Test loss=0.042、Training loss=0.08
-        * (測試中)批次大小=3、學習速率=0.03、啟動函數=Tanh、正規化選項=None、正規化參數=0.001 → Test loss=0.042、Training loss=0.08
+        * 批次大小=10、學習速率=0.1、啟動函數=Tanh、正規化選項=None、正規化參數=0.001 → Test loss=0.01、Training loss=0.009
 
-Back to <a href="#深度學習理論與實作">非監督式的機器學習</a>
+Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
 <br>
 <br>
+
+
+## 初探深度學習使用Keras
+### D066-Keras安裝與介紹
+* Keras
+  * 易學易懂的深度學習套件
+    * 以設計為出發點：容易上手，因此隱藏很多實作細節，自由度稍嫌不夠，但很適合教學
+    * Keras 實作並優化了各式經典組件，因此即使是同時熟悉 TensorFlow 與 Keras 的老手，開發時也會兩者並用互補
+  * Keras 包含的組件
+    * 模型形狀類
+      * 直覺概念：神經元數/隱藏層數/啟動函數
+      * Keras 組件：Sequential Model/Functional Model/Layers
+    * 配置參數類
+      * 直覺概念：學習速率/批次大小/正規化
+      * Keras 組件：Ｏptimier/Reguliarizes/Callbacks
+  * 深度學習寫法封裝
+    * TensorFlow 將深度學習中的 GPU/CPU 指令封裝起來，減少語法差異
+    * Keras 是將 TensorFlow 等後端程式更近一步封裝成單一套件並優化，用少量的程式便能實現經典模型 
+  * Keras的後端
+    * Keras 的實現實際上完全依賴 TensorFlow 的語法完成，這種情形我們稱 TensorFlow 是 Keras 的一種後端(Backend)<br>
+      ![Keras的後端](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Keras%E7%9A%84%E5%BE%8C%E7%AB%AF.png) 
+    * Keras/TensorFlow 的比較：由於目前整併兩者的 TensorFlow 2.0 仍在測試階段，本教材仍以 Keras 為主
+      <table border="1" width="15%">
+          <tr>
+            <th width="5%"> </a>
+            <th width="5%"> Keras </a>
+            <th width="5%"> Tensorflow </a>
+          </tr>
+          <tr>
+            <td> 學習難度 </td>
+            <td> 低 </td>
+            <td> 高 </td>
+          </tr>
+          <tr>
+            <td> 模型彈性 </td>
+            <td> 中 </td>
+            <td> 高 </td>
+          </tr>
+          <tr>
+            <td> 主要差異 </td>
+            <td> 處理神經層 </td>
+            <td> 處理資料流 </td>
+          </tr>
+          <tr>
+            <td> 代表組件 </td>
+            <td> Layers/Model </td>
+            <td> Tensor/Session/Placeholder </td>
+          </tr>
+      </table>
+      
+  * 安裝流程
+    * 是否有 GPU：可平行運算、加速矩陣運算，適用於 Nvidia 的 GPU 框架上
+      * 因有 GPU 需要先裝 GPU 的指令集，故有 GPU 需要 4 個步驟，沒有只需 2 步驟<br>
+        ![安裝步驟](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Keras%E5%AE%89%E8%A3%9D%E6%AD%A5%E9%A9%9F.png)
+      * 有 GPU 版：如找不到 pip 指令，可採用 pip3 代替 pip 執行安裝
+        * 由於 GPU 的 CUDA/cuDNN 版本經常升級，因此 TensorFlow/Keras 的版本也需要頻繁更換版本，因此建議以安裝當時的[官網](https://www.tensorflow.org/install/gpu)資訊為準，查閱 Software requirements 部分<br>
+          ![Software requirements](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Software%20requirements.png)
+        * Step 1：安裝 CUDA
+          * 到[官網](https://developer.nvidia.com/cuda-downloads)依作業系統版本與需求選擇選項，下載 CUDA 驅動程式並安裝
+            * Linux 選項範例<br>
+              ![Linux 選項範例](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Linux%E9%81%B8%E9%A0%85%E7%AF%84%E4%BE%8B.png)
+            * Windows 選項範例<br>
+              ![Windows 選項範例](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Windows%E9%81%B8%E9%A0%85%E7%AF%84%E4%BE%8B.png)
+            * Mac OS 選項範例
+              ![Mac OS 選項範例](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Mac%20OS%E9%81%B8%E9%A0%85%E7%AF%84%E4%BE%8B.png)
+        * Step 2：安裝 cuDNN
+          * cuDNN 安裝時，需要從[官網](https://developer.nvidia.com/cudnn)點選
+          * 這個步驟需要在 NVIDIA 註冊才能下載
+          * 註冊並登入後，會看到類似下面的畫面，請依照上一步驟的 CUDA 版本，選擇對應的 cuDNN 版本並安裝
+            ![cuDNN安裝](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_cuDNN%E5%AE%89%E8%A3%9D.png)
+        * Step 3：安裝 TensorFlow GPU 版，後面有 -gpu 才是正確的「GPU版」Tensorflow
+          * 指令：pip install tensorflow-gpu (Ubuntu 前面加上 sudo)
+        * Step 4：安裝 Keras
+          * 指令：pip install keras
+          * (Windows) 新增環境變數於 PATH
+            * Win10：可從 開始/控制台/系統 開啟視窗後，點選「進階」分頁最下面的按鈕「環境變數」，會跳出下列視窗，請在下半視窗中尋找「Path」變數，把下列兩個路徑加入，Windows 其他版本請搜尋「[windows版號] set path environment」
+               * C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin
+               * C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp
+               * (舊版項目間要用分號(;)隔開/CUDA 版號請依 Step1 實際安裝版本為準)<br>
+              ![set path environment](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_4-2%E6%AD%A5%E9%A9%9FWindows.png)
+      * 沒有 GPU 版：如找不到 pip 指令，可採用 pip3 代替 pip 執行安裝
+        * Step 1：安裝 TensorFlow：pip install tensorflow (Ubuntu 前面加上 sudo)
+        * Step 2：安裝 Keras：pip install keras
+    * 作業系統
+      * 因為不同作業系統間，GPU 的安裝步驟會因介面或指令有所不同，所以我們會分 Windows/Linux (以Ubuntu為例)/Mac 分別介紹流程
+    * 注意事項
+      * 是否使用 Anaconda 虛擬環境
+        * Python 環境是採用 Anaconda 安裝，那後續安裝需切換至常用的虛擬環境下安裝(點選 Anaconda/Anaconda Prompt 後再安裝)，以確保安裝與常用環境是同一目錄
+        * Python 環境是用指令安裝，那麼直接用指令安裝即可( Windows 可以用命令提示字元)
+    * 驗證安裝
+      * 安裝完後，開啟 .ipynb 檔輸入下列指令並執行，確認是否有順利執行
+        * import tensorflow
+        * import keras
+* 範例與作業
+  * [範例D066]()
+    * Keras 的使用方法及常見錯誤
+    * 檔案：Day_066_Introduction_of_Keras.ipynb
+  * [作業D066]()
+    * 檢查 Keras 的 backend
+    * 使用 fuzz factor 產生 1e-99
+    * 設定 Keras 浮點運算為 float16
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D067-Keras Dataset
+* 範例與作業
+  * [範例D067]()
+  * [作業D067]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D068-Keras Sequential API
+* 範例與作業
+  * [範例D068]()
+  * [作業D068]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D069-Keras Module API
+* 範例與作業
+  * [範例D069]()
+  * [作業D069]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D070-深度神經網路的基礎知識
+* 範例與作業
+  * [範例D070]()
+  * [作業D070]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D071-損失函數
+* 範例與作業
+  * [範例D071]()
+  * [作業D071]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D072-啟動函數
+* 範例與作業
+  * [範例D072]()
+  * [作業D072]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D073-梯度下降GradientDescent
+* 範例與作業
+  * [範例D073]()
+  * [作業D073]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D074-GradientDescent數學原理
+* 範例與作業
+  * [範例D074]()
+  * [作業D074]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D075-BackPropagation
+* 範例與作業
+  * [範例D075]()
+  * [作業D075]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D076-優化器Optimizers
+* 範例與作業
+  * [範例D076]()
+  * [作業D076]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D077-神經網路-訓練細節與技巧-ValidationAndOverfit
+* 範例與作業
+  * [範例D077]()
+  * [作業D077]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D078-神經網路-訓練前注意事項
+* 範例與作業
+  * [範例D078]()
+  * [作業D078]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D079-神經網路-訓練細節與技巧-LearningRateEffect
+* 範例與作業
+  * [範例D079]()
+  * [作業D079]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D080-程式實作-優化器與學習率的組合與比較
+* 範例與作業
+  * [範例D080]()
+  * [作業D080]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D081-神經網路-訓練細節與技巧-Regularization
+* 範例與作業
+  * [範例D081]()
+  * [作業D081]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D082-神經網路-訓練細節與技巧-Dropout
+* 範例與作業
+  * [範例D082]()
+  * [作業D082]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D083-神經網路-訓練細節與技巧-BatchNormalization
+* 範例與作業
+  * [範例D083]()
+  * [作業D083]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D084-程式實作-正規化AND機移除AND批次標準化的組合與比較
+* 範例與作業
+  * [範例D084]()
+  * [作業D084]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D085-神經網路-訓練細節與技巧-使用Callbacks函數做Earlystop
+* 範例與作業
+  * [範例D085]()
+  * [作業D085]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D086-神經網路-訓練細節與技巧-使用Callbacks函數儲存Model
+* 範例與作業
+  * [範例D086]()
+  * [作業D086]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D087-神經網路-訓練細節與技巧-使用Callbacks函數做ReduceLearningRate
+* 範例與作業
+  * [範例D087]()
+  * [作業D087]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D088-神經網路-訓練細節與技巧-撰寫Callbacks函數
+* 範例與作業
+  * [範例D088]()
+  * [作業D088]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D089-神經網路-訓練細節與技巧-撰寫Lossfunction
+* 範例與作業
+  * [範例D089]()
+  * [作業D089]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D090-使用傳統電腦視覺與機器學習進行影像辨識
+* 範例與作業
+  * [範例D090]()
+  * [作業D090]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+### D091-程式實作-使用傳統電腦視覺與機器學習進行影像辨識
+* 範例與作業
+  * [範例D091]()
+  * [作業D091]()
+
+Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
+<br>
+<br>
+
+
