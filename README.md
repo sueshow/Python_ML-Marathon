@@ -2844,7 +2844,7 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
 * 深度學習
   * 深度神經網路(Supervised LearningDeep Neural Network)
     * 簡介[D064-D065]
-    * 套件介紹[D066-]
+    * 套件介紹[D066-D069]
       * Keras 簡介與安裝
       * Keras 內建資料集下載
       * 如何用 Keras 搭建類神經網路
@@ -3071,24 +3071,24 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 <br>
 
-### D067-Keras Dataset
+### D067-KerasDataset
 * Keras
   * 資料集
-    * CIFAR10 小圖像分類
+    * CIFAR10 小圖像分類---影像分類與識別學習
       * 數據集 50,000 張 32X32 彩色訓練圖像，標註超過 10 個類別，10,000 張測試圖像
       * 語法
         ```
         from keras.datasets import cifar10
         (x_train, y_train), (x_test, y_test) = cifar10.load_data() 
         ```
-    * CIFAR100 小圖像分類
+    * CIFAR100 小圖像分類---影像分類與識別學習
       * 數據集 50,000 張 32X32 彩色訓練圖像，標註超過 100 個類別，10,000 張測試圖像
       * 語法
         ```
         from keras.datasets import cifar100
         (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine') 
         ```
-    * IMDB 電影評論情緒分類
+    * IMDB 電影評論情緒分類---文本分析與情緒分類
       * 來自 IMDB 的 25,000 部電影評論的數據集，標有情緒(正面/負面)。評論已經過預處理，每個評論都被編碼為一系列單詞索引(整數)
       * 單詞由數據集中的整體頻率索引
         * 整數「3」編碼數據中第 3 個最頻繁的單詞
@@ -3096,27 +3096,39 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
       * 語法
         ```
         from keras.datasets import imdb
-        (x_train, y_train), (x_test, y_test) = imdb.load_data(path=“imdb.npz”,num_words= None,skip_top=0,maxlen=None, seed=113,start_char=1,oov_char=2,index_from=3)
+        (x_train, y_train), (x_test, y_test) = imdb.load_data(path="imdb.npz",num_words= None,skip_top=0,maxlen=None, seed=113,start_char=1,oov_char=2,index_from=3)
         ```
         * path：如果沒有本地數據('~/.keras/datasets/'+path)，數據集將被下載到此位置
-        * 
-        *
-    * 路透社 newswire 話題分類
-    * 手寫數字的 MNIST 數據庫
+        * num_words：整數或無。最常見的詞彙需要考慮，任何不太頻繁的單詞將 oov_char 在序列數據中顯示為值
+        * skip_top：整數。最常被忽略的詞 (它們將 oov_char 在序列數據中顯示為值)
+        * maxlen：int。最大序列長度，任何更長的序列都將被截斷
+        * 種子：int。用於可重複數據改組的種子
+        * start_char：int。序列的開頭將標有此字符，設置為 1，然 0 通常是填充字符
+        * oov_char：int。這是因為切出字 num_words 或 skip_top 限制將這個字符替換
+        * index_from：int。使用此索引和更高的索引實際單詞
+    * 路透社 newswire 話題分類---文本分析與情緒分類
+      * 來自路透社的 11,228 條新聞專線的數據集，標註 46 個主題，與 IMDB 數據集一樣，每條線都被編碼為一系列字索引
+      * 語法
+        ```
+        from keras.datasets import reuters
+
+        (x_train, y_train), (x_test, y_test) = reuters.load_data(path=“reuters npz”,num_words= None,skip_top=0,maxlen=None, test_split=0.2,seed=113,start_char=1,oov_char=2,index_from=3)
+        ```
+    * 手寫數字的 MNIST 數據庫---影像分類與識別學習
       * 數據集包含 10 個數字的 60,000 個 28x28 灰度圖像，及 10,000 個圖像的測試集
       * 語法
         ```
         from keras.datasets import mnist
         (x_train, y_train), (x_test, y_test) = mnsit.load_data() 
         ```
-    * 時尚文章的時尚 MNIST 數據庫
+    * 時尚文章的時尚 MNIST 數據庫---影像分類與識別學習
       * 數據集包含 10 個時尚類別的 60,000 個 28x28 灰度圖像，及 10,000 個圖像的測試集
       * 語法
         ```
         from keras.datasets import fashion_mnsit
         (x_train, y_train), (x_test, y_test) = fashion_mnsit.load_data()
         ```
-    * 波士頓房屋價格迴歸數據集
+    * 波士頓房屋價格迴歸數據集---Data/Numerical 學習
       * 數據集取自卡內基梅隆大學維護的 StatLib 庫
       * 20 世紀 70 年代後期，樣本在波士頓郊區的不同位置包含 13 個房屋屬性。目標是一個地點房屋的中位值(單位：k$)
       * 語法
@@ -3129,8 +3141,10 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     * Anaconda 影用程式存儲 Keras 模型和資料集檔，用對應的用戶資料夾下的「.keras」資料夾下
     * 資料集下載後預設存儲目錄「C:Users\Administrator\.keras\datasets」下的同名檔
   * 執行下載
-    > from keras.datasets import cifar10    #從 Keras 導入相應的模組<br>
-    > (x_train, y_train), (x_validate, y_validate) = cifar10.load_data()   #從網路即時下載<br>
+    ```
+    from keras.datasets import cifar10    #從 Keras 導入相應的模組<br>
+    (x_train, y_train), (x_validate, y_validate) = cifar10.load_data()   #從網路即時下載
+    ```
 * 範例與作業
   * [範例D067]()
   * [作業D067]()
@@ -3139,7 +3153,84 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 <br>
 
-### D068-Keras Sequential API
+### D068-KerasSequentialAPI
+* Keras 框架<br>
+  ![]()
+* 序列模型(Sequential Model)
+  * 序列模型是多個網路層的線性堆疊
+  * Sequential 是一系列模型的簡單線性疊加，可在構造函數中傳入一些列的網路層
+    * 語法
+      ```
+      from keras.models import Sequential
+      from keras.layers import Dense, Activation
+
+      model = Sequential()
+      model.add(Dense(32, _input_dim=784))
+      model.add(Activation("relu"))
+
+      # 另外的寫法
+      model = Sequential([Dense(32, _input_shap=(784,)), Activation('relu')
+      ```
+  * 基礎元件
+    * 宣告 Model
+    * model.add 添加層
+    * model.compile 模型訓練
+    * model.fit 模型訓練參數設置+訓練
+    * 模型評估
+    * 模型預測
+      ```
+      # 先匯入套件
+      import tensorflow as tf
+      from tensorflow.keras import layers
+
+      # 再來建立序列模型
+      model=tf.keras.Sequential([layers.Dense(20,input_shape=(1000,)),   # 輸入為1000的一維向量
+                                 layers.Dense(30),                       # 每一層的數值是units，用來定義該層輸出的大小
+                                 layers.Dense(25),
+                                 layers.Dense(10)])
+      ```  
+  * 指定模型的輸入維度
+    * Sequential 的第一層(只有第一層，後面的層會自動匹配)需要知道輸入的 shape 
+在第一層加入一個 input_shape 參數，input_shape 應該是一個 shape 的 tuple 資料類型
+      * input_shape 是一系列整數的 tuple，某些位置可為 None
+      * input_shape 中不用指明 batch_size 的數目
+    * 2D 網路層：如 Dense 允許在層的構造函數的 input_dim 中指定輸入的維度
+    * 3D 時間層：可在構造函數中指定 input_dim 和 input_length 來實現
+    * 如：RNN 可指定 batch_size，後面輸入必須是 (batch_size, input_shape)
+    * 常用參數
+      <table border="1" width="15%">
+          <tr>
+            <th width="5%"> 名稱 </a>
+            <th width="5%"> 作用 </a>
+            <th width="5%"> 原型參數 </a>
+          </tr>
+          <tr>
+            <td> Dense </td>
+            <td> 實現全連接層 </td>
+            <td> Dense(units, activation, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros') </td>
+          </tr>
+          <tr>
+            <td> Activation </td>
+            <td> 對上層輸出應用激活函數 </td>
+            <td> Activation(activation) </td>
+          </tr>
+          <tr>
+            <td> Dropout </td>
+            <td> 對上層輸出應用 dropout 以防止過擬合 </td>
+            <td> Dropout(ration) </td>
+          </tr>
+          <tr>
+            <td> Flatten </td>
+            <td> 對上層輸出一維化 </td>
+            <td> Flatten() </td>
+          </tr>
+          <tr>
+            <td> Reshape </td>
+            <td> 對上層輸出 reshape </td>
+            <td> Reshape(target_shape) </td>
+          </tr>
+      </table>
+      
 * 範例與作業
   * [範例D068]()
   * [作業D068]()
@@ -3148,7 +3239,14 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 <br>
 
-### D069-Keras Module API
+### D069-KerasModuleAPI
+* 函數式 API
+  * 用戶定義多輸出模型、非循環有向模型(有向無環圖)或具有共享層的模型等複雜模型的途徑
+  * 利用函數式 API，可輕易地重用訓練好的模型：可將任何模型看作是一個層，然後通過傳遞一個張量來調用它。注意：在調用模型時，您不僅重用模型結構，還重用它的權重
+* 比較
+  * 模型需要多於一個的輸出，選擇函數式模型
+  * 函數式模型是最廣泛的一類模型，序貫模型(Sequential)是特例
+  * 
 * 範例與作業
   * [範例D069]()
   * [作業D069]()
