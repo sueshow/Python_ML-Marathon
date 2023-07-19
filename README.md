@@ -3075,7 +3075,7 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 * Keras
   * 資料集
     * CIFAR10 小圖像分類---影像分類與識別學習
-      * 數據集 50,000 張 32X32 彩色訓練圖像，標註超過 10 個類別，10,000 張測試圖像
+      * 數據集 50,000 張 32X32 彩色(RGB)訓練圖像，標註超過 10 個類別，10,000 張測試圖像
       * 語法
         ```
         from keras.datasets import cifar10
@@ -3086,7 +3086,8 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
       * 語法
         ```
         from keras.datasets import cifar100
-        (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine') 
+        (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')   # 詳細標示
+        # label_mode='coarace' 大致標示， 
         ```
     * IMDB 電影評論情緒分類---文本分析與情緒分類
       * 來自 IMDB 的 25,000 部電影評論的數據集，標有情緒(正面/負面)。評論已經過預處理，每個評論都被編碼為一系列單詞索引(整數)
@@ -3098,14 +3099,14 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
         from keras.datasets import imdb
         (x_train, y_train), (x_test, y_test) = imdb.load_data(path="imdb.npz",num_words= None,skip_top=0,maxlen=None, seed=113,start_char=1,oov_char=2,index_from=3)
         ```
-        * path：如果沒有本地數據('~/.keras/datasets/'+path)，數據集將被下載到此位置
-        * num_words：整數或無。最常見的詞彙需要考慮，任何不太頻繁的單詞將 oov_char 在序列數據中顯示為值
-        * skip_top：整數。最常被忽略的詞 (它們將 oov_char 在序列數據中顯示為值)
-        * maxlen：int。最大序列長度，任何更長的序列都將被截斷
+        * path：資料夾位置，如果沒有本地數據('~/.keras/datasets/'+path)，數據集將被下載到此位置
+        * num_words：整數或無，保留前 n 個最常出現的詞彙(最小索引值)。最常見的詞彙需要考慮，任何不太頻繁的單詞將 oov_char 在序列數據中顯示為值
+        * skip_top：整數，索引比 n 大的數字會被 oov_char 取代。最常被忽略的詞 (它們將 oov_char 在序列數據中顯示為值)
+        * maxlen：int。最大序列長度，超過 n 個單詞的評論會被截斷
         * 種子：int。用於可重複數據改組的種子
-        * start_char：int。序列的開頭將標有此字符，設置為 1，然 0 通常是填充字符
-        * oov_char：int。這是因為切出字 num_words 或 skip_top 限制將這個字符替換
-        * index_from：int。使用此索引和更高的索引實際單詞
+        * start_char：int，每條評論的起始索引為 n，也就是起始字為 n，不符合規定也會被 oov_char 取代。序列的開頭將標有此字符，設置為 1，然 0 通常是填充字符
+        * oov_char：int，不滿足 num_words 或 skip_top 限制的單詞會設定為 n。這是因為切出字 num_words 或 skip_top 限制將這個字符替換
+        * index_from：int，索引值 = 索引值加上 n，調整索引值大小的參數，default = 3。使用此索引和更高的索引實際單詞
     * 路透社 newswire 話題分類---文本分析與情緒分類
       * 來自路透社的 11,228 條新聞專線的數據集，標註 46 個主題，與 IMDB 數據集一樣，每條線都被編碼為一系列字索引
       * 語法
@@ -3136,7 +3137,7 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
         from keras.datasets import boston_housing
         (x_train, y_train), (x_test, y_test) = boston_housing.load_data() 
         ```
-  * 資料夾：在 Windows 環境，使用 Anaconda 安裝
+  * (預設)資料夾：在 Windows 環境，使用 Anaconda 安裝
     * Anaconda 應用程式安裝目錄下的 Keras 子資料夾，需要搜索找到
     * Anaconda 影用程式存儲 Keras 模型和資料集檔，用對應的用戶資料夾下的「.keras」資料夾下
     * 資料集下載後預設存儲目錄「C:Users\Administrator\.keras\datasets」下的同名檔
@@ -3145,9 +3146,13 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     from keras.datasets import cifar10    #從 Keras 導入相應的模組<br>
     (x_train, y_train), (x_validate, y_validate) = cifar10.load_data()   #從網路即時下載
     ```
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D067]()
+    * 資料集：cifar10
+    * 過程：影像正規化、轉換 label (onehot encoding)
   * [作業D067]()
+    * 資料集：cifar100 → 分類類別為100
+    * 過程：影像正規化、轉換 label (onehot encoding)
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
@@ -3155,22 +3160,21 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 
 ### D068-KerasSequentialAPI
 * Keras 框架<br>
-  ![]()
-* 序列模型(Sequential Model)
-  * 序列模型是多個網路層的線性堆疊
-  * Sequential 是一系列模型的簡單線性疊加，可在構造函數中傳入一些列的網路層
-    * 語法
-      ```
-      from keras.models import Sequential
-      from keras.layers import Dense, Activation
+  ![框架]()
+* 序列模型(Sequential Model)：宣告式 API，靜態
+  * 序列模型是多個網路層的線性堆疊，循序性地加入，可在構造函數中傳入一些列的網路層
+  * 語法
+    ```
+    from keras.models import Sequential
+    from keras.layers import Dense, Activation
 
-      model = Sequential()
-      model.add(Dense(32, _input_dim=784))
-      model.add(Activation("relu"))
+    model = Sequential()
+    model.add(Dense(32, _input_dim=784))
+    model.add(Activation("relu"))
 
-      # 另外的寫法
-      model = Sequential([Dense(32, _input_shap=(784,)), Activation('relu')
-      ```
+    # 另外的寫法
+    model = Sequential([Dense(32, _input_shap=(784,)), Activation('relu')
+    ```
   * 基礎元件
     * 宣告 Model
     * model.add 添加層
@@ -3231,16 +3235,19 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
           </tr>
       </table>
       
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D068]()
+    * 資料集：CIFAR10
+    * 重點：說明身經網路模型在 Keras 所需相關的 library
   * [作業D068]()
+    * 
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
 ### D069-KerasModuleAPI
-* 函數式 API
+* 函數式 API：宣告式 API，靜態
   * 用戶定義多輸出模型、非循環有向模型(有向無環圖)或具有共享層的模型等複雜模型的途徑
   * 利用函數式 API，可輕易地重用訓練好的模型：可將任何模型看作是一個層，然後通過傳遞一個張量來調用它。注意：在調用模型時，您不僅重用模型結構，還重用它的權重
 * 比較
