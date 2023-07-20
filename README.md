@@ -3148,10 +3148,10 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     ```
 * 範例與作業(待上傳)
   * [範例D067]()
-    * 資料集：cifar10
+    * 資料集：CIFAR10
     * 過程：影像正規化、轉換 label (onehot encoding)
   * [作業D067]()
-    * 資料集：cifar100 → 分類類別為100
+    * 資料集：CIFAR100 → 分類類別為100
     * 過程：影像正規化、轉換 label (onehot encoding)
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
@@ -3240,7 +3240,8 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     * 資料集：CIFAR10
     * 重點：說明身經網路模型在 Keras 所需相關的 library
   * [作業D068]()
-    * 
+    * 資料集：CIFAR10
+    * 重點：修改 input shape: (Conv2D(64,(3,3))) 的設定，新增一層 Dense 並觀看 model.summary 的輸出
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
@@ -3253,7 +3254,10 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 * 比較
   * 模型需要多於一個的輸出，選擇函數式模型
   * 函數式模型是最廣泛的一類模型，序貫模型(Sequential)是特例
-  * 
+* 衍伸說明
+  * 層對象接受張量為參數，返回一個張量
+  * 輸入是張量，輸出也是張量的一個框架就是一個模型，通過 Model 定義
+  * 這樣的模型可像 Keras 的 Sequential 一樣被訓練
 * 範例與作業
   * [範例D069]()
   * [作業D069]()
