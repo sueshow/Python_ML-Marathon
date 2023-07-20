@@ -3289,10 +3289,10 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     main_output = Dense(1, activation='sigmoid', name='main_output')(x)
 
     # 宣告 MODEL API，分別採用自行定義的 Input/Output Layer
-    model = Model(inputs=[main_input, auxiliary_input], outputs=[main_output, auxiliary_output])
+    model = Model(inputs=[main_input, news_input], outputs=[news_output, main_output])
     model.compile(optimizer='rmsprop',
-                  loss={'main_output':'binary_crossentropy', 'aux_output':'binary_crossentropy'},
-                  loss_weights={'main_output':1., 'aux_output':0.2})
+                  loss={'main_output':'binary_crossentropy', 'news_output':'binary_crossentropy'},
+                  loss_weights={'main_output':1., 'news_output':0.2})
     ```
     <br>
     ![Module]()
@@ -3309,15 +3309,47 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
         * 建立一個模型來分辨兩條推文是否來自同一個人(如：通過推文的相似性來對用戶進行比較)
         * 將兩條推文編碼成兩個向量，連接向量，然後添加邏輯回歸層，這將輸出兩條推文來自同一作者的概率，模型將接收一對對正負表示的推特數據
         * 由於這個問題是對稱的，編碼第一條推文的機制應該被完全重用來編碼第二條推文(權重及其他全部)
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D069]()
+    * 資料集：housing = fetch_california_housing()
+    * 重點
+      * 用 tensorflow.keras 的 functional API 建立簡單的多輸入單輸出模型，並進行房價預測
+      * 輸入 A (4 個 feature)經過隱藏層 1 (30個神經元)和 2(30個神經元)(deep)，輸入 B (5 個 feature)經過隱藏層 3 (30個神經元)後再進行合併(1個神經元)再輸出(指定輸入[A,B]，輸出結果為 concat 後經過 1 個神經元的結果)
+      * 說明 compile 與 fit 用法的不同
   * [作業D069]()
+    * 資料集
+    * 重點
+      * 修改 Name 中，自訂義的 Layer 名稱，並增加一層全連接層
+      * 宣告 Model API，分別採用自訂義的 Input/Output Layer
+      * 透過 model.summary 查看 Layers stack
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
 ### D070-深度神經網路的基礎知識
+* 深度學習網路歷史
+  * 單層感知器(Perceptron)<br>
+    ![]()
+  * 多層感知器(Multilayer Perceptron)<br>
+    ![]()
+  * 深度學習網路(DNN)<br>
+    ![]()
+  * 差異
+    * 多層感知器與深度學習網路主要差異為可以多層隱藏層建構出一個具有深度的神經
+* 深度學習本身是機器學習領域下的一個分支，核心概念為「從資料中尋找一組最適合解決某種特定問題的函式」
+  * 語音辨識：輸入一段語音，機器能辨識出語音對應的文字
+  * 圖像辨識：輸入一張貓咪圖片，機器能分辨出這張圖裡有貓
+  * 棋藝競賽：輸入圍棋的落子狀況，機器能算出勝率最高的下個落子點
+  * 對話系統：在對話系統中，機器接受到 Hi，它能作出一個適當的回應，如 Hello
+* 需要深度學習網路
+  * 手寫辨識照片利用單一層隱藏層神經網路能達 97% 以上的正確率，但近年來不斷訓練僅能達到接近 97% 的正確率
+  * 主要原因為神經網路同時須考慮到照片大小，照片裡出現的圖像、像素及 RGB 等問題，因此需要較大的神經網路才能學習到更多照片裡的資訊
+  * 在一個語言辨識的測驗中，無論是淺的或深度神經網路，辨識率都隨著神經元數目的增加而成長
+  * 在相同數目的神經元時，深度神經網路的表現總是比較好
+* 深度學習網路
+  * 概念
+  * 
 * 範例與作業
   * [範例D070]()
   * [作業D070]()
