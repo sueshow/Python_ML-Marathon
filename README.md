@@ -3258,6 +3258,57 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
   * 層對象接受張量為參數，返回一個張量
   * 輸入是張量，輸出也是張量的一個框架就是一個模型，通過 Model 定義
   * 這樣的模型可像 Keras 的 Sequential 一樣被訓練
+* 配置
+  * 搭建多輸入、多輸出的模型
+    ```
+    from keras.layers import Input, Embedding, LSTM, Dense
+    from keras.models import Model
+
+    # 這些整數在 1 到 10,000 之間(10,000 個詞的詞彙表)，且序列長度為 100 個詞
+    # 宣告一個 NAME 去定義 Input
+    main_input = Input(shape=(100,), dtype='int32', name='main_input')
+
+    # Embedding 層將輸入序列編碼為一個稠密向量的序列，每個向量維度為 512
+    x = Embedding(output_dim=512, input_dim=10000, input_length=100)(main_input)
+
+    # LSTM 層把向量序列轉換成單個向量，它包含整個序列的上下文信息
+    lstm_out = LSTM(32)(x)
+
+    # 插入輔助損失，使得即使在模型主損失很高的情況下，LSTM 層和 Embedding 層都能被平穩地訓練
+    news_output = Dense(1, activation='sigmoid', name='news_out')(lstm_out)
+
+    # 輔助輸入數據與 LSTM 層的輸出連接起來，輸入到模型
+    import keras
+    news_input = Input(shape=(5,), name='news_in')
+    x = keras.layers.concatenate([lstm_out, news_input])
+
+    # 堆疊多個全連接網路層
+    x = Dense(64, activation='relu')(x)
+    x = Dense(64, activation='relu')(x)
+    # 最後添加主要的邏輯回歸層
+    main_output = Dense(1, activation='sigmoid', name='main_output')(x)
+
+    # 宣告 MODEL API，分別採用自行定義的 Input/Output Layer
+    model = Model(inputs=[main_input, auxiliary_input], outputs=[main_output, auxiliary_output])
+    model.compile(optimizer='rmsprop',
+                  loss={'main_output':'binary_crossentropy', 'aux_output':'binary_crossentropy'},
+                  loss_weights={'main_output':1., 'aux_output':0.2})
+    ```
+    <br>
+    ![Module]()
+  * 應用說明
+    * 利用函數式 API 可輕易地重用訓練好的模型：可將任何模型看作是一個層，然後通過傳遞一個張量來調用它。注意：在調用模型時，不僅重用模型的架構，還重用了它的權重
+    * 具有多個輸入和輸出的模型，函數式 API 使處理大量交織的數據流變得容易
+    * 範例
+      * 預測 Twitter 上的一條新聞標題有多少轉發和點讚數<br>
+        ![Twitter]()
+        * 模型的主要輸入將是新聞標題本身，即為一系列詞語
+        * 為了增添趣味，模型還添加其他的輔助輸入來接收額外的數據，如新聞標題的發布時間等
+        * 該模型將通過兩個損失函數進行監督學習，較早地在模型中使用主損失函數，是深度學習模型的一個良好正則方法
+      * 推特推文數據集
+        * 建立一個模型來分辨兩條推文是否來自同一個人(如：通過推文的相似性來對用戶進行比較)
+        * 將兩條推文編碼成兩個向量，連接向量，然後添加邏輯回歸層，這將輸出兩條推文來自同一作者的概率，模型將接收一對對正負表示的推特數據
+        * 由於這個問題是對稱的，編碼第一條推文的機制應該被完全重用來編碼第二條推文(權重及其他全部)
 * 範例與作業
   * [範例D069]()
   * [作業D069]()
