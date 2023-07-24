@@ -3526,19 +3526,179 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
   * 第 2 階段：權重更新
     * Follow Gradient Descent
       * 第 1 和第 2 階段可以反覆循環疊代，直到網路對輸入的響應達到滿意的預定的目標範圍為止
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D075]()
     * 重點
       * 自定義神經網路架構
       * 初始值設定
       * 使用範例
   * [作業D075]()
+    * 權重更新與 Loss function 是 BP Neural Network 重要的一環，請參考範例D075-Back_Propagation，然後練習把網路增加到第三層
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
 ### D076-優化器Optimizers
+* 優化器(optimizers)
+  * 通過最優化方法對目標函數進行優化從而訓練出最好的模型
+    * 功能：通過改善訓練方式，來最小化(或最大化)損失函數 $E(x)$
+    * 算法：用來更新和計算影響模型訓練和模型輸出的網絡參數，使其逼近或達到最優值
+  * SGD：隨機梯度下降法(stochastic gradient decent)
+    * 找出參數的梯度(利用微分的方法)，往梯度的方向去更新參數(weight)
+    * 優點：SGD 每次更新時對每個樣本進行梯度更新，對於很大的數據集來說，可能會有相似的樣本，而 SGD 一次只進行一次更新，就沒有冗餘，而且比較快
+    * 缺點：但是 SGD 因為更新比較頻繁，會造成 cost function 有嚴重的震盪
+    * SGD 調用
+      * 語法：keras.optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=False)
+      * 參數
+        * lr：<float>，學習率
+        * Momentum 動量：<float>，用於加速 SGD 在相關方向上前進，並抑制震盪
+        * Decay(衰變)：<float>，每次參數更新後學習率衰減值
+        * nesterov：布爾值，是否使用 Nesterov 動量
+
+        ```
+        from keras import optimizers 
+
+        model = Sequential() 
+        model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+        model.add(Activation('softmax’)) 
+
+        #實例化一個優化器對象，然後將它傳入model.compile()，可以修改參數
+        sgd = optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True) model.compile(loss='mean_squared_error', optimizer=sgd) 
+
+        # 通過名稱來調用優化器，將使用優化器的默認參數
+        model.compile(loss='mean_squared_error', optimizer='sgd')
+        ```
+      * SGD, mini-batch gradient descent
+        * batch-gradient：就是普通的梯度下降算法，但是採用批量處理
+          * 當數據集很大(比如有 100000 個左右時)，每次 iteration 都要將 1000000 個數據跑一遍，機器帶不動。於是有了 mini-batch-gradient ——將 1000000 個樣本分成 1000 份，每份 1000 個，都看成一組獨立的數據集，進行 forward_propagation 和 backward_propagation
+        * 在整個算法的流程中，cost function 是局部的，但是 W 和 b 是全局的
+          * 批量梯度下降對訓練集上每一個數據都計算誤差，但只在所有訓練數據計算完成後才更新模型
+          * 對訓練集上的一次訓練過程稱為一代(epoch)。因此，批量梯度下降是在每一個訓練 epoch 之後更新模型
+        * epoch、iteration、batchsize，mini-batch
+          * batchsize：批量大小，即每次訓練在訓練集中取 batchsize 個樣本訓練
+            * batchsize=1
+            * batchsize = mini-batch;
+            * batchsize = whole training set
+          * iteration：1個 iteration 等於使用 batchsize 個樣本訓練一次
+          * epoch：1個 epoch 等於使用訓練集中的全部樣本訓練一次
+        * 範例
+          * features is (50000, 400)
+          * labels is (50000, 10)
+          * batch_size is 128
+          * Iteration = 50000/128+1 = 391
+        * 配置 mini-batch 梯度下降
+          * Mini-batch sizes 簡稱為「batch sizes」，是算法設計中需要調節的參數
+          * 較小的值讓學習過程收斂更快，但是產生更多噪聲
+          * 較大的值讓學習過程收斂較慢，但是準確的估計誤差梯度
+          * batch size 的默認值最好是 32 盡量選擇 2 的冪次方，有利於 GPU 的加速
+          * 調節 batch size 時，最好觀察模型在不同 batch size 下的訓練時間和驗證誤差的學習曲線
+          * 調整其他所有超參數之後再調整 batch size 和學習率
+  * Adagrad
+    * 對於常見的數據給予比較小的學習率去調整參數，對於不常見的數據給予比較大的學習率調整參數
+      * 每個參數都有不同的 learning rate
+      * 根據之前所有 gradient 的 root mean square 修改 
+    * 優點：Adagrad 的是減少了學習率的手動調節
+    * 缺點：它的缺點是分母會不斷積累，這樣學習率就會收縮並最終會變得非常小
+    * Adagrad 調用
+      * 語法：keras.optimizers.Adagrad(lr=0.01, epsilon=None, decay=0.0)
+      * 參數
+        * lr：float >= 0，學習率，一般 η 就取 0.01
+        * epsilon：float >= 0，若為 None，默認為 K.epsilon()
+        * decay：float >= 0，每次參數更新後學習率衰減值
+          ```
+          from keras import optimizers 
+
+          model = Sequential() 
+          model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+          model.add(Activation('softmax')) 
+
+          #實例化一個優化器對象，然後將它傳入 model.compile()，可以修改參數
+          opt = optimizers.Adagrad(lr=0.01, epsilon=None, decay=0.0)
+          model.compile(loss='mean_squared_error', optimizer=opt) 
+          ```
+  * RMSprop
+    * RMSProp 算法旨在抑制梯度的鋸齒下降，但與動量相比，RMSProp 不需要手動配置學習率超參數，由算法自動完成。更重要的是，RMSProp 可為每個參數選擇不同的學習率
+    * This optimizer is usually a good choice for recurrent neural networks
+    * RMSprop 為了解決 Adagrad 學習率急劇下降問題的，比對梯度更新規則：<br>
+      ![]()
+    * RMSprop 調用
+      * 語法：keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=None, decay=0.0) 
+      * 參數
+        * lr：float >= 0，Learning rate
+        * rho：float >= 0
+        * epsilon：float >= 0，Fuzz factor。If None, defaults to K.epsilon()
+        * decay：float >= 0，Learning rate decay over each update
+          ```
+          from keras import optimizers 
+
+          model = Sequential() 
+          model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+          model.add(Activation('softmax')) 
+
+          #實例化一個優化器對象，然後將它傳入model.compile() , 可以修改參數
+          opt = optimizers.RMSprop(lr=0.001, epsilon=None, decay=0.0) 
+          model.compile(loss='mean_squared_error', optimizer=opt)
+          ```
+  * Adam
+    * 除像 RMSprop 一樣存儲了過去梯度的平方 $v_t$ 的指數衰減平均值，也像 momentum 一樣保持了過去梯度 $m_t$ 的指數衰減平均值，「t」
+    * 計算梯度的指數移動平均數，$m_0$ 初始化為 0。綜合考慮之前時間步的梯度動量
+    * $β_1$ 係數為指數衰減率，控制權重分配(動量與當前梯度)，通常取接近於 1 的值。默認為 0.9
+    * 其次，計算梯度平方的指數移動平均數，$v_0$ 初始化為 0。$β_2$ 係數為指數衰減率，控制之前的梯度平方的影響情況。類似於 RMSProp 算法，對梯度平方進行加權均值。默認為 0.999
+    * 由於 $m_0$ 初始化為 0，會導致 $m_t$ 偏向於 0，尤其在訓練初期階段。所以，此處需要對梯度均值 $m_t$ 進行偏差糾正，降低偏差對訓練初期的影響
+    * 與 $m_0$ 類似，因為 $v_0$ 初始化為 0 導致訓練初始階段 $v_t$ 偏向 0，對其進行糾正
+    * 更新參數，初始的學習率 $lr$ 乘以梯度均值與梯度方差的平方根之比。其中默認學習率 lr =0.001, eplison (ε=10^-8)，避免除數變為 0
+    * 對更新的步長計算，能夠從梯度均值及梯度平方兩個角度進行自適應地調節，而不是直接由當前梯度決定
+    * Adam 調用
+      * 語法：keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
+      * 參數
+        * lr：float >= 0，學習率
+        * beta_1：float，0 < beta < 1，通常接近於 1
+        * beta_2：float，0 < beta < 1，通常接近於 1
+        * epsilon：float >= 0，模糊因數，若為 None，默認為 K.epsilon()
+        * amsgrad：boolean，是否應用此演算法的 AMSGrad 變種，來自論文 「On the Convergence of Adam and Beyond」
+        * decay：float >= 0，每次參數更新後學習率衰減值
+          ```
+          from keras import optimizers 
+
+          model = Sequential() 
+          model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+          model.add(Activation('softmax')) 
+
+          #實例化一個優化器對象，然後將它傳入 model.compile()，可修改參數
+          opt = optimizers. Adam(lr=0.001, epsilon=None, decay=0.0) 
+          model.compile(loss='mean_squared_error', optimizer=opt) 
+          ```
+* 最常用的優化算法：Gradient Descent
+  * 使用各參數的梯度值來最小化或最大化損失函數 $E(x)$，通過尋找最小值，控制方差，更新模型參數，最終使模型收斂
+  * 複習：梯度下降 Gradient Descent
+    * $w_{i+1} = w_i - d_i*η_i, i=0,1,…
+    * $η$ 是學習率：可設置為固定值，也可以用一維優化方法沿著訓練的方向逐步更新計算
+    * 參數的更新分為兩步：第一步計算梯度下降的方向，第二步計算合適的學習 
+  * 複習：動量 Momentum
+    * 加入一項：可使得梯度方向不變的維度上速度變快，梯度方向有所改變的維度上的更新速度變慢，這樣就可以加快收斂並減小震盪
+      ![]()
+* 如何選擇優化器
+  * 隨機梯度下降(SGD)：SGD 指的是 mini batch gradient descent
+    * 優點：針對大數據集，訓練速度很快從訓練集樣本中隨機選取一個 batch 計算一次梯度，更新一次模型參數
+    * 缺點
+      * 對所有參數使用相同的學習率。對於稀疏數據或特徵，希望盡快更新一些不經常出現的特徵，慢一些更新常出現的特徵。所以選擇合適的學習率比較困難
+      * 容易收斂到局部最優
+    * 隨機梯度下降法是將數據分成一小批一小批的進行訓練，但是速度比較慢
+  * AdaGrad 採用改變學習率的方式
+  * Adam：利用梯度的一階矩估計和二階矩估計動態調節每個參數的學習率
+    * 優點
+      * 經過偏置校正後，每一次迭代都有確定的範圍，使得參數比較平穩。善於處理稀疏梯度和非平穩目標
+      * 對內存需求小
+      * 對不同內存計算不同的學習率
+    * Adam 係結合 AdaGrad 和 RMSProp 兩種優化算法的優點。對梯度的一階矩估計(First Moment Estimation，即梯度的均值)和二階矩估計(Second Moment Estimation，即梯度的未中心化的方差)進行綜合考慮，計算出更新步長
+  * RMSProp
+    * 自適應調節學習率。對學習率進行了約束，適合處理非平穩目標和 RNN
+    * RMSProp 是將 Momentum 與 AdaGrad 部分相結合
+  * 如果輸入數據集比較稀疏，SGD、NAG和動量項等方法可能效果不好。因此對於稀疏數據集，應該使用某種自適應學習率的方法，且另一好處為不需要人為調整學習率，使用默認參數就可能獲得最優值：Adagrad, RMSprop, Adam
+  * 如果想使訓練深層網絡模型快速收斂或所構建的神經網絡較為複雜，則應該使用Adam或其他自適應學習速率的方法，因為這些方法的實際效果更優
+    * Adam 就是在 RMSprop 的基礎上加了 bias-correction 和 momentum
+    * 隨著梯度變的稀疏，Adam 比 RMSprop 效果會好
 * 範例與作業
   * [範例D076]()
   * [作業D076]()
