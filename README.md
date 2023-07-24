@@ -3433,8 +3433,10 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 * 從程式中微調(Fine Tune)相關的參數
 * 範例與作業(待上傳)
   * [範例D073]()
+    * function：$y=(x+5)^2$
     * learning rate = 0.01 -> 595次
   * [作業D073]()
+    * function：$y=(x+5)^2$
     * 使用不同的組合驗證 learning rate 對所需 iteration 的影響 lr = [0.1, 0.0001] 主要驗證 Lr 對於 grandient 收斂的速度
       * learning rate = 0.1 -> 66次
       * learning rate = 0.0001 -> 執行 10000 次，尚未收斂 
@@ -3469,9 +3471,14 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     * 批次(一般)
     * 小批次(mini batch)
     * 隨機 
-* 範例與作業
+* 範例與作業(待上傳)
   * [範例D074]()
+    * function：$y=(x)^2$
+    * learning rate=$10^{-6}$
+    * 有提及 AdaGrad (李宏毅) 的 learning rate=1
   * [作業D074]()
+    * function：$y=(x+3)^2$
+    * 調整其它 Hyperparameters：w_init、epochs、lr、decay(隨)、momentom 測試逼近的過程
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
