@@ -3478,7 +3478,7 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     * 有提及 AdaGrad (李宏毅) 的 learning rate=1
   * [作業D074]()
     * function：$y=(x+3)^2$
-    * 調整其它 Hyperparameters：w_init、epochs、lr、decay(隨參數更新而)、momentom 測試逼近的過程
+    * 調整其它 Hyperparameters：w_init、epochs、lr、decay(隨參數更新而衰減)、momentom 測試逼近的過程
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
