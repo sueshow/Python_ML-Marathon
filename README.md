@@ -2848,7 +2848,7 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
       * Keras 簡介與安裝
       * Keras 內建資料集下載
       * 如何用 Keras 搭建類神經網路
-    * 組成概念
+    * 組成概念[D072-D074]
     * 訓練技巧
     * 應用案例
   * 卷積神經網路(Convolutional Neural Network，CNN)
@@ -3441,6 +3441,7 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 
 ### D074-GradientDescent數學原理
+*
 * 範例與作業
   * [範例D074]()
   * [作業D074]()
