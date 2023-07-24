@@ -3395,7 +3395,7 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 ### D073-梯度下降GradientDescent
 * 梯度下降(Gradient Descent)：最常用的優化算法
   * 定義：機器學習算法當中，優化算法的功能，是通過改善訓練方式，來最小化(或最大化)損失函數
-    * 除梯度下降(以ㄑ外，有：最小平方法、SVD分解，這些都有 close form solution
+    * 除梯度下降(以)外，有：最小平方法、SVD分解，這些都有 close form solution
   * 概念
     * 通過尋找最小值，控制方差，更新模型參數，最終使模型收斂
     * $w_{i+1} = w_i - d_i*η_i,  i=0,1,…$
