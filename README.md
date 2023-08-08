@@ -2281,7 +2281,8 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
             * 把 n 個點切分到 k 個群中，不斷重複調整群心、重新分群，最後達到每個點都隸屬於與其群心最近的聚類(群)中
     * 關聯規則(Association Rule)
       * 從大量數據中發現變數間隱藏關係的方法
-      * 常見應用案例，如購物籃分析，可作為銷售團隊線上或線下商品組合的決策參考
+      * 常見應用案例，如購物籃分析，可作為銷售團隊線上或線下商品組合的決策參考<br>
+        ![關聯規則](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F_%E9%97%9C%E8%81%AF%E8%A6%8F%E5%89%87.png.crdownload) 
       * 方法
         <table border="1" width="25%">
           <tr>
@@ -2330,7 +2331,8 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
         </table>         
     * 異常檢測(Anomaly Detection)
       * 透過樣本特徵的群聚，將相對異常的模式、樣本或事件辨識出來
-      * 常見應用案例，如交易詐欺、結構缺陷檢測、醫療問題、文字錯誤辨識、入侵檢測
+      * 常見應用案例，如交易詐欺、結構缺陷檢測、醫療問題、文字錯誤辨識、入侵檢測<br>
+        ![異常偵測](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F_%E7%95%B0%E5%B8%B8%E5%81%B5%E6%B8%AC.png.crdownload)  
       * 方法
         * LOF (Local Outlier Factor)
           * 如果樣本點 p 的 LOF 得分接近 1，表示 p 的局部密度與相鄰點差不多
