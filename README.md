@@ -2832,8 +2832,8 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * [人工智慧大歷史](https://suipichen.medium.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%A4%A7%E6%AD%B7%E5%8F%B2-ffe46a350543)
   * [機器學習簡介](https://developers.google.com/machine-learning?hl=zh-tw)
   * [跟著大神學 AI：Google 免費機器學習課程上線，影片都有中文字幕超佛心](https://buzzorange.com/techorange/2018/03/02/learn-with-google/)
-* 範例與作業(待上傳)
-  * [作業D063]()
+* 範例與作業
+  * [作業D063](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_063_Intro_of_DNN_Ans.ipynb)
     * 無程式撰寫，有補充教材
 
 Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
@@ -2843,7 +2843,15 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
 ### D064-深度學習-模型調整與學習曲線
 * 深度學習
   * 深度神經網路(Supervised LearningDeep Neural Network)
-    * 簡介[D064-D065]、套件介紹、組成概念、訓練技巧、應用案例
+    * 簡介[D064-D065]
+    * 套件介紹[D066-D069]
+      * Keras 簡介與安裝
+      * Keras 內建資料集下載
+      * 如何用 Keras 搭建類神經網路
+    * 組成概念[D072-D076]
+      ![]()
+    * 訓練技巧
+    * 應用案例
   * 卷積神經網路(Convolutional Neural Network，CNN)
     * 簡介、套件介紹、訓練技巧、電腦視覺
   * 深度學習簡介：神經網路歷史、深度學習概念、深度學習體驗[D064-D065]
@@ -2889,8 +2897,8 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
       * 雖然圖像化更直覺，但並非量化指標且可視畫不容易，故深度學習的觀察指標仍以「損失函數/誤差」為主
       * 對於不同資料類型，適合加深與加寬的問題都有，但「加深」適合的問題類型較多
       * 輸入特徵的選擇影響結果甚鉅，因此深度學習也需要考慮「特徵工程」
-* 範例與作業(待上傳)
-  * [作業D064]()
+* 範例與作業
+  * [作業D064](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_064_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_064_Experience_of_DNN1_Ans.ipynb)
     * 選擇迴歸資料集(右)-交錯六群，挑戰測試誤差(Test Loss)最低能到多少
       * 在其他參數(特徵X1、X2)保持預設值的情況下，只允許調整隱藏層層數與神經元數量
       * 隱藏層神經元總數最多 8 個 (即 : 可以單層 8 個，或兩層 5 個與 3 個)
@@ -2946,10 +2954,8 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
     * 學習速率：學習速率越大學習曲線越不穩定、但收斂越快，但是與批次的大小不同的是學習速率大於一定以上時，有可能不穩定到無法收斂
     * 啟動函數：當類神經網路層數不多時，啟動函數 Sigmoid/Tanh  的效果比 Relu 更好
     * 正規化：L1/L2 正規化在非深度學習上效果較明顯，而正規化參數較小才有效果
-* 範例與作業(待上傳)
-  * [範例D065]()
-    * 練習 5 ~ 8
-  * [作業D065]()
+* 範例與作業
+  * [作業D065](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_065_%E4%BD%9C%E6%A5%AD%E8%A7%A3%E7%AD%94/Day_065_Experience_of_DNN2_Ans.ipynb)
     * 選擇分類資料集(右下)-螺旋雙臂-交錯六群
       * 限定特徵只能使用前兩個(X1、X2)
       * 隱藏層 2 層滿 (共 8 * 2 =16 個神經元)
@@ -3055,10 +3061,10 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
         * import tensorflow
         * import keras
 * 範例與作業
-  * [範例D066]()
+  * [範例D066](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_066_HW/Day_066_Introduction_of_Keras.ipynb)
     * Keras 的使用方法及常見錯誤
     * 檔案：Day_066_Introduction_of_Keras.ipynb
-  * [作業D066]()
+  * [作業D066](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day_066_Keras_Introduction_Ans.ipynb)
     * 檢查 Keras 的 backend
     * 使用 fuzz factor 產生 1e-99
     * 設定 Keras 浮點運算為 float16
@@ -3066,34 +3072,301 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 <br>
 
-### D067-Keras Dataset
-* 範例與作業
+### D067-KerasDataset
+* Keras
+  * 資料集
+    * CIFAR10 小圖像分類---影像分類與識別學習
+      * 數據集 50,000 張 32X32 彩色(RGB)訓練圖像，標註超過 10 個類別，10,000 張測試圖像
+      * 語法
+        ```
+        from keras.datasets import cifar10
+        (x_train, y_train), (x_test, y_test) = cifar10.load_data() 
+        ```
+    * CIFAR100 小圖像分類---影像分類與識別學習
+      * 數據集 50,000 張 32X32 彩色訓練圖像，標註超過 100 個類別，10,000 張測試圖像
+      * 語法
+        ```
+        from keras.datasets import cifar100
+        (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')   # 詳細標示
+        # label_mode='coarace' 大致標示， 
+        ```
+    * IMDB 電影評論情緒分類---文本分析與情緒分類
+      * 來自 IMDB 的 25,000 部電影評論的數據集，標有情緒(正面/負面)。評論已經過預處理，每個評論都被編碼為一系列單詞索引(整數)
+      * 單詞由數據集中的整體頻率索引
+        * 整數「3」編碼數據中第 3 個最頻繁的單詞
+        * 「0」不代表特定單詞，而是用於編碼任何位知單詞
+      * 語法
+        ```
+        from keras.datasets import imdb
+        (x_train, y_train), (x_test, y_test) = imdb.load_data(path="imdb.npz",num_words= None,skip_top=0,maxlen=None, seed=113,start_char=1,oov_char=2,index_from=3)
+        ```
+        * path：資料夾位置，如果沒有本地數據('~/.keras/datasets/'+path)，數據集將被下載到此位置
+        * num_words：整數或無，保留前 n 個最常出現的詞彙(最小索引值)。最常見的詞彙需要考慮，任何不太頻繁的單詞將 oov_char 在序列數據中顯示為值
+        * skip_top：整數，索引比 n 大的數字會被 oov_char 取代。最常被忽略的詞 (它們將 oov_char 在序列數據中顯示為值)
+        * maxlen：int。最大序列長度，超過 n 個單詞的評論會被截斷
+        * 種子：int。用於可重複數據改組的種子
+        * start_char：int，每條評論的起始索引為 n，也就是起始字為 n，不符合規定也會被 oov_char 取代。序列的開頭將標有此字符，設置為 1，然 0 通常是填充字符
+        * oov_char：int，不滿足 num_words 或 skip_top 限制的單詞會設定為 n。這是因為切出字 num_words 或 skip_top 限制將這個字符替換
+        * index_from：int，索引值 = 索引值加上 n，調整索引值大小的參數，default = 3。使用此索引和更高的索引實際單詞
+    * 路透社 newswire 話題分類---文本分析與情緒分類
+      * 來自路透社的 11,228 條新聞專線的數據集，標註 46 個主題，與 IMDB 數據集一樣，每條線都被編碼為一系列字索引
+      * 語法
+        ```
+        from keras.datasets import reuters
+
+        (x_train, y_train), (x_test, y_test) = reuters.load_data(path=“reuters npz”,num_words= None,skip_top=0,maxlen=None, test_split=0.2,seed=113,start_char=1,oov_char=2,index_from=3)
+        ```
+    * 手寫數字的 MNIST 數據庫---影像分類與識別學習
+      * 數據集包含 10 個數字的 60,000 個 28x28 灰度圖像，及 10,000 個圖像的測試集
+      * 語法
+        ```
+        from keras.datasets import mnist
+        (x_train, y_train), (x_test, y_test) = mnsit.load_data() 
+        ```
+    * 時尚文章的時尚 MNIST 數據庫---影像分類與識別學習
+      * 數據集包含 10 個時尚類別的 60,000 個 28x28 灰度圖像，及 10,000 個圖像的測試集
+      * 語法
+        ```
+        from keras.datasets import fashion_mnsit
+        (x_train, y_train), (x_test, y_test) = fashion_mnsit.load_data()
+        ```
+    * 波士頓房屋價格迴歸數據集---Data/Numerical 學習
+      * 數據集取自卡內基梅隆大學維護的 StatLib 庫
+      * 20 世紀 70 年代後期，樣本在波士頓郊區的不同位置包含 13 個房屋屬性。目標是一個地點房屋的中位值(單位：k$)
+      * 語法
+        ```
+        from keras.datasets import boston_housing
+        (x_train, y_train), (x_test, y_test) = boston_housing.load_data() 
+        ```
+  * (預設)資料夾：在 Windows 環境，使用 Anaconda 安裝
+    * Anaconda 應用程式安裝目錄下的 Keras 子資料夾，需要搜索找到
+    * Anaconda 影用程式存儲 Keras 模型和資料集檔，用對應的用戶資料夾下的「.keras」資料夾下
+    * 資料集下載後預設存儲目錄「C:Users\Administrator\.keras\datasets」下的同名檔
+  * 執行下載
+    ```
+    from keras.datasets import cifar10    #從 Keras 導入相應的模組<br>
+    (x_train, y_train), (x_validate, y_validate) = cifar10.load_data()   #從網路即時下載
+    ```
+* 範例與作業(待上傳)
   * [範例D067]()
+    * 資料集：CIFAR10
+    * 過程：影像正規化、轉換 label (onehot encoding)
   * [作業D067]()
+    * 資料集：CIFAR100 → 分類類別為100
+    * 過程：影像正規化、轉換 label (onehot encoding)
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
-### D068-Keras Sequential API
-* 範例與作業
+### D068-KerasSequentialAPI
+* Keras 框架<br>
+  ![框架]()
+* 序列模型(Sequential Model)：宣告式 API，靜態
+  * 序列模型是多個網路層的線性堆疊，循序性地加入，可在構造函數中傳入一些列的網路層
+  * 語法
+    ```
+    from keras.models import Sequential
+    from keras.layers import Dense, Activation
+
+    model = Sequential()
+    model.add(Dense(32, _input_dim=784))
+    model.add(Activation("relu"))
+
+    # 另外的寫法
+    model = Sequential([Dense(32, _input_shap=(784,)), Activation('relu')
+    ```
+  * 基礎元件
+    * 宣告 Model
+    * model.add 添加層
+    * model.compile 模型訓練
+    * model.fit 模型訓練參數設置+訓練
+    * 模型評估
+    * 模型預測
+      ```
+      # 先匯入套件
+      import tensorflow as tf
+      from tensorflow.keras import layers
+
+      # 再來建立序列模型
+      model=tf.keras.Sequential([layers.Dense(20,input_shape=(1000,)),   # 輸入為1000的一維向量
+                                 layers.Dense(30),                       # 每一層的數值是units，用來定義該層輸出的大小
+                                 layers.Dense(25),
+                                 layers.Dense(10)])
+      ```  
+  * 指定模型的輸入維度
+    * Sequential 的第一層(只有第一層，後面的層會自動匹配)需要知道輸入的 shape 
+在第一層加入一個 input_shape 參數，input_shape 應該是一個 shape 的 tuple 資料類型
+      * input_shape 是一系列整數的 tuple，某些位置可為 None
+      * input_shape 中不用指明 batch_size 的數目
+    * 2D 網路層：如 Dense 允許在層的構造函數的 input_dim 中指定輸入的維度
+    * 3D 時間層：可在構造函數中指定 input_dim 和 input_length 來實現
+    * 如：RNN 可指定 batch_size，後面輸入必須是 (batch_size, input_shape)
+    * 常用參數
+      <table border="1" width="15%">
+          <tr>
+            <th width="5%"> 名稱 </a>
+            <th width="5%"> 作用 </a>
+            <th width="5%"> 原型參數 </a>
+          </tr>
+          <tr>
+            <td> Dense </td>
+            <td> 實現全連接層 </td>
+            <td> Dense(units, activation, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros') </td>
+          </tr>
+          <tr>
+            <td> Activation </td>
+            <td> 對上層輸出應用激活函數 </td>
+            <td> Activation(activation) </td>
+          </tr>
+          <tr>
+            <td> Dropout </td>
+            <td> 對上層輸出應用 dropout 以防止過擬合 </td>
+            <td> Dropout(ration) </td>
+          </tr>
+          <tr>
+            <td> Flatten </td>
+            <td> 對上層輸出一維化 </td>
+            <td> Flatten() </td>
+          </tr>
+          <tr>
+            <td> Reshape </td>
+            <td> 對上層輸出 reshape </td>
+            <td> Reshape(target_shape) </td>
+          </tr>
+      </table>
+      
+* 範例與作業(待上傳)
   * [範例D068]()
+    * 資料集：CIFAR10
+    * 重點：說明身經網路模型在 Keras 所需相關的 library
   * [作業D068]()
+    * 資料集：CIFAR10
+    * 重點：修改 input shape: (Conv2D(64,(3,3))) 的設定，新增一層 Dense 並觀看 model.summary 的輸出
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
-### D069-Keras Module API
-* 範例與作業
+### D069-KerasModuleAPI
+* 函數式 API：宣告式 API，靜態
+  * 用戶定義多輸出模型、非循環有向模型(有向無環圖)或具有共享層的模型等複雜模型的途徑
+  * 利用函數式 API，可輕易地重用訓練好的模型：可將任何模型看作是一個層，然後通過傳遞一個張量來調用它。注意：在調用模型時，您不僅重用模型結構，還重用它的權重
+* 比較
+  * 模型需要多於一個的輸出，選擇函數式模型
+  * 函數式模型是最廣泛的一類模型，序貫模型(Sequential)是特例
+* 衍伸說明
+  * 層對象接受張量為參數，返回一個張量
+  * 輸入是張量，輸出也是張量的一個框架就是一個模型，通過 Model 定義
+  * 這樣的模型可像 Keras 的 Sequential 一樣被訓練
+* 配置
+  * 搭建多輸入、多輸出的模型
+    ```
+    from keras.layers import Input, Embedding, LSTM, Dense
+    from keras.models import Model
+
+    # 這些整數在 1 到 10,000 之間(10,000 個詞的詞彙表)，且序列長度為 100 個詞
+    # 宣告一個 NAME 去定義 Input
+    main_input = Input(shape=(100,), dtype='int32', name='main_input')
+
+    # Embedding 層將輸入序列編碼為一個稠密向量的序列，每個向量維度為 512
+    x = Embedding(output_dim=512, input_dim=10000, input_length=100)(main_input)
+
+    # LSTM 層把向量序列轉換成單個向量，它包含整個序列的上下文信息
+    lstm_out = LSTM(32)(x)
+
+    # 插入輔助損失，使得即使在模型主損失很高的情況下，LSTM 層和 Embedding 層都能被平穩地訓練
+    news_output = Dense(1, activation='sigmoid', name='news_out')(lstm_out)
+
+    # 輔助輸入數據與 LSTM 層的輸出連接起來，輸入到模型
+    import keras
+    news_input = Input(shape=(5,), name='news_in')
+    x = keras.layers.concatenate([lstm_out, news_input])
+
+    # 堆疊多個全連接網路層
+    x = Dense(64, activation='relu')(x)
+    x = Dense(64, activation='relu')(x)
+    # 最後添加主要的邏輯回歸層
+    main_output = Dense(1, activation='sigmoid', name='main_output')(x)
+
+    # 宣告 MODEL API，分別採用自行定義的 Input/Output Layer
+    model = Model(inputs=[main_input, news_input], outputs=[news_output, main_output])
+    model.compile(optimizer='rmsprop',
+                  loss={'main_output':'binary_crossentropy', 'news_output':'binary_crossentropy'},
+                  loss_weights={'main_output':1., 'news_output':0.2})
+    ```
+    <br>
+    ![Module]()
+  * 應用說明
+    * 利用函數式 API 可輕易地重用訓練好的模型：可將任何模型看作是一個層，然後通過傳遞一個張量來調用它。注意：在調用模型時，不僅重用模型的架構，還重用了它的權重
+    * 具有多個輸入和輸出的模型，函數式 API 使處理大量交織的數據流變得容易
+    * 範例
+      * 預測 Twitter 上的一條新聞標題有多少轉發和點讚數<br>
+        ![Twitter]()
+        * 模型的主要輸入將是新聞標題本身，即為一系列詞語
+        * 為了增添趣味，模型還添加其他的輔助輸入來接收額外的數據，如新聞標題的發布時間等
+        * 該模型將通過兩個損失函數進行監督學習，較早地在模型中使用主損失函數，是深度學習模型的一個良好正則方法
+      * 推特推文數據集
+        * 建立一個模型來分辨兩條推文是否來自同一個人(如：通過推文的相似性來對用戶進行比較)
+        * 將兩條推文編碼成兩個向量，連接向量，然後添加邏輯回歸層，這將輸出兩條推文來自同一作者的概率，模型將接收一對對正負表示的推特數據
+        * 由於這個問題是對稱的，編碼第一條推文的機制應該被完全重用來編碼第二條推文(權重及其他全部)
+* 範例與作業(待上傳)
   * [範例D069]()
+    * 資料集：housing = fetch_california_housing()
+    * 重點
+      * 用 tensorflow.keras 的 functional API 建立簡單的多輸入單輸出模型，並進行房價預測
+      * 輸入 A (4 個 feature)經過隱藏層 1 (30個神經元)和 2(30個神經元)(deep)，輸入 B (5 個 feature)經過隱藏層 3 (30個神經元)後再進行合併(1個神經元)再輸出(指定輸入[A,B]，輸出結果為 concat 後經過 1 個神經元的結果)
+      * 說明 compile 與 fit 用法的不同
   * [作業D069]()
+    * 資料集
+    * 重點
+      * 修改 Name 中，自訂義的 Layer 名稱，並增加一層全連接層
+      * 宣告 Model API，分別採用自訂義的 Input/Output Layer
+      * 透過 model.summary 查看 Layers stack
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
 ### D070-深度神經網路的基礎知識
+* 深度學習網路歷史
+  * 單層感知器(Perceptron)<br>
+    ![]()
+  * 多層感知器(Multilayer Perceptron)<br>
+    ![]()
+  * 深度學習網路(DNN)<br>
+    ![]()
+  * 差異
+    * 多層感知器與深度學習網路主要差異為可以多層隱藏層建構出一個具有深度的神經
+* 深度學習本身是機器學習領域下的一個分支，核心概念為「從資料中尋找一組最適合解決某種特定問題的函式」
+  * 語音辨識：輸入一段語音，機器能辨識出語音對應的文字
+  * 圖像辨識：輸入一張貓咪圖片，機器能分辨出這張圖裡有貓
+  * 棋藝競賽：輸入圍棋的落子狀況，機器能算出勝率最高的下個落子點
+  * 對話系統：在對話系統中，機器接受到 Hi，它能作出一個適當的回應，如 Hello
+* 需要深度學習網路
+  * 手寫辨識照片利用單一層隱藏層神經網路能達 97% 以上的正確率，但近年來不斷訓練僅能達到接近 97% 的正確率
+  * 主要原因為神經網路同時須考慮到照片大小，照片裡出現的圖像、像素及 RGB 等問題，因此需要較大的神經網路才能學習到更多照片裡的資訊
+  * 在一個語言辨識的測驗中，無論是淺的或深度神經網路，辨識率都隨著神經元數目的增加而成長
+  * 在相同數目的神經元時，深度神經網路的表現總是比較好
+* 深度學習網路
+  * 概念：從資料中尋找一組最適合解決某種特定問題的函數
+    * Define a set of Function
+      * 由這一層神經元接收上一層神經元的輸入，經過計算(W*x+b)後可以得到一個輸出結果 $a_1$，而 $a_1$ 又會成為下一層的輸入
+        * $[x_1, x_2,..., x_n]$ 是資料輸入層，神經元接受來自 $[X_1,..., X_n]$ 輸入層的資訊，經過 $W=[w_1,..., w_n]$ 權重相乘後加總，加上 Bias 偏移項後，再經過激活函數輸出 Y
+        * 整個運算過程都是數值運算，故傳入的內容必須要轉化為數值
+        * 每一層的輸入內容皆來自前一層權重矩陣與輸入值向量與偏移量的計算結果 -> 輸出向量 $a_1$ 為一個函數型式<br>
+          ![]()
+      * $a_1$ 向量為一個函數，當函數只要 x 數量有增減或 Ｗ (權重)/ b (偏移項)發生改變，整個神經網路的函數內容就會改變
+      * 當神經網路的神經元越多，則神經網路的候選函數就越多，對問題的解釋能力就越強
+      * 核心概念
+        * 每一層的神經數量或連接方式改動，就會產生不同的函式集合
+        * 每次權重一旦改動，就會產生一組新的函數<br>
+          ![]()
+    * Evaluate the Functions
+      * 使用 Loss Function 作為評估整體神經網路的效能
+      * Cross-Entropy 稱 K-L 交叉熵，目的是用來評估模型預測結果與真實結果兩者之間的差距(損失)
+    * Pick the best Function
+  * 
 * 範例與作業
   * [範例D070]()
   * [作業D070]()
@@ -3121,33 +3394,312 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 
 ### D073-梯度下降GradientDescent
-* 範例與作業
+* 梯度下降(Gradient Descent)：最常用的優化算法
+  * 定義：機器學習算法當中，優化算法的功能，是通過改善訓練方式，來最小化(或最大化)損失函數
+    * 除梯度下降(以趨近的方式找 solution)外，有：最小平方法、SVD分解，這些都有 close form solution
+  * 概念
+    * 通過尋找最小值，控制方差，更新模型參數，最終使模型收斂
+    * $w_{i+1} = w_i - d_i*η_i,  i=0,1,…$
+    * 學習率 $η$：可設置為固定值，也可用於一維優化方法沿著訓練的方向逐步更新計算
+      * 學習率定義了每次疊代中應該更改的參數量。換句話說，它控制應該收斂到最低的速度
+      * 小學習率可以使迭代收斂，大學習率可能超過最小值<br>
+        ![]()
+    * 參數的更新分為兩步：第一步計算梯度下降的方向，第二步計算合適的學習
+  * 過程
+    * 首先需要設定一個初始參數值，通常情況下將初值設為零(w=0)，接下來需要計算成本函數 cost
+    * 計算函數的導數在某個點處的斜率值，並設定學習效率參數(lr)的值
+    * 重複執行上述過程，直到參數值收斂，這樣就能獲得函數的最優解<br>
+      ![]()
+  * 確定到極值點？
+    * 學習率是個挪動步長的基數，df(x)/dx是導函數，當離得遠時導數大，移動的越快；當接近極值時，導數會非常小，移動的速度就非常小，為防止跨過極值點<br>
+      ![]()
+    * Different initial point will be caused reach different minima, so different results<br>
+      ![]()
+    * momentum 是梯度下降法中一種常用的加速技術
+      * Gradient Descent 的實現：SGD
+        * 對於一般的 SGD，其表達式為 $x ← x − α * dx$ (x沿負梯度方向下降)
+        * 帶 momentum 項的 SGD 如下形式：<br>
+          $$ v =  ß * v − a * dx $$ <br>
+          $$ x ← x + v $$ <br>
+          * 說明：其中 $ß$ 為 momentum 係數
+            * 若上一次的 momentum(即$ß$)與這一次的負梯度方向是相同的，那這次下降的幅度就會加大，這樣做能夠達到加速收斂的過程
+            * 若上一次的 momentum 與這一次的負梯度方向是相反的，那這次下降的幅度就會縮減，這樣做能夠達到減速收斂的過程
+    * avoid local minima
+      * 在訓練神經網絡的時候，通常在訓練剛開始的時候使用較大的 learning rate，隨著訓練的進行，我們會慢慢的減小 learning rate
+      * 隨著 iteration 改變 Learning：衰減越大，學習率衰減地越快。衰減確實能夠對震盪起到減緩的作用
+  * 缺點
+    * 靠近極小值時速度減慢
+    * 直線搜索可能產生問題
+    * 可能會以「之字型」地下降
+* 從程式中微調(Fine Tune)相關的參數
+* 範例與作業(待上傳)
   * [範例D073]()
+    * function：$y=(x+5)^2$
+    * learning rate = 0.01 -> 595次
   * [作業D073]()
+    * function：$y=(x+5)^2$
+    * 使用不同的組合驗證 learning rate 對所需 iteration 的影響 lr = [0.1, 0.0001] 主要驗證 Lr 對於 grandient 收斂的速度
+      * learning rate = 0.1 -> 66次
+      * learning rate = 0.0001 -> 執行 10000 次，尚未收斂 
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
 ### D074-GradientDescent數學原理
-* 範例與作業
+* Gradient 梯度
+  * 在微積分裡面，對多元函數的參數求 $∂$ 偏導數，把求得的各個參數的偏導數以向量的形式寫出來，就是梯度
+  * 如函數 $f(x)$，對 $x$ 求偏導數，求得的梯度向量就是 $(∂f/∂x)$，簡稱 $grad f(x)$ 或 $▽f(x)$
+* 最常用的優化算法：梯度下降
+  * 目的：沿著目標函數梯度下降的方向搜索極小值(也可以沿著梯度上升的方向搜索極大值)
+  * 要計算 Gradient Descent，考慮
+    * Loss = 實際 ydata – 預測 ydata
+      -> Loss =  w* 實際 xdata – w*預測 xdata (bias 為 init value，被消除)
+    * Gradient = ▽f(θ) (Gradient = ∂L/∂w)
+    * 調整後的權重 = 原權重 – η(Learning rate) * Gradient：每走一步，更新一次
+* 梯度下降的算法調優
+  * Learning rate 選擇，實際上取值取決於數據樣本，如果損失函數在變小，說明取值有效，否則要增大 Learning rate
+  * 自動更新 Learning rate  - 衰減因子 decay
+    * 算法參數的初始值選擇。初始值不同，獲得的最小值也有可能不同，因此梯度下降求得的只是局部最小值；當然如果損失函數是凸函數則一定是最優解
+學習率衰減公式<br>
+      (1) $lr_i = lr_{start} * 1.0 / (1.0 + decay * i)$ <br>
+      (2) 其中 $lr_i$ 為第一迭代 i 時的學習率，$lr_{start}$ 為初始值，decay 為一個介於[0.0, 1.0]的小數。從公式上可看出：<br>
+      
+          * decay 越小，學習率衰減地越慢，當 decay=0 時，學習率保持不變 
+          * decay 越大，學習率衰減地越快，當 decay=1 時，學習率衰減最快
+  * 學習率較小時，收斂到正確結果的速度較慢；學習率較大時，容易在搜索的過程發生震盪
+  * 梯度下降的類型
+    * 批次(一般)
+    * 小批次(mini batch)
+    * 隨機 
+* 範例與作業(待上傳)
   * [範例D074]()
+    * function：$y=(x)^2$
+    * learning rate=$10^{-6}$
+    * 有提及 AdaGrad (李宏毅) 的 learning rate=1
   * [作業D074]()
+    * function：$y=(x+3)^2$
+    * 調整其它 Hyperparameters：w_init、epochs、lr、decay(隨參數更新而衰減)、momentom 測試逼近的過程
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
 ### D075-BackPropagation
-* 範例與作業
+* 反向式傳播 BackPropagation
+  * 反向傳播(BP)是「誤差反向傳播」的簡稱，是一種與最優化方法(如梯度下降法)結合使用的方法，對網路中所有權重計算損失函數的梯度。這個梯度會反饋給最優化方法，用來更新權值以最小化損失函數
+  * 反向傳播要求有對每個輸入值想得到的已知輸出，來計算損失函數梯度，因此，它通常被認為是一種監督式學習方法，可對每層疊代計算梯度。反向傳播要求人工神經元（或「節點」）的啟動函數可微
+  * 流程<br>
+    ![推導流程]()
+  * 範例說明：以預測水果銷售為例
+    * 應給付的價格決定因子：數量(顆數或是單位重量)、單價、稅金
+    * 建立運算單元
+      * 稅金是恆定的，可當成是 Bias，給定 TAX
+      * Input-1：數量，給定 X
+      * Input-2：單價，給定 Y
+      * Output：f(x) = X * Y * TAX
+    * 說明
+      * 付費總價格是根據水果價格，稅金變動而受影響
+      * 水果價格是根據購買數量與單品價格而變動
+      * 可利用每一個 cell (cell - 1：水果價格；cell - 2：付費總價格)，推導微分的結果
+      * 更改 Init Data：更改購買數量、TAX的增加
+        * 輸出會有變動，模型的執行結果跟預期有落差也是變動，這個落差就是 error rate = (Target 輸出)–(實際輸出) 
+  * BP 神經網路是一種按照逆向傳播算法訓練的多層前饋神經網路
+    * 優點
+      * 具有任意複雜的模式分類能力和優良的多維函數映射能力，解決了簡單感知器不能解決的異或或者一些其他的問題
+      * 從結構上講，BP 神經網路具有輸入層、隱含層和輸出層
+      * 從本質上講，BP 算法就是以網路誤差平方目標函數、採用梯度下降法來計算目標函數的最小值
+    * 缺點
+      * 學習速度慢，即使是一個簡單的過程，也需要幾百次甚至上千次的學習才能收斂
+      * 容易陷入局部極小值
+      * 網路層數、神經元個數的選擇沒有相應的理論指導
+      * 網路推廣能力有限
+    * 應用
+      * 函數逼近
+      * 模式識別
+      * 分類
+      * 數據壓縮
+* 前行網路傳播(ForwardPropagation)/反向式傳播(BackPropagation)的差異
+  * 第 1 階段：解函數微分
+    * 每次疊代中的傳播環節包含兩步： 
+      * (前向傳播階段)將訓練輸入送入網路以獲得啟動響應
+      * (反向傳播階段)將啟動響應同訓練輸入對應的目標輸出求差，從而獲得輸出層和隱藏層的響應誤差
+  * 第 2 階段：權重更新
+    * Follow Gradient Descent
+      * 第 1 和第 2 階段可以反覆循環疊代，直到網路對輸入的響應達到滿意的預定的目標範圍為止
+* 範例與作業(待上傳)
   * [範例D075]()
+    * 重點
+      * 自定義神經網路架構
+      * 初始值設定
+      * 使用範例
   * [作業D075]()
+    * 權重更新與 Loss function 是 BP Neural Network 重要的一環，請參考範例D075-Back_Propagation，然後練習把網路增加到第三層
 
 Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</a>
 <br>
 <br>
 
 ### D076-優化器Optimizers
+* 優化器(optimizers)
+  * 通過最優化方法對目標函數進行優化從而訓練出最好的模型
+    * 功能：通過改善訓練方式，來最小化(或最大化)損失函數 $E(x)$
+    * 算法：用來更新和計算影響模型訓練和模型輸出的網絡參數，使其逼近或達到最優值
+  * SGD：隨機梯度下降法(stochastic gradient decent)
+    * 找出參數的梯度(利用微分的方法)，往梯度的方向去更新參數(weight)
+    * 優點：SGD 每次更新時對每個樣本進行梯度更新，對於很大的數據集來說，可能會有相似的樣本，而 SGD 一次只進行一次更新，就沒有冗餘，而且比較快
+    * 缺點：但是 SGD 因為更新比較頻繁，會造成 cost function 有嚴重的震盪
+    * SGD 調用
+      * 語法：keras.optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=False)
+      * 參數
+        * lr：<float>，學習率
+        * Momentum 動量：<float>，用於加速 SGD 在相關方向上前進，並抑制震盪
+        * Decay(衰變)：<float>，每次參數更新後學習率衰減值
+        * nesterov：布爾值，是否使用 Nesterov 動量
+
+        ```
+        from keras import optimizers 
+
+        model = Sequential() 
+        model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+        model.add(Activation('softmax’)) 
+
+        #實例化一個優化器對象，然後將它傳入model.compile()，可以修改參數
+        sgd = optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True) model.compile(loss='mean_squared_error', optimizer=sgd) 
+
+        # 通過名稱來調用優化器，將使用優化器的默認參數
+        model.compile(loss='mean_squared_error', optimizer='sgd')
+        ```
+      * SGD, mini-batch gradient descent
+        * batch-gradient：就是普通的梯度下降算法，但是採用批量處理
+          * 當數據集很大(比如有 100000 個左右時)，每次 iteration 都要將 1000000 個數據跑一遍，機器帶不動。於是有了 mini-batch-gradient ——將 1000000 個樣本分成 1000 份，每份 1000 個，都看成一組獨立的數據集，進行 forward_propagation 和 backward_propagation
+        * 在整個算法的流程中，cost function 是局部的，但是 W 和 b 是全局的
+          * 批量梯度下降對訓練集上每一個數據都計算誤差，但只在所有訓練數據計算完成後才更新模型
+          * 對訓練集上的一次訓練過程稱為一代(epoch)。因此，批量梯度下降是在每一個訓練 epoch 之後更新模型
+        * epoch、iteration、batchsize，mini-batch
+          * batchsize：批量大小，即每次訓練在訓練集中取 batchsize 個樣本訓練
+            * batchsize=1
+            * batchsize = mini-batch;
+            * batchsize = whole training set
+          * iteration：1個 iteration 等於使用 batchsize 個樣本訓練一次
+          * epoch：1個 epoch 等於使用訓練集中的全部樣本訓練一次
+        * 範例
+          * features is (50000, 400)
+          * labels is (50000, 10)
+          * batch_size is 128
+          * Iteration = 50000/128+1 = 391
+        * 配置 mini-batch 梯度下降
+          * Mini-batch sizes 簡稱為「batch sizes」，是算法設計中需要調節的參數
+          * 較小的值讓學習過程收斂更快，但是產生更多噪聲
+          * 較大的值讓學習過程收斂較慢，但是準確的估計誤差梯度
+          * batch size 的默認值最好是 32 盡量選擇 2 的冪次方，有利於 GPU 的加速
+          * 調節 batch size 時，最好觀察模型在不同 batch size 下的訓練時間和驗證誤差的學習曲線
+          * 調整其他所有超參數之後再調整 batch size 和學習率
+  * Adagrad
+    * 對於常見的數據給予比較小的學習率去調整參數，對於不常見的數據給予比較大的學習率調整參數
+      * 每個參數都有不同的 learning rate
+      * 根據之前所有 gradient 的 root mean square 修改 
+    * 優點：Adagrad 的是減少了學習率的手動調節
+    * 缺點：它的缺點是分母會不斷積累，這樣學習率就會收縮並最終會變得非常小
+    * Adagrad 調用
+      * 語法：keras.optimizers.Adagrad(lr=0.01, epsilon=None, decay=0.0)
+      * 參數
+        * lr：float >= 0，學習率，一般 η 就取 0.01
+        * epsilon：float >= 0，若為 None，默認為 K.epsilon()
+        * decay：float >= 0，每次參數更新後學習率衰減值
+          ```
+          from keras import optimizers 
+
+          model = Sequential() 
+          model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+          model.add(Activation('softmax')) 
+
+          #實例化一個優化器對象，然後將它傳入 model.compile()，可以修改參數
+          opt = optimizers.Adagrad(lr=0.01, epsilon=None, decay=0.0)
+          model.compile(loss='mean_squared_error', optimizer=opt) 
+          ```
+  * RMSprop
+    * RMSProp 算法旨在抑制梯度的鋸齒下降，但與動量相比，RMSProp 不需要手動配置學習率超參數，由算法自動完成。更重要的是，RMSProp 可為每個參數選擇不同的學習率
+    * This optimizer is usually a good choice for recurrent neural networks
+    * RMSprop 為了解決 Adagrad 學習率急劇下降問題的，比對梯度更新規則：<br>
+      ![]()
+    * RMSprop 調用
+      * 語法：keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=None, decay=0.0) 
+      * 參數
+        * lr：float >= 0，Learning rate
+        * rho：float >= 0
+        * epsilon：float >= 0，Fuzz factor。If None, defaults to K.epsilon()
+        * decay：float >= 0，Learning rate decay over each update
+          ```
+          from keras import optimizers 
+
+          model = Sequential() 
+          model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+          model.add(Activation('softmax')) 
+
+          #實例化一個優化器對象，然後將它傳入model.compile() , 可以修改參數
+          opt = optimizers.RMSprop(lr=0.001, epsilon=None, decay=0.0) 
+          model.compile(loss='mean_squared_error', optimizer=opt)
+          ```
+  * Adam
+    * 除像 RMSprop 一樣存儲了過去梯度的平方 $v_t$ 的指數衰減平均值，也像 momentum 一樣保持了過去梯度 $m_t$ 的指數衰減平均值，「t」
+    * 計算梯度的指數移動平均數，$m_0$ 初始化為 0。綜合考慮之前時間步的梯度動量
+    * $β_1$ 係數為指數衰減率，控制權重分配(動量與當前梯度)，通常取接近於 1 的值。默認為 0.9
+    * 其次，計算梯度平方的指數移動平均數，$v_0$ 初始化為 0。$β_2$ 係數為指數衰減率，控制之前的梯度平方的影響情況。類似於 RMSProp 算法，對梯度平方進行加權均值。默認為 0.999
+    * 由於 $m_0$ 初始化為 0，會導致 $m_t$ 偏向於 0，尤其在訓練初期階段。所以，此處需要對梯度均值 $m_t$ 進行偏差糾正，降低偏差對訓練初期的影響
+    * 與 $m_0$ 類似，因為 $v_0$ 初始化為 0 導致訓練初始階段 $v_t$ 偏向 0，對其進行糾正
+    * 更新參數，初始的學習率 $lr$ 乘以梯度均值與梯度方差的平方根之比。其中默認學習率 lr =0.001, eplison (ε=10^-8)，避免除數變為 0
+    * 對更新的步長計算，能夠從梯度均值及梯度平方兩個角度進行自適應地調節，而不是直接由當前梯度決定
+    * Adam 調用
+      * 語法：keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
+      * 參數
+        * lr：float >= 0，學習率
+        * beta_1：float，0 < beta < 1，通常接近於 1
+        * beta_2：float，0 < beta < 1，通常接近於 1
+        * epsilon：float >= 0，模糊因數，若為 None，默認為 K.epsilon()
+        * amsgrad：boolean，是否應用此演算法的 AMSGrad 變種，來自論文 「On the Convergence of Adam and Beyond」
+        * decay：float >= 0，每次參數更新後學習率衰減值
+          ```
+          from keras import optimizers 
+
+          model = Sequential() 
+          model.add(Dense(64, kernel_initializer='uniform', input_shape=(10,)))
+          model.add(Activation('softmax')) 
+
+          #實例化一個優化器對象，然後將它傳入 model.compile()，可修改參數
+          opt = optimizers. Adam(lr=0.001, epsilon=None, decay=0.0) 
+          model.compile(loss='mean_squared_error', optimizer=opt) 
+          ```
+* 最常用的優化算法：Gradient Descent
+  * 使用各參數的梯度值來最小化或最大化損失函數 $E(x)$，通過尋找最小值，控制方差，更新模型參數，最終使模型收斂
+  * 複習：梯度下降 Gradient Descent
+    * $w_{i+1} = w_i - d_i*η_i, i=0,1,…
+    * $η$ 是學習率：可設置為固定值，也可以用一維優化方法沿著訓練的方向逐步更新計算
+    * 參數的更新分為兩步：第一步計算梯度下降的方向，第二步計算合適的學習 
+  * 複習：動量 Momentum
+    * 加入一項：可使得梯度方向不變的維度上速度變快，梯度方向有所改變的維度上的更新速度變慢，這樣就可以加快收斂並減小震盪
+      ![]()
+* 如何選擇優化器
+  * 隨機梯度下降(SGD)：SGD 指的是 mini batch gradient descent
+    * 優點：針對大數據集，訓練速度很快從訓練集樣本中隨機選取一個 batch 計算一次梯度，更新一次模型參數
+    * 缺點
+      * 對所有參數使用相同的學習率。對於稀疏數據或特徵，希望盡快更新一些不經常出現的特徵，慢一些更新常出現的特徵。所以選擇合適的學習率比較困難
+      * 容易收斂到局部最優
+    * 隨機梯度下降法是將數據分成一小批一小批的進行訓練，但是速度比較慢
+  * AdaGrad 採用改變學習率的方式
+  * Adam：利用梯度的一階矩估計和二階矩估計動態調節每個參數的學習率
+    * 優點
+      * 經過偏置校正後，每一次迭代都有確定的範圍，使得參數比較平穩。善於處理稀疏梯度和非平穩目標
+      * 對內存需求小
+      * 對不同內存計算不同的學習率
+    * Adam 係結合 AdaGrad 和 RMSProp 兩種優化算法的優點。對梯度的一階矩估計(First Moment Estimation，即梯度的均值)和二階矩估計(Second Moment Estimation，即梯度的未中心化的方差)進行綜合考慮，計算出更新步長
+  * RMSProp
+    * 自適應調節學習率。對學習率進行了約束，適合處理非平穩目標和 RNN
+    * RMSProp 是將 Momentum 與 AdaGrad 部分相結合
+  * 如果輸入數據集比較稀疏，SGD、NAG和動量項等方法可能效果不好。因此對於稀疏數據集，應該使用某種自適應學習率的方法，且另一好處為不需要人為調整學習率，使用默認參數就可能獲得最優值：Adagrad, RMSprop, Adam
+  * 如果想使訓練深層網絡模型快速收斂或所構建的神經網絡較為複雜，則應該使用Adam或其他自適應學習速率的方法，因為這些方法的實際效果更優
+    * Adam 就是在 RMSprop 的基礎上加了 bias-correction 和 momentum
+    * 隨著梯度變的稀疏，Adam 比 RMSprop 效果會好
 * 範例與作業
   * [範例D076]()
   * [作業D076]()
