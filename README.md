@@ -2275,14 +2275,15 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
             * Single Linkage：群與群的距離為不同群中最接近兩點間的距離，容易產生大者恆大的分群結果
             * Average Linkage：群與群的距離為不同群中各點與各點間距離總和平均，相比 Single Linkage 則較容易產生齊頭並進、各群規模相近的分群結果
             * Complete Linkage：群與群的距離為不同群中最遠兩點間的距離
-            * Ward's Method：將兩群合併後，各點到合併後的群中心的距離平方和
+            * Ward's Method：將兩群合併後，各點到合併後的群中心的距離平方和<br>
+            ![Cluster Dendrogram](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F_Cluster%20Dendrogram.png)    
         * 分割式分群(Partitional Clustering)
           * K-Means
             * 把 n 個點切分到 k 個群中，不斷重複調整群心、重新分群，最後達到每個點都隸屬於與其群心最近的聚類(群)中
     * 關聯規則(Association Rule)
       * 從大量數據中發現變數間隱藏關係的方法
       * 常見應用案例，如購物籃分析，可作為銷售團隊線上或線下商品組合的決策參考<br>
-        ![關聯規則](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F_%E9%97%9C%E8%81%AF%E8%A6%8F%E5%89%87.png.crdownload) 
+        ![關聯規則](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F-%E9%97%9C%E8%81%AF%E5%88%86%E6%9E%90.png) 
       * 方法
         <table border="1" width="25%">
           <tr>
@@ -2332,7 +2333,7 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
     * 異常檢測(Anomaly Detection)
       * 透過樣本特徵的群聚，將相對異常的模式、樣本或事件辨識出來
       * 常見應用案例，如交易詐欺、結構缺陷檢測、醫療問題、文字錯誤辨識、入侵檢測<br>
-        ![異常偵測](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F_%E7%95%B0%E5%B8%B8%E5%81%B5%E6%B8%AC.png.crdownload)  
+        ![異常偵測](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F-%E7%95%B0%E5%B8%B8%E7%9B%A3%E6%B8%AC.png)  
       * 方法
         * LOF (Local Outlier Factor)
           * 如果樣本點 p 的 LOF 得分接近 1，表示 p 的局部密度與相鄰點差不多
@@ -2342,8 +2343,10 @@ Back to <a href="#Kaggle期中考">Kaggle期中考</a>
       * 當特徵數太多難於理解及呈現的情況下，藉由抽象化的技術轉換原資料的表示方式、降低資料維度、組合成新的特徵，同時不失去原有的資訊
       * 方法
         * 主成分分析(Principle Component Analysis, PCA)
-          * 對一系列可能相關的特徵進行線性轉換，將他們投影成另一系列「線性不相關」的特徵值，這些不相關特徵稱為「主成分」
+          * 對一系列可能相關的特徵進行線性轉換，將他們投影成另一系列「線性不相關」的特徵值，這些不相關特徵稱為「主成分」<br>
+      ![降維](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F-%E9%99%8D%E7%B6%AD.png)
     * 結構化資料分析
+      ![結構化資料](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F-%E7%B5%90%E6%A7%8B%E5%8C%96%E8%B3%87%E6%96%99.png)
     * 非結構化資料分析
       * 非結構化資料如文字、影像等，可藉由非監督式學習技術，幫助呈現、描述並在一系列資料中萃取關鍵字
       * 常見案例，如主題模型(topic model)
