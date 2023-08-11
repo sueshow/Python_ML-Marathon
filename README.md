@@ -3356,13 +3356,11 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 
 ### D070-深度神經網路的基礎知識
-* 深度學習網路歷史
-  * 單層感知器(Perceptron)<br>
-    ![]()
-  * 多層感知器(Multilayer Perceptron)<br>
-    ![]()
-  * 深度學習網路(DNN)<br>
-    ![]()
+* 深度學習網路歷史<br>
+  ![深度學習網路歷史](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E7%B6%B2%E8%B7%AF%E6%AD%B7%E5%8F%B2.png)
+  * 單層感知器(Perceptron)
+  * 多層感知器(Multilayer Perceptron)
+  * 深度學習網路(DNN)
   * 差異
     * 多層感知器與深度學習網路主要差異為可以多層隱藏層建構出一個具有深度的神經
 * 深度學習本身是機器學習領域下的一個分支，核心概念為「從資料中尋找一組最適合解決某種特定問題的函式」
@@ -3379,20 +3377,25 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
   * 概念：從資料中尋找一組最適合解決某種特定問題的函數
     * Define a set of Function
       * 由這一層神經元接收上一層神經元的輸入，經過計算(W*x+b)後可以得到一個輸出結果 $a_1$，而 $a_1$ 又會成為下一層的輸入
-        * $[x_1, x_2,..., x_n]$ 是資料輸入層，神經元接受來自 $[X_1,..., X_n]$ 輸入層的資訊，經過 $W=[w_1,..., w_n]$ 權重相乘後加總，加上 Bias 偏移項後，再經過激活函數輸出 Y
+        * $[x_1, x_2,..., x_n]$ 是資料輸入層，神經元接受來自 $[X_1,..., X_n]$ 輸入層的資訊，經過 $W=[w_1,..., w_n]$ 權重相乘後加總，加上 Bias 偏移項後，再經過激活函數輸出 Y<br>
+          ![概念](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E6%A6%82%E5%BF%B5.png)
         * 整個運算過程都是數值運算，故傳入的內容必須要轉化為數值
         * 每一層的輸入內容皆來自前一層權重矩陣與輸入值向量與偏移量的計算結果 -> 輸出向量 $a_1$ 為一個函數型式<br>
-          ![]()
+          ![核心概念](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%A7%8B.png)
       * $a_1$ 向量為一個函數，當函數只要 x 數量有增減或 Ｗ (權重)/ b (偏移項)發生改變，整個神經網路的函數內容就會改變
-      * 當神經網路的神經元越多，則神經網路的候選函數就越多，對問題的解釋能力就越強
+      * 當神經網路的神經元越多，則神經網路的候選函數就越多，對問題的解釋能力就越強<br>
+        ![每層概念](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E6%AF%8F%E5%B1%A4%E6%A6%82%E5%BF%B5.png)
       * 核心概念
         * 每一層的神經數量或連接方式改動，就會產生不同的函式集合
         * 每次權重一旦改動，就會產生一組新的函數<br>
-          ![]()
+          ![核心架構](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%A7%8B.png)
     * Evaluate the Functions
       * 使用 Loss Function 作為評估整體神經網路的效能
       * Cross-Entropy 稱 K-L 交叉熵，目的是用來評估模型預測結果與真實結果兩者之間的差距(損失)
+      * 黃色 $Y_^$ 是實際的結果，就是某個分類是1，其他是0，而模型預測的 Y 是一組機率值(加總為1)<br>  
+        ![Evaluate the Functions](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_Evaluate%20the%20Functions.png)
     * Pick the best Function
+      *  
   * 
 * 範例與作業
   * [範例D070]()
