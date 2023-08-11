@@ -2895,6 +2895,7 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
         * 結果圖像化：圖像逐漸穩定
       * 實驗結果
         * 訓練/測試誤差趨近 0 為主，這種情況稱作收斂
+      ![按下啟動，觀察指標變化](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/TF%20PlayGround_%E6%8C%89%E4%B8%8B%E5%95%9F%E5%8B%95%E8%A7%80%E5%AF%9F%E6%8C%87%E6%A8%99%E8%AE%8A%E5%8C%96.png)
     * 2：增加隱藏層數：加深
       * 練習
         * 資料及切換：分群資料集(左下)-2群，調整層數後啟動學習
