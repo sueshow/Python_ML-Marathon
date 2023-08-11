@@ -2911,13 +2911,14 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
         * 切換不同隱藏層神經元數量後，看看學習效果
       * 實驗結果
         * 當神經元少於等於兩個以下時，將無法收斂<br>
-          ![增減神經元數](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/TF%20PlayGround_%E5%A2%9E%E6%B8%9B%E7%A5%9E%E7%B6%93%E5%85%83%E6%95%B8.png.crdownload)
+          ![增減神經元數](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/TF%20PlayGround_%E5%A2%9E%E6%B8%9B%E7%A5%9E%E7%B6%93%E5%85%83%E6%95%B8.png)
     * 4：切換不同特徵
       * 練習
         * 資料集切換：分類資料集(左上)-同心圓，隱藏層 1 層，隱藏神經元 2 個
         * 切換任不同的 2 個特徵後啟動，看看學習效果
       * 實驗結果
         * 當特徵選到兩個特徵的平方時，即使中間只有 2 個神經元也會收
+      ![切換不同特徵](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/TF%20PlayGround_%E5%88%87%E6%8F%9B%E4%B8%8D%E5%90%8C%E7%89%B9%E5%BE%B5.png)
     * 重點
       * 雖然圖像化更直覺，但並非量化指標且可視畫不容易，故深度學習的觀察指標仍以「損失函數/誤差」為主
       * 對於不同資料類型，適合加深與加寬的問題都有，但「加深」適合的問題類型較多
