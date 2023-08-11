@@ -3174,11 +3174,11 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
     from keras.datasets import cifar10    #從 Keras 導入相應的模組<br>
     (x_train, y_train), (x_validate, y_validate) = cifar10.load_data()   #從網路即時下載
     ```
-* 範例與作業(待上傳)
-  * [範例D067]()
+* 範例與作業
+  * [範例D067](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_067_HW_keras_dataset/Day67-Keras_Dataset_Introduce.ipynb)
     * 資料集：CIFAR10
     * 過程：影像正規化、轉換 label (onehot encoding)
-  * [作業D067]()
+  * [作業D067](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day067-Keras_Dataset_Ans.ipynb)
     * 資料集：CIFAR100 → 分類類別為100
     * 過程：影像正規化、轉換 label (onehot encoding)
 
@@ -3188,7 +3188,7 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 
 ### D068-KerasSequentialAPI
 * Keras 框架<br>
-  ![框架]()
+  ![框架回顧](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_%E6%A1%86%E6%9E%B6%E5%9B%9E%E9%A1%A7.png)
 * 序列模型(Sequential Model)：宣告式 API，靜態
   * 序列模型是多個網路層的線性堆疊，循序性地加入，可在構造函數中傳入一些列的網路層
   * 語法
@@ -3263,11 +3263,11 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
           </tr>
       </table>
       
-* 範例與作業(待上傳)
-  * [範例D068]()
+* 範例與作業
+  * [範例D068](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_068_HW_keras_sequential_model/Day68-Keras_Sequential_Model_HW.ipynb)
     * 資料集：CIFAR10
     * 重點：說明身經網路模型在 Keras 所需相關的 library
-  * [作業D068]()
+  * [作業D068](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day068-Keras_Sequential_Model_Ans.ipynb)
     * 資料集：CIFAR10
     * 重點：修改 input shape: (Conv2D(64,(3,3))) 的設定，新增一層 Dense 並觀看 model.summary 的輸出
 
@@ -3323,13 +3323,13 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
                   loss_weights={'main_output':1., 'news_output':0.2})
     ```
     <br>
-    ![Module]()
+    ![Module](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Module%20API.png)
   * 應用說明
     * 利用函數式 API 可輕易地重用訓練好的模型：可將任何模型看作是一個層，然後通過傳遞一個張量來調用它。注意：在調用模型時，不僅重用模型的架構，還重用了它的權重
     * 具有多個輸入和輸出的模型，函數式 API 使處理大量交織的數據流變得容易
     * 範例
       * 預測 Twitter 上的一條新聞標題有多少轉發和點讚數<br>
-        ![Twitter]()
+        ![Twitter](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Keras_Twitter%E6%96%B0%E8%81%9E%E8%BD%89%E7%99%BC%E6%95%B8%E5%8F%8A%E9%BB%9E%E8%AE%9A%E6%95%B8.png)
         * 模型的主要輸入將是新聞標題本身，即為一系列詞語
         * 為了增添趣味，模型還添加其他的輔助輸入來接收額外的數據，如新聞標題的發布時間等
         * 該模型將通過兩個損失函數進行監督學習，較早地在模型中使用主損失函數，是深度學習模型的一個良好正則方法
@@ -3337,14 +3337,14 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
         * 建立一個模型來分辨兩條推文是否來自同一個人(如：通過推文的相似性來對用戶進行比較)
         * 將兩條推文編碼成兩個向量，連接向量，然後添加邏輯回歸層，這將輸出兩條推文來自同一作者的概率，模型將接收一對對正負表示的推特數據
         * 由於這個問題是對稱的，編碼第一條推文的機制應該被完全重用來編碼第二條推文(權重及其他全部)
-* 範例與作業(待上傳)
-  * [範例D069]()
+* 範例與作業
+  * [範例D069](https://github.com/sueshow/Python_ML-Marathon/blob/main/Homework/Day_069_HW_Module_API/Day69-keras_Module_API.ipynb)
     * 資料集：housing = fetch_california_housing()
     * 重點
       * 用 tensorflow.keras 的 functional API 建立簡單的多輸入單輸出模型，並進行房價預測
       * 輸入 A (4 個 feature)經過隱藏層 1 (30個神經元)和 2(30個神經元)(deep)，輸入 B (5 個 feature)經過隱藏層 3 (30個神經元)後再進行合併(1個神經元)再輸出(指定輸入[A,B]，輸出結果為 concat 後經過 1 個神經元的結果)
       * 說明 compile 與 fit 用法的不同
-  * [作業D069]()
+  * [作業D069](https://github.com/sueshow/Python_ML-Marathon/blob/main/Solution/Day069-keras_Module_API_Ans.ipynb)
     * 資料集
     * 重點
       * 修改 Name 中，自訂義的 Layer 名稱，並增加一層全連接層
