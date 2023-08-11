@@ -2378,16 +2378,21 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
       * 階層式分群(Hierarchical)
       * 分割式分群(Partitional)：如 K-means、K-Medoids
       * 基於密度的分群：如 DBSCAN
-      * 基於機率的分群：如 高斯混合模型(Gaussian Mixture Model, GMM)
+      * 基於機率的分群：如 高斯混合模型(Gaussian Mixture Model, GMM)<br>
+  ![類型_監督式與非監督式](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%A1%9E%E5%9E%8B_%E7%9B%A3%E7%9D%A3%E5%BC%8F%E8%88%87%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F.png)
 * K-Means
   * 簡介
     * 把所有資料點分成 k 個 clusters，使得相同 cluster 中的所有資料點彼此儘量相似，而不同 cluster 的資料點儘量不同
     * 距離測量(e.g. 歐氏距離)用於計算資料點的相似度和相異度，每個 cluster 有一個中心點，中心點可理解為最能代表 cluster 的點
   * 分群算法流程
-    * 目標是將 training set 分成 2 群
-    * 隨機選取 2 個點，稱爲 cluster centroid(群心、中心點)
-    * 對每一個樣本點根據它距離哪一群的中心點較近，標記為落在該群之一的點(*cluster assignment)
-    * 然後把群心移到同一群樣本點的中心點(*update centroid)
+    * 目標是將 training set 分成 2 群<br>
+      ![part01](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Kmean_part01.png)
+    * 隨機選取 2 個點，稱爲 cluster centroid(群心、中心點)<br>
+      ![part02](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Kmean_part02.png)
+    * 對每一個樣本點根據它距離哪一群的中心點較近，標記為落在該群之一的點(*cluster assignment)<br>
+      ![part03](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Kmean_part03.png)
+    * 然後把群心移到同一群樣本點的中心點(*update centroid)<br>
+      ![part04](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Kmean_part04.png)
     * 反覆進行上述的 *cluster assignment 及 *update centroid，直到樣本點不再被 assign 到與上一次不同的群，便是算法成功收斂完畢
   * 最佳化目標：分群算法執行的目的是希望產出品質最好的分群結果，使總體群內平方誤差最小
     $$\sum\limits_{i=0}^n min_{u_j \in C}(||x_i-u_j||^2)$$
@@ -2470,23 +2475,29 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 運作方式：將每個樣本視為一個群聚(Cluster)，計算族群兩兩之間的距離，從樹狀結構底部不斷融合相近的樣本；假如生成的群數多於我們預期的群數，則反覆重複聚合最近距離的兩群的動作，直到群數降到條件範圍內，最後再根據條件進行分群(族群數量、族群距離)
     * 判讀方式
       * 樹狀結構圖 dendrogram
-        * 透過一張樹狀結構圖(dendrogram)來呈現分群的過程和結果，看水平線切過多少「樹枝」，「樹枝」水平線以下代表是同一群
+        * 透過一張樹狀結構圖(dendrogram)來呈現分群的過程和結果，看水平線切過多少「樹枝」，「樹枝」水平線以下代表是同一群<br>
+          ![樹狀結構圖](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9A%8E%E5%B1%A4%E5%BC%8F%E5%88%86%E7%BE%A4_%E6%A8%B9%E7%8B%80%E7%B5%90%E6%A7%8B%E5%9C%96%20dendrogram.png)
 * K-means vs. 階層分群
   * K-means：預先定義群數(n of clusters)
-  * 階層分群：依據定義距離來分群(bottom-up)，也可以決定群數做分群(top-down)
+  * 階層分群：依據定義距離來分群(bottom-up)，也可以決定群數做分群(top-down)<br>
+  ![比較](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/Kmean%20vs%20%E9%9A%8E%E5%B1%A4%E5%88%86%E7%BE%A4.png)
 * 階層分群演算法
   * 不指定分群的數量
   * 每筆資料為一個 cluster，計算每兩群之間的距離
     * Single-link：群聚間的距離定義為不同群聚中最接近兩點間的距離
         $$d(C_i,C_j)=min_{a\in C_i,b\in C_j} d(a,b)$$
+      ![單一連結](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9A%8E%E5%B1%A4%E5%BC%8F%E5%88%86%E7%BE%A4_single-link.png)
     * Complete-link：群聚間的距離定義為不同群聚中最遠兩點間的距離，這樣可以保證這兩個集合合併後，任何一對的距離不會大於 d
         $$d(C_i,C_j)=max_{a\in C_i,b\in C_j} d(a,b)$$ 
+      ![完整連結](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9A%8E%E5%B1%A4%E5%BC%8F%E5%88%86%E7%BE%A4_complete-link.png)
     * Average-link：群聚間的距離定義為不同群聚間各點與各點間距離總和的平均
         $$d(C_i,C_j)=\sum\limits_{a\in C_i,b\in C_j}\frac{d(a,b)}{|C_i||C_j|}$$
         where $|C_i|$ and $|C_j|$ are the sizes for $C_i$ and $C_j$, respectively
+      ![平均連結](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9A%8E%E5%B1%A4%E5%BC%8F%E5%88%86%E7%BE%A4_average-link.png)
     * 沃德法[Ward's Method](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-83-%E6%B2%83%E5%BE%B7%E9%9A%8E%E5%B1%A4%E5%88%86%E7%BE%A4%E6%B3%95-ward-hierarchical-clustering-273c0e21050)：群聚間的距離定義為各點到兩群合併後的群中心的距離平方和
         $$d(C_i,C_j)=\sum\limits_{a \in C_i \cup C_j} ||a-\mu||$$
         where $\mu$ is the mean vector of $C_i \cup C_j$
+      ![沃德法](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9A%8E%E5%B1%A4%E5%BC%8F%E5%88%86%E7%BE%A4_wards%20method.png)
     * 特性
       * single linkage 會在群聚的過程中產生「大者恆大」的效果
       * complete linkage 和 average linkage 比較容易產生「齊頭並進」的效果
@@ -2510,6 +2521,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
 ### D058-非監督式-分群-HierarchicalClustering觀察-使用2D樣版資料集
 * 2D 樣版資料集(2d toy dataset)
   * 2D 樣版資料集著重於圖形的人機差異：挑選人眼容易分群，但非監督模型常常有困難的圖案樣板來展示
+    ![2d toy dataset](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9A%8E%E5%B1%A4%E5%BC%8F%E5%88%86%E7%BE%A4_2d%20toy%20dataset.png)
   * 用途：用來讓人眼評估非監督模型的好壞，因為非監督模型的任務包含分群(對應於監督的分類)與流形還原(對應監督的迴歸)，所以 2D 樣板資料集在設計上也包含這兩種類型的資料集
 * sklearn 的資料集
   * 主要分為
@@ -2517,6 +2529,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     * 生成式(Samples generator)：先有既定模式，在模式下有限度的隨機生成每次使用的資料集
   * 2D 樣版資料集
     * 屬於生成式資料集(Samples generator)，使用不同分布，用以顯示各種非監督模型的優缺點
+      ![生成式](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%9A%8E%E5%B1%A4%E5%BC%8F%E5%88%86%E7%BE%A4_2d%20toy%20dataset_%E7%94%9F%E6%88%90%E5%BC%8F.png)
     * 參考資料
       * [使用 2D 樣版資料集](https://lemon-dolomite-062.notion.site/Day-58-2D-bc40d32b0c65479b8c93011d9609ec21)
 * 範例與作業
@@ -2533,8 +2546,10 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 數據為度過大 → 提高模型的複雜度，當資料樣本不足時，模型訓練的結果較差
   * 壓縮資料
     * 有助於使用較少的 RAM 或 disk space，也助於加速 learning algorithms
-    * 影像壓縮：壓縮後圖片可能變得模糊，但依然保有明顯的輪廓和特徵
-  * 特徵組合及抽象化：壓縮後可組合出新的、抽象化的特徵，減少冗餘、無用的資訊
+    * 影像壓縮：壓縮後圖片可能變得模糊，但依然保有明顯的輪廓和特徵<br>
+    ![影像壓縮](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%99%8D%E7%B6%AD_%E5%BD%B1%E5%83%8F%E5%A3%93%E7%B8%AE.png)
+  * 特徵組合及抽象化：壓縮後可組合出新的、抽象化的特徵，減少冗餘、無用的資訊<br>
+    ![特徵組合及抽象化](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%99%8D%E7%B6%AD_%E7%89%B9%E5%BE%B5%E7%B5%84%E5%90%88%E5%8F%8A%E6%8A%BD%E8%B1%A1%E5%8C%96.png)
   * 資料視覺化
     * 特徵太多時，很難 visualize data，不容易觀察資料
     * 將資料維度(特徵)降至 2 到 3 個，能夠用一般的 2D 或 3D 圖表呈現資料
@@ -2544,7 +2559,8 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
   * 減少雜訊對模型的影響
   * 確保特徵間互相獨立
 * 常見降維方法
-  * 主成分分析 PCA (Principal components analysis)
+  * 主成分分析 PCA (Principal components analysis)<br>
+    ![PCA](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%99%8D%E7%B6%AD_PCA_01.png)
     * 利用線性轉換，將資料從高雄(k維)映射到低維(m維)空間，並提取(m維)資料的主要特徵，保有原始資料的重要資訊
     * PCA 不是從原始資料中捨棄不重要的特徵來降維，而是由這些特徵與其向量(eigenvector)的線性組合，降維至二維平面上，所產生的新特徵來代表原始資料
     * 特性
@@ -2574,13 +2590,16 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
         * [奇異值(SVD)分解](https://blog.csdn.net/Feeryman_Lee/article/details/104339696)
         * 其他參考資料
           * [特徵值分解](https://blog.csdn.net/Sunshine_in_Moon/article/details/51513880)
-          * [分解原理與計算](https://blog.csdn.net/weixin_42462804/article/details/83905320?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase)
+          * [分解原理與計算](https://blog.csdn.net/weixin_42462804/article/details/83905320?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase)<br>
+        ![分解](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%99%8D%E7%B6%AD_PCA_%E7%89%B9%E5%BE%B5%E5%80%BC%20(EVD)%20%E8%88%87%E5%A5%87%E7%95%B0%E5%80%BC%20(SVD).png)
       * 選取 k 個最大特徵值(eigenvalues)相對應 k 個的特徵向量(eigenvector)，其中 k 即為新特徵子空間的維度
       * 使用排序最上面的 k 個的特徵向量(eigenvector)，建立投影矩陣(project matrix) W
-      * 使用投影矩陣(project matrix) W 轉換原本 d 維的原數據至新的 k 維特徵子空間
+      * 使用投影矩陣(project matrix) W 轉換原本 d 維的原數據至新的 k 維特徵子空間<br>
+        ![建立投影](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%99%8D%E7%B6%AD_PCA_%E5%BB%BA%E7%AB%8B%E6%8A%95%E5%BD%B1.png)
     * 優點
       * 組合出來後新的 feature 可用來做 supervised learning 預測模型
-      * 以判斷人臉為例，最重要的特徵都可以捨棄，將不必要的資訊捨棄除可加速 learning，也可避免 overfitting
+      * 以判斷人臉為例，最重要的特徵都可以捨棄，將不必要的資訊捨棄除可加速 learning，也可避免 overfitting<br>
+      ![PCA](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E9%99%8D%E7%B6%AD_PCA_03.png)
     * 要點
       * 不建議在早期就做，否則可能會丟失重要的 features 而 underfitting
       * 可在 optimization 階段時，考慮 PCA，並觀察運用後對準確度的影響
@@ -2638,7 +2657,7 @@ Back to <a href="#非監督式的機器學習">非監督式的機器學習</a>
     ![t-SNE 視覺化](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_%E6%B5%81%E5%9E%8B%E9%82%84%E5%8E%9F.jpg)<br>
     ![t-SNE MNIST視覺化](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_MNIST%E8%A6%96%E8%A6%BA%E5%8C%96.jpg)
     * S 型的展開<br>
-      ![S Curve](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_S%20Curve.png)
+      ![S Curve](https://github.com/sueshow/Python_ML- Marathon/blob/main/Picture/t-SNE_S%20Curve.png)
     * 瑞士捲的展開<br>
       ![Swiss Roll](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/t-SNE_Swiss%20Roll.png)
     * 斷球面地展開<br>
