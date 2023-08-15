@@ -2867,13 +2867,15 @@ Back to <a href="#深度學習理論與實作">深度學習理論與實作</a>
 ### D064-深度學習-模型調整與學習曲線
 * 深度學習
   * 深度神經網路(Supervised LearningDeep Neural Network)
-    * 簡介[D064-D065]
+    * 簡介[D064-D065]<br>
+      ![簡介](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF_%E7%B0%A1%E4%BB%8B.png)
     * 套件介紹[D066-D069]
       * Keras 簡介與安裝
       * Keras 內建資料集下載
-      * 如何用 Keras 搭建類神經網路
-    * 組成概念[D072-D076]
-      ![]()
+      * 如何用 Keras 搭建類神經網路<br>
+      ![套件介紹](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF_%E5%A5%97%E4%BB%B6%E4%BB%8B%E7%B4%B9.png)
+    * 組成概念[D071-D076]
+      ![組成概念](https://github.com/sueshow/Python_ML-Marathon/blob/main/Picture/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92_%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF_%E7%B5%84%E6%88%90%E6%A6%82%E5%BF%B5.png)
     * 訓練技巧
     * 應用案例
   * 卷積神經網路(Convolutional Neural Network，CNN)
@@ -3426,6 +3428,25 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
 <br>
 
 ### D071-損失函數
+* 損失函數
+  * 機器學習中所有的算法都需要最大化或最小化一個函數，這個函數被稱為「目標函數」
+    * 為何最小化
+      * 期望：希望模型預測出來的東西可與實際值一樣
+      * 在回歸問題稱為「殘差(residual)」；在分類問題稱為「錯誤率(error rate)」
+  * 一般把最小化的一類函數，稱為「損失函數」，即「實際值與預測值的落差」，它能根據預測結果，衡量出模型預測能力的好壞
+  * 大致分為
+    * 分類問題的損失函數
+    * 回歸問題的損失函數
+      * mean squared error(均方誤差)
+        * 最小平方法(Least Square)的目標函數，即為預測值與實際值的差距之平均值
+        * 其他變形的函數，如 mean absolute error、mean absolute percentage error、mean squared logarithmic error
+        * 使用時機
+          * n 個樣本的預測值與實際值的差距
+          * Numerical 相關
+      * 
+  * 概念：y 表示實際值，$\hat{y}$ 表示預測值
+    $$ loss/residual=y-\hat{y} $$
+    $$ error rate=\frac{\sum_{i=1}^{n} sign(y_i) \neq \hat{y}_i }{n}$$
 * 範例與作業
   * [範例D071]()
   * [作業D071]()
