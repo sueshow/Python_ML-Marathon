@@ -3444,7 +3444,7 @@ Back to <a href="#初探深度學習使用Keras">初探深度學習使用Keras</
           * n 個樣本的預測值與實際值的差距
           * Numerical 相關
       * 
-  * 概念：y 表示實際值，$\hat{y}$ 表示預測值
+  * 概念：y 表示實際值，$\hat{y}$ 表示預測值<br>
     $$ loss/residual=y-\hat{y} $$
     $$ error rate=\frac{\sum_{i=1}^{n} sign(y_i) \neq \hat{y}_i }{n}$$
 * 範例與作業
