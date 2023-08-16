@@ -1820,10 +1820,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
       * 可懲罰模型的複雜度，避免模型變得過於複雜，造成過擬合 (Over-fitting)，當模型越複雜時其值就會越大
       * 希望模型的參數數值不要太大，原因是參數的數值變小，噪音對最終輸出的結果影響越小，提升模型的泛化能力，但也讓模型的擬合能力下降
     * 類型
-      * L1 函數<br>
-        $\alpha \sum |weights|$
-      * L2 函數<br>
-        $\alpha \sum (weights)^2$
+      * L1 函數：$\alpha \sum |weights|$
+      * L2 函數：$\alpha \sum (weights)^2$
   * 為了避免 Over-fitting，目標函數 = 損失函數 + 正則化
 * LASSO 回歸
   * Linear Regression 加上 L1，其中有個超參數 α 可以調整正則化的強度
@@ -1868,10 +1866,8 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
 * 決策樹 Decision Tree
   * 透過一系列的是非問題，將資料進行切分
   * 從訓練資料中找出規則，讓每一次決策能使訊息增益 (Information Gain) 最大化，訊息增益越大代表切分後的兩群資料，群內相似程度越高
-    * 吉尼係數(Gini-Index)<br>
-      $Gini = 1-\sum_j p_j^2$
-    * 熵(Entropy)<br>
-      $Entropy = -\sum_j p_j log_2 P_j$
+    * 吉尼係數(Gini-Index)：$Gini = 1-\sum_j p_j^2$
+    * 熵(Entropy)：$Entropy = -\sum_j p_j log_2 P_j$
   * 從構建樹的過程中，透過 feature 被用來切分的次數，來得知哪些 features 是相對有用的，實務上可以使用 feature importance 來了解模型如何進行分類，總和為 1
   * 可視覺化每個決策的過程，是個具有非常高解釋性的模型
 * 範例與作業
