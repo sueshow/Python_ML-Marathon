@@ -1820,8 +1820,10 @@ Back to <a href="#機器學習基礎模型建立">機器學習基礎模型建立
       * 可懲罰模型的複雜度，避免模型變得過於複雜，造成過擬合 (Over-fitting)，當模型越複雜時其值就會越大
       * 希望模型的參數數值不要太大，原因是參數的數值變小，噪音對最終輸出的結果影響越小，提升模型的泛化能力，但也讓模型的擬合能力下降
     * 類型
-      * L1 函數：$ \alpha \sum |weights| $
-      * L2 函數：$ \alpha \sum (weights)^2 $
+      * L1 函數<br>
+        $ \alpha \sum |weights| $
+      * L2 函數<br>
+        $ \alpha \sum (weights)^2 $
   * 為了避免 Over-fitting，目標函數 = 損失函數 + 正則化
 * LASSO 回歸
   * Linear Regression 加上 L1，其中有個超參數 α 可以調整正則化的強度
